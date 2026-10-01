@@ -1,0 +1,967 @@
+{
+  "runs": [
+    {
+      "id": "c683bb65-6fcb-4024-9146-35766c40f1de",
+      "project_id": "121c601d-3591-4ef4-ab3a-c632860a2c37",
+      "status": "STOPPED",
+      "stop_reason": "MODEL ERROR",
+      "accepted_at": "2026-10-01T08:39:57.510Z",
+      "deadline_at": "2026-10-01T08:49:57.510Z",
+      "immutable_snapshot": {
+        "reset": {
+          "id": "07a0722e-4f64-4514-ac7e-d376e83d3056",
+          "version": 1,
+          "checkSteps": [
+            {
+              "id": "read",
+              "extracts": [],
+              "parameters": [],
+              "operationId": "GET /api/control/baseline",
+              "bodyBindings": [],
+              "expectedStatuses": [200]
+            }
+          ],
+          "resetSteps": [
+            {
+              "id": "reset",
+              "extracts": [],
+              "parameters": [],
+              "operationId": "POST /api/control/reset",
+              "bodyBindings": [],
+              "expectedStatuses": [200]
+            }
+          ],
+          "resetAssertions": [],
+          "baselineAssertions": [
+            {
+              "id": "17489a71-40d5-4409-ad32-f138aa89d497",
+              "predicate": {
+                "id": "a0b544a2-92e0-435d-b18a-0b78847f5005",
+                "source": "DEVELOPER",
+                "version": 1,
+                "sourceRef": "owner-approved-empty-baseline",
+                "assertions": [
+                  {
+                    "op": "equals",
+                    "left": {
+                      "kind": "json",
+                      "stepId": "read",
+                      "pointer": "/accounts"
+                    },
+                    "right": {
+                      "kind": "literal",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "op": "equals",
+                    "left": {
+                      "kind": "json",
+                      "stepId": "read",
+                      "pointer": "/tokens"
+                    },
+                    "right": {
+                      "kind": "literal",
+                      "value": 0
+                    }
+                  }
+                ],
+                "applicability": [],
+                "canonicalHash": "d061b0ef147610a728211712ee6f7e7d32038e9f4d06d4e7e08c9f286e7613d4"
+              }
+            }
+          ]
+        },
+        "scope": {
+          "port": 57383,
+          "origin": "http://127.0.0.1:57383",
+          "hostname": "127.0.0.1",
+          "addresses": [
+            {
+              "ip": "127.0.0.1",
+              "family": 4
+            }
+          ],
+          "approvalId": "0448d264-0cd3-4025-ba4e-075b24ea9e41",
+          "operationIds": [
+            "POST /api/control/reset",
+            "GET /api/control/baseline",
+            "POST /api/accounts",
+            "POST /api/accounts/{accountId}/password-reset",
+            "PATCH /api/accounts/{accountId}/email",
+            "POST /api/password-reset"
+          ],
+          "operationPolicy": [
+            {
+              "phases": ["RESET"],
+              "category": "RESET",
+              "operationId": "POST /api/control/reset"
+            },
+            {
+              "phases": ["BASELINE"],
+              "category": "BASELINE",
+              "operationId": "GET /api/control/baseline"
+            },
+            {
+              "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"],
+              "category": "EXPLORATION",
+              "operationId": "POST /api/accounts"
+            },
+            {
+              "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"],
+              "category": "EXPLORATION",
+              "operationId": "POST /api/accounts/{accountId}/password-reset"
+            },
+            {
+              "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"],
+              "category": "EXPLORATION",
+              "operationId": "PATCH /api/accounts/{accountId}/email"
+            },
+            {
+              "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"],
+              "category": "EXPLORATION",
+              "operationId": "POST /api/password-reset"
+            }
+          ],
+          "basePathSegments": ["api"],
+          "mutationsAcknowledged": true
+        },
+        "predicates": [
+          {
+            "id": "66647786-3fa3-42da-9041-c3357e429016",
+            "source": "DEVELOPER",
+            "version": 1,
+            "sourceRef": "token-invalidation-policy",
+            "assertions": [
+              {
+                "op": "equals",
+                "left": {
+                  "kind": "status",
+                  "stepId": "use"
+                },
+                "right": {
+                  "kind": "literal",
+                  "value": 403
+                }
+              }
+            ],
+            "applicability": [
+              {
+                "op": "equals",
+                "left": {
+                  "kind": "operation",
+                  "stepId": "email"
+                },
+                "right": {
+                  "kind": "literal",
+                  "value": "PATCH /api/accounts/{accountId}/email"
+                }
+              },
+              {
+                "op": "equals",
+                "left": {
+                  "kind": "operation",
+                  "stepId": "use"
+                },
+                "right": {
+                  "kind": "literal",
+                  "value": "POST /api/password-reset"
+                }
+              },
+              {
+                "op": "before",
+                "left": {
+                  "kind": "step-index",
+                  "stepId": "email"
+                },
+                "right": {
+                  "kind": "step-index",
+                  "stepId": "use"
+                }
+              }
+            ],
+            "canonicalHash": "f21e37fe913b62db41e9c8e4f83cb480df4635c4403de10b3a30d8e958865b2e"
+          }
+        ],
+        "apiSnapshot": {
+          "operations": [
+            {
+              "id": "POST /api/control/reset",
+              "method": "POST",
+              "eligible": true,
+              "responses": {
+                "200": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/$defs/ghostqaSelected",
+                        "$defs": {
+                          "ghostqaSelected": {
+                            "type": "object",
+                            "required": ["reset"],
+                            "properties": {
+                              "reset": {
+                                "type": "boolean"
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "description": "Result"
+                }
+              },
+              "parameters": [],
+              "pathTemplate": "/api/control/reset",
+              "exclusionReasons": []
+            },
+            {
+              "id": "GET /api/control/baseline",
+              "method": "GET",
+              "eligible": true,
+              "responses": {
+                "200": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/$defs/ghostqaSelected",
+                        "$defs": {
+                          "ghostqaSelected": {
+                            "type": "object",
+                            "required": ["accounts", "tokens"],
+                            "properties": {
+                              "tokens": {
+                                "type": "integer"
+                              },
+                              "accounts": {
+                                "type": "integer"
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "description": "Result"
+                }
+              },
+              "parameters": [],
+              "pathTemplate": "/api/control/baseline",
+              "exclusionReasons": []
+            },
+            {
+              "id": "POST /api/accounts",
+              "method": "POST",
+              "eligible": true,
+              "responses": {
+                "201": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/$defs/ghostqaSelected",
+                        "$defs": {
+                          "ghostqaSelected": {
+                            "type": "object",
+                            "required": ["id"],
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "maxLength": 256
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "description": "Result"
+                }
+              },
+              "parameters": [],
+              "requestBody": {
+                "$ref": "#/$defs/ghostqaSelected",
+                "$defs": {
+                  "ghostqaSelected": {
+                    "type": "object",
+                    "required": ["email", "password"],
+                    "properties": {
+                      "email": {
+                        "type": "string",
+                        "format": "email",
+                        "maxLength": 256
+                      },
+                      "password": {
+                        "type": "string",
+                        "maxLength": 256,
+                        "x-sensitive": true
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "pathTemplate": "/api/accounts",
+              "exclusionReasons": []
+            },
+            {
+              "id": "POST /api/accounts/{accountId}/password-reset",
+              "method": "POST",
+              "eligible": true,
+              "responses": {
+                "200": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/$defs/ghostqaSelected",
+                        "$defs": {
+                          "ghostqaSelected": {
+                            "type": "object",
+                            "required": ["token"],
+                            "properties": {
+                              "token": {
+                                "type": "string",
+                                "format": "uuid",
+                                "maxLength": 256,
+                                "x-sensitive": true
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "description": "Result"
+                }
+              },
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "accountId",
+                  "style": "simple",
+                  "schema": {
+                    "$ref": "#/$defs/ghostqaSelected",
+                    "$defs": {
+                      "ghostqaSelected": {
+                        "type": "string",
+                        "format": "uuid",
+                        "maxLength": 256
+                      }
+                    }
+                  },
+                  "explode": false,
+                  "required": true,
+                  "sensitive": false
+                }
+              ],
+              "pathTemplate": "/api/accounts/{accountId}/password-reset",
+              "exclusionReasons": []
+            },
+            {
+              "id": "PATCH /api/accounts/{accountId}/email",
+              "method": "PATCH",
+              "eligible": true,
+              "responses": {
+                "200": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/$defs/ghostqaSelected",
+                        "$defs": {
+                          "ghostqaSelected": {
+                            "type": "object",
+                            "required": ["id", "email"],
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                                "maxLength": 256
+                              },
+                              "email": {
+                                "type": "string",
+                                "maxLength": 256
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "description": "Result"
+                }
+              },
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "accountId",
+                  "style": "simple",
+                  "schema": {
+                    "$ref": "#/$defs/ghostqaSelected",
+                    "$defs": {
+                      "ghostqaSelected": {
+                        "type": "string",
+                        "format": "uuid",
+                        "maxLength": 256
+                      }
+                    }
+                  },
+                  "explode": false,
+                  "required": true,
+                  "sensitive": false
+                }
+              ],
+              "requestBody": {
+                "$ref": "#/$defs/ghostqaSelected",
+                "$defs": {
+                  "ghostqaSelected": {
+                    "type": "object",
+                    "required": ["email"],
+                    "properties": {
+                      "email": {
+                        "type": "string",
+                        "format": "email",
+                        "maxLength": 256
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "pathTemplate": "/api/accounts/{accountId}/email",
+              "exclusionReasons": []
+            },
+            {
+              "id": "POST /api/password-reset",
+              "method": "POST",
+              "eligible": true,
+              "responses": {
+                "200": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/$defs/ghostqaSelected",
+                        "$defs": {
+                          "ghostqaSelected": {
+                            "type": "object",
+                            "required": ["updated"],
+                            "properties": {
+                              "updated": {
+                                "type": "boolean"
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "description": "Result"
+                },
+                "403": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/$defs/ghostqaSelected",
+                        "$defs": {
+                          "ghostqaSelected": {
+                            "type": "object",
+                            "required": ["error"],
+                            "properties": {
+                              "error": {
+                                "type": "string",
+                                "maxLength": 256
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "description": "Result"
+                }
+              },
+              "parameters": [],
+              "requestBody": {
+                "$ref": "#/$defs/ghostqaSelected",
+                "$defs": {
+                  "ghostqaSelected": {
+                    "type": "object",
+                    "required": ["token", "password"],
+                    "properties": {
+                      "token": {
+                        "type": "string",
+                        "maxLength": 256,
+                        "x-sensitive": true
+                      },
+                      "password": {
+                        "type": "string",
+                        "maxLength": 256,
+                        "x-sensitive": true
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "pathTemplate": "/api/password-reset",
+              "exclusionReasons": []
+            }
+          ],
+          "snapshotId": "985a17b1-58f7-4548-8e2d-6283af0d619c",
+          "contentHash": "791d4b21eda0e71b880c0d35f3147e234220d88ebe5e6fad04e2f35d5edbf5e5",
+          "openapiVersion": "3.1.0",
+          "importDiagnostics": []
+        },
+        "credentialBindings": []
+      },
+      "counters": {
+        "limits": {
+          "steps": 10,
+          "journeys": 1,
+          "requests": 200,
+          "milliseconds": 600000,
+          "modelTimeoutMs": 30000,
+          "requestTimeoutMs": 10000
+        },
+        "acceptedAt": "2026-10-01T08:39:57.510Z",
+        "deadlineAt": "2026-10-01T08:49:57.510Z",
+        "modelCalls": 1,
+        "usedRequests": 0,
+        "stagnantRounds": 0,
+        "requestsByPhase": {
+          "RESET": 0,
+          "REPLAY": 0,
+          "ARTIFACT": 0,
+          "BASELINE": 0,
+          "EXPLORATION": 0,
+          "MINIMIZATION": 0
+        },
+        "usedExplorationJourneys": 0
+      },
+      "cancel_at": null,
+      "model_config": {
+        "model": "gemini-3.5-flash-lite",
+        "provider": "gemini"
+      }
+    }
+  ],
+  "journeys": [],
+  "step_records": [],
+  "evidence": [
+    {
+      "id": "c5d1e6bc-f768-4a81-8ba6-8ce3d47dbd4d",
+      "run_id": "c683bb65-6fcb-4024-9146-35766c40f1de",
+      "trial_id": "9d9653b0-63c8-4d97-bc9e-ea328d93fb41",
+      "kind": "PLANNING INTENT",
+      "predicate_ref": null,
+      "baseline_id": null,
+      "step_refs": [],
+      "evaluation": {
+        "model": "gemini-3.5-flash-lite",
+        "context": {
+          "api": {
+            "operations": [
+              {
+                "id": "POST /api/accounts",
+                "method": "POST",
+                "eligible": true,
+                "responses": {
+                  "201": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "$ref": "#/$defs/ghostqaSelected",
+                          "$defs": {
+                            "ghostqaSelected": {
+                              "type": "object",
+                              "required": ["id"],
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "format": "uuid",
+                                  "maxLength": 256
+                                }
+                              },
+                              "additionalProperties": false
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "description": "Result"
+                  }
+                },
+                "parameters": [],
+                "requestBody": {
+                  "$ref": "#/$defs/ghostqaSelected",
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "object",
+                      "required": ["email", "password"],
+                      "properties": {
+                        "email": {
+                          "type": "string",
+                          "format": "email",
+                          "maxLength": 256
+                        },
+                        "password": {
+                          "type": "string",
+                          "maxLength": 256,
+                          "x-sensitive": true
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "pathTemplate": "/api/accounts",
+                "exclusionReasons": []
+              },
+              {
+                "id": "POST /api/accounts/{accountId}/password-reset",
+                "method": "POST",
+                "eligible": true,
+                "responses": {
+                  "200": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "$ref": "#/$defs/ghostqaSelected",
+                          "$defs": {
+                            "ghostqaSelected": {
+                              "type": "object",
+                              "required": ["token"],
+                              "properties": {
+                                "token": {
+                                  "type": "string",
+                                  "format": "uuid",
+                                  "maxLength": 256,
+                                  "x-sensitive": true
+                                }
+                              },
+                              "additionalProperties": false
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "description": "Result"
+                  }
+                },
+                "parameters": [
+                  {
+                    "in": "path",
+                    "name": "accountId",
+                    "style": "simple",
+                    "schema": {
+                      "$ref": "#/$defs/ghostqaSelected",
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "string",
+                          "format": "uuid",
+                          "maxLength": 256
+                        }
+                      }
+                    },
+                    "explode": false,
+                    "required": true,
+                    "sensitive": false
+                  }
+                ],
+                "pathTemplate": "/api/accounts/{accountId}/password-reset",
+                "exclusionReasons": []
+              },
+              {
+                "id": "PATCH /api/accounts/{accountId}/email",
+                "method": "PATCH",
+                "eligible": true,
+                "responses": {
+                  "200": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "$ref": "#/$defs/ghostqaSelected",
+                          "$defs": {
+                            "ghostqaSelected": {
+                              "type": "object",
+                              "required": ["id", "email"],
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "maxLength": 256
+                                },
+                                "email": {
+                                  "type": "string",
+                                  "maxLength": 256
+                                }
+                              },
+                              "additionalProperties": false
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "description": "Result"
+                  }
+                },
+                "parameters": [
+                  {
+                    "in": "path",
+                    "name": "accountId",
+                    "style": "simple",
+                    "schema": {
+                      "$ref": "#/$defs/ghostqaSelected",
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "string",
+                          "format": "uuid",
+                          "maxLength": 256
+                        }
+                      }
+                    },
+                    "explode": false,
+                    "required": true,
+                    "sensitive": false
+                  }
+                ],
+                "requestBody": {
+                  "$ref": "#/$defs/ghostqaSelected",
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "object",
+                      "required": ["email"],
+                      "properties": {
+                        "email": {
+                          "type": "string",
+                          "format": "email",
+                          "maxLength": 256
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "pathTemplate": "/api/accounts/{accountId}/email",
+                "exclusionReasons": []
+              },
+              {
+                "id": "POST /api/password-reset",
+                "method": "POST",
+                "eligible": true,
+                "responses": {
+                  "200": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "$ref": "#/$defs/ghostqaSelected",
+                          "$defs": {
+                            "ghostqaSelected": {
+                              "type": "object",
+                              "required": ["updated"],
+                              "properties": {
+                                "updated": {
+                                  "type": "boolean"
+                                }
+                              },
+                              "additionalProperties": false
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "description": "Result"
+                  },
+                  "403": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "$ref": "#/$defs/ghostqaSelected",
+                          "$defs": {
+                            "ghostqaSelected": {
+                              "type": "object",
+                              "required": ["error"],
+                              "properties": {
+                                "error": {
+                                  "type": "string",
+                                  "maxLength": 256
+                                }
+                              },
+                              "additionalProperties": false
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "description": "Result"
+                  }
+                },
+                "parameters": [],
+                "requestBody": {
+                  "$ref": "#/$defs/ghostqaSelected",
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "object",
+                      "required": ["token", "password"],
+                      "properties": {
+                        "token": {
+                          "type": "string",
+                          "maxLength": 256,
+                          "x-sensitive": true
+                        },
+                        "password": {
+                          "type": "string",
+                          "maxLength": 256,
+                          "x-sensitive": true
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "pathTemplate": "/api/password-reset",
+                "exclusionReasons": []
+              }
+            ],
+            "snapshotId": "985a17b1-58f7-4548-8e2d-6283af0d619c",
+            "contentHash": "791d4b21eda0e71b880c0d35f3147e234220d88ebe5e6fad04e2f35d5edbf5e5",
+            "openapiVersion": "3.1.0",
+            "importDiagnostics": []
+          },
+          "mappings": [
+            {
+              "id": "10db1d08-edf2-4d4d-9506-5a8deba27680",
+              "kind": "DECLARED",
+              "statement": "POST /api/accounts is declared by the imported specification",
+              "evidenceIds": [],
+              "operationIds": ["POST /api/accounts"]
+            },
+            {
+              "id": "3021db15-8a7f-4eaf-bc03-940d718e287b",
+              "kind": "DECLARED",
+              "statement": "POST /api/accounts/{accountId}/password-reset is declared by the imported specification",
+              "evidenceIds": [],
+              "operationIds": ["POST /api/accounts/{accountId}/password-reset"]
+            },
+            {
+              "id": "b71e248f-a5e3-4f8d-a48d-53ea3ed9823d",
+              "kind": "DECLARED",
+              "statement": "PATCH /api/accounts/{accountId}/email is declared by the imported specification",
+              "evidenceIds": [],
+              "operationIds": ["PATCH /api/accounts/{accountId}/email"]
+            },
+            {
+              "id": "00ff645c-81e0-4e48-92c1-ee76b3bdc035",
+              "kind": "DECLARED",
+              "statement": "POST /api/password-reset is declared by the imported specification",
+              "evidenceIds": [],
+              "operationIds": ["POST /api/password-reset"]
+            }
+          ],
+          "observations": [],
+          "symbolicInputs": {},
+          "remainingLimits": {
+            "steps": 10,
+            "journeys": 1,
+            "requests": 200
+          },
+          "predicateDefinitions": [
+            {
+              "id": "66647786-3fa3-42da-9041-c3357e429016",
+              "source": "DEVELOPER",
+              "version": 1,
+              "sourceRef": "token-invalidation-policy",
+              "assertions": [
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "status",
+                    "stepId": "use"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": 403
+                  }
+                }
+              ],
+              "applicability": [
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "operation",
+                    "stepId": "email"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": "PATCH /api/accounts/{accountId}/email"
+                  }
+                },
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "operation",
+                    "stepId": "use"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": "POST /api/password-reset"
+                  }
+                },
+                {
+                  "op": "before",
+                  "left": {
+                    "kind": "step-index",
+                    "stepId": "email"
+                  },
+                  "right": {
+                    "kind": "step-index",
+                    "stepId": "use"
+                  }
+                }
+              ],
+              "canonicalHash": "f21e37fe913b62db41e9c8e4f83cb480df4635c4403de10b3a30d8e958865b2e"
+            }
+          ],
+          "approvedPredicateRefs": [
+            {
+              "id": "66647786-3fa3-42da-9041-c3357e429016",
+              "hash": "f21e37fe913b62db41e9c8e4f83cb480df4635c4403de10b3a30d8e958865b2e",
+              "version": 1
+            }
+          ],
+          "consideredHypothesisHashes": []
+        },
+        "provider": "gemini"
+      },
+      "created_at": "2026-10-01T08:39:57.517Z"
+    },
+    {
+      "id": "1832139c-2247-479b-9422-4a1ddaf0fdd2",
+      "run_id": "c683bb65-6fcb-4024-9146-35766c40f1de",
+      "trial_id": "9d9653b0-63c8-4d97-bc9e-ea328d93fb41",
+      "kind": "PLANNING RESULT",
+      "predicate_ref": null,
+      "baseline_id": null,
+      "step_refs": [],
+      "evaluation": {
+        "telemetry": {
+          "model": "gemini-3.5-flash-lite",
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1354
+          },
+          "outcome": "MODEL ERROR",
+          "provider": "gemini",
+          "attempted": true
+        }
+      },
+      "created_at": "2026-10-01T08:39:59.128Z"
+    }
+  ],
+  "findings": []
+}

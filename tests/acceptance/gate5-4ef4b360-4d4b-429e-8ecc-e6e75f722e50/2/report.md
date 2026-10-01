@@ -1,0 +1,1226 @@
+# GhostQA finding evidence
+
+Finding: `f58885ad-fefb-4f67-8ede-cdc878627b8a` — CONFIRMED
+Evidence chain: OBSERVED VIOLATION → CONFIRMED → best verified reproducer.
+Consistency: true. Artifact: GENERATED / UNVERIFIED.
+
+Predicate: `ddbaeabf-8057-4521-9c6f-220d6068c9b0`, version 1, canonical hash `ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d`.
+Approval provenance: DEVELOPER; source `an order observed as CANCELLED must not later be observed as FULFILLED within the same fresh trial`; eligible as of run acceptance: true.
+
+Original journey length: 3. Best verified journey length: 3.
+This is the shortest verified sequence found.
+It is locally irreducible under attempted deletion strategy.
+Local minimization stop reason: LOCAL MINIMUM.
+Truncated: no.
+
+## Expected invariant
+
+When the applicability conditions hold, every approved assertion must be satisfied:
+
+- `{"kind":"json","pointer":"/state","stepId":"later"}` not-equals `{"kind":"literal","value":"FULFILLED"}`
+
+## Evidence references
+
+- EXPLORATION: evidence `f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6`, trial `8c00ce4c-ef97-4b5e-a270-fe83a9459e31`, baseline `e9cc9a26-9455-4e94-8839-6700d954bba6`, verdict VIOLATED.
+- REPLAY: evidence `fd9090c3-6504-4a5a-a7dd-dd08d2c958bf`, trial `d9a89e52-6a60-4826-8e91-a8c207a7412b`, baseline `7b4b5d39-9647-4c72-8083-ca5ea82e4b07`, verdict VIOLATED.
+
+## Minimized reproduction
+
+1. `create` — `POST /api/orders`
+2. `cancelled` — `POST /api/orders/{orderId}/cancel`
+3. `later` — `POST /api/orders/{orderId}/fulfill`
+
+## Minimized attempt history
+
+- Remove `create`: rejected; PRODUCER REQUIRED; candidate `28aaebbf-3943-4f34-b53d-215b72d5611a`.
+- Remove `cancelled`: rejected; PREDICATE STEP REQUIRED; candidate `76224459-7647-4f30-9132-2856977b8cce`.
+- Remove `later`: rejected; PREDICATE STEP REQUIRED; candidate `295262be-bd12-416d-9168-349b0de9a987`.
+
+## Setup and verification
+
+Supply explicit target/address/operation approval, mutation acknowledgment, finite limits and credential slots separately. A standalone runner is not included in this manifest-only export.
+Generation does not establish supervised verification. This manifest has not been verified through the originating run.
+
+## Exact assertions and sanitized evidence
+
+```json
+{
+  "approval": {
+    "asOf": "2026-10-01T21:07:54.915Z",
+    "eligible": true,
+    "source": "DEVELOPER",
+    "sourceRef": "an order observed as CANCELLED must not later be observed as FULFILLED within the same fresh trial"
+  },
+  "bestJourney": {
+    "dependencies": [
+      {
+        "consumer": "cancelled",
+        "producer": "create",
+        "variable": "orderId"
+      },
+      {
+        "consumer": "later",
+        "producer": "create",
+        "variable": "orderId"
+      }
+    ],
+    "id": "2b2cd645-cc24-4785-afe2-252579c031f9",
+    "predicateRef": {
+      "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+      "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+      "version": 1
+    },
+    "rationale": "Journey validating that a cancelled order cannot be fulfilled.",
+    "steps": [
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          201
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "orderId",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ],
+        "id": "create",
+        "operationId": "POST /api/orders",
+        "parameters": []
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "cancelledId",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "cancelled"
+            }
+          }
+        ],
+        "id": "cancelled",
+        "operationId": "POST /api/orders/{orderId}/cancel",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "orderId",
+            "value": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ]
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "laterState",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "later"
+            }
+          }
+        ],
+        "id": "later",
+        "operationId": "POST /api/orders/{orderId}/fulfill",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "orderId",
+            "value": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ]
+      }
+    ],
+    "variables": []
+  },
+  "bestLength": 3,
+  "executionProvenance": {
+    "acceptedAt": "2026-10-01T21:07:54.915Z",
+    "deadlineAt": "2026-10-01T21:17:54.915Z",
+    "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+    "trialIds": [
+      "8c00ce4c-ef97-4b5e-a270-fe83a9459e31",
+      "d9a89e52-6a60-4826-8e91-a8c207a7412b"
+    ]
+  },
+  "finding": {
+    "classification": "CONFIRMED",
+    "consistent": true,
+    "id": "f58885ad-fefb-4f67-8ede-cdc878627b8a",
+    "initialEvidenceId": "f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6",
+    "minimizationStop": "LOCAL MINIMUM",
+    "minimizedJourneyId": "2b2cd645-cc24-4785-afe2-252579c031f9",
+    "originalJourneyId": "2b2cd645-cc24-4785-afe2-252579c031f9",
+    "predicateRef": {
+      "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+      "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+      "version": 1
+    },
+    "projectId": "609e6328-5a8d-462d-ac8d-8490ed3cfd23",
+    "replayEvidenceIds": [
+      "fd9090c3-6504-4a5a-a7dd-dd08d2c958bf"
+    ],
+    "transitions": [
+      {
+        "evidenceRefs": [
+          "f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6"
+        ],
+        "next": "OBSERVED VIOLATION",
+        "prior": null,
+        "reason": "INITIAL PREDICATE VIOLATION"
+      },
+      {
+        "evidenceRefs": [
+          "f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6",
+          "fd9090c3-6504-4a5a-a7dd-dd08d2c958bf"
+        ],
+        "next": "CONFIRMED",
+        "prior": "OBSERVED VIOLATION",
+        "reason": "INDEPENDENT FRESH REPLAY VIOLATED"
+      }
+    ]
+  },
+  "formatVersion": 1,
+  "generationState": "GENERATED",
+  "initial": {
+    "baseline": {
+      "assertionIds": [
+        "b38a8bef-5d02-407c-9ce5-dda68daf83a6"
+      ],
+      "checkStepIds": [
+        "baseline"
+      ],
+      "id": "e9cc9a26-9455-4e94-8839-6700d954bba6",
+      "resetStepIds": [
+        "reset"
+      ],
+      "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+      "trialId": "8c00ce4c-ef97-4b5e-a270-fe83a9459e31",
+      "verdict": "SATISFIED"
+    },
+    "evidence": {
+      "baselineEvidenceId": "e9cc9a26-9455-4e94-8839-6700d954bba6",
+      "id": "f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6",
+      "observationIds": [
+        "a2fce5c8-b6a3-46a3-bee9-dd8e6a67e18f",
+        "c3da2fbd-699c-4655-b784-78681ab48610",
+        "55a675ee-ac13-431b-a944-913e6e64fc98"
+      ],
+      "outcome": "VIOLATED",
+      "phase": "EXPLORATION",
+      "predicateRef": {
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+        "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+        "version": 1
+      },
+      "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+      "symbolicOperands": {
+        "applicability": [
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "cancelled"
+            },
+            "op": "equals",
+            "right": {
+              "kind": "literal",
+              "value": "CANCELLED"
+            }
+          },
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "cancelled"
+            },
+            "op": "equals",
+            "right": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "later"
+            }
+          },
+          {
+            "left": {
+              "kind": "step-index",
+              "stepId": "cancelled"
+            },
+            "op": "before",
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "later"
+            },
+            "op": "not-equals",
+            "right": {
+              "kind": "literal",
+              "value": "FULFILLED"
+            }
+          }
+        ],
+        "executionOrder": [
+          {
+            "operationId": "POST /api/orders",
+            "ordinal": 0,
+            "stepId": "create"
+          },
+          {
+            "operationId": "POST /api/orders/{orderId}/cancel",
+            "ordinal": 1,
+            "stepId": "cancelled"
+          },
+          {
+            "operationId": "POST /api/orders/{orderId}/fulfill",
+            "ordinal": 2,
+            "stepId": "later"
+          }
+        ]
+      },
+      "trialId": "8c00ce4c-ef97-4b5e-a270-fe83a9459e31"
+    },
+    "observations": [
+      {
+        "id": "c3da2fbd-699c-4655-b784-78681ab48610",
+        "result": {
+          "elapsedMs": 2.1548750000001746,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/orders",
+            "url": "http://127.0.0.1:57733/api/orders"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "81dcdd6b-72b6-4a8b-861a-922c77bf6dd3",
+              "state": "CREATED"
+            },
+            "elapsedMs": 2.1548750000001746,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 21:07:58 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 201,
+            "text": "{\"id\":\"81dcdd6b-72b6-4a8b-861a-922c77bf6dd3\",\"state\":\"CREATED\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T21:07:58.429Z",
+          "status": 201,
+          "stepId": "create",
+          "truncated": false
+        },
+        "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+        "stateMappings": [],
+        "stepId": "create",
+        "trialId": "8c00ce4c-ef97-4b5e-a270-fe83a9459e31"
+      },
+      {
+        "id": "55a675ee-ac13-431b-a944-913e6e64fc98",
+        "result": {
+          "elapsedMs": 2.359667000000627,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/orders/{orderId}/cancel",
+            "url": "http://127.0.0.1:57733/api/orders/81dcdd6b-72b6-4a8b-861a-922c77bf6dd3/cancel"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "81dcdd6b-72b6-4a8b-861a-922c77bf6dd3",
+              "state": "CANCELLED"
+            },
+            "elapsedMs": 2.359667000000627,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 21:07:58 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 200,
+            "text": "{\"id\":\"81dcdd6b-72b6-4a8b-861a-922c77bf6dd3\",\"state\":\"CANCELLED\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T21:07:58.466Z",
+          "status": 200,
+          "stepId": "cancelled",
+          "truncated": false
+        },
+        "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+        "stateMappings": [],
+        "stepId": "cancelled",
+        "trialId": "8c00ce4c-ef97-4b5e-a270-fe83a9459e31"
+      },
+      {
+        "id": "a2fce5c8-b6a3-46a3-bee9-dd8e6a67e18f",
+        "result": {
+          "elapsedMs": 1.597249999998894,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/orders/{orderId}/fulfill",
+            "url": "http://127.0.0.1:57733/api/orders/81dcdd6b-72b6-4a8b-861a-922c77bf6dd3/fulfill"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "81dcdd6b-72b6-4a8b-861a-922c77bf6dd3",
+              "state": "FULFILLED"
+            },
+            "elapsedMs": 1.597249999998894,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 21:07:58 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 200,
+            "text": "{\"id\":\"81dcdd6b-72b6-4a8b-861a-922c77bf6dd3\",\"state\":\"FULFILLED\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T21:07:58.472Z",
+          "status": 200,
+          "stepId": "later",
+          "truncated": false
+        },
+        "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+        "stateMappings": [],
+        "stepId": "later",
+        "trialId": "8c00ce4c-ef97-4b5e-a270-fe83a9459e31"
+      }
+    ]
+  },
+  "minimization": {
+    "attempts": [
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [],
+          "id": "28aaebbf-3943-4f34-b53d-215b72d5611a",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+            "version": 1
+          },
+          "rationale": "Journey validating that a cancelled order cannot be fulfilled.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "cancelledId",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "cancelled"
+                  }
+                }
+              ],
+              "id": "cancelled",
+              "operationId": "POST /api/orders/{orderId}/cancel",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ]
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "laterState",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/state",
+                    "stepId": "later"
+                  }
+                }
+              ],
+              "id": "later",
+              "operationId": "POST /api/orders/{orderId}/fulfill",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PRODUCER REQUIRED",
+        "removedStepId": "create"
+      },
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [
+            {
+              "consumer": "later",
+              "producer": "create",
+              "variable": "orderId"
+            }
+          ],
+          "id": "76224459-7647-4f30-9132-2856977b8cce",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+            "version": 1
+          },
+          "rationale": "Journey validating that a cancelled order cannot be fulfilled.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                201
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "orderId",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ],
+              "id": "create",
+              "operationId": "POST /api/orders",
+              "parameters": []
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "laterState",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/state",
+                    "stepId": "later"
+                  }
+                }
+              ],
+              "id": "later",
+              "operationId": "POST /api/orders/{orderId}/fulfill",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PREDICATE STEP REQUIRED",
+        "removedStepId": "cancelled"
+      },
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [
+            {
+              "consumer": "cancelled",
+              "producer": "create",
+              "variable": "orderId"
+            }
+          ],
+          "id": "295262be-bd12-416d-9168-349b0de9a987",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+            "version": 1
+          },
+          "rationale": "Journey validating that a cancelled order cannot be fulfilled.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                201
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "orderId",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ],
+              "id": "create",
+              "operationId": "POST /api/orders",
+              "parameters": []
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "cancelledId",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "cancelled"
+                  }
+                }
+              ],
+              "id": "cancelled",
+              "operationId": "POST /api/orders/{orderId}/cancel",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PREDICATE STEP REQUIRED",
+        "removedStepId": "later"
+      }
+    ],
+    "best": {
+      "dependencies": [
+        {
+          "consumer": "cancelled",
+          "producer": "create",
+          "variable": "orderId"
+        },
+        {
+          "consumer": "later",
+          "producer": "create",
+          "variable": "orderId"
+        }
+      ],
+      "id": "2b2cd645-cc24-4785-afe2-252579c031f9",
+      "predicateRef": {
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+        "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+        "version": 1
+      },
+      "rationale": "Journey validating that a cancelled order cannot be fulfilled.",
+      "steps": [
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            201
+          ],
+          "extracts": [
+            {
+              "expectedType": "string",
+              "name": "orderId",
+              "sensitive": false,
+              "source": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "create"
+              }
+            }
+          ],
+          "id": "create",
+          "operationId": "POST /api/orders",
+          "parameters": []
+        },
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            200,
+            409
+          ],
+          "extracts": [
+            {
+              "expectedType": "string",
+              "name": "cancelledId",
+              "sensitive": false,
+              "source": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "cancelled"
+              }
+            }
+          ],
+          "id": "cancelled",
+          "operationId": "POST /api/orders/{orderId}/cancel",
+          "parameters": [
+            {
+              "location": "path",
+              "name": "orderId",
+              "value": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "create"
+              }
+            }
+          ]
+        },
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            200,
+            409
+          ],
+          "extracts": [
+            {
+              "expectedType": "string",
+              "name": "laterState",
+              "sensitive": false,
+              "source": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "later"
+              }
+            }
+          ],
+          "id": "later",
+          "operationId": "POST /api/orders/{orderId}/fulfill",
+          "parameters": [
+            {
+              "location": "path",
+              "name": "orderId",
+              "value": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "create"
+              }
+            }
+          ]
+        }
+      ],
+      "variables": []
+    },
+    "bestLength": 3,
+    "finding": {
+      "classification": "CONFIRMED",
+      "consistent": true,
+      "id": "f58885ad-fefb-4f67-8ede-cdc878627b8a",
+      "initialEvidenceId": "f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6",
+      "minimizationStop": "LOCAL MINIMUM",
+      "minimizedJourneyId": "2b2cd645-cc24-4785-afe2-252579c031f9",
+      "originalJourneyId": "2b2cd645-cc24-4785-afe2-252579c031f9",
+      "predicateRef": {
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+        "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+        "version": 1
+      },
+      "projectId": "609e6328-5a8d-462d-ac8d-8490ed3cfd23",
+      "replayEvidenceIds": [
+        "fd9090c3-6504-4a5a-a7dd-dd08d2c958bf"
+      ],
+      "transitions": [
+        {
+          "evidenceRefs": [
+            "f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6"
+          ],
+          "next": "OBSERVED VIOLATION",
+          "prior": null,
+          "reason": "INITIAL PREDICATE VIOLATION"
+        },
+        {
+          "evidenceRefs": [
+            "f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6",
+            "fd9090c3-6504-4a5a-a7dd-dd08d2c958bf"
+          ],
+          "next": "CONFIRMED",
+          "prior": "OBSERVED VIOLATION",
+          "reason": "INDEPENDENT FRESH REPLAY VIOLATED"
+        }
+      ]
+    },
+    "locallyIrreducible": true,
+    "originalLength": 3,
+    "stopReason": "LOCAL MINIMUM"
+  },
+  "originalJourney": {
+    "dependencies": [
+      {
+        "consumer": "cancelled",
+        "producer": "create",
+        "variable": "orderId"
+      },
+      {
+        "consumer": "later",
+        "producer": "create",
+        "variable": "orderId"
+      }
+    ],
+    "id": "2b2cd645-cc24-4785-afe2-252579c031f9",
+    "predicateRef": {
+      "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+      "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+      "version": 1
+    },
+    "rationale": "Journey validating that a cancelled order cannot be fulfilled.",
+    "steps": [
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          201
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "orderId",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ],
+        "id": "create",
+        "operationId": "POST /api/orders",
+        "parameters": []
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "cancelledId",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "cancelled"
+            }
+          }
+        ],
+        "id": "cancelled",
+        "operationId": "POST /api/orders/{orderId}/cancel",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "orderId",
+            "value": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ]
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "laterState",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "later"
+            }
+          }
+        ],
+        "id": "later",
+        "operationId": "POST /api/orders/{orderId}/fulfill",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "orderId",
+            "value": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ]
+      }
+    ],
+    "variables": []
+  },
+  "originalLength": 3,
+  "predicate": {
+    "applicability": [
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/state",
+          "stepId": "cancelled"
+        },
+        "op": "equals",
+        "right": {
+          "kind": "literal",
+          "value": "CANCELLED"
+        }
+      },
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/id",
+          "stepId": "cancelled"
+        },
+        "op": "equals",
+        "right": {
+          "kind": "json",
+          "pointer": "/id",
+          "stepId": "later"
+        }
+      },
+      {
+        "left": {
+          "kind": "step-index",
+          "stepId": "cancelled"
+        },
+        "op": "before",
+        "right": {
+          "kind": "step-index",
+          "stepId": "later"
+        }
+      }
+    ],
+    "assertions": [
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/state",
+          "stepId": "later"
+        },
+        "op": "not-equals",
+        "right": {
+          "kind": "literal",
+          "value": "FULFILLED"
+        }
+      }
+    ],
+    "canonicalHash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+    "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+    "source": "DEVELOPER",
+    "sourceRef": "an order observed as CANCELLED must not later be observed as FULFILLED within the same fresh trial",
+    "version": 1
+  },
+  "predicateRef": {
+    "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+    "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+    "version": 1
+  },
+  "replays": [
+    {
+      "baseline": {
+        "assertionIds": [
+          "b38a8bef-5d02-407c-9ce5-dda68daf83a6"
+        ],
+        "checkStepIds": [
+          "baseline"
+        ],
+        "id": "7b4b5d39-9647-4c72-8083-ca5ea82e4b07",
+        "resetStepIds": [
+          "reset"
+        ],
+        "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+        "trialId": "d9a89e52-6a60-4826-8e91-a8c207a7412b",
+        "verdict": "SATISFIED"
+      },
+      "evidence": {
+        "baselineEvidenceId": "7b4b5d39-9647-4c72-8083-ca5ea82e4b07",
+        "id": "fd9090c3-6504-4a5a-a7dd-dd08d2c958bf",
+        "observationIds": [
+          "589ae90f-2e75-41dd-91e5-40499fe5741b",
+          "7d53ada1-a96d-479f-929d-4b27c9fc7808",
+          "8473ae23-1052-4a12-9a38-68f9cb4cee98"
+        ],
+        "outcome": "VIOLATED",
+        "phase": "REPLAY",
+        "predicateRef": {
+          "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+          "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+          "version": 1
+        },
+        "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+        "symbolicOperands": {
+          "applicability": [
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "cancelled"
+              },
+              "op": "equals",
+              "right": {
+                "kind": "literal",
+                "value": "CANCELLED"
+              }
+            },
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "cancelled"
+              },
+              "op": "equals",
+              "right": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "later"
+              }
+            },
+            {
+              "left": {
+                "kind": "step-index",
+                "stepId": "cancelled"
+              },
+              "op": "before",
+              "right": {
+                "kind": "step-index",
+                "stepId": "later"
+              }
+            }
+          ],
+          "assertions": [
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "later"
+              },
+              "op": "not-equals",
+              "right": {
+                "kind": "literal",
+                "value": "FULFILLED"
+              }
+            }
+          ],
+          "executionOrder": [
+            {
+              "operationId": "POST /api/orders",
+              "ordinal": 0,
+              "stepId": "create"
+            },
+            {
+              "operationId": "POST /api/orders/{orderId}/cancel",
+              "ordinal": 1,
+              "stepId": "cancelled"
+            },
+            {
+              "operationId": "POST /api/orders/{orderId}/fulfill",
+              "ordinal": 2,
+              "stepId": "later"
+            }
+          ]
+        },
+        "trialId": "d9a89e52-6a60-4826-8e91-a8c207a7412b"
+      },
+      "observations": [
+        {
+          "id": "589ae90f-2e75-41dd-91e5-40499fe5741b",
+          "result": {
+            "elapsedMs": 1.1580420000009326,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/orders",
+              "url": "http://127.0.0.1:57733/api/orders"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "522b6fc4-21ad-49e7-8469-98d325d0b3f6",
+                "state": "CREATED"
+              },
+              "elapsedMs": 1.1580420000009326,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 21:07:58 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 201,
+              "text": "{\"id\":\"522b6fc4-21ad-49e7-8469-98d325d0b3f6\",\"state\":\"CREATED\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T21:07:58.504Z",
+            "status": 201,
+            "stepId": "create",
+            "truncated": false
+          },
+          "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+          "stateMappings": [],
+          "stepId": "create",
+          "trialId": "d9a89e52-6a60-4826-8e91-a8c207a7412b"
+        },
+        {
+          "id": "8473ae23-1052-4a12-9a38-68f9cb4cee98",
+          "result": {
+            "elapsedMs": 1.1404590000001917,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/orders/{orderId}/cancel",
+              "url": "http://127.0.0.1:57733/api/orders/522b6fc4-21ad-49e7-8469-98d325d0b3f6/cancel"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "522b6fc4-21ad-49e7-8469-98d325d0b3f6",
+                "state": "CANCELLED"
+              },
+              "elapsedMs": 1.1404590000001917,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 21:07:58 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 200,
+              "text": "{\"id\":\"522b6fc4-21ad-49e7-8469-98d325d0b3f6\",\"state\":\"CANCELLED\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T21:07:58.508Z",
+            "status": 200,
+            "stepId": "cancelled",
+            "truncated": false
+          },
+          "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+          "stateMappings": [],
+          "stepId": "cancelled",
+          "trialId": "d9a89e52-6a60-4826-8e91-a8c207a7412b"
+        },
+        {
+          "id": "7d53ada1-a96d-479f-929d-4b27c9fc7808",
+          "result": {
+            "elapsedMs": 1.4147499999999127,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/orders/{orderId}/fulfill",
+              "url": "http://127.0.0.1:57733/api/orders/522b6fc4-21ad-49e7-8469-98d325d0b3f6/fulfill"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "522b6fc4-21ad-49e7-8469-98d325d0b3f6",
+                "state": "FULFILLED"
+              },
+              "elapsedMs": 1.4147499999999127,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 21:07:58 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 200,
+              "text": "{\"id\":\"522b6fc4-21ad-49e7-8469-98d325d0b3f6\",\"state\":\"FULFILLED\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T21:07:58.511Z",
+            "status": 200,
+            "stepId": "later",
+            "truncated": false
+          },
+          "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+          "stateMappings": [],
+          "stepId": "later",
+          "trialId": "d9a89e52-6a60-4826-8e91-a8c207a7412b"
+        }
+      ]
+    }
+  ],
+  "reproductionClaim": "shortest verified sequence found",
+  "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+  "setup": "Supply explicit target/address/operation approval, mutation acknowledgment, finite limits and credential slots separately. A standalone runner is not included in this manifest-only export.",
+  "stopReason": "LOCAL MINIMUM",
+  "truncated": false,
+  "verification": "UNVERIFIED"
+}
+```

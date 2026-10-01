@@ -1,0 +1,18 @@
+{
+  "task": "T044",
+  "classification": "developer-executed live acceptance",
+  "observedOutput": {
+    "task": "T044",
+    "result": "FAIL",
+    "reason": "LIVE GATE INCOMPLETE; NO PASS RECORDED"
+  },
+  "failedStage": "UNKNOWN; NOT RETAINED",
+  "lastCompletedStage": "UNKNOWN; NOT RETAINED",
+  "diagnosis": {
+    "confirmedDefect": "ACCEPTANCE DIAGNOSTICS / FAILURE EVIDENCE RETENTION",
+    "runtimeCause": "UNDETERMINED",
+    "evidence": "Original catch discarded all exceptions; evidence exported only after all PASS checks; isolated schema dropped in finally. No failed snapshot or Gate 4 package is present."
+  },
+  "codexLiveAcceptanceExecuted": false,
+  "T044Checked": false
+}

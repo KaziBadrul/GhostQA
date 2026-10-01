@@ -1,0 +1,6 @@
+{
+  "scenario": "cancelled-order-fulfillment",
+  "inconsistentState": "FULFILLED",
+  "repairedState": "CANCELLED",
+  "requiredBaseline": { "orders": 0 }
+}

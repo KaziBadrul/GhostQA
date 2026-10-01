@@ -1,0 +1,5050 @@
+{
+  "task": "T048 POST-GATE FAILURE ANALYSIS",
+  "seriesId": "gate5-0964afd0-7aa7-4a71-a063-ce7042585538",
+  "historicalResult": "FAIL",
+  "T048Checked": false,
+  "historicalFiles": {
+    "tests/acceptance/benchmark.json": "ed6706cb2238baa62d2c6107a1eadf0a198cbe58c6ef444a34229f083d6c1f04",
+    "tests/acceptance/results.md": "bb1b1d06031f0c8c628fba819669c96c79332f79487f039722dd238f1684e7c6",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/9-assigned.json": "c2ae6ee0de4780185de7071ae6320cbda5d52ef54b89bd1dde02f479b9fcd90c",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/8-result.json": "a4a41e2335d6747bddb4846a66b71cfc9deae7cb0670a5f7e71caef4ed4407a8",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/summary.json": "82d7534b6082f4106d57d81c5c337532b4a1c93da2c77d862077d862c62935ca",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/26-assigned.json": "2ead5bba37485807540ee5726830960e9678384dd994808d4f448e4bc13f583a",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15-result.json": "feb51bf0c5e9dadb29cc3c0103936ad6f5c1d87fde3adacff2db9dfa810ad001",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/27-result.json": "86a001c11f6fbefa2a80244e3f67b729ea022f26685c9501ecff9aaab2ffa937",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1-result.json": "92b0aff05b12c402764314b325d7a9b51e05e585a895ad5846dff27e4c90e6c9",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/22-assigned.json": "224bed0c51471a610b958471eea897a9a43cbf8ce94510f34a00cee55507ab00",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/25-assigned.json": "ab187bbf32bf1a2679d7a104520ea7e6ea1bc02fe3974b5811f3826e83ef9800",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/10-result.json": "998d88168ee485f34e6de9e6b6df6f81e93c1064d8595ea873ca26f9a2de98d9",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/21-assigned.json": "9ac3865324e20ab738e443fb55cce2be1103f3c3e517eaebd849ea1bb4de7478",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/18-assigned.json": "5a5752584baf7d7add3ff8a397a40865737a56fb29ae9c3fb972adc2e55d6c8d",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4-result.json": "6a8376ee13a2e6edc4eebc1d2d6a9186d3f39ecd060711df31f7ec59d4637599",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/22-result.json": "ce40a538d66a70091bff4d5047d5d7de73605c2c46dd2f753ca7a479ac23f07d",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/19-result.json": "f069362da6daa47e68bdb536dd55ea0712d593fb07fd276ee8eb188f79d2d767",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/28-result.json": "b1ad0b7a509617acbde1edf6e0007c3bbe05238f306c09950966fd56d8cc1866",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4-assigned.json": "59edb6bce8de501791dbfa53015f1dbe06486f2ef59c5399c6f07e4e41c5b04d",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/21-result.json": "383314a24a695983df8d5d2e3cca88c0f8ee0398d8547b596dfb4243eda48a44",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/7-result.json": "14895adee697afb5e9b567935b08815b776cbca56a4b062a43fc0de79cf77f44",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/12-assigned.json": "ae1ca09c9a35618860d9c3e9a1c878bee80952bc16a183a871631c01fd5fcce6",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13-result.json": "b5df8eeb3c66c70939b1500539282e703f13ce94388566a7ccfb8e5e426ee886",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/16-assigned.json": "fb003bdbda52ad0e95259e8465904a061eb2ee40b9125b3a66ae10e77b27a08c",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/28-assigned.json": "07363f134001944ebbdea7d50b40c8a4167eee2f0f4c5846f427da294ff9ce09",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2-result.json": "6c7c4bcffd6fc9830846691bf021fce7b7d5e55278126ae9db12198a24d5e5ae",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/11-assigned.json": "b6d824787df0fee0a4f7bcf13d5849cbeb94b97a875c9e5a73cad297a10334f7",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/24-result.json": "3b6753d47005d28caa3ee3fae8b3c7e0b2b57c9cd4c7adfddea4f496b5101768",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15-assigned.json": "d7392ab74662bbdbecca45e2136cdf1367ff2baec2ee07be88d84c1726b7e8d3",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/16-result.json": "8c1961b4cb0971843d8fdee639ad02520e677d2f5e2146175d4859dbd0e344fe",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/7-assigned.json": "8664e0d7c0ebacc0b8e3681a0f5b8a19dbb58ce69a78c62c0c85971df488ce57",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3-assigned.json": "50808010891dc052a9416dfdf2d9dff21ee1217331bebdb499ca8a3e118bdd73",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14-assigned.json": "4cc3f95cf73b9e6d8638a03297259ab294a948212bc0aff8d6080394998a77dd",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/10-assigned.json": "a8aee7f5a489f59dc826a1024efa7bc7dc6dac9b078d4133c6c5480b14fd2e96",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/18-result.json": "cad1cb811f7fe45fe3841c48772b0f356a94f786667e3d22b5b51172aa0a493e",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/29-assigned.json": "85ebda48e192f2b0d67d6b953e35246ac238b2791749eb2eeec0ab29a6c596dc",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/identity.json": "590d1f8731cea161e0c89fb8970f0603f780a836c132705847692ff62a454d36",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2-assigned.json": "1771f1bc414c5722ea31409d600c4f6db44f34e41c02067ccf47ed6ab3c7ab8f",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/23-result.json": "93bf3cd16910790270dec57b7414af788dc25ea4eb1d5179a8c0647017f2ef47",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5-result.json": "5452921b820a920514b549228c03d319165b5f968ec82693101fb6b52217dc4e",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/6-assigned.json": "09146fb8e2d1abe72cf2468e42d2570438b39ea56ef2f2d84b45fc18bdd3af66",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/11-result.json": "9db778cf738139a2d27e23cd7b821da7225465f432e879134da2d22f1a409784",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1-assigned.json": "9b204e5b86b9a423d706a53cbf4f8050443d4f05f0f510fe3f6e4d5d1dfa4f30",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/26-result.json": "dc3cd2aaa0d5acd9afc59a5f072cd6cd777c8a72a7e6776eae7f7d47ae05e2a6",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14-result.json": "60d797acb3bce4179532d7d99fff6a72ae5d579d9b96e1876d47e83b68a606dc",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5-assigned.json": "5c0f4b7599ad32bac2012dff847cd68e6c32dd13cd1e23fb1c74b97e4626427b",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/validation.json": "736515122cddacdf7fd6fb31eba776bd47ba6af55f5e9b8d7ab9c5bb714f12f9",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/9-result.json": "09ca689402bebdcbaf02c21bd0f3886fcee5a19838d6fc488451662e1256b12a",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/17-assigned.json": "b4623e6539a18bfb0d9ef5baedc1079e46c916e8135572ac13e88d3f1acab11f",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13-assigned.json": "8ea6eda88d8020ee5130fb6257bc175abf1d51daeaf0cfbfa7fb40a4553deb6a",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/30-result.json": "6d9844d3463ab593d09de627e9c1ea2e03e9b87bfc7c73ace7ea2685ebafbf7e",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/19-assigned.json": "4265609971de014638deee985b6ed536248cd84dcd9c7c55c2834b0153486f86",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/series.json": "3ffd8e6e4e45b4c57d8335f7151bb2a38b2875cd56059f79accf10419bc04664",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/20-assigned.json": "3b1988ec5ceffec9df90c3b61b008e644ce92bc98b0a2a1bdfe30c8997fcfccc",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/24-assigned.json": "e783368bf51b1d334a0d1681d4a48cbed83d64d88df3f844fb2c36f994703a99",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/17-result.json": "5bd616b4360a0edd15f90c50fafbeca160b9523a9980824da26be60dd72aedaf",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/preflight.json": "cac811b3872318a55b903fe392c45c0be5e0b90e176669510c931db44f9d2b94",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/25-result.json": "4f29e5db6c58ecee97148fcbea698d7b6e007d90fcc5324523d70c94daa55293",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3-result.json": "8ebf5d2c646e5af5bf4ff9f17b10cd74b96714c739fb26a5167346c2c6c30ccc",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/12-result.json": "df48ad01a37a012c9d5dbb8d926409e6e1b143ddfd0ef678baf965451021e1b5",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/6-result.json": "dfeb9a6d8d59232ca846d4051f9c682cd6be1209d64043626da8d928959ee61c",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/20-result.json": "6e1251d1d52bf7750bdbfd3c866c3b5d812970860c4c64518a5f0886289a03bc",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/8-assigned.json": "7ca27e1b5a29fdae916840cfd25280ae62c090321bb39fb9962b41055350320c",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/23-assigned.json": "6bad2e3d6360f8e6d476423f37b76acb996d1db882ba3397dee7c858bc671b85",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/29-result.json": "3234bcf52a718c55e418f2b98f379600e6ce203cae2804ba9f506eaf20501366",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/30-assigned.json": "7f76f077ae9e136f13873523f18f82a82ca495d73958b252f47a8d79d39996e0",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/27-assigned.json": "e321f2eb8465dc117a83ce206482fddac2a83be354a2337a34633c859d252624",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/20/evidence.json": "374a8bb1204167d1df019e12f47fd932c52a6034f58e6c17b318d6b9f63dfd19",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/18/evidence.json": "5210d8013176d0367a1cf745dd8125ea3b91e7f0943f7a027fb9a0973ef30f94",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/27/evidence.json": "d815c008c875a9a9bc9ff602c4a6ee9721b123335e780fa188076b7f3a7da256",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/9/evidence.json": "9d909a5269fd2e528b0f8e83dd75e73b1a10071c58b2392f38e26bad991793c9",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/11/evidence.json": "04c13fa7637dcdb53ab041d57973a15e0c2a02dc29416051d4f020d1ab64fe4e",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/7/evidence.json": "7f6d4a82f4c6ff587c05b3c45075c692278ae6a5973068189e180a7744a92341",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/29/evidence.json": "dba7ea36b7086da0c98c3d98ad5c19b0f8f635f059377dbcb9ecf5cd5f8963a2",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/16/evidence.json": "91722447593ed4e285b11f77aa6d16749b9f86753e355f70531debba17cb9155",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/6/evidence.json": "bc75dd7b2f653d931294ff409146a4867d42834f79bd8b36e293efba4b6ff071",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/28/evidence.json": "f2bcadf810bba626358d5d95cedd9cade0df5bfb61b7c27e2931688c637e587b",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/17/evidence.json": "b939f74cf1161634706d079e3467a72664568073517a7e0094f3b8f6b12b7414",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/evidence.json": "0f3356edb332be71f51b47eded6a44aaf6f6a32918eebf6d66d184d7d4f66555",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/report.json": "c6ee240a1fb18269a9fbcbdb222e6729bbc7f038bde98f57e50b796a735d69e9",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/report.md": "dbd545fc4cd7218acef2603da7342e0f5ff61c3c6aaa195ff658e2388aa1d818",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/regression.mjs": "7355ad9557b168de32b9e2b6fea7afc4e186449c569dc049c4cfc65cf16cbc70",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/manifest.json": "98be5b4e079fb3c21c1d5ea5490da018d96144307effb0be37fd2106591fe6d0",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/10/evidence.json": "3719e52493fb68a539626dfe3b5d4dc5da3dce9159fc1a8aa400768150783f27",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/19/evidence.json": "568ca4dd3b4cabd21eb6ca4897f47dbb5468a6d275db3d51802b815b9dc923d7",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/26/evidence.json": "5e3d0a5b902a653531927f402d3d5c7cead471999097053ba1a89fa565d2c11b",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/8/evidence.json": "50ab48c148101ccea07c4bb93747ace40624a5241bdb5cfbd549e2fd41699ef4",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/21/evidence.json": "93c5fbd4518732b71abe766db2d9188b57dde4592e7de4c6ac1dee0245401376",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/30/evidence.json": "f64492135377170f2126abc1d4c7d354e5ed7b09f0efc9791d6f95b4d4d8603b",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/24/evidence.json": "cf7df117474b9cc08a2af5ad3939ce1b69dbb8ec013b48806635961cad7d49e3",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/23/evidence.json": "175be6715a6c17dfd8d5a0e7619c11e72252a66768bf82146c2a9250c9e6d3ee",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/evidence.json": "9db3e76273ce42f6b1d894760c33fa02db08891e766b664a616dc3a744593a54",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/report.json": "3c1f4ecaa66c16fce40f3a3932de5f80215c2b6b3618a0d2e0156350469123a9",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/report.md": "d43b3c673078b4c42bcef015e952c2e83eff1717aede61cbe6249c031d296c22",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/regression.mjs": "577060cbaffdf07f49dd845ec11f1dd7a75c96b84e37013842ac5051c16c46cd",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/manifest.json": "1e85cd3c03dcc22d58b686faefdd6712b77f8d70d2331c6532423c4cc53bf9e0",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/evidence.json": "57beabeceb1f00089142ec8a025b22a479acbc205465863c408b706e2dcfcf05",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/report.json": "eb73b4529958b4fafe831be48ee122b7abb447e7c96ad5b80a3d25f70e35b499",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/report.md": "5a60049b9bd634848cdd12875d6bf796dc4cb6a6824a8786b6a38fbc5e2b0498",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/regression.mjs": "88fecd13cf06f349efc62f41f2fd19a0d9a42db5bf310cfdb893cb44f826b68d",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/manifest.json": "ba56876e7568dd9a0efe69649fc29faeabf7791d9bbd07ca834a613abf4e5b7b",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/evidence.json": "d29c8b02a3088b9265dc842e8546fa6261df20f935c90c6923d372ac40c379a8",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/report.json": "d06ab5123f81e7a2e3e384ab1c637b5886e7a30c2b2aabcb22e61e9200383d51",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/report.md": "52a93ec0e0b92dbc43b064b780b959951c2cda67c05569e9ae9776753494e57f",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/regression.mjs": "aed90806b7798957db42c9a29e54f5d943a3c362c084b389e2468ab46eecf36c",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/manifest.json": "24b466336948c23e03e87fe232d80cf7680d65e751e5c3e67e13b84bd4454db7",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/12/evidence.json": "9cca041a699be64e48ebae586bdb65e88fe00b184ba6c3aee32aa52bf5d9eb3c",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/evidence.json": "fe578c6a2923563983ce65812c82c9579d1c23087051aaf78cdd831cf221a2ee",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/report.json": "5fd36142eeddc0fe2a4ba4e450a2a5ff2568a4fc9fc8b7cddc1b3b6ec9d66e31",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/report.md": "cf1976b498c4edd0aba061e52942ff4dfdc07d3ed3b940ed404e7244013498bf",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/regression.mjs": "79dda1c2f05f66b2abc40010fea3fbbdab2ef857dd185b99d0f616f433cf8628",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/manifest.json": "1e410dcb5ecf96454474f376ce6c3fc585f982875dee9de4109dbf7439d514b3",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/evidence.json": "ae5d3d5044e896ce4e3033d0abb4b0452639d662cd9b819a7f658d88cb6740d8",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/report.json": "04c7f8c68eca7e79b0ff42021c6b7c0c73c1b86dc870a91014bff6613c344bd3",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/report.md": "487c330c219c97a98775f85e5c180289cb30c9301dbf942a2fb18be5fbc3ef08",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/regression.mjs": "cb15e446f69a9a569bd3fea7d1e69d75bd439b018b75b344765d666684a5daf8",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/manifest.json": "de16a52bea7832764cfd19505ed1bba6723449a52d28e92069e9cb4f0a8244e4",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/evidence.json": "82696185b00c90be29fde4729fd008e35a1b503a5f5daa0cf8012b7c71268987",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/report.json": "ed5e8f4f7aeba8d701bc87ddd21e7ecfc764eb410685967c42c2bf060125c4f7",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/report.md": "d9ea0c649c32a0520476c1bbc35ad38b9c7e0b6c84041bffd0ac2a092c98629b",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/regression.mjs": "6f4ebbd8a5a7ce396b3201ae468f6d825930aa96bbf13f9b43ee8f1d8c1500b9",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/manifest.json": "49a1b442670f33d044f91ba93109a34ab87d69493899351beab36220c5c193e1",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/evidence.json": "1e32eb715d8ca5cc27a60b78d97a3f0ed499852e75defdadc367af8dcb02e096",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/report.json": "b62d344904b5b06de01d40a6d809a5cf9440a1aec58e4ff5548fa9ae3b2c40c7",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/report.md": "9d0f944b9e8cc6f711d8799b5a8b190de4bc498cf7494fb428068087c66a8e92",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/regression.mjs": "4d6dc63baefe2e1cf3e24d6f0eb636cd744860e39c0633597fd59c3ef8aa27c0",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/manifest.json": "542138485f6e3fa5bd25cef709b4b2a930c4ff4fc52aae577204116481168b15",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/22/evidence.json": "425f8de22d24ff7ec53ca94e125357947a68a57f067cf63d0be63aac1bb240c4",
+    "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/25/evidence.json": "18254d2a08186204b1d3cb63e628fa924e404c13b3280c7452332f926072da65"
+  },
+  "historicalIntegrity": "PASS: 129 files SHA-256 unchanged",
+  "matrix": [
+    {
+      "ordinal": 1,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "repetition": 1,
+      "assignedRunId": "1ae77195-4079-4629-948e-f818610e6ed2",
+      "executionTrialIds": [
+        "5ffe0752-174f-4c0a-bf05-20037e2f1751",
+        "852a964f-7f27-4d4a-b0ab-7c44ef272fe5",
+        "a83453a0-7bf2-430f-ad16-2c0d91c95591"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "providerCallResults": ["PROPOSED"],
+      "proposalValidationResults": ["ACCEPTED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 1,
+      "targetRequests": 15,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "trialId": "5ffe0752-174f-4c0a-bf05-20037e2f1751",
+          "evidenceId": "d51935fb-b8ac-460b-905c-8d04d5875c81"
+        },
+        {
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "trialId": "a83453a0-7bf2-430f-ad16-2c0d91c95591",
+          "evidenceId": "2b50647a-eb63-4dc6-9021-c22401a7a1e1"
+        },
+        {
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "trialId": "852a964f-7f27-4d4a-b0ab-7c44ef272fe5",
+          "evidenceId": "d13b7a0b-bb6c-4f92-ae7e-abe4c75f2523"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 1,
+          "roundId": "85667fdb-cb3b-404d-a46f-44400be2148e",
+          "intentEvidenceId": "2b4b1324-8b9d-4efe-9111-df6a1a2563c2",
+          "resultEvidenceId": "8d1c4601-9549-4f88-8b73-6b52cc6de1f3",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2171,
+            "outputTokens": 658
+          },
+          "noveltyHash": "f96dcf3588f03eb2ce5329c4c37d84370ec69bb6077a4f33e8b18587ad18b5e1",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 2,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "repetition": 2,
+      "assignedRunId": "bce853ab-b10d-49fc-9aa7-f834d1c9bc77",
+      "executionTrialIds": [
+        "bf141d50-375c-48ba-8709-b20b98e3caa9",
+        "dffeab3c-cf9c-465f-a37d-f3d2fd6cd1c0",
+        "e835cf32-ced4-400e-b0bf-bad3488fd8ee"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "providerCallResults": ["PROPOSED"],
+      "proposalValidationResults": ["ACCEPTED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 1,
+      "targetRequests": 15,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "trialId": "dffeab3c-cf9c-465f-a37d-f3d2fd6cd1c0",
+          "evidenceId": "c8f32b50-e432-49a3-8f86-f44f997b4457"
+        },
+        {
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "trialId": "bf141d50-375c-48ba-8709-b20b98e3caa9",
+          "evidenceId": "4262c789-41e4-4035-b4f6-ce55b4e2d65c"
+        },
+        {
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "trialId": "e835cf32-ced4-400e-b0bf-bad3488fd8ee",
+          "evidenceId": "06b67ea6-00fb-4eca-a578-174fdf05e36b"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 2,
+          "roundId": "0354c954-56e0-495f-acfe-89d637f06847",
+          "intentEvidenceId": "a407f893-fbfb-410a-ab75-a264f72a00ae",
+          "resultEvidenceId": "62fc17ec-95d2-456d-b83a-07188af3aa3f",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2164,
+            "outputTokens": 677
+          },
+          "noveltyHash": "dbf1324787e55c33d46748e512e5e04760c0075168fed15e1c895aa09f0f50ad",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "step1",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "step1",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "step1",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 3,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "repetition": 3,
+      "assignedRunId": "ea34c5e3-1b28-4741-86a9-3521d33e8d2d",
+      "executionTrialIds": [
+        "8b39f66e-31d8-4973-9bb4-b4e39ea503f9",
+        "dd93fd67-cb9f-43d3-82e2-f6e1ca030f29",
+        "f451c203-4b9f-4464-85ba-73799428abe6"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "providerCallResults": ["PROPOSED"],
+      "proposalValidationResults": ["ACCEPTED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 1,
+      "targetRequests": 15,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "trialId": "8b39f66e-31d8-4973-9bb4-b4e39ea503f9",
+          "evidenceId": "9cb30ceb-e7d2-4437-9b4d-bfe567fa6405"
+        },
+        {
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "trialId": "f451c203-4b9f-4464-85ba-73799428abe6",
+          "evidenceId": "c1ea2384-5b3e-4dc1-918a-271ac8dad54a"
+        },
+        {
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "trialId": "dd93fd67-cb9f-43d3-82e2-f6e1ca030f29",
+          "evidenceId": "0fda486d-50c6-485d-b21d-dab51b2f6d40"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 3,
+          "roundId": "87f0427c-2973-42f6-9925-b3189b14fbd8",
+          "intentEvidenceId": "27b25f0b-b994-4da8-930a-d26c832ed6c2",
+          "resultEvidenceId": "3435106a-5204-43ae-bd3c-373f85430911",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2172,
+            "outputTokens": 687
+          },
+          "noveltyHash": "82ad04ec492c6c3303a8aef18da0c9a12e75f31f8145ea9c6afe54643db0423a",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 4,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "repetition": 4,
+      "assignedRunId": "bd670426-6159-4500-bd27-d49118082aa0",
+      "executionTrialIds": [
+        "552ab83c-0415-477d-88f5-71f83c40e335",
+        "b96bb61e-55af-4d27-964d-948307676dbe",
+        "c8aa8d9c-c602-43a2-9014-14cc9b97ea09"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "providerCallResults": ["PROPOSED"],
+      "proposalValidationResults": ["ACCEPTED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 1,
+      "targetRequests": 15,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "trialId": "c8aa8d9c-c602-43a2-9014-14cc9b97ea09",
+          "evidenceId": "06c8a828-6bba-44ed-ad57-4fac251476c5"
+        },
+        {
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "trialId": "552ab83c-0415-477d-88f5-71f83c40e335",
+          "evidenceId": "103f48bd-75af-41cd-99bf-ac5f1e939abf"
+        },
+        {
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "trialId": "b96bb61e-55af-4d27-964d-948307676dbe",
+          "evidenceId": "3121134b-3ba7-43d6-a96c-af58ed79f568"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 4,
+          "roundId": "1a6f0ee7-5046-4601-bee5-c5048d6be603",
+          "intentEvidenceId": "bee77dcd-baea-41a6-b89b-80ccf2f85fa2",
+          "resultEvidenceId": "3b85fb4f-701f-4de9-95c9-fbf5d6290272",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2172,
+            "outputTokens": 742
+          },
+          "noveltyHash": "17a5a44002e2b5cd84c22deb5fc7c269be87a8ec42bbad3a2af010b6d91f77be",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 5,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "repetition": 5,
+      "assignedRunId": "93e5d5a0-8b73-4261-88f7-ea9dbee1063f",
+      "executionTrialIds": [
+        "1335348e-4ff3-4709-8b4a-75d0028ed3e8",
+        "4035846d-d23c-49bd-b855-2d4ea064020a",
+        "e8f88065-b215-4903-b329-d520f17f4255"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "providerCallResults": ["PROPOSED"],
+      "proposalValidationResults": ["ACCEPTED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 1,
+      "targetRequests": 15,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "trialId": "4035846d-d23c-49bd-b855-2d4ea064020a",
+          "evidenceId": "59d0a2b5-8ff6-4552-8ebc-fd14b9077093"
+        },
+        {
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "trialId": "e8f88065-b215-4903-b329-d520f17f4255",
+          "evidenceId": "4e1f18fd-5920-4cce-b576-33cf19aca7f0"
+        },
+        {
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "trialId": "1335348e-4ff3-4709-8b4a-75d0028ed3e8",
+          "evidenceId": "f3fc6d61-a04f-4135-b3ab-a7539ebe24d9"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 5,
+          "roundId": "92e32325-e19f-4f70-830a-f0a287a839c0",
+          "intentEvidenceId": "6ed9910b-295c-496d-8f62-5ee5bdd3832f",
+          "resultEvidenceId": "808a86eb-3f0d-460d-95ae-c23c65d4ceec",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2165,
+            "outputTokens": 700
+          },
+          "noveltyHash": "54caacc1ed894567e7ed110b7cdaa221951a33c20eb5eb66ba94642a4edfdfee",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 6,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "repetition": 1,
+      "assignedRunId": "f93f1450-38dc-4d65-a2ae-43e6a0c22a8d",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "B: downstream proposal contract rejection; rule unavailable",
+      "providerCallResults": ["MODEL PLAN ERROR"],
+      "proposalValidationResults": ["REJECTED; exact rule unavailable"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/6/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 6,
+          "roundId": "2c9f0b37-caa9-43f8-a2bd-d07067c1743b",
+          "intentEvidenceId": "88f97fdf-a9c8-4713-8258-b08861b8bc88",
+          "resultEvidenceId": "9f9655dd-2e7c-4814-a973-f272a480a796",
+          "providerCallResult": "MODEL PLAN ERROR",
+          "validation": "REJECTED; exact rule unavailable",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2172,
+            "outputTokens": 776
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 7,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "repetition": 2,
+      "assignedRunId": "24e35e74-eddb-4b62-bf47-38264893f14f",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "B: downstream proposal contract rejection; rule unavailable",
+      "providerCallResults": ["MODEL PLAN ERROR"],
+      "proposalValidationResults": ["REJECTED; exact rule unavailable"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/7/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 7,
+          "roundId": "27b5eb1c-53fb-4876-9e7f-2d7eb339cef0",
+          "intentEvidenceId": "68b83546-b842-4fd5-9f8f-49ea08a65656",
+          "resultEvidenceId": "6d2410a1-4cc7-4fde-9b32-b06cc7fd50f2",
+          "providerCallResult": "MODEL PLAN ERROR",
+          "validation": "REJECTED; exact rule unavailable",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2166,
+            "outputTokens": 685
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 8,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "repetition": 3,
+      "assignedRunId": "fe8807a5-2716-4b5a-ac98-7478569a3d7b",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "B: downstream proposal contract rejection; rule unavailable",
+      "providerCallResults": ["MODEL PLAN ERROR"],
+      "proposalValidationResults": ["REJECTED; exact rule unavailable"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/8/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 8,
+          "roundId": "7d4c50de-da17-4e9f-a6c4-e925b1d915d9",
+          "intentEvidenceId": "921f216b-8e84-4bf4-8cd6-218c8444f412",
+          "resultEvidenceId": "294b956b-2930-4363-99c5-2834a879f76b",
+          "providerCallResult": "MODEL PLAN ERROR",
+          "validation": "REJECTED; exact rule unavailable",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2163,
+            "outputTokens": 657
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 9,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "repetition": 4,
+      "assignedRunId": "223fed5d-a2c7-44c1-b9bd-c7fbf3ef0bdd",
+      "executionTrialIds": [
+        "e127454a-fbf4-487e-bae9-ca924b2636db",
+        "e4a627bf-a085-48cd-ba08-acdc608ccd45"
+      ],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "STAGNATION",
+      "immediateCause": "C: three consecutive normalized duplicate proposals",
+      "providerCallResults": [
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED"
+      ],
+      "proposalValidationResults": [
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED"
+      ],
+      "stagnationState": 3,
+      "modelCalls": 5,
+      "explorationJourneys": 2,
+      "targetRequests": 10,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "e4a627bf-a085-48cd-ba08-acdc608ccd45",
+          "evidenceId": "c622f4be-4f08-43f0-aebe-351f002137ea"
+        },
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "e127454a-fbf4-487e-bae9-ca924b2636db",
+          "evidenceId": "5a26d1dd-fbe2-417c-a042-85213974f23c"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/9/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 9,
+          "roundId": "4174999b-45a2-4aa4-b4b2-32cf7b3a705e",
+          "intentEvidenceId": "bcd324e4-3382-4ade-8552-91108e9f57e0",
+          "resultEvidenceId": "d1233b5e-8db8-4777-a94d-2cf2511c530b",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2173,
+            "outputTokens": 736
+          },
+          "noveltyHash": "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 10,
+          "roundId": "ca8c9f1b-14f7-4043-95ad-077d036b02b9",
+          "intentEvidenceId": "e0491da9-39f7-4cb7-bd0e-c97c634fca62",
+          "resultEvidenceId": "33dd9beb-e872-4b2d-9a1b-1ac04f5ce1e9",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 4205,
+            "outputTokens": 696
+          },
+          "noveltyHash": "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 3,
+            "mappingCount": 10,
+            "consideredHypothesisHashes": [
+              "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 11,
+          "roundId": "d122da2f-d652-47ec-88b9-188e8d56aaeb",
+          "intentEvidenceId": "c3627fd4-5cbf-431e-921b-9d6f84665ec4",
+          "resultEvidenceId": "5825fbfc-06a5-4aa7-88af-5c004a794564",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6223,
+            "outputTokens": 708
+          },
+          "noveltyHash": "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051",
+          "useful": false,
+          "stagnantRoundsAfter": 1,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73",
+              "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 12,
+          "roundId": "5e45a793-c23e-4cdc-b392-f86c956b8d56",
+          "intentEvidenceId": "da55ef21-ba81-498b-aabf-0b1bef31ab95",
+          "resultEvidenceId": "28f2ebef-4801-471d-9bfb-f216a67e7da1",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6223,
+            "outputTokens": 695
+          },
+          "noveltyHash": "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051",
+          "useful": false,
+          "stagnantRoundsAfter": 2,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73",
+              "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 13,
+          "roundId": "5df34a12-b009-4af0-8339-ea4afa175fb7",
+          "intentEvidenceId": "404a0417-bbee-49fe-b704-c117a2357dd9",
+          "resultEvidenceId": "74740d5c-db2a-4b6b-9b39-02e543327d89",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6223,
+            "outputTokens": 676
+          },
+          "noveltyHash": "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051",
+          "useful": false,
+          "stagnantRoundsAfter": 3,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73",
+              "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 10,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "repetition": 5,
+      "assignedRunId": "d4ef84a8-d42d-4b8a-ac07-db84553d6e04",
+      "executionTrialIds": [
+        "182c15d8-2934-4648-9e03-a41cf23a00e4",
+        "e70891b2-7c04-4ffc-b12c-3531741eac44"
+      ],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": [
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED",
+        "MODEL ERROR"
+      ],
+      "proposalValidationResults": [
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED",
+        "NOT REACHED"
+      ],
+      "stagnationState": 1,
+      "modelCalls": 4,
+      "explorationJourneys": 2,
+      "targetRequests": 10,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "182c15d8-2934-4648-9e03-a41cf23a00e4",
+          "evidenceId": "1fb6e3ec-65bb-4922-ac00-771cfa07e835"
+        },
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "e70891b2-7c04-4ffc-b12c-3531741eac44",
+          "evidenceId": "bc5b9444-b6bf-4904-bce9-76c7150e51e5"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/10/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 14,
+          "roundId": "04e565e0-c1b5-43d6-aebf-c8b921c544b4",
+          "intentEvidenceId": "7a8adeeb-fc10-4517-aadb-135cfef7f447",
+          "resultEvidenceId": "c2878234-6ba5-44a2-a251-3c4432fcf477",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2159,
+            "outputTokens": 689
+          },
+          "noveltyHash": "817e78163f3cd576d9026c78e26f1fab14ea952b4506e9f34b37cc2bd9771957",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 15,
+          "roundId": "113764e8-fc2d-47e2-a9d1-0cd798280e9e",
+          "intentEvidenceId": "f5acf704-f10f-4cf4-b2b9-e25cb8bac45a",
+          "resultEvidenceId": "bce6e068-1e5d-4a9a-91a8-d9ec00a03591",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 4213,
+            "outputTokens": 635
+          },
+          "noveltyHash": "b6ae5dc612647ff99fff6d9c0889cd0461064a20c43a031a2dd4f2781a647a7c",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 3,
+            "mappingCount": 10,
+            "consideredHypothesisHashes": [
+              "817e78163f3cd576d9026c78e26f1fab14ea952b4506e9f34b37cc2bd9771957"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 16,
+          "roundId": "62993352-c7ef-4e55-82f9-3f607b866896",
+          "intentEvidenceId": "09fc7152-b3f3-4a46-9973-d9210821168f",
+          "resultEvidenceId": "9d430555-f0ac-45b3-b52b-a7ef434fb34d",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6243,
+            "outputTokens": 653
+          },
+          "noveltyHash": "b6ae5dc612647ff99fff6d9c0889cd0461064a20c43a031a2dd4f2781a647a7c",
+          "useful": false,
+          "stagnantRoundsAfter": 1,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "817e78163f3cd576d9026c78e26f1fab14ea952b4506e9f34b37cc2bd9771957",
+              "b6ae5dc612647ff99fff6d9c0889cd0461064a20c43a031a2dd4f2781a647a7c"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 17,
+          "roundId": "7655164b-d9a9-4e21-8556-4b5bdb2830d6",
+          "intentEvidenceId": "3b598c80-9e3a-49c1-ae96-0153f542388d",
+          "resultEvidenceId": "52370510-9c06-4c1f-a7cf-3583cb4896ca",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 3697
+          },
+          "stagnantRoundsAfter": 1,
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "817e78163f3cd576d9026c78e26f1fab14ea952b4506e9f34b37cc2bd9771957",
+              "b6ae5dc612647ff99fff6d9c0889cd0461064a20c43a031a2dd4f2781a647a7c"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 11,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "repetition": 1,
+      "assignedRunId": "c64b7a85-fb75-4824-b3fe-f43be1db1657",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/11/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 18,
+          "roundId": "55c0f87c-e60b-4297-9b4f-3e8134be3c18",
+          "intentEvidenceId": "4f188f9a-44f1-4b10-a2b1-33347e5ca858",
+          "resultEvidenceId": "a23cf3f0-5125-4be1-8570-c30850b57560",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1423
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 12,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "repetition": 2,
+      "assignedRunId": "c5a8d216-41f7-4420-ae0c-0b69265ee6f2",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "B: downstream proposal contract rejection; rule unavailable",
+      "providerCallResults": ["MODEL PLAN ERROR"],
+      "proposalValidationResults": ["REJECTED; exact rule unavailable"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/12/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 19,
+          "roundId": "0fa80720-4af5-487a-9809-1f82dca1cfe5",
+          "intentEvidenceId": "e9421cf5-5601-49b4-90bf-b5241fc7d225",
+          "resultEvidenceId": "6ccfcec9-4ff4-42cf-b652-af15837de07f",
+          "providerCallResult": "MODEL PLAN ERROR",
+          "validation": "REJECTED; exact rule unavailable",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2131,
+            "outputTokens": 681
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 13,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "repetition": 3,
+      "assignedRunId": "3eaf3a9a-798c-4ad4-9b76-5d1ffbfb8024",
+      "executionTrialIds": [
+        "a591becf-4da3-4d72-9f75-d1e2b6b754ad",
+        "e497f2c7-40c8-4230-b889-70585916995e",
+        "ec48769b-7d95-4ddf-842a-5eb1ba63d4e7"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "providerCallResults": ["PROPOSED"],
+      "proposalValidationResults": ["ACCEPTED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 1,
+      "targetRequests": 15,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "trialId": "e497f2c7-40c8-4230-b889-70585916995e",
+          "evidenceId": "0e9d2ec3-c145-4e54-818f-bb99cdfdde6b"
+        },
+        {
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "trialId": "ec48769b-7d95-4ddf-842a-5eb1ba63d4e7",
+          "evidenceId": "2e60e0d3-2616-4385-ba7a-b2fc58fa7eac"
+        },
+        {
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "trialId": "a591becf-4da3-4d72-9f75-d1e2b6b754ad",
+          "evidenceId": "19bde89d-7852-4643-bea0-31bad0c79c02"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 20,
+          "roundId": "cb2116f6-e47a-4fa1-a92a-f4693d558a77",
+          "intentEvidenceId": "2edd47bf-1cd7-43d9-83bc-e662574e6e55",
+          "resultEvidenceId": "8b89d3a5-7b42-4bff-8622-812851ac662b",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2135,
+            "outputTokens": 634
+          },
+          "noveltyHash": "ab6a5f5b7a0ed070cb78705abc783754845abbf2b42eab35bcd22fd03c963e0c",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 14,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "repetition": 4,
+      "assignedRunId": "90c02d8a-590d-47db-9e25-04a734c1cb2b",
+      "executionTrialIds": [
+        "70b25b64-42d3-4dcd-a5b4-d0829e7753f2",
+        "e07b2703-ba26-4a4d-a15a-8acf115ebe6b",
+        "ff7164a4-c979-4810-bca6-1b6cd5b6eba8"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "providerCallResults": ["PROPOSED"],
+      "proposalValidationResults": ["ACCEPTED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 1,
+      "targetRequests": 15,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "trialId": "ff7164a4-c979-4810-bca6-1b6cd5b6eba8",
+          "evidenceId": "cd1d833c-fae6-4e04-bd4c-9cd4149ebd9d"
+        },
+        {
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "trialId": "e07b2703-ba26-4a4d-a15a-8acf115ebe6b",
+          "evidenceId": "76df9e44-7477-488c-a071-f9fe221aaac7"
+        },
+        {
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "trialId": "70b25b64-42d3-4dcd-a5b4-d0829e7753f2",
+          "evidenceId": "9d4a6750-d181-43f9-b15a-b061a4a7f9d5"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 21,
+          "roundId": "2620bceb-fcd3-4f31-821b-b85c233d38dc",
+          "intentEvidenceId": "9fae5880-d5a8-4d7f-b8a2-7e3f03e22e60",
+          "resultEvidenceId": "87232b1d-92c4-4f35-81d4-7888acf60fc6",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2132,
+            "outputTokens": 648
+          },
+          "noveltyHash": "e4022c8f36726ee09b02896c928c3a17b49e1246f41998f95a293745244db12b",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 15,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "repetition": 5,
+      "assignedRunId": "74e5251e-49fc-4ec3-9f3a-37bfe5b367ce",
+      "executionTrialIds": [
+        "3777d7b3-67e7-40a3-b203-0cb9ff7c5371",
+        "3ca08709-501d-4515-8e5b-79becb0ce204",
+        "9646e0f7-9073-4d6e-a845-77985a5045e2"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "providerCallResults": ["PROPOSED"],
+      "proposalValidationResults": ["ACCEPTED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 1,
+      "targetRequests": 15,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "trialId": "3777d7b3-67e7-40a3-b203-0cb9ff7c5371",
+          "evidenceId": "dc0a1e92-f996-4757-8382-1fd2ce5ae896"
+        },
+        {
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "trialId": "9646e0f7-9073-4d6e-a845-77985a5045e2",
+          "evidenceId": "573d2ac4-98c6-43c6-a297-09343caf571d"
+        },
+        {
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "trialId": "3ca08709-501d-4515-8e5b-79becb0ce204",
+          "evidenceId": "0835b711-762d-47f3-a153-09f88c05cbc7"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 22,
+          "roundId": "19225936-8a2f-4d42-aa44-4925007cf357",
+          "intentEvidenceId": "4020e020-e8fb-4308-93b6-0224f84cf01f",
+          "resultEvidenceId": "d2c2f7a6-b5f0-4c2e-99bd-47d2662efb50",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2133,
+            "outputTokens": 724
+          },
+          "noveltyHash": "3242f1e156e53a23607ed0137d6dbb0a1e9749ab617ed2211216e72ff5120fc9",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 16,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "repetition": 1,
+      "assignedRunId": "87482f03-2fd5-46c6-aa0e-d6890002a9f5",
+      "executionTrialIds": [
+        "04a55167-b66e-41db-ae03-40b65a56b9ce",
+        "b7f1a7ad-34c4-42ac-baf9-77bcb41ea00e"
+      ],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "STAGNATION",
+      "immediateCause": "C: three consecutive normalized duplicate proposals",
+      "providerCallResults": [
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED"
+      ],
+      "proposalValidationResults": [
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED"
+      ],
+      "stagnationState": 3,
+      "modelCalls": 5,
+      "explorationJourneys": 2,
+      "targetRequests": 10,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "b7f1a7ad-34c4-42ac-baf9-77bcb41ea00e",
+          "evidenceId": "32bc563e-df83-40cb-805e-aa9a530bfdf7"
+        },
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "04a55167-b66e-41db-ae03-40b65a56b9ce",
+          "evidenceId": "a343a660-7485-4679-9b3a-b616a59d5ec9"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/16/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 23,
+          "roundId": "f4699882-6892-43b8-a07e-5793bc71a435",
+          "intentEvidenceId": "716946cd-8f86-4613-9183-443b0167ce89",
+          "resultEvidenceId": "216919ec-1dc1-4a01-9412-e4c0a601efd6",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2130,
+            "outputTokens": 668
+          },
+          "noveltyHash": "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 24,
+          "roundId": "86acfb1c-da31-47f7-890c-416c3f10ca24",
+          "intentEvidenceId": "7d60bfb8-79e1-4c21-afd3-c1085a61441f",
+          "resultEvidenceId": "c32d2ee7-14b7-4f41-b4e8-6a64f9e8df90",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 4121,
+            "outputTokens": 579
+          },
+          "noveltyHash": "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 3,
+            "mappingCount": 10,
+            "consideredHypothesisHashes": [
+              "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 25,
+          "roundId": "032b8eda-314f-4785-8bae-a90377e5a4dd",
+          "intentEvidenceId": "e5db7d45-5e07-41ad-86ee-114e34762d52",
+          "resultEvidenceId": "ae1e1bf0-b7af-4ce6-83d7-b7cd03a230f1",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6149,
+            "outputTokens": 691
+          },
+          "noveltyHash": "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef",
+          "useful": false,
+          "stagnantRoundsAfter": 1,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e",
+              "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 26,
+          "roundId": "9e795f92-e965-4dfe-8693-dd72fec06143",
+          "intentEvidenceId": "85360464-4f80-4890-b9f5-6ac85319e73d",
+          "resultEvidenceId": "0c6d27b3-64c6-475a-933d-0bfe5feca25d",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6149,
+            "outputTokens": 654
+          },
+          "noveltyHash": "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef",
+          "useful": false,
+          "stagnantRoundsAfter": 2,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e",
+              "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 27,
+          "roundId": "e45ef612-8830-4d32-aea6-ce29f902f659",
+          "intentEvidenceId": "1f53a78d-19bd-4748-b715-81d8b8f2c0e5",
+          "resultEvidenceId": "12fc1377-ce30-4fd4-a2cf-b24e4fdf11a8",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6149,
+            "outputTokens": 643
+          },
+          "noveltyHash": "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef",
+          "useful": false,
+          "stagnantRoundsAfter": 3,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e",
+              "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 17,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "repetition": 2,
+      "assignedRunId": "5b920534-da3b-4dba-85bd-4cce48efdd1b",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "B: downstream proposal contract rejection; rule unavailable",
+      "providerCallResults": ["MODEL PLAN ERROR"],
+      "proposalValidationResults": ["REJECTED; exact rule unavailable"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/17/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 28,
+          "roundId": "5d0c36b2-2556-4951-8625-92703cd2ede2",
+          "intentEvidenceId": "6cd32d92-9c53-41b2-9eed-7b2ebd4d5931",
+          "resultEvidenceId": "aa0a46c5-f128-4581-acdd-9c6548a9df94",
+          "providerCallResult": "MODEL PLAN ERROR",
+          "validation": "REJECTED; exact rule unavailable",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2132,
+            "outputTokens": 604
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 18,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "repetition": 3,
+      "assignedRunId": "a7116bfb-f64a-4d51-9582-33f4020e888b",
+      "executionTrialIds": [
+        "33dd7b98-188a-431f-acd7-09b6175dab6b",
+        "ca2032ba-8721-43f7-8fb8-458a88c96abd"
+      ],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "STAGNATION",
+      "immediateCause": "C: three consecutive normalized duplicate proposals",
+      "providerCallResults": [
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED",
+        "PROPOSED"
+      ],
+      "proposalValidationResults": [
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED"
+      ],
+      "stagnationState": 3,
+      "modelCalls": 5,
+      "explorationJourneys": 2,
+      "targetRequests": 10,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "ca2032ba-8721-43f7-8fb8-458a88c96abd",
+          "evidenceId": "f64769bf-7549-4b94-8a45-f481cf641c40"
+        },
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "33dd7b98-188a-431f-acd7-09b6175dab6b",
+          "evidenceId": "3c0634c8-5657-4c93-8f1b-f467df377631"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/18/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 29,
+          "roundId": "538cb16c-5687-4248-bf1c-0acefc0f1bc4",
+          "intentEvidenceId": "29df4ddd-0d11-4aa1-92db-eec0c023113a",
+          "resultEvidenceId": "7050fd47-797f-4f7c-b80a-7894188bb878",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2131,
+            "outputTokens": 640
+          },
+          "noveltyHash": "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 30,
+          "roundId": "8f0c05da-5237-43fb-b08d-0e2d99b26a0e",
+          "intentEvidenceId": "264eecbd-7224-4cf7-be85-0486fcceeba9",
+          "resultEvidenceId": "07deaa9e-2e18-4adc-9b28-7511f847d5f6",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 4129,
+            "outputTokens": 668
+          },
+          "noveltyHash": "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 3,
+            "mappingCount": 10,
+            "consideredHypothesisHashes": [
+              "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 31,
+          "roundId": "1468c60d-a82e-4e17-8266-9d9e08a82b03",
+          "intentEvidenceId": "9d1e0d2f-b377-44dd-85c4-8998070fbb3e",
+          "resultEvidenceId": "9a774169-2cb9-4aea-a470-f6e82da34a57",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6219,
+            "outputTokens": 628
+          },
+          "noveltyHash": "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b",
+          "useful": false,
+          "stagnantRoundsAfter": 1,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3",
+              "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 32,
+          "roundId": "a0cd7772-fbe7-4491-a973-c48f9e65cedc",
+          "intentEvidenceId": "897d1871-1eba-4842-b2cc-97ea8ea0c81e",
+          "resultEvidenceId": "c4a6f3a1-98ab-422a-975e-45ae1bf26a36",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6219,
+            "outputTokens": 647
+          },
+          "noveltyHash": "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b",
+          "useful": false,
+          "stagnantRoundsAfter": 2,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3",
+              "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 33,
+          "roundId": "092cb931-0348-4b6b-9656-7f3dbb17a865",
+          "intentEvidenceId": "170b8f70-4762-4458-898c-045ec5d22270",
+          "resultEvidenceId": "38e8f884-abb1-4736-ba36-9e620e5d8f9e",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6219,
+            "outputTokens": 641
+          },
+          "noveltyHash": "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b",
+          "useful": false,
+          "stagnantRoundsAfter": 3,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3",
+              "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 19,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "repetition": 4,
+      "assignedRunId": "3206cb81-e79d-49c4-967a-1692f7b7ba2d",
+      "executionTrialIds": ["5d7fe93f-a5f9-47c0-924f-dc6c928b6906"],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["PROPOSED", "MODEL ERROR"],
+      "proposalValidationResults": ["ACCEPTED", "NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 2,
+      "explorationJourneys": 1,
+      "targetRequests": 5,
+      "usableJourneyEverProposed": true,
+      "invariantEvaluated": true,
+      "invariantOutcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "5d7fe93f-a5f9-47c0-924f-dc6c928b6906",
+          "evidenceId": "569cc324-69da-4c5f-ad62-ae77aaf7285b"
+        }
+      ],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/19/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 34,
+          "roundId": "8e5db8ad-0ae1-4f28-9949-cd5ac24b00e4",
+          "intentEvidenceId": "8040136e-e6ee-4d72-b949-90105f9c9403",
+          "resultEvidenceId": "7e1b45c3-0e22-48e1-a238-de7489a875c8",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2137,
+            "outputTokens": 717
+          },
+          "noveltyHash": "6a3861ea640befed2c00ec7d78aa6d9f99d3e510dffd0ea4909b0ce9364a9471",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 35,
+          "roundId": "77c25f0a-fb29-4652-bec1-892b0fb33029",
+          "intentEvidenceId": "493d21ea-fe44-4b73-952f-f1924b95f821",
+          "resultEvidenceId": "53833f8e-68eb-4fc8-8085-44ea84d01587",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 2557
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 3,
+            "mappingCount": 10,
+            "consideredHypothesisHashes": [
+              "6a3861ea640befed2c00ec7d78aa6d9f99d3e510dffd0ea4909b0ce9364a9471"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 20,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "repetition": 5,
+      "assignedRunId": "08d258b5-2945-4d7a-bb67-06edbe340dc4",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/20/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 36,
+          "roundId": "de624b14-e085-4381-bd68-3dfef5a306f0",
+          "intentEvidenceId": "f7cffbde-1a75-484a-a30c-c335da3b41ea",
+          "resultEvidenceId": "425b238f-6044-42b8-80e0-35260c5bd37b",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1423
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 21,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 1,
+      "assignedRunId": "e3f0fd0e-106d-4cb7-b3b6-eed3eefcedb2",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/21/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 37,
+          "roundId": "fcc12695-889b-4ec0-af79-9ed03f0431dc",
+          "intentEvidenceId": "eb07c18e-6f93-4222-959e-c293af5137fc",
+          "resultEvidenceId": "a3ec1e06-2de4-41c1-9bf7-5cfcc8b2044f",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 22,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 2,
+      "assignedRunId": "4c6d588a-b684-4c87-b33e-1b7139402947",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/22/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 38,
+          "roundId": "ad1e6a15-c379-4b28-8b00-519c2a15dae5",
+          "intentEvidenceId": "ae137acb-920a-486d-8380-d26202c1fc2a",
+          "resultEvidenceId": "bec06375-0e68-443f-a533-aebf527677c9",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 23,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 3,
+      "assignedRunId": "c8beb97d-0625-4cb6-bcef-eaa9b3d6a539",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/23/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 39,
+          "roundId": "bfad5db2-7563-4b8b-8aed-da6f883501bb",
+          "intentEvidenceId": "25082770-9ecf-439a-af77-7f2271d71903",
+          "resultEvidenceId": "38623c5d-4269-4302-ab59-8d0c21a909f5",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 24,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 4,
+      "assignedRunId": "882ede05-f714-4671-96a0-7bf1658332a4",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/24/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 40,
+          "roundId": "71cea15b-58a4-4de3-a856-5e52f4fe47ef",
+          "intentEvidenceId": "b9d4f717-49cd-42c1-a309-0e06b716d677",
+          "resultEvidenceId": "d1c67ee1-0c14-4908-beab-542a2c294fa5",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 25,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 5,
+      "assignedRunId": "78e0b66e-c9b9-4c05-b204-08af27ef0836",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/25/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 41,
+          "roundId": "193ea46f-0ca4-45a4-b5b1-c5855341f736",
+          "intentEvidenceId": "3de4fc31-058d-4640-bd69-ae6206e8eebe",
+          "resultEvidenceId": "da216fdf-04c3-4953-8730-5c48d7cf71b5",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 26,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 1,
+      "assignedRunId": "49337009-822c-4611-85cb-8c6e646a5b94",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/26/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 42,
+          "roundId": "3b46c26f-1266-491d-a645-26d8c9b6d744",
+          "intentEvidenceId": "a7143160-6cff-4202-bdae-463ceab48a2e",
+          "resultEvidenceId": "23bc9c7c-35fc-4751-82c1-4fac77b229f1",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 27,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 2,
+      "assignedRunId": "0e855ea1-3314-4ab6-8a86-bbc04efa0103",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/27/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 43,
+          "roundId": "cfff907d-feb1-4c22-975d-baa3097d3446",
+          "intentEvidenceId": "521999fc-81a1-42d6-b541-9925fd4a2038",
+          "resultEvidenceId": "ea10343f-5b5d-437b-ac73-a31b8624048b",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 28,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 3,
+      "assignedRunId": "34a0b9cd-3596-4769-a8d8-569264c463a1",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/28/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 44,
+          "roundId": "5304a801-521f-4ba1-a4dd-1fd5a9e24967",
+          "intentEvidenceId": "a7568641-3b10-454e-ab5e-2798dc5f0866",
+          "resultEvidenceId": "66757e69-8b6a-43ab-87db-0131cbcf3e8b",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 29,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 4,
+      "assignedRunId": "2eaa9207-e1fa-4d69-b20b-0cb2daa29eed",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/29/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 45,
+          "roundId": "b9224898-c01b-479f-abcb-698412b32aa0",
+          "intentEvidenceId": "7d3f9ee9-33df-437f-8238-0de9ff0f9dd7",
+          "resultEvidenceId": "f2eaf21d-e242-45c1-ba2a-3fc477a785cd",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 30,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 5,
+      "assignedRunId": "36044720-151e-462e-b303-ee10b7c7604a",
+      "executionTrialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A: provider HTTP 429 RESOURCE_EXHAUSTED",
+      "providerCallResults": ["MODEL ERROR"],
+      "proposalValidationResults": ["NOT REACHED"],
+      "stagnationState": 0,
+      "modelCalls": 1,
+      "explorationJourneys": 0,
+      "targetRequests": 0,
+      "usableJourneyEverProposed": false,
+      "invariantEvaluated": false,
+      "invariantOutcomes": [],
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/30/evidence.json",
+      "calls": [
+        {
+          "globalOrdinal": 46,
+          "roundId": "25254c4d-fb7d-4451-8fba-dc115e4e5d6c",
+          "intentEvidenceId": "6a8c38b0-4f9c-4159-92e8-20153c1607c4",
+          "resultEvidenceId": "3ac40ec7-ecb9-4000-9e3b-1d44a5d1ac56",
+          "providerCallResult": "MODEL ERROR",
+          "validation": "NOT REACHED",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "usage": {
+            "estimated": true,
+            "inputTokens": 1435
+          },
+          "stagnantRoundsAfter": 0,
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/documents",
+              "GET /api/documents/{documentId}",
+              "POST /api/documents/{documentId}/archive",
+              "POST /api/documents/{documentId}/publish"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rateLimitedCalls": [
+    {
+      "ordinal": 10,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "repetition": 5,
+      "runId": "d4ef84a8-d42d-4b8a-ac07-db84553d6e04",
+      "globalCall": 17,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "52370510-9c06-4c1f-a7cf-3583cb4896ca"
+    },
+    {
+      "ordinal": 11,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "repetition": 1,
+      "runId": "c64b7a85-fb75-4824-b3fe-f43be1db1657",
+      "globalCall": 18,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "a23cf3f0-5125-4be1-8570-c30850b57560"
+    },
+    {
+      "ordinal": 19,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "repetition": 4,
+      "runId": "3206cb81-e79d-49c4-967a-1692f7b7ba2d",
+      "globalCall": 35,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "53833f8e-68eb-4fc8-8085-44ea84d01587"
+    },
+    {
+      "ordinal": 20,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "repetition": 5,
+      "runId": "08d258b5-2945-4d7a-bb67-06edbe340dc4",
+      "globalCall": 36,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "425b238f-6044-42b8-80e0-35260c5bd37b"
+    },
+    {
+      "ordinal": 21,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 1,
+      "runId": "e3f0fd0e-106d-4cb7-b3b6-eed3eefcedb2",
+      "globalCall": 37,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "a3ec1e06-2de4-41c1-9bf7-5cfcc8b2044f"
+    },
+    {
+      "ordinal": 22,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 2,
+      "runId": "4c6d588a-b684-4c87-b33e-1b7139402947",
+      "globalCall": 38,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "bec06375-0e68-443f-a533-aebf527677c9"
+    },
+    {
+      "ordinal": 23,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 3,
+      "runId": "c8beb97d-0625-4cb6-bcef-eaa9b3d6a539",
+      "globalCall": 39,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "38623c5d-4269-4302-ab59-8d0c21a909f5"
+    },
+    {
+      "ordinal": 24,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 4,
+      "runId": "882ede05-f714-4671-96a0-7bf1658332a4",
+      "globalCall": 40,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "d1c67ee1-0c14-4908-beab-542a2c294fa5"
+    },
+    {
+      "ordinal": 25,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "repetition": 5,
+      "runId": "78e0b66e-c9b9-4c05-b204-08af27ef0836",
+      "globalCall": 41,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "da216fdf-04c3-4953-8730-5c48d7cf71b5"
+    },
+    {
+      "ordinal": 26,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 1,
+      "runId": "49337009-822c-4611-85cb-8c6e646a5b94",
+      "globalCall": 42,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "23bc9c7c-35fc-4751-82c1-4fac77b229f1"
+    },
+    {
+      "ordinal": 27,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 2,
+      "runId": "0e855ea1-3314-4ab6-8a86-bbc04efa0103",
+      "globalCall": 43,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "ea10343f-5b5d-437b-ac73-a31b8624048b"
+    },
+    {
+      "ordinal": 28,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 3,
+      "runId": "34a0b9cd-3596-4769-a8d8-569264c463a1",
+      "globalCall": 44,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "66757e69-8b6a-43ab-87db-0131cbcf3e8b"
+    },
+    {
+      "ordinal": 29,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 4,
+      "runId": "2eaa9207-e1fa-4d69-b20b-0cb2daa29eed",
+      "globalCall": 45,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "f2eaf21d-e242-45c1-ba2a-3fc477a785cd"
+    },
+    {
+      "ordinal": 30,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "repetition": 5,
+      "runId": "36044720-151e-462e-b303-ee10b7c7604a",
+      "globalCall": 46,
+      "apiStatus": "RESOURCE_EXHAUSTED",
+      "httpStatus": 429,
+      "model": "gemini-3.5-flash-lite",
+      "stage": "REQUEST",
+      "evidenceId": "3ac40ec7-ecb9-4000-9e3b-1d44a5d1ac56"
+    }
+  ],
+  "contractFailures": [
+    {
+      "ordinal": 6,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "runId": "f93f1450-38dc-4d65-a2ae-43e6a0c22a8d",
+      "exactValidationRule": "UNKNOWN: not retained",
+      "rejectedModelOutputShape": "UNKNOWN: no rejected proposal retained",
+      "adapterStage": "Provider returned a ReplySchema-valid response with usage; deterministic requestProposal validation rejected downstream.",
+      "observedClassification": "CONTRACT_VALIDATION",
+      "requests": 0,
+      "usableJourneyEverProposed": false,
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/6/evidence.json",
+      "resultEvidenceId": "9f9655dd-2e7c-4814-a973-f272a480a796"
+    },
+    {
+      "ordinal": 7,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "runId": "24e35e74-eddb-4b62-bf47-38264893f14f",
+      "exactValidationRule": "UNKNOWN: not retained",
+      "rejectedModelOutputShape": "UNKNOWN: no rejected proposal retained",
+      "adapterStage": "Provider returned a ReplySchema-valid response with usage; deterministic requestProposal validation rejected downstream.",
+      "observedClassification": "CONTRACT_VALIDATION",
+      "requests": 0,
+      "usableJourneyEverProposed": false,
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/7/evidence.json",
+      "resultEvidenceId": "6d2410a1-4cc7-4fde-9b32-b06cc7fd50f2"
+    },
+    {
+      "ordinal": 8,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "runId": "fe8807a5-2716-4b5a-ac98-7478569a3d7b",
+      "exactValidationRule": "UNKNOWN: not retained",
+      "rejectedModelOutputShape": "UNKNOWN: no rejected proposal retained",
+      "adapterStage": "Provider returned a ReplySchema-valid response with usage; deterministic requestProposal validation rejected downstream.",
+      "observedClassification": "CONTRACT_VALIDATION",
+      "requests": 0,
+      "usableJourneyEverProposed": false,
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/8/evidence.json",
+      "resultEvidenceId": "294b956b-2930-4363-99c5-2834a879f76b"
+    },
+    {
+      "ordinal": 12,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "runId": "c5a8d216-41f7-4420-ae0c-0b69265ee6f2",
+      "exactValidationRule": "UNKNOWN: not retained",
+      "rejectedModelOutputShape": "UNKNOWN: no rejected proposal retained",
+      "adapterStage": "Provider returned a ReplySchema-valid response with usage; deterministic requestProposal validation rejected downstream.",
+      "observedClassification": "CONTRACT_VALIDATION",
+      "requests": 0,
+      "usableJourneyEverProposed": false,
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/12/evidence.json",
+      "resultEvidenceId": "6ccfcec9-4ff4-42cf-b652-af15837de07f"
+    },
+    {
+      "ordinal": 17,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "runId": "5b920534-da3b-4dba-85bd-4cce48efdd1b",
+      "exactValidationRule": "UNKNOWN: not retained",
+      "rejectedModelOutputShape": "UNKNOWN: no rejected proposal retained",
+      "adapterStage": "Provider returned a ReplySchema-valid response with usage; deterministic requestProposal validation rejected downstream.",
+      "observedClassification": "CONTRACT_VALIDATION",
+      "requests": 0,
+      "usableJourneyEverProposed": false,
+      "evidenceFile": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/17/evidence.json",
+      "resultEvidenceId": "aa0a46c5-f128-4581-acdd-9c6548a9df94"
+    }
+  ],
+  "stagnationStops": [
+    {
+      "ordinal": 9,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "calls": [
+        {
+          "globalOrdinal": 9,
+          "roundId": "4174999b-45a2-4aa4-b4b2-32cf7b3a705e",
+          "intentEvidenceId": "bcd324e4-3382-4ade-8552-91108e9f57e0",
+          "resultEvidenceId": "d1233b5e-8db8-4777-a94d-2cf2511c530b",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2173,
+            "outputTokens": 736
+          },
+          "noveltyHash": "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "orderId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 10,
+          "roundId": "ca8c9f1b-14f7-4043-95ad-077d036b02b9",
+          "intentEvidenceId": "e0491da9-39f7-4cb7-bd0e-c97c634fca62",
+          "resultEvidenceId": "33dd9beb-e872-4b2d-9a1b-1ac04f5ce1e9",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 4205,
+            "outputTokens": 696
+          },
+          "noveltyHash": "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 3,
+            "mappingCount": 10,
+            "consideredHypothesisHashes": [
+              "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 11,
+          "roundId": "d122da2f-d652-47ec-88b9-188e8d56aaeb",
+          "intentEvidenceId": "c3627fd4-5cbf-431e-921b-9d6f84665ec4",
+          "resultEvidenceId": "5825fbfc-06a5-4aa7-88af-5c004a794564",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6223,
+            "outputTokens": 708
+          },
+          "noveltyHash": "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051",
+          "useful": false,
+          "stagnantRoundsAfter": 1,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73",
+              "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 12,
+          "roundId": "5e45a793-c23e-4cdc-b392-f86c956b8d56",
+          "intentEvidenceId": "da55ef21-ba81-498b-aabf-0b1bef31ab95",
+          "resultEvidenceId": "28f2ebef-4801-471d-9bfb-f216a67e7da1",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6223,
+            "outputTokens": 695
+          },
+          "noveltyHash": "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051",
+          "useful": false,
+          "stagnantRoundsAfter": 2,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73",
+              "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 13,
+          "roundId": "5df34a12-b009-4af0-8339-ea4afa175fb7",
+          "intentEvidenceId": "404a0417-bbee-49fe-b704-c117a2357dd9",
+          "resultEvidenceId": "74740d5c-db2a-4b6b-9b39-02e543327d89",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6223,
+            "outputTokens": 676
+          },
+          "noveltyHash": "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051",
+          "useful": false,
+          "stagnantRoundsAfter": 3,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "cancelled",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "73c2c248cc3fe5a244d4430249814131f880b95ac28f0c10adc6c2df6e561d73",
+              "45453dfc4e747400d3aad06e9e9af603463b81b17eeb7cf99a8f531d1a4ac051"
+            ],
+            "eligibleOperations": [
+              "POST /api/orders",
+              "GET /api/orders/{orderId}",
+              "POST /api/orders/{orderId}/cancel",
+              "POST /api/orders/{orderId}/fulfill"
+            ]
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "e4a627bf-a085-48cd-ba08-acdc608ccd45",
+          "evidenceId": "c622f4be-4f08-43f0-aebe-351f002137ea"
+        },
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "e127454a-fbf4-487e-bae9-ca924b2636db",
+          "evidenceId": "5a26d1dd-fbe2-417c-a042-85213974f23c"
+        }
+      ]
+    },
+    {
+      "ordinal": 16,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "calls": [
+        {
+          "globalOrdinal": 23,
+          "roundId": "f4699882-6892-43b8-a07e-5793bc71a435",
+          "intentEvidenceId": "716946cd-8f86-4613-9183-443b0167ce89",
+          "resultEvidenceId": "216919ec-1dc1-4a01-9412-e4c0a601efd6",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2130,
+            "outputTokens": 668
+          },
+          "noveltyHash": "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 24,
+          "roundId": "86acfb1c-da31-47f7-890c-416c3f10ca24",
+          "intentEvidenceId": "7d60bfb8-79e1-4c21-afd3-c1085a61441f",
+          "resultEvidenceId": "c32d2ee7-14b7-4f41-b4e8-6a64f9e8df90",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 4121,
+            "outputTokens": 579
+          },
+          "noveltyHash": "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 3,
+            "mappingCount": 10,
+            "consideredHypothesisHashes": [
+              "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 25,
+          "roundId": "032b8eda-314f-4785-8bae-a90377e5a4dd",
+          "intentEvidenceId": "e5db7d45-5e07-41ad-86ee-114e34762d52",
+          "resultEvidenceId": "ae1e1bf0-b7af-4ce6-83d7-b7cd03a230f1",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6149,
+            "outputTokens": 691
+          },
+          "noveltyHash": "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef",
+          "useful": false,
+          "stagnantRoundsAfter": 1,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e",
+              "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 26,
+          "roundId": "9e795f92-e965-4dfe-8693-dd72fec06143",
+          "intentEvidenceId": "85360464-4f80-4890-b9f5-6ac85319e73d",
+          "resultEvidenceId": "0c6d27b3-64c6-475a-933d-0bfe5feca25d",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6149,
+            "outputTokens": 654
+          },
+          "noveltyHash": "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef",
+          "useful": false,
+          "stagnantRoundsAfter": 2,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e",
+              "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 27,
+          "roundId": "e45ef612-8830-4d32-aea6-ce29f902f659",
+          "intentEvidenceId": "1f53a78d-19bd-4748-b715-81d8b8f2c0e5",
+          "resultEvidenceId": "12fc1377-ce30-4fd4-a2cf-b24e4fdf11a8",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6149,
+            "outputTokens": 643
+          },
+          "noveltyHash": "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef",
+          "useful": false,
+          "stagnantRoundsAfter": 3,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "003e8a5a180ba9e303dfef3c0abbbf48f33e6a8326392a82a3093d575b2e599e",
+              "dfd03eef5d17c70a0740d1846c8822584dc88727c24b9eff737c29d0c32058ef"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "b7f1a7ad-34c4-42ac-baf9-77bcb41ea00e",
+          "evidenceId": "32bc563e-df83-40cb-805e-aa9a530bfdf7"
+        },
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "04a55167-b66e-41db-ae03-40b65a56b9ce",
+          "evidenceId": "a343a660-7485-4679-9b3a-b616a59d5ec9"
+        }
+      ]
+    },
+    {
+      "ordinal": 18,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "calls": [
+        {
+          "globalOrdinal": 29,
+          "roundId": "538cb16c-5687-4248-bf1c-0acefc0f1bc4",
+          "intentEvidenceId": "29df4ddd-0d11-4aa1-92db-eec0c023113a",
+          "resultEvidenceId": "7050fd47-797f-4f7c-b80a-7894188bb878",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 2131,
+            "outputTokens": 640
+          },
+          "noveltyHash": "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 0,
+            "mappingCount": 4,
+            "consideredHypothesisHashes": [],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 30,
+          "roundId": "8f0c05da-5237-43fb-b08d-0e2d99b26a0e",
+          "intentEvidenceId": "264eecbd-7224-4cf7-be85-0486fcceeba9",
+          "resultEvidenceId": "07deaa9e-2e18-4adc-9b28-7511f847d5f6",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 4129,
+            "outputTokens": 668
+          },
+          "noveltyHash": "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b",
+          "useful": true,
+          "stagnantRoundsAfter": 0,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 3,
+            "mappingCount": 10,
+            "consideredHypothesisHashes": [
+              "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 31,
+          "roundId": "1468c60d-a82e-4e17-8266-9d9e08a82b03",
+          "intentEvidenceId": "9d1e0d2f-b377-44dd-85c4-8998070fbb3e",
+          "resultEvidenceId": "9a774169-2cb9-4aea-a470-f6e82da34a57",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6219,
+            "outputTokens": 628
+          },
+          "noveltyHash": "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b",
+          "useful": false,
+          "stagnantRoundsAfter": 1,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3",
+              "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 32,
+          "roundId": "a0cd7772-fbe7-4491-a973-c48f9e65cedc",
+          "intentEvidenceId": "897d1871-1eba-4842-b2cc-97ea8ea0c81e",
+          "resultEvidenceId": "c4a6f3a1-98ab-422a-975e-45ae1bf26a36",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6219,
+            "outputTokens": 647
+          },
+          "noveltyHash": "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b",
+          "useful": false,
+          "stagnantRoundsAfter": 2,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3",
+              "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        },
+        {
+          "globalOrdinal": 33,
+          "roundId": "092cb931-0348-4b6b-9656-7f3dbb17a865",
+          "intentEvidenceId": "170b8f70-4762-4458-898c-045ec5d22270",
+          "resultEvidenceId": "38e8f884-abb1-4736-ba36-9e620e5d8f9e",
+          "providerCallResult": "PROPOSED",
+          "validation": "ACCEPTED",
+          "usage": {
+            "estimated": false,
+            "inputTokens": 6219,
+            "outputTokens": 641
+          },
+          "noveltyHash": "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b",
+          "useful": false,
+          "stagnantRoundsAfter": 3,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "bindings": [
+            {
+              "stepId": "create",
+              "parameters": []
+            },
+            {
+              "stepId": "unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            },
+            {
+              "stepId": "later",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ]
+            }
+          ],
+          "feedback": {
+            "observationCount": 6,
+            "mappingCount": 16,
+            "consideredHypothesisHashes": [
+              "1b1096e89fe24f0c47808812ec70f7508827bc234a34d101c3c21b36d3a0b5b3",
+              "15b227118d3283588e2b8ecbf798cbb381ad49055332268e7da23198b8e6c18b"
+            ],
+            "eligibleOperations": [
+              "POST /api/items",
+              "GET /api/items/{itemId}",
+              "POST /api/items/{itemId}/unavailable",
+              "POST /api/items/{itemId}/allocate"
+            ]
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "ca2032ba-8721-43f7-8fb8-458a88c96abd",
+          "evidenceId": "f64769bf-7549-4b94-8a45-f481cf641c40"
+        },
+        {
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "trialId": "33dd7b98-188a-431f-acd7-09b6175dab6b",
+          "evidenceId": "3c0634c8-5657-4c93-8f1b-f467df377631"
+        }
+      ]
+    }
+  ],
+  "contractLimitations": "Exact rejected rule, output shape and causal prompt/schema mismatch cannot be established: failed-result rows retain telemetry only; rejected proposals were not persisted. No live reconstruction was attempted.",
+  "correction": {
+    "files": ["src/cli/benchmark.ts", "tests/benchmark/harness.test.ts"],
+    "description": "Respect persisted usage.estimated instead of inferring provider counts from provider identity; extract shared read-only metric projection and test existing conservative aggregate/JSON semantics.",
+    "productionAuthorityChanged": false,
+    "providerOrPlannerBehaviorChanged": false,
+    "benchmarkReportingChanged": true,
+    "newFrozenSeriesRequired": true,
+    "newFreeze": {
+      "engineHash": "681152c18aa32cd2504661029a44fb6a0b31b74b00db7d8bcf05381467054857",
+      "promptHash": "2811526c6f7e88de2fd604c5561e5e6c39de8248a64b3ba154f1ed2b7e5409d7",
+      "dependencyHash": "f77a13c73abbc0c67348574a8675c64961de8613ba6b1b2d21a1f78d676d20ff",
+      "modelHash": "5a838f92caeff18f264cd53b55047d80a356c59e9c31f66a99e89f515b24dca4",
+      "fixtureHash": "ec5f5b9118c4647da82ce9e51c4fe3e09fa04a601fd1f0958ea46923eae102dc",
+      "configurationHash": "1d4b7a1cdc5f10ba25e14e1335dc6a260e1f43f8b69826a36afab5b1a06e25f7",
+      "buildHash": "b9aecf93eff8d9d3ecc3abb1a1b91df1244bb5aaf692566ed166e49549c18d21",
+      "configuration": {
+        "formatVersion": 1,
+        "mode": "AUTONOMOUS_DISCOVERY",
+        "identity": {
+          "provider": "gemini",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "limits": {
+          "requests": 200,
+          "milliseconds": 600000,
+          "journeys": 20,
+          "steps": 10,
+          "requestTimeoutMs": 10000,
+          "modelTimeoutMs": 30000
+        },
+        "trialsPerVariant": 5,
+        "suiteHash": "4a5268ef8022ed0c0e6a0649503f59b1d23214dee857179cf8c62be902203aaa",
+        "runtime": "v24.21.0",
+        "platform": "darwin",
+        "architecture": "arm64",
+        "selection": "required",
+        "inputs": {},
+        "credentials": "NONE",
+        "scope": "explicit owned loopback /api; frozen phase policy; mutations acknowledged"
+      },
+      "files": {
+        "engineFiles": {
+          "package.json": "67a3c38e347a38535014b8cdaa1f5ed0dcc9b42afeb11ef911629c67ea33ad4e",
+          "scripts/build-engine.mjs": "5ce44c0cbc09e7f14269c5fdc2d45d430eacfad6908fd1f894872f80704b9298",
+          "src/cli/benchmark.ts": "d11631e2bed44a3dc615c49183c8a937cd0ada897aeecddd622c4de605583be4",
+          "src/cli/regression.ts": "349df8a85eec0ee642db083b37b77f6b8d1c7e9848f7b22fb1719a1860a83794",
+          "src/cli/reproduction-progress.ts": "a1616ba09ffd51f64316e05d5ce90851827dcf6ecd04f15d4ea494722d15f56d",
+          "src/cli/vertical-slice.ts": "0ba056a374083ecac5722d6ec04f56a1968d7d91b9cf34303ad34d9b3c639897",
+          "src/engine/.DS_Store": "b4e2984ab0b5b46755be6b240fe216ef144030230f6a1f3cb4aed8085f604b4a",
+          "src/engine/budget/manager.ts": "9ea147abe648d326eb9951be518f402eb9a99e4f13f7a838501955eb1f711a63",
+          "src/engine/contracts/api.ts": "3a33b7d245cabeb8dc146915e7fb5cd77a9602fc389765406110eaa19b57bf03",
+          "src/engine/contracts/artifact.ts": "1ac09ba54044165c7801283cb4ef0b1d2c0f62c9472402c2d1a9c88b385618bd",
+          "src/engine/contracts/common.ts": "36bf6bc73434654a8bbf7008ac17ef1e29e11238323fefb4c28ec2b5be9a9c06",
+          "src/engine/contracts/execution.ts": "a95d80a73b64196e262c95401706f9672bdc9f4e468cf12e0fcd184cb4d33ede",
+          "src/engine/contracts/index.ts": "d13137ddb540dc76b6fa1c084f80e176d8f1b6e0b313e4e6490d7691d6071e0e",
+          "src/engine/contracts/journey.ts": "91ed9f46e5da013e33e7d30b80655ea67b37173818e39c2dbc03c7a1e731573f",
+          "src/engine/contracts/messages.ts": "5813c27e27db20f69a7181314c8ccd5a341018a34e0c256b8d11977e78c40f93",
+          "src/engine/contracts/minimization.ts": "9457e4087507d6cc28e6fa8456e845edb02fe1d3d95456eca3d94d63c55d6180",
+          "src/engine/contracts/predicate.ts": "8b33cb697f02a7da1e28aadcece46fe207b78bb1190a7d5acbfb3bb7cd86ce0c",
+          "src/engine/contracts/run.ts": "e18be0de66afade25c90a0607766419ee5d947019df577d79d4eb3bc84f20333",
+          "src/engine/detection/candidates.ts": "1ee0c67237bdd3e6f34a85975a43d3f6cc433915e75340d7f64811d87201eba0",
+          "src/engine/detection/findings.ts": "81603ffb79370122a64e5958cc1c049427b919b79627b912b3a556eddd3a8c82",
+          "src/engine/detection/predicate.ts": "7d82db848ef621ade2cfc0c552b95327633c00c57e868cacd02723ac44ab43a6",
+          "src/engine/execution/auth.ts": "6f98fc77d33efb0d07abdda658b20afe7adff8d7e0aa4fbc27813aa1949524b0",
+          "src/engine/execution/bindings.ts": "cf2e7761975655cb8c816d44b4d6b612272a7805a202ccd12211ba3e04fa0600",
+          "src/engine/execution/generate.ts": "742c14c565e6ea6e60f82223f78832c391d285ae5fc1c819695ffe4a3665ef15",
+          "src/engine/execution/http-executor.ts": "d7d78368f7f96d05cad1300208ffad274f95bb505331fc56490ab95af2601308",
+          "src/engine/execution/journey.ts": "4684d941716149eccb079f52bcf871cfd2775a03c6f719ec709bfecba12dc4d1",
+          "src/engine/execution/prepare.ts": "0a8c303bc0604110c1d7abb9fc5cb3062ebfd2c620b53b14f250b77468d09193",
+          "src/engine/execution/requests.ts": "f9bce1931b494822674cd5666d1e2368801cd048a899bd6d6bdde455da7df8b5",
+          "src/engine/execution/response-policy.ts": "f518f577ed3d78af939270c02e7eab5ce8dd9665115901eef8a111817dc3cca4",
+          "src/engine/execution/variables.ts": "6e6fc755e98b002b752f61af97ae63daa30c5bb22c8a27b875bd0e23523dcc49",
+          "src/engine/exports/assertions.ts": "11066cb015dcdcd5f423b6f324585935169b437b328f0a0608de05c5c3c4f5a0",
+          "src/engine/exports/bundle.ts": "a327e74c64d2ef22702bcec486d9a8c83ccae27dfe92d5457e80a6d7a78803b2",
+          "src/engine/exports/contracts.ts": "5b661829f59a9456693d4abdb1f4da1f324f545f51c929990e7ce6d0812311e8",
+          "src/engine/exports/manifest-integrity.ts": "b49b4a7ee19566502453915a799b430b40de40cb586b61de42484e8670aab685",
+          "src/engine/exports/manifest.ts": "2fff9cc9f6c476b73ca5d2670747febe80ca929ec8a30153a1cb71d03a433003",
+          "src/engine/exports/report.ts": "cc215eac7de3d1268f15b5298aa43ef706b36575d50f1186687bcd49173de2ca",
+          "src/engine/exports/runner.ts": "c5ae20402a97b266b39d5c679bf31eb50e67ae89200ec8231c601c708d5c4390",
+          "src/engine/exports/secret-free.ts": "7067f1946012915e1627fb6220e1e4e0a2d2d5b6cf8711ced3c9ee6749d2e0b4",
+          "src/engine/exports/source.ts": "b6d949b1d7359fe7ec8405a946c2c3fa80c1703ddeedfdfeda5642d3e6e9e3ea",
+          "src/engine/exports/verification-source.ts": "1b617597d0f1b320ec4ff765c0e415168361d4f3e186014d3cb9b5ac506b3952",
+          "src/engine/exports/verify.ts": "6294caf4a60ceb12a6a23f15a5e3427201d37673ae47ed311bf8d8eba2236d92",
+          "src/engine/fresh-state/manager.ts": "b0ece90e85c2e5d078fd13034875deabd7eba940e9922e66b7bffaa93e84157f",
+          "src/engine/fresh-state/trial.ts": "ee7e6166de3b26d3664038eaa18a383bd1ad8c2e03fde99a1c42d9bd17c94b65",
+          "src/engine/mapping/state.ts": "6ae461e039a8e68007da888bcc75a5382c02987111279206c1026655c57d581c",
+          "src/engine/minimization/deletion.ts": "db4eedfd29e0b0925237d86d20ed7427ea4792ac63e99b57252cad3a3513da8e",
+          "src/engine/minimization/greedy.ts": "4247ed8bc88f03c88d38c28d1d0cfabfb88a5ce6fbc78dd23deaa15ac0e6ef53",
+          "src/engine/observations/store.ts": "81fc7483d4324c0ccefb5d541caf43297156a964e83bb0396fc28d9572d8b3a5",
+          "src/engine/observations/summarize.ts": "ec11dccd083e31fba90ecee16a9a9232116622cf3bf68ea63b7f3978eb4c638f",
+          "src/engine/openapi/document.ts": "573986cf3ebdaa4bfc5ef1bf963c29d4af8396e2c8fef768f99d6714ae351df8",
+          "src/engine/openapi/import-worker.ts": "4bc41d67ab6842a63d4ab267f492888b8655458c496dff8ad86c7e799a056685",
+          "src/engine/openapi/model.ts": "ca5dcc5be90e2051d27dd782e9d7b6e3715b59652afeba801023c249f4509d4c",
+          "src/engine/openapi/parse.ts": "bb9303e732044b58a6bbd64d162d5b5e1c344637fd9ee27d6482d9dee544177b",
+          "src/engine/openapi/profile.ts": "7f57dd32501db0f6bb7a1adea88e054f375b30e7383d5fdbdc260792e137d306",
+          "src/engine/openapi/references.ts": "741dc9b44fc0efc74aa5bba3f5ff29ee92ad1cef1f3e37f4601d26795896d1bd",
+          "src/engine/openapi/sanitize.ts": "727c8af297c069184adca71e21414fe3f38e824edcb4446148a93ff2fd14f4f8",
+          "src/engine/openapi/schemas.ts": "3966d69205b46e6449fda85d434ea2d14e0db422edb7c83412c9a477db45a1ff",
+          "src/engine/planning/context.ts": "26ebb98f59988706791638a758f6f45092a086f9e714108c1c437e0dd3b8c459",
+          "src/engine/planning/gemini-schema.ts": "369c8ce5b4d4e5126c37e4551303f7c5da05b2b927a45eb226f65524d0b2bac8",
+          "src/engine/planning/gemini.ts": "bdb6617bb9eb5472af6860711b56471f6e1a2f0702e9003ca85ed639e7c320eb",
+          "src/engine/planning/provider.ts": "8cd27a18c5471e9e214d35529d8701ee8e76ebee6215998236926576cd4186cf",
+          "src/engine/policy/headers.ts": "0f440365bf92d428c45ea42a5f7cbb08ba874ea1dccb84b3c4f00995ec2234d4",
+          "src/engine/policy/operations.ts": "551eac6db5d5477b222d603b150eb6980415df0ed3931d5225d9361aa989a4f5",
+          "src/engine/policy/scope.ts": "1702c04130b76c865f5f4b0394404324c06be0aeb18dac86003729243ea9dcae",
+          "src/engine/secrets/classify.ts": "c305dd58854f6aa496e9690233e96318939ce5dfe7d35271299cef23b7269f01",
+          "src/engine/secrets/sanitize.ts": "1504fcad4c743a0d686229fa77eebc9fc1957893062a3476f54bc235eb7344bc",
+          "src/engine/secrets/vault.ts": "410ff203b47ccf063ca7ada91d37d37b2c6a19bace58c76aca0f37b05962cb2d",
+          "src/engine/session/explore.ts": "08d772e3e56a563d8ae8092544290266b0806bfd41e930ad7296a0c82f127a18",
+          "src/engine/session/worker.ts": "9c8124fb157e52ec9d55b974f0f8cd690889963061c3c2387ebdf1a682e849fe",
+          "src/engine/validation/dependencies.ts": "9bc9210d452cd7d4036146dc66bfd75c1151deb09791f4d737bf027bdd053b2c",
+          "src/engine/validation/journey.ts": "a87d98941fbadcc741a48a474f047f7768984275344a4104a5a28e803339cad0",
+          "src/engine/validation/predicate.ts": "1610e3a485810effa09a4f48672f15abc034fbccc64fade68ca05d85e0e9786e",
+          "src/engine/verification/replay.ts": "7a2dd102213ee3cf03c834be422edbe1346b5529198aa5fe12fc3e01a543cbe2",
+          "src/server/config.ts": "8f809882a9bcdfee6e07872dc624edd8b97ea2dd7f57942a2d7bbf299550b12e",
+          "src/server/credential-store.ts": "dcff480c546a7fd35266a0db98dbcbb7e4d2529a2260aa2acc2d0da52ed81611",
+          "src/server/db.ts": "a136b96ce58d354381ebc94c51f3ce0a603bf6da6a70a8bc15d3b2a6368c009e",
+          "src/server/dispatch.ts": "161147c860b168fdaa61967d7597dec2d44cb6b8ec35430f819b1bf65d800af1",
+          "src/server/migrate.ts": "707112bca276cb5e78d2f9af01765c5bb4f07f7763127b12b65150a19782902e",
+          "src/server/repositories/artifacts.ts": "a5b17c21bcd3a3d62c4891fe7a30e4a514731780bb9a5d30c721a64b8c0ef421",
+          "src/server/repositories/evidence.ts": "86cd079d1361550dcc472f7215ff66532cbbc3e0030acefbe39b50ff73c82158",
+          "src/server/repositories/findings.ts": "033f08f9f8683c69eadb4124ae8de78ea9536ba2e9d7d91cbcd1541293c019e2",
+          "src/server/repositories/journeys.ts": "0881a7bf4c05cf1edacdcb496cdfba703e80d7f8f4c9f117907356383e730e01",
+          "src/server/repositories/minimization.ts": "12802ea46c69f5c907b12dac82a154743183ef7bfca5d17b403e4474d7240ef6",
+          "src/server/repositories/predicates.ts": "117c6c26240bb3157e8f9a6e5e0ca59fcccaf9720de79decdd423b958f09cd72",
+          "src/server/repositories/runs.ts": "e6f1c376f3fd551b046212ea811261f297182177f71e0ac9523185a8b690d15c",
+          "src/server/repositories/specifications.ts": "815fd86a0222aeb7263701afa74739c0cd3d4f038c8f7e0c058279711000dad0",
+          "src/server/run-supervisor.ts": "e87aa14a1e5d874349933aff0e863c76c872c76ba4a9bda9fb8117beeeb78677",
+          "src/server/scope-preview.ts": "da28915d67bbc8f70533d471cfa1c95fb4c8f5263909f89937694a5b4a97708d",
+          "src/transport/address.ts": "94f80d332e2eea73f0202e8f3f30d3b091794312df3efb13938e2ab65eac2da9",
+          "src/transport/headers.ts": "d9fd0d28dd58401c8653a29c61c6241ed6fcbb52012f9ef16693891dff9ebb19",
+          "src/transport/http.ts": "d903eaaf662d96995b4045ec9a92e128382501d2916ee9f7c5d13004d6579ad0"
+        },
+        "promptFiles": {
+          "src/engine/planning/context.ts": "26ebb98f59988706791638a758f6f45092a086f9e714108c1c437e0dd3b8c459",
+          "src/engine/planning/gemini-schema.ts": "369c8ce5b4d4e5126c37e4551303f7c5da05b2b927a45eb226f65524d0b2bac8",
+          "src/engine/planning/gemini.ts": "bdb6617bb9eb5472af6860711b56471f6e1a2f0702e9003ca85ed639e7c320eb"
+        },
+        "fixtureFiles": {
+          "fixtures/api/inventory.ts": "68f86a81dbae528b6aa6985b35772d4e86043b61e793de96033ab7aa6c47dbae",
+          "fixtures/api/order-lifecycle.ts": "b1538e26b2218a89f0176496f0fcb93ee2a88df8de597dec0a1eccdb5713ceb3",
+          "fixtures/api/workflow.ts": "c61f8a66811bd384eecc4ff5d1e292db745b86137c83be477e778890347f0918",
+          "fixtures/openapi/inventory.json": "376bb9c941d9d917f0e903549e75e8b3017c59cfd2e6db7bfa66eaa3b39d22a1",
+          "fixtures/openapi/order-lifecycle.json": "e901f66359887c1c79bf401f0bdd3a52154ddbed39fb85b898a3790eb18abd08",
+          "fixtures/openapi/workflow.json": "935f7ac62dd824e9c1b43903db3bd8a36a92413337dce0dbc75e652d32b2fcfa",
+          "fixtures/private/required-suite.json": "6108bc0161f35d80713eecf8468b84cffcb0ec8f6e209ba2cd9d0d3de98058aa",
+          "fixtures/required.ts": "84982597986dfaa116aeda07048b98d7fa07ce8fb6eb6121cb6315f44e904458",
+          "scripts/t035-configuration.ts": "a208f0b0057db643a537c5e0562f78f1a1e6d260e30d224e84563f02457c9649"
+        },
+        "buildFiles": {
+          "dist/engine-worker.mjs": "5e3b48005cc58c5f471d78810a7a173be26a4b06b4d4c3c08d2b21f00354ad54",
+          "dist/import-worker.mjs": "b6f2bb5ef6438732144cd7ff5105a63f8c175c138aa0734c36ca78edc203605b"
+        }
+      }
+    },
+    "changesFromHistoricalFreeze": ["engineHash"],
+    "newFreezeClassification": "NON-EXECUTING POST-CORRECTION IDENTITY SNAPSHOT; NOT A NEW SERIES"
+  },
+  "validation": {
+    "testFirst": {
+      "passed": 22,
+      "failed": 8
+    },
+    "focused": {
+      "passed": 138,
+      "failed": 0,
+      "skipped": 0
+    },
+    "fullRegression": {
+      "passed": 866,
+      "failed": 0,
+      "skipped": 0
+    },
+    "typecheck": "PASS",
+    "lintFormat": "PASS",
+    "sanitization": "PASS",
+    "changedFileLint": "PASS",
+    "changedFileFormat": "PASS",
+    "historicalIntegrity": "PASS",
+    "knownUnrelatedIssues": {
+      "lintErrors": 2,
+      "formatFailures": 9
+    },
+    "benchmarkArtifactIntegrity": "PASS: all original file hashes, 30 outcomes/rates, eight manifest/package rebuilds",
+    "historicalFileCount": 129,
+    "onlyExistingFilesChanged": [
+      "src/cli/benchmark.ts",
+      "tests/benchmark/harness.test.ts"
+    ],
+    "noNewSeriesExecuted": true
+  },
+  "AP002": "FAIL: inventory 3/5 and workflow 0/5 violate per-fixture >=4/5 discovery AND confirmation; no additional execution/confirmation defect demonstrated.",
+  "nextSeriesCommand": "npm run benchmark -- --approve-local-fixtures --output \"tests/acceptance/gate5-$(uuidgen | tr '[:upper:]' '[:lower:]')\"",
+  "nextSeriesExecuted": false,
+  "T049Untouched": true,
+  "T058Untouched": true
+}

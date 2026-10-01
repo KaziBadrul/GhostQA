@@ -1,0 +1,580 @@
+{
+  "task": "T038",
+  "status": "COMPLETE TEST-FIRST",
+  "productionMinimizationImplemented": false,
+  "newTests": 89,
+  "passingSetupTests": 8,
+  "expectedRedT039Tests": 81,
+  "missingBoundary": "src/engine/minimization/greedy.ts",
+  "focusedSuites": [
+    {
+      "file": "tests/integration/minimization.test.ts",
+      "passed": 4,
+      "expectedRed": 31,
+      "tests": [
+        {
+          "test": "setup: existing supervisor independently confirms supplied order journey minimal=false",
+          "status": "PASS",
+          "diagnostic": null
+        },
+        {
+          "test": "setup: existing supervisor independently confirms supplied order journey minimal=true",
+          "status": "PASS",
+          "diagnostic": null
+        },
+        {
+          "test": "setup: valid five-step MINIMIZATION trial already uses independent baseline and sole dispatcher",
+          "status": "PASS",
+          "diagnostic": null
+        },
+        {
+          "test": "ordered deletion reduces supplied six steps to exact same eligible three-step violation with durable fresh evidence",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "already minimal confirmed journey reaches only local criterion without a target trial",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "repaired variant rejects SATISFIED removals, visits candidates once and retains previously verified original",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "stable removal order and finite restart scans are independent of generated runtime UUIDs",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "all-phase budget 22 admits whole candidate or preserves verified best before reset",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "all-phase budget 23 admits whole candidate or preserves verified best before reset",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "all-phase budget 28 admits whole candidate or preserves verified best before reset",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "reset failure stops minimization honestly without accepting a reduction or changing confirmation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "baseline failure stops minimization honestly without accepting a reduction or changing confirmation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "execution failure stops minimization honestly without accepting a reduction or changing confirmation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "cancel failure stops minimization honestly without accepting a reduction or changing confirmation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "time failure stops minimization honestly without accepting a reduction or changing confirmation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "ownership failure stops minimization honestly without accepting a reduction or changing confirmation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "cancellation between attempts retains first independently verified reduction and schedules no further reset",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "preflight predicate ID cannot reuse confirmed evidence or consume budget",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "preflight predicate version cannot reuse confirmed evidence or consume budget",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "preflight predicate hash cannot reuse confirmed evidence or consume budget",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "preflight journey edit cannot reuse confirmed evidence or consume budget",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "preflight not confirmed cannot reuse confirmed evidence or consume budget",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "preflight inconsistent cannot reuse confirmed evidence or consume budget",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "preflight scope edit cannot reuse confirmed evidence or consume budget",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "closed supervisor gate after confirmation prevents any alternate transport",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "setup: expected final three-step candidate reproduces exact violation after fresh minimization reset",
+          "status": "PASS",
+          "diagnostic": null
+        },
+        {
+          "test": "reset failure after one accepted reduction retains its exact evidence and best journey",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "execution failure after one accepted reduction retains its exact evidence and best journey",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "cancellation during durable intent blocks dispatch, conservatively charges existing budget and retains best",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "durable intent storage failure cannot authorize target dispatch or accept a deletion",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "invalid stale baseline cannot authorize a candidate journey or a preserving verdict",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "invalid reused baseline cannot authorize a candidate journey or a preserving verdict",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "invalid missing baseline cannot authorize a candidate journey or a preserving verdict",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "invalid failed baseline cannot authorize a candidate journey or a preserving verdict",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "invalid unevaluable baseline cannot authorize a candidate journey or a preserving verdict",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/minimizer.test.ts",
+      "passed": 4,
+      "expectedRed": 50,
+      "tests": [
+        {
+          "test": "setup: supplied six-step journey is validated, with two independent removable reads",
+          "status": "PASS",
+          "diagnostic": null
+        },
+        {
+          "test": "setup: input confirmation is independent, eligible and references exact original journey",
+          "status": "PASS",
+          "diagnostic": null
+        },
+        {
+          "test": "setup: all candidate verdict fixtures are evaluated by the existing deterministic evaluator",
+          "status": "PASS",
+          "diagnostic": null
+        },
+        {
+          "test": "ordered deletion index 0 protects producer/predicate or removes independent action",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "ordered deletion index 1 protects producer/predicate or removes independent action",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "ordered deletion index 2 protects producer/predicate or removes independent action",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "ordered deletion index 3 protects producer/predicate or removes independent action",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "ordered deletion index 4 protects producer/predicate or removes independent action",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "ordered deletion index 5 protects producer/predicate or removes independent action",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "predicate-referenced json operand protects the step in either comparison side",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "predicate-referenced header operand protects the step in either comparison side",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "predicate-referenced status operand protects the step in either comparison side",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "predicate-referenced step-index operand protects the step in either comparison side",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "predicate-referenced variable operand protects the step in either comparison side",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "deletion rejects removal of a response producer used by another retained step",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "invalid deletion index -1 does not invent a candidate",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "invalid deletion index 6 does not invent a candidate",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "invalid deletion index 1.5 does not invent a candidate",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "only exact eligible fresh VIOLATED determines reduction preservation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "only exact eligible fresh SATISFIED determines reduction preservation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "only exact eligible fresh NOT APPLICABLE determines reduction preservation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "only exact eligible fresh UNEVALUABLE determines reduction preservation",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "wrong predicate ID: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "wrong version: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "wrong canonical hash: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "edited approved predicate/new version: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "candidate different predicate: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "hypothesis-only predicate: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "observed candidate instead of confirmation: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "inconsistent confirmation: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "missing replay confirmation evidence: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "stale baseline trial: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "reused confirmation baseline: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "reused prior minimization baseline: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "reused prior minimization trial: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "missing baseline: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "failed baseline: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "unevaluable baseline: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "unrelated baseline assertion: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "wrong baseline run: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "discovery evidence reused: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "confirmation evidence reused: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "missing observation: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "unknown observation reference: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "foreign-trial observation: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "truncated response: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "execution error is not predicate verdict: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "execution error observation: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "interrupted observation: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "different phase: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "missing verdict: cannot accept a reduction",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "setup: negative fixtures construct independently of missing minimizer",
+          "status": "PASS",
+          "diagnostic": null
+        },
+        {
+          "test": "a forged VIOLATED label/model explanation cannot override SATISFIED observations",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        },
+        {
+          "test": "a candidate changing retained operations or action order is not single-step deletion",
+          "status": "EXPECTED RED",
+          "diagnostic": "Error: T039 missing boundary: src/engine/minimization/greedy.ts"
+        }
+      ]
+    }
+  ],
+  "existingRegression": {
+    "passed": 519,
+    "failed": 0,
+    "skipped": 0,
+    "files": 46,
+    "excluded": [
+      "tests/unit/minimizer.test.ts",
+      "tests/integration/minimization.test.ts"
+    ]
+  },
+  "typecheck": "PASS",
+  "changedFileLint": "PASS; no warnings",
+  "changedFileFormat": "PASS",
+  "knownRepositoryLint": {
+    "errors": 2,
+    "file": "src/engine/mapping/state.ts",
+    "lines": [49, 52]
+  },
+  "knownRepositoryFormat": {
+    "failures": 9,
+    "files": [
+      "src/engine/contracts/common.ts",
+      "src/engine/contracts/predicate.ts",
+      "src/engine/detection/predicate.ts",
+      "src/engine/execution/journey.ts",
+      "src/engine/execution/variables.ts",
+      "src/engine/mapping/state.ts",
+      "src/server/config.ts",
+      "tests/helpers/setup.ts",
+      "tests/unit/config.test.ts"
+    ]
+  },
+  "historicalAndProductionSHA256": {
+    "tests/acceptance/vertical-slice.md": "78d89f8e440d8a9552cbc855190072d48a247b54437e3cc1e4eaf0b34f852849",
+    "tests/acceptance/vertical-slice-order-passed.json": "401b9340e370e4baccad0a8ffa79ee374e8433e512a244474ccfd9e63d5faf87",
+    "tests/acceptance/t037.md": "85a922016bb92882cd34bfbf8f212607e5a50de41e2e887d7408825b12a5cca7",
+    "tests/acceptance/t037-order-passed.json": "6576c0e9abb4d47d9792c0e9eeeb221e29003773c6e272db7e407bb48956ac6b",
+    "tests/unit/finding-transitions.test.ts": "d192251e448f5dad7ec791baf69aa2c835baa520a90f2651f723c987bbce7b42",
+    "tests/integration/verification.test.ts": "df74b4e08b4fcb7085f2efc201958636b56b6800028f7ab115af61e234c522cc",
+    "src/server/migrate.ts": "707112bca276cb5e78d2f9af01765c5bb4f07f7763127b12b65150a19782902e",
+    "src/server/credential-store.ts": "dcff480c546a7fd35266a0db98dbcbb7e4d2529a2260aa2acc2d0da52ed81611",
+    "src/server/dispatch.ts": "415929fb01eb7747f1bc1d0c9507b63e1b7303c009e43a33e5880f2dc55ea4f4",
+    "src/server/config.ts": "8f809882a9bcdfee6e07872dc624edd8b97ea2dd7f57942a2d7bbf299550b12e",
+    "src/server/run-supervisor.ts": "42cb18b631fc5bebf39b41ca9b64df688926877eddc334cfc4ca91bed8939cab",
+    "src/server/db.ts": "a136b96ce58d354381ebc94c51f3ce0a603bf6da6a70a8bc15d3b2a6368c009e",
+    "src/server/scope-preview.ts": "da28915d67bbc8f70533d471cfa1c95fb4c8f5263909f89937694a5b4a97708d",
+    "src/cli/vertical-slice.ts": "fef8b144a00a90a6e620299b80799574e021d04503763839ab64f76057814089",
+    "src/server/repositories/specifications.ts": "815fd86a0222aeb7263701afa74739c0cd3d4f038c8f7e0c058279711000dad0",
+    "src/server/repositories/evidence.ts": "86cd079d1361550dcc472f7215ff66532cbbc3e0030acefbe39b50ff73c82158",
+    "src/server/repositories/runs.ts": "e6f1c376f3fd551b046212ea811261f297182177f71e0ac9523185a8b690d15c",
+    "src/server/repositories/journeys.ts": "0881a7bf4c05cf1edacdcb496cdfba703e80d7f8f4c9f117907356383e730e01",
+    "src/server/repositories/predicates.ts": "117c6c26240bb3157e8f9a6e5e0ca59fcccaf9720de79decdd423b958f09cd72",
+    "src/server/repositories/findings.ts": "f50c664018af372d3b99286888243871bbf6cd9d58a211fa17f3862175bdc2ca",
+    "src/engine/mapping/state.ts": "6ae461e039a8e68007da888bcc75a5382c02987111279206c1026655c57d581c",
+    "src/engine/secrets/sanitize.ts": "1504fcad4c743a0d686229fa77eebc9fc1957893062a3476f54bc235eb7344bc",
+    "src/engine/secrets/vault.ts": "410ff203b47ccf063ca7ada91d37d37b2c6a19bace58c76aca0f37b05962cb2d",
+    "src/engine/secrets/classify.ts": "c305dd58854f6aa496e9690233e96318939ce5dfe7d35271299cef23b7269f01",
+    "src/engine/contracts/messages.ts": "5813c27e27db20f69a7181314c8ccd5a341018a34e0c256b8d11977e78c40f93",
+    "src/engine/contracts/journey.ts": "91ed9f46e5da013e33e7d30b80655ea67b37173818e39c2dbc03c7a1e731573f",
+    "src/engine/contracts/common.ts": "36bf6bc73434654a8bbf7008ac17ef1e29e11238323fefb4c28ec2b5be9a9c06",
+    "src/engine/contracts/predicate.ts": "8b33cb697f02a7da1e28aadcece46fe207b78bb1190a7d5acbfb3bb7cd86ce0c",
+    "src/engine/contracts/api.ts": "3a33b7d245cabeb8dc146915e7fb5cd77a9602fc389765406110eaa19b57bf03",
+    "src/engine/contracts/index.ts": "c407de68083ebcd8e85627bf881edb14b9131c6f485092a36d86d547f57ad329",
+    "src/engine/contracts/artifact.ts": "1ac09ba54044165c7801283cb4ef0b1d2c0f62c9472402c2d1a9c88b385618bd",
+    "src/engine/contracts/execution.ts": "a95d80a73b64196e262c95401706f9672bdc9f4e468cf12e0fcd184cb4d33ede",
+    "src/engine/contracts/run.ts": "e18be0de66afade25c90a0607766419ee5d947019df577d79d4eb3bc84f20333",
+    "src/engine/planning/context.ts": "26ebb98f59988706791638a758f6f45092a086f9e714108c1c437e0dd3b8c459",
+    "src/engine/planning/gemini-schema.ts": "369c8ce5b4d4e5126c37e4551303f7c5da05b2b927a45eb226f65524d0b2bac8",
+    "src/engine/planning/gemini.ts": "bdb6617bb9eb5472af6860711b56471f6e1a2f0702e9003ca85ed639e7c320eb",
+    "src/engine/planning/provider.ts": "fa67ece43e1f34991699d8e627956612329ce154fd7e41225fc5ebda9ed197ee",
+    "src/engine/openapi/sanitize.ts": "727c8af297c069184adca71e21414fe3f38e824edcb4446148a93ff2fd14f4f8",
+    "src/engine/openapi/parse.ts": "bb9303e732044b58a6bbd64d162d5b5e1c344637fd9ee27d6482d9dee544177b",
+    "src/engine/openapi/document.ts": "573986cf3ebdaa4bfc5ef1bf963c29d4af8396e2c8fef768f99d6714ae351df8",
+    "src/engine/openapi/schemas.ts": "3966d69205b46e6449fda85d434ea2d14e0db422edb7c83412c9a477db45a1ff",
+    "src/engine/openapi/model.ts": "ca5dcc5be90e2051d27dd782e9d7b6e3715b59652afeba801023c249f4509d4c",
+    "src/engine/openapi/profile.ts": "7f57dd32501db0f6bb7a1adea88e054f375b30e7383d5fdbdc260792e137d306",
+    "src/engine/openapi/references.ts": "741dc9b44fc0efc74aa5bba3f5ff29ee92ad1cef1f3e37f4601d26795896d1bd",
+    "src/engine/openapi/import-worker.ts": "4bc41d67ab6842a63d4ab267f492888b8655458c496dff8ad86c7e799a056685",
+    "src/engine/fresh-state/manager.ts": "0b10b5c49e79e00a6e599b7c099b83d747b7ba3039dea20476608213ecb38fb4",
+    "src/engine/fresh-state/trial.ts": "ee7e6166de3b26d3664038eaa18a383bd1ad8c2e03fde99a1c42d9bd17c94b65",
+    "src/engine/verification/replay.ts": "7a2dd102213ee3cf03c834be422edbe1346b5529198aa5fe12fc3e01a543cbe2",
+    "src/engine/execution/requests.ts": "f9bce1931b494822674cd5666d1e2368801cd048a899bd6d6bdde455da7df8b5",
+    "src/engine/execution/bindings.ts": "cf2e7761975655cb8c816d44b4d6b612272a7805a202ccd12211ba3e04fa0600",
+    "src/engine/execution/journey.ts": "4684d941716149eccb079f52bcf871cfd2775a03c6f719ec709bfecba12dc4d1",
+    "src/engine/execution/response-policy.ts": "f518f577ed3d78af939270c02e7eab5ce8dd9665115901eef8a111817dc3cca4",
+    "src/engine/execution/variables.ts": "6e6fc755e98b002b752f61af97ae63daa30c5bb22c8a27b875bd0e23523dcc49",
+    "src/engine/execution/generate.ts": "742c14c565e6ea6e60f82223f78832c391d285ae5fc1c819695ffe4a3665ef15",
+    "src/engine/execution/http-executor.ts": "aabc38e3a8e1e3019415cc8155ca88efa77ab6d8cbb63ae19145833ee6a19dea",
+    "src/engine/execution/auth.ts": "e1990f382289beeb7338c279c42cf20a942030f6be11037dcdd7362527ce98d3",
+    "src/engine/observations/summarize.ts": "ec11dccd083e31fba90ecee16a9a9232116622cf3bf68ea63b7f3978eb4c638f",
+    "src/engine/observations/store.ts": "81fc7483d4324c0ccefb5d541caf43297156a964e83bb0396fc28d9572d8b3a5",
+    "src/engine/detection/candidates.ts": "1ee0c67237bdd3e6f34a85975a43d3f6cc433915e75340d7f64811d87201eba0",
+    "src/engine/detection/predicate.ts": "7d82db848ef621ade2cfc0c552b95327633c00c57e868cacd02723ac44ab43a6",
+    "src/engine/detection/findings.ts": "81603ffb79370122a64e5958cc1c049427b919b79627b912b3a556eddd3a8c82",
+    "src/engine/validation/dependencies.ts": "9bc9210d452cd7d4036146dc66bfd75c1151deb09791f4d737bf027bdd053b2c",
+    "src/engine/validation/journey.ts": "a87d98941fbadcc741a48a474f047f7768984275344a4104a5a28e803339cad0",
+    "src/engine/validation/predicate.ts": "1610e3a485810effa09a4f48672f15abc034fbccc64fade68ca05d85e0e9786e",
+    "src/engine/policy/scope.ts": "179a12b6d18f075854db02aa24b6a45bc44b2ac21b7fbec436cb43b549143392",
+    "src/engine/policy/headers.ts": "d9fd0d28dd58401c8653a29c61c6241ed6fcbb52012f9ef16693891dff9ebb19",
+    "src/engine/policy/operations.ts": "551eac6db5d5477b222d603b150eb6980415df0ed3931d5225d9361aa989a4f5",
+    "src/engine/budget/manager.ts": "9ea147abe648d326eb9951be518f402eb9a99e4f13f7a838501955eb1f711a63",
+    "src/engine/session/explore.ts": "08d772e3e56a563d8ae8092544290266b0806bfd41e930ad7296a0c82f127a18",
+    "src/engine/session/worker.ts": "9c8124fb157e52ec9d55b974f0f8cd690889963061c3c2387ebdf1a682e849fe",
+    "migrations/001_core.sql": "ddcc466ee39dc34c9765ef795c1690871190706c4ccefc6d92a91a7a2c45a417",
+    "migrations/002_observed_violation.sql": "b7d3fb39fe94be799c0a284ba06e5061536f8452b5e89821192b58fbff750d65",
+    "migrations/003_finding_history.sql": "d5f62ce01d7a32b43eeeb3f7eb90f3b3614bad350b715c351752e8cf89153dc6"
+  },
+  "taskChanges": "Only T038 checkbox",
+  "T039": "UNTOUCHED; unchecked and no production boundary",
+  "T040": "UNTOUCHED; unchecked"
+}

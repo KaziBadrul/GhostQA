@@ -1,0 +1,95 @@
+{
+  "task": "T047",
+  "status": "COMPLETE",
+  "checked": true,
+  "classification": "CODEX-EXECUTED AUTOMATED LOCAL ARTIFACT ACCEPTANCE; NOT AUTONOMOUS DISCOVERY",
+  "artifactAcceptanceTests": {
+    "passed": 22,
+    "failed": 0
+  },
+  "focused": {
+    "passed": 199,
+    "failed": 0,
+    "skipped": 0
+  },
+  "fullRegression": {
+    "passed": 858,
+    "failed": 0,
+    "skipped": 0
+  },
+  "requiredFixtures": ["order-lifecycle", "inventory", "workflow"],
+  "independentByFixture": {
+    "order-lifecycle": {
+      "faulty": "3/3 FAIL / VIOLATED",
+      "repaired": "3/3 PASS / SATISFIED",
+      "sameFixedPackageAcrossSixInvocations": true,
+      "originatingStateUnchanged": true
+    },
+    "inventory": {
+      "faulty": "3/3 FAIL / VIOLATED",
+      "repaired": "3/3 PASS / SATISFIED",
+      "sameFixedPackageAcrossSixInvocations": true,
+      "originatingStateUnchanged": true
+    },
+    "workflow": {
+      "faulty": "3/3 FAIL / VIOLATED",
+      "repaired": "3/3 PASS / SATISFIED",
+      "sameFixedPackageAcrossSixInvocations": true,
+      "originatingStateUnchanged": true
+    }
+  },
+  "supervisedByFixture": {
+    "order-lifecycle": {
+      "faulty": "3/3 VIOLATED / VERIFIED",
+      "repaired": "3/3 SATISFIED / UNVERIFIED"
+    },
+    "inventory": {
+      "faulty": "3/3 VIOLATED / VERIFIED",
+      "repaired": "3/3 SATISFIED / UNVERIFIED"
+    },
+    "workflow": {
+      "faulty": "3/3 VIOLATED / VERIFIED",
+      "repaired": "3/3 SATISFIED / UNVERIFIED"
+    }
+  },
+  "pairedPackageOriginVerification": {
+    "order-lifecycle": {
+      "manifestHash": "921cb562efb90e9c5a7cc8cecb1d5036e1c11e76fa93a961e8a1beb1b8b4c0ca",
+      "packageHash": "bbed0cd1771966f7b777d25f5a8bba123143276e9695efe91cb72ebd98ed667b",
+      "status": "VERIFIED"
+    },
+    "inventory": {
+      "manifestHash": "26bcfd902b4a3155e73960b4d7c14524e07f70bdaaed64978b3a85520da93749",
+      "packageHash": "21982a382ccf32b83e81727aff495037d7122b1b3c042ee82bea6e94dedcbee4",
+      "status": "VERIFIED"
+    },
+    "workflow": {
+      "manifestHash": "cfd6517e1d2a71ad1511accbb693f6a56e458338d1f1471f543c3808e5cad7d8",
+      "packageHash": "f275873069f09e4b0a58f79244c875ec0f987a8f483d954137bf20ef6683cad2",
+      "status": "VERIFIED"
+    }
+  },
+  "independentRequestLimitPerInvocation": 5,
+  "supervisedRequestLimitPerAcceptanceRun": 15,
+  "supervisedSourceRequests": 10,
+  "supervisedRemainingArtifactRequests": 5,
+  "insufficientBudgetAndCancellationFailClosed": true,
+  "freshIdentitiesAndBaselines": true,
+  "independentExecutionGrantsNoOriginatingStatus": true,
+  "evidenceFile": "tests/acceptance/t047-observed.json",
+  "typecheck": "PASS",
+  "changedFileLint": "PASS",
+  "changedFileFormat": "PASS",
+  "sanitization": "PASS",
+  "historicalEvidenceUnchanged": true,
+  "productionEngineCodeChanged": false,
+  "authoritySemanticsChanged": false,
+  "manualAcceptancePending": false,
+  "liveGeminiBenchmarkExecuted": false,
+  "T048Untouched": true,
+  "T058Untouched": true,
+  "knownUnrelatedIssues": {
+    "lintErrors": 2,
+    "formatFailures": 9
+  }
+}

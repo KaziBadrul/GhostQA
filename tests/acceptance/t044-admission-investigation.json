@@ -1,0 +1,47 @@
+{
+  "task": "T044",
+  "classification": "admission-only investigation; no live acceptance executed by Codex",
+  "developerObservedOutput": {
+    "task": "T044",
+    "result": "FAIL",
+    "failedStage": "RUN_ADMISSION",
+    "reason": "SUPERVISOR BUSY",
+    "lastCompletedStage": "SCOPE_APPROVAL",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "runId": "325d0540-72c9-490a-937c-3d70612be408",
+    "evidenceFile": "tests/acceptance/t044-failed-a18e4fbe-6742-4d1c-957f-92440c595d74.json"
+  },
+  "failedSnapshotSha256": "e11afe5af6eaa3097f4f7f34cb6b7ba44940acefca3bab62ea1684aea1039ae5",
+  "currentReadOnlyInspection": {
+    "testAndApplicationDatabaseSame": true,
+    "advisoryLockId": 4420517,
+    "backendPid": 29221,
+    "backendState": "idle",
+    "backendStart": "2026-10-01T12:50:07.306Z",
+    "serverPid": 29191,
+    "matchingClientPort": 52399,
+    "serverWorkingDirectoryIsRepository": true,
+    "activeApplicationRuns": 0
+  },
+  "rootCause": "Existing GhostQA server holds the session advisory lock in the same database selected by acceptance. Schema isolation does not isolate database advisory locks.",
+  "productionLifecycleDefect": false,
+  "productionAuthoritySemanticsChanged": false,
+  "remediation": "Developer gracefully stops the owned server first, then reruns acceptance with exclusive supervisor ownership; no automated unlock/kill/retry.",
+  "focusedTests": {
+    "passed": 57,
+    "failed": 0,
+    "skipped": 0
+  },
+  "fullRegression": {
+    "passed": 791,
+    "failed": 0,
+    "skipped": 0
+  },
+  "typecheck": "PASS",
+  "changedLint": "PASS",
+  "changedFormat": "PASS",
+  "sanitization": "PASS",
+  "T044Checked": false,
+  "T045Untouched": true
+}

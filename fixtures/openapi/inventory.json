@@ -1,0 +1,260 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Inventory API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/control/reset": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "reset": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": ["reset"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/control/baseline": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": ["items"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items": {
+      "post": {
+        "responses": {
+          "201": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["AVAILABLE", "UNAVAILABLE", "ALLOCATED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items/{itemId}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "maxLength": 256
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["AVAILABLE", "UNAVAILABLE", "ALLOCATED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items/{itemId}/unavailable": {
+      "post": {
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "maxLength": 256
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["AVAILABLE", "UNAVAILABLE", "ALLOCATED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["AVAILABLE", "UNAVAILABLE", "ALLOCATED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items/{itemId}/allocate": {
+      "post": {
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "maxLength": 256
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["AVAILABLE", "UNAVAILABLE", "ALLOCATED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["AVAILABLE", "UNAVAILABLE", "ALLOCATED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

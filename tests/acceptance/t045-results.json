@@ -1,0 +1,56 @@
+{
+  "task": "T045",
+  "status": "COMPLETE",
+  "checked": true,
+  "requiredFixtures": ["order-lifecycle", "inventory", "workflow"],
+  "orderLifecycleReused": true,
+  "initialExpectedRed": {
+    "passed": 0,
+    "failed": 13,
+    "cause": "missing fixture modules and required-suite file"
+  },
+  "newTests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "focused": {
+    "passed": 144,
+    "failed": 0,
+    "skipped": 0
+  },
+  "fullRegression": {
+    "passed": 814,
+    "failed": 0,
+    "skipped": 0
+  },
+  "previousRegressionTests": 798,
+  "typecheck": "PASS",
+  "changedFileLint": "PASS",
+  "changedFileFormat": "PASS",
+  "sanitization": "PASS",
+  "publicContractsIdenticalAcrossVariants": true,
+  "supportedOpenApiOperationsPerNewFixture": 6,
+  "plannerJourneyCandidatesPerNewFixture": 4,
+  "controlCandidatesExcluded": true,
+  "privateEvaluatorMetadataExcluded": true,
+  "supervisorControlRejection": "PASS",
+  "genericPredicateVerdicts": {
+    "inconsistent": "VIOLATED",
+    "repaired": "SATISFIED",
+    "wrongEntityOrOrder": "NOT APPLICABLE",
+    "missingEvidence": "UNEVALUABLE"
+  },
+  "requestsPerPairedSupervisedTest": 10,
+  "freshTrialAndBaselineIdsIndependent": true,
+  "productionEngineCodeChanged": false,
+  "authoritySemanticsChanged": false,
+  "historicalEvidenceUnchanged": true,
+  "gate4PackageUnchanged": true,
+  "geminiCallsPerformed": false,
+  "benchmarkExecuted": false,
+  "knownUnrelatedIssues": {
+    "lintErrors": 2,
+    "formatFailures": 9
+  },
+  "T046AndLaterUntouched": true
+}

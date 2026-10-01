@@ -1,0 +1,13 @@
+{
+  "scenario": "password-reset-after-email-change",
+  "requiredScenarios": [
+    "password-reset-after-email-change",
+    "password-reset-after-password-change"
+  ],
+  "faultyStatus": 200,
+  "repairedStatus": 403,
+  "requiredBaseline": {
+    "accounts": 0,
+    "tokens": 0
+  }
+}

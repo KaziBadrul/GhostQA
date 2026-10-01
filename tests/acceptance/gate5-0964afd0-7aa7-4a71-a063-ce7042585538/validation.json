@@ -1,0 +1,677 @@
+{
+  "task": "T048",
+  "seriesId": "gate5-0964afd0-7aa7-4a71-a063-ce7042585538",
+  "result": "PASS for automated regression and integrity; Gate 5 FAIL is unchanged",
+  "fullRegression": {
+    "passed": 858,
+    "failed": 0,
+    "skipped": 0
+  },
+  "testFiles": {
+    "harness.test.ts": {
+      "passed": 22,
+      "failed": 0,
+      "skipped": 0
+    },
+    "artifact.test.ts": {
+      "passed": 45,
+      "failed": 0,
+      "skipped": 0
+    },
+    "core.test.ts": {
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    },
+    "gemini.test.ts": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0
+    },
+    "openapi-profile-matrix.test.ts": {
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0
+    },
+    "openapi-reference-siblings.test.ts": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "openapi-schema-semantics.test.ts": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "openapi.test.ts": {
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0
+    },
+    "predicate-provenance.test.ts": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    },
+    "provider-failure-diagnostics.test.ts": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    "provider.test.ts": {
+      "passed": 28,
+      "failed": 0,
+      "skipped": 0
+    },
+    "account-invariants.test.ts": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "agent-loop.test.ts": {
+      "passed": 29,
+      "failed": 0,
+      "skipped": 0
+    },
+    "api-model.test.ts": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    },
+    "artifact-assertions.test.ts": {
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    },
+    "budget.test.ts": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0
+    },
+    "config.test.ts": {
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0
+    },
+    "finding-transitions.test.ts": {
+      "passed": 47,
+      "failed": 0,
+      "skipped": 0
+    },
+    "foundation.test.ts": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "headers.test.ts": {
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0
+    },
+    "minimizer.test.ts": {
+      "passed": 54,
+      "failed": 0,
+      "skipped": 0
+    },
+    "observations.test.ts": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "openapi-sanitization.test.ts": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "openapi-worker.test.ts": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "planner.test.ts": {
+      "passed": 24,
+      "failed": 0,
+      "skipped": 0
+    },
+    "planning-boundary.test.ts": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "predicates.test.ts": {
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0
+    },
+    "scope-preview.test.ts": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "scope.test.ts": {
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0
+    },
+    "secrets.test.ts": {
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0
+    },
+    "single-dispatch.test.ts": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "standalone-authority.test.ts": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    "t044-diagnostics.test.ts": {
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0
+    },
+    "transport.test.ts": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "variables.test.ts": {
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0
+    },
+    "account-fixture.test.ts": {
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    },
+    "artifact-acceptance.test.ts": {
+      "passed": 22,
+      "failed": 0,
+      "skipped": 0
+    },
+    "artifact-authority.test.ts": {
+      "passed": 27,
+      "failed": 0,
+      "skipped": 0
+    },
+    "artifact-persistence.test.ts": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    "candidate-loop-local.test.ts": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "controlled-fixture-execution.test.ts": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "credentials.test.ts": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "database.test.ts": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "dispatch.test.ts": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    },
+    "evidence-store.test.ts": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    },
+    "fresh-state.test.ts": {
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0
+    },
+    "journey-execution.test.ts": {
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0
+    },
+    "migrations.test.ts": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "minimization-authority.test.ts": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "minimization.test.ts": {
+      "passed": 35,
+      "failed": 0,
+      "skipped": 0
+    },
+    "openapi-persistence.test.ts": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "order-lifecycle.test.ts": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "predicate-persistence.test.ts": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "reproduction-pipeline.test.ts": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    },
+    "required-fixtures.test.ts": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0
+    },
+    "standalone-runner.test.ts": {
+      "passed": 66,
+      "failed": 0,
+      "skipped": 0
+    },
+    "supervisor.test.ts": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    "suspicious.test.ts": {
+      "passed": 22,
+      "failed": 0,
+      "skipped": 0
+    },
+    "t044-admission.test.ts": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "verification-authority.test.ts": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    },
+    "verification.test.ts": {
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0
+    },
+    "vertical-slice-local.test.ts": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "engineAcceptance": {
+    "AP-002": {
+      "result": "FAIL",
+      "failedRequirements": [
+        {
+          "requirement": "SC-002 / AP-002",
+          "fixtureId": "inventory",
+          "discoveries": 3,
+          "confirmations": 3,
+          "denominator": 5,
+          "required": 4
+        },
+        {
+          "requirement": "SC-002 / AP-002",
+          "fixtureId": "workflow",
+          "discoveries": 0,
+          "confirmations": 0,
+          "denominator": 5,
+          "required": 4
+        }
+      ]
+    },
+    "AP-003": {
+      "result": "PASS",
+      "evidence": [
+        "tests/acceptance/t046-results.json",
+        "tests/acceptance/t047-observed.json",
+        "tests/acceptance/artifacts.md"
+      ],
+      "separateSuppliedReduction": "4 -> 3 for each fixture; NOT autonomous discovery"
+    },
+    "AP-004_ENGINE": {
+      "result": "PASS",
+      "classification": "engine automated acceptance coverage; UI/API-dependent portions deferred where specified",
+      "testFiles": {
+        "scope.test.ts": {
+          "passed": 26,
+          "failed": 0,
+          "skipped": 0
+        },
+        "scope-preview.test.ts": {
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        "headers.test.ts": {
+          "passed": 11,
+          "failed": 0,
+          "skipped": 0
+        },
+        "transport.test.ts": {
+          "passed": 8,
+          "failed": 0,
+          "skipped": 0
+        },
+        "dispatch.test.ts": {
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        },
+        "standalone-runner.test.ts": {
+          "passed": 66,
+          "failed": 0,
+          "skipped": 0
+        },
+        "single-dispatch.test.ts": {
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "standalone-authority.test.ts": {
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "evidence": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/validation.json"
+    },
+    "AP-005_ENGINE": {
+      "result": "PASS",
+      "classification": "engine automated acceptance coverage; UI/API-dependent portions deferred where specified",
+      "testFiles": {
+        "secrets.test.ts": {
+          "passed": 18,
+          "failed": 0,
+          "skipped": 0
+        },
+        "credentials.test.ts": {
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "evidence-store.test.ts": {
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        },
+        "observations.test.ts": {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "openapi-sanitization.test.ts": {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "provider.test.ts": {
+          "passed": 28,
+          "failed": 0,
+          "skipped": 0
+        },
+        "planning-boundary.test.ts": {
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        "artifact.test.ts": {
+          "passed": 45,
+          "failed": 0,
+          "skipped": 0
+        },
+        "standalone-runner.test.ts": {
+          "passed": 66,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "evidence": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/validation.json"
+    },
+    "AP-008": {
+      "result": "PASS",
+      "classification": "engine automated acceptance coverage; UI/API-dependent portions deferred where specified",
+      "testFiles": {
+        "fresh-state.test.ts": {
+          "passed": 25,
+          "failed": 0,
+          "skipped": 0
+        },
+        "budget.test.ts": {
+          "passed": 16,
+          "failed": 0,
+          "skipped": 0
+        },
+        "verification.test.ts": {
+          "passed": 17,
+          "failed": 0,
+          "skipped": 0
+        },
+        "minimization.test.ts": {
+          "passed": 35,
+          "failed": 0,
+          "skipped": 0
+        },
+        "artifact-authority.test.ts": {
+          "passed": 27,
+          "failed": 0,
+          "skipped": 0
+        },
+        "artifact-persistence.test.ts": {
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        },
+        "reproduction-pipeline.test.ts": {
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "evidence": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/validation.json"
+    },
+    "AP-009_ENGINE": {
+      "result": "PASS",
+      "classification": "engine automated acceptance coverage; UI/API-dependent portions deferred where specified",
+      "testFiles": {
+        "budget.test.ts": {
+          "passed": 16,
+          "failed": 0,
+          "skipped": 0
+        },
+        "agent-loop.test.ts": {
+          "passed": 29,
+          "failed": 0,
+          "skipped": 0
+        },
+        "planner.test.ts": {
+          "passed": 24,
+          "failed": 0,
+          "skipped": 0
+        },
+        "provider.test.ts": {
+          "passed": 28,
+          "failed": 0,
+          "skipped": 0
+        },
+        "provider-failure-diagnostics.test.ts": {
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        },
+        "supervisor.test.ts": {
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        },
+        "journey-execution.test.ts": {
+          "passed": 23,
+          "failed": 0,
+          "skipped": 0
+        },
+        "dispatch.test.ts": {
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        },
+        "artifact-authority.test.ts": {
+          "passed": 27,
+          "failed": 0,
+          "skipped": 0
+        },
+        "standalone-runner.test.ts": {
+          "passed": 66,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "evidence": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/validation.json"
+    },
+    "AP-010": {
+      "result": "PASS",
+      "classification": "engine automated acceptance coverage; UI/API-dependent portions deferred where specified",
+      "testFiles": {
+        "openapi.test.ts": {
+          "passed": 11,
+          "failed": 0,
+          "skipped": 0
+        },
+        "openapi-profile-matrix.test.ts": {
+          "passed": 15,
+          "failed": 0,
+          "skipped": 0
+        },
+        "openapi-schema-semantics.test.ts": {
+          "passed": 19,
+          "failed": 0,
+          "skipped": 0
+        },
+        "openapi-reference-siblings.test.ts": {
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "openapi-persistence.test.ts": {
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        "variables.test.ts": {
+          "passed": 32,
+          "failed": 0,
+          "skipped": 0
+        },
+        "journey-execution.test.ts": {
+          "passed": 23,
+          "failed": 0,
+          "skipped": 0
+        },
+        "predicate-provenance.test.ts": {
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0
+        },
+        "verification.test.ts": {
+          "passed": 17,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "evidence": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/validation.json"
+    },
+    "AP-011": {
+      "result": "PASS",
+      "classification": "engine automated acceptance coverage; UI/API-dependent portions deferred where specified",
+      "testFiles": {
+        "predicates.test.ts": {
+          "passed": 15,
+          "failed": 0,
+          "skipped": 0
+        },
+        "predicate-provenance.test.ts": {
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0
+        },
+        "predicate-persistence.test.ts": {
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "finding-transitions.test.ts": {
+          "passed": 47,
+          "failed": 0,
+          "skipped": 0
+        },
+        "verification.test.ts": {
+          "passed": 17,
+          "failed": 0,
+          "skipped": 0
+        },
+        "verification-authority.test.ts": {
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        },
+        "suspicious.test.ts": {
+          "passed": 22,
+          "failed": 0,
+          "skipped": 0
+        },
+        "artifact.test.ts": {
+          "passed": 45,
+          "failed": 0,
+          "skipped": 0
+        },
+        "artifact-authority.test.ts": {
+          "passed": 27,
+          "failed": 0,
+          "skipped": 0
+        },
+        "artifact-persistence.test.ts": {
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "evidence": "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/validation.json"
+    }
+  },
+  "typecheck": "PASS",
+  "changedLint": "NOT APPLICABLE: no code changes",
+  "benchmarkArtifactStructureAndIntegrity": "PASS",
+  "sourceAndHistoricalHashesUnchanged": true,
+  "sanitization": "PASS",
+  "rawHarnessTokenSourceDefect": {
+    "requirement": "FR-029 usage source attribution",
+    "classification": "harness reporting defect; measured execution unchanged",
+    "source": "src/cli/benchmark.ts executeBenchmarkTrial tokenMetric call",
+    "cause": "Gemini provider identity forces estimated=false even when persisted failed-call telemetry has usage.estimated=true.",
+    "affectedInputCallCount": 14,
+    "actualProviderReportedInputTokens": 117422,
+    "actualEstimatedInputTokens": 23450,
+    "handling": "Original journals and raw per-record metrics preserved. Audited token metrics derive from persisted per-call usage flags; no production correction or rerun in this series."
+  },
+  "changedFormat": "PASS"
+}

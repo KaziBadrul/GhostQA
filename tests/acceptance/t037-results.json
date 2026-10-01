@@ -1,0 +1,89 @@
+{
+  "task": "T037",
+  "status": "PASS",
+  "productionAndTestFiles": [
+    "src/engine/detection/findings.ts",
+    "src/engine/verification/replay.ts",
+    "src/server/repositories/findings.ts",
+    "migrations/003_finding_history.sql",
+    "src/server/repositories/predicates.ts",
+    "src/engine/session/explore.ts",
+    "src/cli/vertical-slice.ts",
+    "src/engine/planning/gemini.ts",
+    "src/engine/planning/provider.ts",
+    "scripts/t037-acceptance.ts",
+    "tests/integration/verification-authority.test.ts",
+    "tests/integration/verification.test.ts"
+  ],
+  "focused": {
+    "passed": 70,
+    "failed": 0,
+    "T036ContractTests": 64,
+    "additionalAuthorityTests": 6
+  },
+  "fullRegression": {
+    "passed": 519,
+    "failed": 0,
+    "skipped": 0,
+    "files": 46,
+    "previousRegressionTests": 449
+  },
+  "typecheck": "PASS",
+  "changedFileLint": "PASS",
+  "changedFileFormat": "PASS",
+  "repositoryLint": {
+    "existingErrors": 2,
+    "file": "src/engine/mapping/state.ts"
+  },
+  "repositoryFormat": {
+    "remainingExistingFailures": 9,
+    "note": "explore.ts was formatted because T037 changes it; no unrelated cleanup"
+  },
+  "liveAcceptance": {
+    "task": "T037",
+    "result": "GATE 3 PASS",
+    "runId": "79ab1d89-18ab-4523-b3d5-0f6ca496103f",
+    "findingId": "b7d4cc90-1d44-4b23-beb5-fc82a8b4e617",
+    "model": "gemini-3.5-flash-lite",
+    "predicateRef": {
+      "id": "7319d417-ad31-4476-9c1d-c1943bb3c48a",
+      "version": 1,
+      "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+    },
+    "initialEvidenceId": "ea854174-9b24-4eb7-95bb-2b73476dac18",
+    "initialTrialId": "08bc2213-cd5e-46a6-bca0-358b51c73866",
+    "initialBaselineId": "e73b5e38-c083-4432-a1be-c66a55e20ffc",
+    "replayEvidenceId": "ce09aae1-d51a-48b4-9569-2571e2dda6e5",
+    "replayTrialId": "e12e835c-391c-476f-968e-291955c8b36d",
+    "replayBaselineId": "60569eaf-a10c-4495-9317-89f69c2f526b",
+    "usedRequests": 10,
+    "modelCalls": 1
+  },
+  "historicalPreservation": "Original T035 snapshots and vertical-slice.md prefix preserved by SHA-256",
+  "T036TestCorrection": "User-approved spy binding correction only; assertions unchanged",
+  "failedAttempts": [
+    {
+      "runId": "32a0d3d4-fe6e-42d8-9cd9-9d09a58a9b72",
+      "stage": "SUPERVISOR BUSY",
+      "requests": 0
+    },
+    {
+      "runId": "1a590e04-b6e0-4a51-b547-d79d923a5635",
+      "stage": "MODEL PLAN ERROR",
+      "requests": 0
+    },
+    {
+      "runId": "6ce6179b-7fd7-4217-bf23-01ba94572e09",
+      "stage": "MODEL PLAN ERROR",
+      "requests": 0
+    }
+  ],
+  "providerOnlyDiagnostic": {
+    "targetRequests": 0,
+    "stage": "PROPOSAL VALIDATION",
+    "code": "PREDICATE HASH MISMATCH",
+    "note": "Separate real-provider call using the same sanitized planning context; original rejected proposals were not persisted."
+  },
+  "regressionInvocationCorrection": "An initial full run used the app database and encountered supervisor-lock failures after server restoration. The passing run uses the isolated test database.",
+  "T038": "UNTOUCHED"
+}

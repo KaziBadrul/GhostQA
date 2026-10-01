@@ -1,0 +1,3515 @@
+{
+  "task": "T048 POST-SERIES-2 ANALYSIS",
+  "gateStatus": "FAIL; T048 UNCHECKED",
+  "seriesIds": [
+    "gate5-0964afd0-7aa7-4a71-a063-ce7042585538",
+    "gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50"
+  ],
+  "historicalIntegrity": {
+    "algorithm": "SHA-256",
+    "filesCompared": 245,
+    "changedFiles": [],
+    "fileHashes": {
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/9-assigned.json": "c2ae6ee0de4780185de7071ae6320cbda5d52ef54b89bd1dde02f479b9fcd90c",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/8-result.json": "a4a41e2335d6747bddb4846a66b71cfc9deae7cb0670a5f7e71caef4ed4407a8",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/summary.json": "82d7534b6082f4106d57d81c5c337532b4a1c93da2c77d862077d862c62935ca",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/26-assigned.json": "2ead5bba37485807540ee5726830960e9678384dd994808d4f448e4bc13f583a",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15-result.json": "feb51bf0c5e9dadb29cc3c0103936ad6f5c1d87fde3adacff2db9dfa810ad001",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/27-result.json": "86a001c11f6fbefa2a80244e3f67b729ea022f26685c9501ecff9aaab2ffa937",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1-result.json": "92b0aff05b12c402764314b325d7a9b51e05e585a895ad5846dff27e4c90e6c9",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/22-assigned.json": "224bed0c51471a610b958471eea897a9a43cbf8ce94510f34a00cee55507ab00",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/25-assigned.json": "ab187bbf32bf1a2679d7a104520ea7e6ea1bc02fe3974b5811f3826e83ef9800",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/10-result.json": "998d88168ee485f34e6de9e6b6df6f81e93c1064d8595ea873ca26f9a2de98d9",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/21-assigned.json": "9ac3865324e20ab738e443fb55cce2be1103f3c3e517eaebd849ea1bb4de7478",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/18-assigned.json": "5a5752584baf7d7add3ff8a397a40865737a56fb29ae9c3fb972adc2e55d6c8d",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4-result.json": "6a8376ee13a2e6edc4eebc1d2d6a9186d3f39ecd060711df31f7ec59d4637599",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/22-result.json": "ce40a538d66a70091bff4d5047d5d7de73605c2c46dd2f753ca7a479ac23f07d",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/19-result.json": "f069362da6daa47e68bdb536dd55ea0712d593fb07fd276ee8eb188f79d2d767",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/28-result.json": "b1ad0b7a509617acbde1edf6e0007c3bbe05238f306c09950966fd56d8cc1866",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4-assigned.json": "59edb6bce8de501791dbfa53015f1dbe06486f2ef59c5399c6f07e4e41c5b04d",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/21-result.json": "383314a24a695983df8d5d2e3cca88c0f8ee0398d8547b596dfb4243eda48a44",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/7-result.json": "14895adee697afb5e9b567935b08815b776cbca56a4b062a43fc0de79cf77f44",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/12-assigned.json": "ae1ca09c9a35618860d9c3e9a1c878bee80952bc16a183a871631c01fd5fcce6",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13-result.json": "b5df8eeb3c66c70939b1500539282e703f13ce94388566a7ccfb8e5e426ee886",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/16-assigned.json": "fb003bdbda52ad0e95259e8465904a061eb2ee40b9125b3a66ae10e77b27a08c",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/28-assigned.json": "07363f134001944ebbdea7d50b40c8a4167eee2f0f4c5846f427da294ff9ce09",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2-result.json": "6c7c4bcffd6fc9830846691bf021fce7b7d5e55278126ae9db12198a24d5e5ae",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/11-assigned.json": "b6d824787df0fee0a4f7bcf13d5849cbeb94b97a875c9e5a73cad297a10334f7",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/24-result.json": "3b6753d47005d28caa3ee3fae8b3c7e0b2b57c9cd4c7adfddea4f496b5101768",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15-assigned.json": "d7392ab74662bbdbecca45e2136cdf1367ff2baec2ee07be88d84c1726b7e8d3",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/16-result.json": "8c1961b4cb0971843d8fdee639ad02520e677d2f5e2146175d4859dbd0e344fe",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/7-assigned.json": "8664e0d7c0ebacc0b8e3681a0f5b8a19dbb58ce69a78c62c0c85971df488ce57",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3-assigned.json": "50808010891dc052a9416dfdf2d9dff21ee1217331bebdb499ca8a3e118bdd73",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14-assigned.json": "4cc3f95cf73b9e6d8638a03297259ab294a948212bc0aff8d6080394998a77dd",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/10-assigned.json": "a8aee7f5a489f59dc826a1024efa7bc7dc6dac9b078d4133c6c5480b14fd2e96",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/18-result.json": "cad1cb811f7fe45fe3841c48772b0f356a94f786667e3d22b5b51172aa0a493e",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/29-assigned.json": "85ebda48e192f2b0d67d6b953e35246ac238b2791749eb2eeec0ab29a6c596dc",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/identity.json": "590d1f8731cea161e0c89fb8970f0603f780a836c132705847692ff62a454d36",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2-assigned.json": "1771f1bc414c5722ea31409d600c4f6db44f34e41c02067ccf47ed6ab3c7ab8f",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/23-result.json": "93bf3cd16910790270dec57b7414af788dc25ea4eb1d5179a8c0647017f2ef47",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5-result.json": "5452921b820a920514b549228c03d319165b5f968ec82693101fb6b52217dc4e",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/6-assigned.json": "09146fb8e2d1abe72cf2468e42d2570438b39ea56ef2f2d84b45fc18bdd3af66",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/11-result.json": "9db778cf738139a2d27e23cd7b821da7225465f432e879134da2d22f1a409784",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1-assigned.json": "9b204e5b86b9a423d706a53cbf4f8050443d4f05f0f510fe3f6e4d5d1dfa4f30",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/26-result.json": "dc3cd2aaa0d5acd9afc59a5f072cd6cd777c8a72a7e6776eae7f7d47ae05e2a6",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14-result.json": "60d797acb3bce4179532d7d99fff6a72ae5d579d9b96e1876d47e83b68a606dc",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5-assigned.json": "5c0f4b7599ad32bac2012dff847cd68e6c32dd13cd1e23fb1c74b97e4626427b",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/validation.json": "736515122cddacdf7fd6fb31eba776bd47ba6af55f5e9b8d7ab9c5bb714f12f9",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/9-result.json": "09ca689402bebdcbaf02c21bd0f3886fcee5a19838d6fc488451662e1256b12a",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/17-assigned.json": "b4623e6539a18bfb0d9ef5baedc1079e46c916e8135572ac13e88d3f1acab11f",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13-assigned.json": "8ea6eda88d8020ee5130fb6257bc175abf1d51daeaf0cfbfa7fb40a4553deb6a",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/30-result.json": "6d9844d3463ab593d09de627e9c1ea2e03e9b87bfc7c73ace7ea2685ebafbf7e",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/19-assigned.json": "4265609971de014638deee985b6ed536248cd84dcd9c7c55c2834b0153486f86",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/series.json": "3ffd8e6e4e45b4c57d8335f7151bb2a38b2875cd56059f79accf10419bc04664",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/20-assigned.json": "3b1988ec5ceffec9df90c3b61b008e644ce92bc98b0a2a1bdfe30c8997fcfccc",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/24-assigned.json": "e783368bf51b1d334a0d1681d4a48cbed83d64d88df3f844fb2c36f994703a99",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/17-result.json": "5bd616b4360a0edd15f90c50fafbeca160b9523a9980824da26be60dd72aedaf",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/preflight.json": "cac811b3872318a55b903fe392c45c0be5e0b90e176669510c931db44f9d2b94",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/25-result.json": "4f29e5db6c58ecee97148fcbea698d7b6e007d90fcc5324523d70c94daa55293",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3-result.json": "8ebf5d2c646e5af5bf4ff9f17b10cd74b96714c739fb26a5167346c2c6c30ccc",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/12-result.json": "df48ad01a37a012c9d5dbb8d926409e6e1b143ddfd0ef678baf965451021e1b5",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/6-result.json": "dfeb9a6d8d59232ca846d4051f9c682cd6be1209d64043626da8d928959ee61c",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/20-result.json": "6e1251d1d52bf7750bdbfd3c866c3b5d812970860c4c64518a5f0886289a03bc",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/8-assigned.json": "7ca27e1b5a29fdae916840cfd25280ae62c090321bb39fb9962b41055350320c",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/23-assigned.json": "6bad2e3d6360f8e6d476423f37b76acb996d1db882ba3397dee7c858bc671b85",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/29-result.json": "3234bcf52a718c55e418f2b98f379600e6ce203cae2804ba9f506eaf20501366",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/30-assigned.json": "7f76f077ae9e136f13873523f18f82a82ca495d73958b252f47a8d79d39996e0",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/27-assigned.json": "e321f2eb8465dc117a83ce206482fddac2a83be354a2337a34633c859d252624",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/20/evidence.json": "374a8bb1204167d1df019e12f47fd932c52a6034f58e6c17b318d6b9f63dfd19",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/18/evidence.json": "5210d8013176d0367a1cf745dd8125ea3b91e7f0943f7a027fb9a0973ef30f94",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/27/evidence.json": "d815c008c875a9a9bc9ff602c4a6ee9721b123335e780fa188076b7f3a7da256",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/9/evidence.json": "9d909a5269fd2e528b0f8e83dd75e73b1a10071c58b2392f38e26bad991793c9",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/11/evidence.json": "04c13fa7637dcdb53ab041d57973a15e0c2a02dc29416051d4f020d1ab64fe4e",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/7/evidence.json": "7f6d4a82f4c6ff587c05b3c45075c692278ae6a5973068189e180a7744a92341",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/29/evidence.json": "dba7ea36b7086da0c98c3d98ad5c19b0f8f635f059377dbcb9ecf5cd5f8963a2",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/16/evidence.json": "91722447593ed4e285b11f77aa6d16749b9f86753e355f70531debba17cb9155",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/6/evidence.json": "bc75dd7b2f653d931294ff409146a4867d42834f79bd8b36e293efba4b6ff071",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/28/evidence.json": "f2bcadf810bba626358d5d95cedd9cade0df5bfb61b7c27e2931688c637e587b",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/17/evidence.json": "b939f74cf1161634706d079e3467a72664568073517a7e0094f3b8f6b12b7414",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/evidence.json": "0f3356edb332be71f51b47eded6a44aaf6f6a32918eebf6d66d184d7d4f66555",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/report.json": "c6ee240a1fb18269a9fbcbdb222e6729bbc7f038bde98f57e50b796a735d69e9",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/report.md": "dbd545fc4cd7218acef2603da7342e0f5ff61c3c6aaa195ff658e2388aa1d818",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/regression.mjs": "7355ad9557b168de32b9e2b6fea7afc4e186449c569dc049c4cfc65cf16cbc70",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/1/manifest.json": "98be5b4e079fb3c21c1d5ea5490da018d96144307effb0be37fd2106591fe6d0",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/10/evidence.json": "3719e52493fb68a539626dfe3b5d4dc5da3dce9159fc1a8aa400768150783f27",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/19/evidence.json": "568ca4dd3b4cabd21eb6ca4897f47dbb5468a6d275db3d51802b815b9dc923d7",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/26/evidence.json": "5e3d0a5b902a653531927f402d3d5c7cead471999097053ba1a89fa565d2c11b",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/8/evidence.json": "50ab48c148101ccea07c4bb93747ace40624a5241bdb5cfbd549e2fd41699ef4",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/21/evidence.json": "93c5fbd4518732b71abe766db2d9188b57dde4592e7de4c6ac1dee0245401376",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/30/evidence.json": "f64492135377170f2126abc1d4c7d354e5ed7b09f0efc9791d6f95b4d4d8603b",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/24/evidence.json": "cf7df117474b9cc08a2af5ad3939ce1b69dbb8ec013b48806635961cad7d49e3",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/23/evidence.json": "175be6715a6c17dfd8d5a0e7619c11e72252a66768bf82146c2a9250c9e6d3ee",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/evidence.json": "9db3e76273ce42f6b1d894760c33fa02db08891e766b664a616dc3a744593a54",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/report.json": "3c1f4ecaa66c16fce40f3a3932de5f80215c2b6b3618a0d2e0156350469123a9",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/report.md": "d43b3c673078b4c42bcef015e952c2e83eff1717aede61cbe6249c031d296c22",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/regression.mjs": "577060cbaffdf07f49dd845ec11f1dd7a75c96b84e37013842ac5051c16c46cd",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/4/manifest.json": "1e85cd3c03dcc22d58b686faefdd6712b77f8d70d2331c6532423c4cc53bf9e0",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/evidence.json": "57beabeceb1f00089142ec8a025b22a479acbc205465863c408b706e2dcfcf05",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/report.json": "eb73b4529958b4fafe831be48ee122b7abb447e7c96ad5b80a3d25f70e35b499",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/report.md": "5a60049b9bd634848cdd12875d6bf796dc4cb6a6824a8786b6a38fbc5e2b0498",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/regression.mjs": "88fecd13cf06f349efc62f41f2fd19a0d9a42db5bf310cfdb893cb44f826b68d",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/15/manifest.json": "ba56876e7568dd9a0efe69649fc29faeabf7791d9bbd07ca834a613abf4e5b7b",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/evidence.json": "d29c8b02a3088b9265dc842e8546fa6261df20f935c90c6923d372ac40c379a8",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/report.json": "d06ab5123f81e7a2e3e384ab1c637b5886e7a30c2b2aabcb22e61e9200383d51",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/report.md": "52a93ec0e0b92dbc43b064b780b959951c2cda67c05569e9ae9776753494e57f",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/regression.mjs": "aed90806b7798957db42c9a29e54f5d943a3c362c084b389e2468ab46eecf36c",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/3/manifest.json": "24b466336948c23e03e87fe232d80cf7680d65e751e5c3e67e13b84bd4454db7",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/12/evidence.json": "9cca041a699be64e48ebae586bdb65e88fe00b184ba6c3aee32aa52bf5d9eb3c",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/evidence.json": "fe578c6a2923563983ce65812c82c9579d1c23087051aaf78cdd831cf221a2ee",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/report.json": "5fd36142eeddc0fe2a4ba4e450a2a5ff2568a4fc9fc8b7cddc1b3b6ec9d66e31",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/report.md": "cf1976b498c4edd0aba061e52942ff4dfdc07d3ed3b940ed404e7244013498bf",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/regression.mjs": "79dda1c2f05f66b2abc40010fea3fbbdab2ef857dd185b99d0f616f433cf8628",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/2/manifest.json": "1e410dcb5ecf96454474f376ce6c3fc585f982875dee9de4109dbf7439d514b3",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/evidence.json": "ae5d3d5044e896ce4e3033d0abb4b0452639d662cd9b819a7f658d88cb6740d8",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/report.json": "04c7f8c68eca7e79b0ff42021c6b7c0c73c1b86dc870a91014bff6613c344bd3",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/report.md": "487c330c219c97a98775f85e5c180289cb30c9301dbf942a2fb18be5fbc3ef08",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/regression.mjs": "cb15e446f69a9a569bd3fea7d1e69d75bd439b018b75b344765d666684a5daf8",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/13/manifest.json": "de16a52bea7832764cfd19505ed1bba6723449a52d28e92069e9cb4f0a8244e4",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/evidence.json": "82696185b00c90be29fde4729fd008e35a1b503a5f5daa0cf8012b7c71268987",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/report.json": "ed5e8f4f7aeba8d701bc87ddd21e7ecfc764eb410685967c42c2bf060125c4f7",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/report.md": "d9ea0c649c32a0520476c1bbc35ad38b9c7e0b6c84041bffd0ac2a092c98629b",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/regression.mjs": "6f4ebbd8a5a7ce396b3201ae468f6d825930aa96bbf13f9b43ee8f1d8c1500b9",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/5/manifest.json": "49a1b442670f33d044f91ba93109a34ab87d69493899351beab36220c5c193e1",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/evidence.json": "1e32eb715d8ca5cc27a60b78d97a3f0ed499852e75defdadc367af8dcb02e096",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/report.json": "b62d344904b5b06de01d40a6d809a5cf9440a1aec58e4ff5548fa9ae3b2c40c7",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/report.md": "9d0f944b9e8cc6f711d8799b5a8b190de4bc498cf7494fb428068087c66a8e92",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/regression.mjs": "4d6dc63baefe2e1cf3e24d6f0eb636cd744860e39c0633597fd59c3ef8aa27c0",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/14/manifest.json": "542138485f6e3fa5bd25cef709b4b2a930c4ff4fc52aae577204116481168b15",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/22/evidence.json": "425f8de22d24ff7ec53ca94e125357947a68a57f067cf63d0be63aac1bb240c4",
+      "tests/acceptance/gate5-0964afd0-7aa7-4a71-a063-ce7042585538/25/evidence.json": "18254d2a08186204b1d3cb63e628fa924e404c13b3280c7452332f926072da65",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/9-assigned.json": "44656f5e53d5ab70f88e640989ce2d6860abb396c19240c4c7f8eac44ea9db18",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/8-result.json": "3c710618bd85427b4ff39e4fd8ceea4716874787632b6d960c6e38ecdf839ffb",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/summary.json": "1eef168f6c30fc54e62ae32e13c8775504806ab4cd20da3b0de05d1c37c4be61",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/26-assigned.json": "afe38f6435310f05e5062fbe88bfb591ffbc9cfbbd6d472dfc200faf3a5c95c0",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15-result.json": "53f2845cf3d370e5f69bbe838800b2bb685768b9fd4302258751edd58774491c",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/27-result.json": "cd3ec610cc0941bd7d601ca922c23ed4c62839da025e4b049528ab00a17eaf3c",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/1-result.json": "a26bf1246a06227352f1f10629208acd75fc0a91c9899b73355a45d52009194f",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/22-assigned.json": "d9ac1fb754c2ad4c5d9f6302e753e7ec04a7c619fbfe69f653279967bace98bc",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/25-assigned.json": "18ffc676b8ab2c65de20a447cda503a29f80fa0180815a79aea1a6464733f0ea",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/10-result.json": "deff7235034c31e356148917ee4c7ccc4b716757cb54c151f942b2299ea15257",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/21-assigned.json": "bf57ae8acfdf51e560d3581b45a1e092eaaf154d0205585152541797b41421db",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/18-assigned.json": "710c8767d9b642dcaf9fdfda8c98475fe01bf6aa721447eb53bfc36ed35bfff4",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4-result.json": "c0423a6f6f96c36a90f02d4b10086573877a03fb9d0dffb8ccb97120c3ba2e40",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/22-result.json": "209de80995b554d1db06abc63ae27a4e744445638cc55443b58b55300c3ff80a",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/19-result.json": "70b24c098716ad087248c32663767f9b08673134ad0be453b114ddd1575bfd91",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/28-result.json": "943795f7bad820067a30e974042c610bb55936e4cb0ec6cc662bcb24c2159a2c",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4-assigned.json": "b44a8381a44719f5f8c85567eb938cb1e6c67bb175bead1bd07fbad4595bf5d5",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/21-result.json": "95fb63d164385a3e3a68d5ada8236eddaeb4c494f66d663d8587001bc4b092b4",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/7-result.json": "f0273c8b0c5d722345b1632949f99b7ccb4f9502acbb28af5dec87aca5f669b3",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/12-assigned.json": "2063cada01ea8a17367299420f3d0f58c87a1fafd442845ab282744a89ef1525",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/13-result.json": "9f577f20bdf4a2895fec3409c72bfeb1ebaddae5c86bfcf8b7f2c605a1fa8a33",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/16-assigned.json": "a88b106e2851b02288529512e8a57840ed53f353136131b6134ce30d99250430",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/28-assigned.json": "de6f2a377d0059ffb6606a1e43caa179f0f1c4dcfcd72828cb6d6757b95a97d5",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2-result.json": "944b8b955deb1b5ab0b9e3c56b583ac25dd29279d352b3c5192169f321b4ed8e",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/11-assigned.json": "7279b76bd9f2238ddad52a469f5d5ff9bfee6a39dcf8a252ec8b1dae14b19814",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/24-result.json": "edcb4fb2cb036d24439b84fdd72f9d6c05044fca9090403d4298221a1cc61e90",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15-assigned.json": "ecf594ec919bf3e1b719d2da75d8d5800af6e03b4d7629ca4d311cac8e2f24ab",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/16-result.json": "eb0d59659bfacc5ab0ca5f21911593714ad0b33f59bbeb1344e5c8b8a814c626",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/7-assigned.json": "676bdfc4794cb0d2e4c396a929231dd2caf9142473c09541e3e98f44cfec41b1",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3-assigned.json": "811b20cc988336b052fd9c304dae001afd6b415fb084d2a79ea24cf2e0b164be",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14-assigned.json": "e2ffc9705fc28a2401879ab83003c5e2600a4e06c200bab5b29993851cde719f",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/10-assigned.json": "e44113bd0fb99fa070185c798360990ae5a2ae36daf5893536b8cba14321a87a",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/18-result.json": "2146c84779abc692b99be8fe7137cf90deb593f057d8a6cbdcb8f5f4cd8fddf2",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/29-assigned.json": "a0414787f9ab8fefed0e5fc1abcc5ffa15da360ed490f3a5846651f5d71dbf88",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2-assigned.json": "506c13f829da089792abea6155b7afc0ffc2a62e56914f8c49632f471d62a416",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/23-result.json": "83158c2238d9209a535af530ea395a6caa7b3bc07f92d30903973df2a324a264",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5-result.json": "f9141a60ac0a04904f0856e81e9d227380be85371f74ad280a021d5867e0d1dc",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/6-assigned.json": "2e4439e275543a1b300e2c3b04faa3c19ed571ec66f3f9f72f1b0cb6a7616a4d",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/11-result.json": "a6a1f5c7e6e71e2a9626138c69bafccf958343aefa703acaa89969a52f960349",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/1-assigned.json": "93a52715ed19243479bf23b2176edbd3c96cb8b0f474e631572da3681c03606f",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/26-result.json": "d931d31df4da56cb8fdb8fdfc081c614569fb44ca2b83420e4bed98d2839ad49",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14-result.json": "9a68bf69a4739cb18e5cafd610f4524d4644773b391d0b520ab55e09c74824a4",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5-assigned.json": "1ac392fcbcdaa6143f56de817ee78dc875a99ff211071f43a3da5c80df4ab7fb",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/9-result.json": "85576af652ce9124cc5674a5bb9c600cf2a1177fb34b56d01a0634e9eed2bb87",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/17-assigned.json": "f7b9532b57e764ce50a8abcfdbd8860b65b7d19ca98eb0666a35e68d2a8931aa",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/13-assigned.json": "3faa4d3d5e211e78fd6421fc4a84ad38ff763785a66f87f9dc8f89f2adc0c060",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/30-result.json": "67be68e12ae5d4cbf9d9741c68236084330737e3a0b5e50e2b4f207a8d044a1d",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/19-assigned.json": "0d14038ecbc0508f50daad3464c0204aceb17df9c027e6f883527ea2a738cf33",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/series.json": "2ecb578d32f0e65f1c8503c705638f117159b7617086ca104412c270109a823a",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/20-assigned.json": "398bb81990d3e766750e8ef08691c938ffbe5478d4c1e728a77123dddc28aedf",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/24-assigned.json": "ee6f28a071c863315fbc9620d06f8b793514e5b85bbd14b06b20f059e6096209",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/17-result.json": "6560bf67e626726124fc778aca94f07fe082648f8f5ef24c540e55f33c26d517",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/25-result.json": "cbe8eb19748de48ee06c2a46fe2241e56ff3bc2454b17301aa34eae28de3f204",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3-result.json": "78db3733bc6d5147c28dccc71c64ee4681797fab9bcf7b149d1eae043434ae40",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/12-result.json": "0c0ff06697167bd1db4c0f734b75257b1ac092797214767285e442a4093708ae",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/6-result.json": "1e07b9db5e0be272b05c4551efb53ecb18a0d7208072bc690afaaecda6f06dee",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/20-result.json": "5000269ac6872529c3ee4433967c7f061a4c2fee09258eb86b98e7464e56fae5",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/8-assigned.json": "e90f46183785406dd4adb119381fd4604d518037f9a74107a4309c4680a0318a",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/23-assigned.json": "1ae570d8a04bae2c490c29b90ff9aa064c480d2744ec07d9b1157bda58f377d5",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/29-result.json": "77c68e94cf6fbcdedfe2654ee2182926616a485a0b392ee79b52e85c2536cfa8",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/30-assigned.json": "f5409b01ccff16e0308456112a3352f10cbf615b381d1ac8f7b040ddd41b679e",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/27-assigned.json": "add3f849d9f6f5dd250b09c4ac11c099e7003f6be59de91a2100ab4e0366227c",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/20/evidence.json": "6574874face9dc03d0d532ed34636ac3a3a9910761beac66643abf77a66ccd57",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/18/evidence.json": "9c5e6fb346391dfa17d80bc25092a1d934188d9cf7fb0a4c811636bc0eb5fe72",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/27/evidence.json": "a3ef0643dcbbf09eae97c9f07c2e88674b82ac5aa87e36e9a2157840b6fde0f4",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/9/evidence.json": "38ecb050eff872bbc27944833c94a96555674774770a8d64f1e525541aaeefb2",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/11/evidence.json": "c0526ad2ccd7696479aba7682445edf8dc56da762b5971de86d754181e9ca470",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/7/evidence.json": "9b101de641c26a2f2ff87a59a71e9ec9975d2892f39272b1cd4f6c80859ca1e4",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/29/evidence.json": "1532e2eef9c7aef1658446471cbfb18ebb1933d61114377a731fa156a053d525",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/16/evidence.json": "3136ceb93a0f92c7b0582d6b1771df6aebb3f8d2481f5599e9b8f81537a051c5",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/6/evidence.json": "383f8c52b596b6dfdc1cc622526fcf266eeb8efdf646fe30978dc4464f741023",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/28/evidence.json": "05871f6ee2d3ffb1c1eeaced9cb7ca98533c9d78d197460e6f2c50450ce1a909",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/17/evidence.json": "e54c3ec597b4fd71e83519266d361a26186cf68bc963e59be4fb7662058223ed",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/1/evidence.json": "66ae9dc486b49f763fcc196036a24ef200ea1ef764b242aecb620b34a90243e8",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/10/evidence.json": "56a2059afdc36d259eafa70c165d35ab2495bbb4326ac5aee6441535790caa2b",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/19/evidence.json": "dc9dd5a4a5dbac7e477376a78752357d502ed7482f24959fb667643e0f3f9a0b",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/26/evidence.json": "a907f8a2b6ff5214d14c64be4d3b5f178f6538c9ddc4a492d108e79a48c41ebe",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/8/evidence.json": "995807b74ae882787c4fd312c2522b78be879d896f2a189533d9f16bb5c77e2c",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/21/evidence.json": "ea6510c80edab90ec5d5a6913e3532f376f728d3b3f243ec0e6a76b925fe6cad",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/30/evidence.json": "642a7ab124f83ba25e922c4ab1dd1cd93b460e5623f9b1e23683e37ec8712034",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/24/evidence.json": "0f7172d5ad2b414d0ebc0459d6e4ae34c9891afb456b6818d87827728e0e15c7",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/23/evidence.json": "dd32830e9617a68fb13562a8cc8b2300d3b5c0eb712dd7a9312d1c988063c155",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4/evidence.json": "b745454d80cb683d01be9854836fa4c2a3e9fd833a9a5f536b174ea75566aafd",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4/report.json": "27547e0b52a283b1ef1806ab1d37724a75656e6691dca938f4e2b2c9f28c3355",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4/report.md": "48981e469b9f7c528200a251966034e6bb36eb4a23ee17e4ba1175913d87fa13",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4/regression.mjs": "b395f9b10848dfa78a2ad0904702844a60dc119401669a048e24e1fb54646062",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4/manifest.json": "dceb1ae9c9f57d7e22866ebf5dea963b71272439873349fbee8341c0a4e2865d",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15/evidence.json": "43a7a85064fd017ddbf2f3a3324ae911f0e23683da6738185cec995085b559b4",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15/report.json": "bb70df02402cd60a84da4f56fe5234a5ac7e703b33854d4582bd5bf7ac3c17a2",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15/report.md": "855a585ba729553dd3e3ab99677144ca6569bee50c43e256776fb688eb3deae1",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15/regression.mjs": "8f79dee829f2a6a867f0e78544bf7cfbbeef64e01370648c76ecc633dd714a8c",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15/manifest.json": "3c3b861a26eb19f2cd317a5a7a0e528f103613d90874be8b40db04e4ae535564",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3/evidence.json": "115cf4aa7c87d483cf3a1a16fc57858f6f35fe2458e1b7ad5dd196acc4f8d0fd",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3/report.json": "6ab1a8246632561f6fecac830c8e1d1822b4ca68373d4148320b8e9602bca7a5",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3/report.md": "f9c090a52e37cfc562de1ebf264d49afa4b572c34b34c6dfe38a2ec200ff9142",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3/regression.mjs": "012a5ac8f20b63adb2366299d8854eba62250ac55731445cf2007195f237d29a",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3/manifest.json": "1f631e0710d683336b8adae653309f80d74a67f3d978e881be75ec2bff22e7ab",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/12/evidence.json": "0ab10d208fe442c3052ef864940f5000bcfd622668c7e7db1da3b082916a5272",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2/evidence.json": "077ba52a74032e303c0a266dc9d0484953228aeb1bd3a71f2872f0207c52de91",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2/report.json": "ca55f1c140bf8d3cdef300ddda1a0e2c610244f612445c25d2bd732698a34df1",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2/report.md": "0e8394ad653e93ef9563e0b65d56934db44a92a9e9df3b02afcbf63a67cf0f96",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2/regression.mjs": "5e460346eff9e3796f0e9dae149bfe93ee9f1b25671b38749432e1cf3892ba10",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2/manifest.json": "48096aee1224f847a72ebd4fd99376070aaf9a89b1befa078acb1d52799912fe",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/13/evidence.json": "7c2bb59f15929fd4168f607f9abcdb325fde16a66ae20347c4b280a799cef631",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5/evidence.json": "f296acc8b81c2fb7e1d27abe375a6b5f361a4be2abc02a92ec3a473e5bb6c374",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5/report.json": "27e347c1bc00a2afb4bb675af5417c4e929b4834965ce800fb6e9cc42cf4f2ad",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5/report.md": "9bb2e55f9bfa6360de38334eef5d20181c1aa4bf9ee11e6dd4e26c7c3d355c43",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5/regression.mjs": "59643cedae14d5f960a954a2ec0c5edb34c768edf23725eb6d51163b81a79b61",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5/manifest.json": "c318e8ca763d66a94182789cff22cc014637e43d3199bf5100b3bcd70b3a6859",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14/evidence.json": "4d0e2fbdfb302e8e73647a0580107ba419f193578d689d4287ed0ce66d5d2171",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14/report.json": "d6b33f0cedc2da6fcae3068fec2432170066fda40a46301f2b161f44fbbac0d8",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14/report.md": "56ac917dd1bc5a0e1b53a8121799fc51fab81aff7d24736a4d2ec3dd4aca4b43",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14/regression.mjs": "f694a4c760ace25278845bd98161907cc902d395e0538859ca4b1e58b1686124",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14/manifest.json": "fc0ce28ad31da3eda34610fdd454d332633c8bb3bf06f96b3514eb5a58917669",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/22/evidence.json": "33944c8406d4e698a371a081918e5208fda02e20426f2f8536ec5634e0ad480f",
+      "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/25/evidence.json": "fc331075158a63919dbd0076c33185ca35c24fb00affc56a80bfa120f65b9805",
+      "tests/acceptance/benchmark.json": "ed6706cb2238baa62d2c6107a1eadf0a198cbe58c6ef444a34229f083d6c1f04",
+      "tests/acceptance/results.md": "bb1b1d06031f0c8c628fba819669c96c79332f79487f039722dd238f1684e7c6"
+    }
+  },
+  "comparison": [
+    {
+      "seriesId": "gate5-0964afd0-7aa7-4a71-a063-ce7042585538",
+      "metrics": [
+        {
+          "fixture": "order-lifecycle",
+          "variant": "faulty",
+          "provider429": 0,
+          "contractFailures": 0,
+          "stagnation": 0,
+          "executionErrors": 0,
+          "validatedProposals": 5,
+          "admittedJourneys": 5,
+          "completedJourneys": 5,
+          "discoveries": 5,
+          "confirmations": 5,
+          "modelCalls": 5,
+          "targetRequests": 75,
+          "denominator": 5
+        },
+        {
+          "fixture": "order-lifecycle",
+          "variant": "repaired",
+          "provider429": 1,
+          "contractFailures": 3,
+          "stagnation": 1,
+          "executionErrors": 0,
+          "validatedProposals": 8,
+          "admittedJourneys": 4,
+          "completedJourneys": 4,
+          "discoveries": 0,
+          "confirmations": 0,
+          "modelCalls": 12,
+          "targetRequests": 20,
+          "denominator": 5
+        },
+        {
+          "fixture": "inventory",
+          "variant": "faulty",
+          "provider429": 1,
+          "contractFailures": 1,
+          "stagnation": 0,
+          "executionErrors": 0,
+          "validatedProposals": 3,
+          "admittedJourneys": 3,
+          "completedJourneys": 3,
+          "discoveries": 3,
+          "confirmations": 3,
+          "modelCalls": 5,
+          "targetRequests": 45,
+          "denominator": 5
+        },
+        {
+          "fixture": "inventory",
+          "variant": "repaired",
+          "provider429": 2,
+          "contractFailures": 1,
+          "stagnation": 2,
+          "executionErrors": 0,
+          "validatedProposals": 11,
+          "admittedJourneys": 5,
+          "completedJourneys": 5,
+          "discoveries": 0,
+          "confirmations": 0,
+          "modelCalls": 14,
+          "targetRequests": 25,
+          "denominator": 5
+        },
+        {
+          "fixture": "workflow",
+          "variant": "faulty",
+          "provider429": 5,
+          "contractFailures": 0,
+          "stagnation": 0,
+          "executionErrors": 0,
+          "validatedProposals": 0,
+          "admittedJourneys": 0,
+          "completedJourneys": 0,
+          "discoveries": 0,
+          "confirmations": 0,
+          "modelCalls": 5,
+          "targetRequests": 0,
+          "denominator": 5
+        },
+        {
+          "fixture": "workflow",
+          "variant": "repaired",
+          "provider429": 5,
+          "contractFailures": 0,
+          "stagnation": 0,
+          "executionErrors": 0,
+          "validatedProposals": 0,
+          "admittedJourneys": 0,
+          "completedJourneys": 0,
+          "discoveries": 0,
+          "confirmations": 0,
+          "modelCalls": 5,
+          "targetRequests": 0,
+          "denominator": 5
+        }
+      ]
+    },
+    {
+      "seriesId": "gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50",
+      "metrics": [
+        {
+          "fixture": "order-lifecycle",
+          "variant": "faulty",
+          "provider429": 0,
+          "contractFailures": 1,
+          "stagnation": 0,
+          "executionErrors": 0,
+          "validatedProposals": 4,
+          "admittedJourneys": 4,
+          "completedJourneys": 4,
+          "discoveries": 4,
+          "confirmations": 4,
+          "modelCalls": 5,
+          "targetRequests": 60,
+          "denominator": 5
+        },
+        {
+          "fixture": "order-lifecycle",
+          "variant": "repaired",
+          "provider429": 1,
+          "contractFailures": 2,
+          "stagnation": 1,
+          "executionErrors": 1,
+          "validatedProposals": 9,
+          "admittedJourneys": 6,
+          "completedJourneys": 5,
+          "discoveries": 0,
+          "confirmations": 0,
+          "modelCalls": 12,
+          "targetRequests": 28,
+          "denominator": 5
+        },
+        {
+          "fixture": "inventory",
+          "variant": "faulty",
+          "provider429": 3,
+          "contractFailures": 0,
+          "stagnation": 0,
+          "executionErrors": 0,
+          "validatedProposals": 2,
+          "admittedJourneys": 2,
+          "completedJourneys": 2,
+          "discoveries": 2,
+          "confirmations": 2,
+          "modelCalls": 5,
+          "targetRequests": 30,
+          "denominator": 5
+        },
+        {
+          "fixture": "inventory",
+          "variant": "repaired",
+          "provider429": 2,
+          "contractFailures": 1,
+          "stagnation": 2,
+          "executionErrors": 0,
+          "validatedProposals": 13,
+          "admittedJourneys": 5,
+          "completedJourneys": 5,
+          "discoveries": 0,
+          "confirmations": 0,
+          "modelCalls": 16,
+          "targetRequests": 25,
+          "denominator": 5
+        },
+        {
+          "fixture": "workflow",
+          "variant": "faulty",
+          "provider429": 5,
+          "contractFailures": 0,
+          "stagnation": 0,
+          "executionErrors": 0,
+          "validatedProposals": 0,
+          "admittedJourneys": 0,
+          "completedJourneys": 0,
+          "discoveries": 0,
+          "confirmations": 0,
+          "modelCalls": 5,
+          "targetRequests": 0,
+          "denominator": 5
+        },
+        {
+          "fixture": "workflow",
+          "variant": "repaired",
+          "provider429": 5,
+          "contractFailures": 0,
+          "stagnation": 0,
+          "executionErrors": 0,
+          "validatedProposals": 0,
+          "admittedJourneys": 0,
+          "completedJourneys": 0,
+          "discoveries": 0,
+          "confirmations": 0,
+          "modelCalls": 5,
+          "targetRequests": 0,
+          "denominator": 5
+        }
+      ]
+    }
+  ],
+  "series2TrialMatrix": [
+    {
+      "ordinal": 1,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "runId": "511f9748-854b-4464-9031-9e4a4920e9b3",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "C CONTRACT VALIDATION; EXACT RULE UNKNOWN",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 1,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 1,
+          "evidenceId": "e1397c4e-7236-4b0e-9422-fe6b734a5230",
+          "planningTrialId": "adfdd183-fd86-4aa9-bd5c-805d31d27e6b",
+          "outcome": "MODEL PLAN ERROR",
+          "failureKind": "CONTRACT_VALIDATION",
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "CONTRACT_VALIDATION",
+          "exactRejectedRule": "UNKNOWN",
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/1-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/1/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "runId": "c5ff0cd1-812d-43fb-87d1-171cd00543d8",
+      "trialIds": [
+        "6c26d48c-4623-471f-824c-9cbacbbeb8c5",
+        "8c00ce4c-ef97-4b5e-a270-fe83a9459e31",
+        "d9a89e52-6a60-4826-8e91-a8c207a7412b"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 1,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 1,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 15,
+      "phaseRequests": {
+        "ARTIFACT": 3,
+        "BASELINE": 3,
+        "EXPLORATION": 3,
+        "MINIMIZATION": 0,
+        "REPLAY": 3,
+        "RESET": 3
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "f3ee4f1f-bca7-42f0-b7af-bfedae74d5a6",
+          "trialId": "8c00ce4c-ef97-4b5e-a270-fe83a9459e31",
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+            "version": 1
+          }
+        },
+        {
+          "id": "fd9090c3-6504-4a5a-a7dd-dd08d2c958bf",
+          "trialId": "d9a89e52-6a60-4826-8e91-a8c207a7412b",
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+            "version": 1
+          }
+        },
+        {
+          "id": "fe0bc63c-f277-4252-9156-01cd6ae38457",
+          "trialId": "6c26d48c-4623-471f-824c-9cbacbbeb8c5",
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 2,
+          "evidenceId": "aabed0a2-96bf-49d3-8320-b0d3b35a6fb7",
+          "planningTrialId": "a6284a6d-05f5-48aa-9b99-f70eb7f5b163",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "ddbaeabf-8057-4521-9c6f-220d6068c9b0",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "3e3b4fb5dccddc4492a78824148b5406b7c34f7d3d264044e135262fdca299d2",
+            "useful": true
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/2/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "runId": "472fa724-b0c8-4e33-bd30-2a120582f957",
+      "trialIds": [
+        "65c69ea7-c75e-46bb-9ae5-4de946893353",
+        "8b11be4f-0ce5-4c99-9011-3fecb4846727",
+        "f19d849d-1fcc-473d-8205-12fdd63c9a86"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 1,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 1,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 15,
+      "phaseRequests": {
+        "ARTIFACT": 3,
+        "BASELINE": 3,
+        "EXPLORATION": 3,
+        "MINIMIZATION": 0,
+        "REPLAY": 3,
+        "RESET": 3
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "1eb6f19d-aaba-4fb1-887d-8eaa4ad77c61",
+          "trialId": "f19d849d-1fcc-473d-8205-12fdd63c9a86",
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "df22ec7e-4027-429d-88f4-937f51e44e7a",
+            "version": 1
+          }
+        },
+        {
+          "id": "8177e71e-2826-46eb-9a44-0d67243358dc",
+          "trialId": "8b11be4f-0ce5-4c99-9011-3fecb4846727",
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "df22ec7e-4027-429d-88f4-937f51e44e7a",
+            "version": 1
+          }
+        },
+        {
+          "id": "754a2296-8db0-4c5b-93bd-1c03128ff689",
+          "trialId": "65c69ea7-c75e-46bb-9ae5-4de946893353",
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "df22ec7e-4027-429d-88f4-937f51e44e7a",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 3,
+          "evidenceId": "9888692c-cbef-41a9-b6c0-519af5f5624d",
+          "planningTrialId": "1c231c45-07cc-4a0b-a9c3-28439d137692",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["variable", "variable"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "df22ec7e-4027-429d-88f4-937f51e44e7a",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "141c0e0d9d8265537063e7ead43f1c6a71c3f496b2ead115a2dc1910c7fa3881",
+            "useful": true
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/3/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "runId": "2349e93b-a4b6-4ea0-bfc0-a5021b29be3d",
+      "trialIds": [
+        "2a873303-5c70-45d6-b826-df77581f9134",
+        "44153c50-c45b-4158-95dd-39cd8a1c89cb",
+        "cb98b585-3c73-433a-9e69-a9069f1cfdb4"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 1,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 1,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 15,
+      "phaseRequests": {
+        "ARTIFACT": 3,
+        "BASELINE": 3,
+        "EXPLORATION": 3,
+        "MINIMIZATION": 0,
+        "REPLAY": 3,
+        "RESET": 3
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "193b393b-606b-4813-a8da-ed3cf805daa6",
+          "trialId": "2a873303-5c70-45d6-b826-df77581f9134",
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "39116805-1425-4221-9059-cee772af6bed",
+            "version": 1
+          }
+        },
+        {
+          "id": "dcd7830f-d115-4617-9a00-144ded195c29",
+          "trialId": "cb98b585-3c73-433a-9e69-a9069f1cfdb4",
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "39116805-1425-4221-9059-cee772af6bed",
+            "version": 1
+          }
+        },
+        {
+          "id": "043c41e7-397d-4ffe-b0a1-bb0991d10e94",
+          "trialId": "44153c50-c45b-4158-95dd-39cd8a1c89cb",
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "39116805-1425-4221-9059-cee772af6bed",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 4,
+          "evidenceId": "7d73bd97-08ed-4f12-b6d2-c019b7c5bc7b",
+          "planningTrialId": "16664d1e-a2d6-48c1-9d2e-cb085e9a0177",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["variable", "variable"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "39116805-1425-4221-9059-cee772af6bed",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "7cabb42d27d27247eee2a64de466aeb42a9259c9250c253a120b04da6cc92566",
+            "useful": true
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/4/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "fixture": "order-lifecycle",
+      "variant": "faulty",
+      "runId": "3094d748-3d2b-4efe-a7be-25e2d313557c",
+      "trialIds": [
+        "228c1251-4227-4cab-bec2-e84507450de8",
+        "b8ede7d2-2747-4d44-b7fe-6f402bca17bf",
+        "c16d5fac-ad2d-4cc3-8246-2e826a98653a"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 1,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 1,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 15,
+      "phaseRequests": {
+        "ARTIFACT": 3,
+        "BASELINE": 3,
+        "EXPLORATION": 3,
+        "MINIMIZATION": 0,
+        "REPLAY": 3,
+        "RESET": 3
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "b6805372-40d4-4d31-b8dd-0021b5563e22",
+          "trialId": "b8ede7d2-2747-4d44-b7fe-6f402bca17bf",
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "5787f7ac-9df1-4441-b412-8e4dc48edb58",
+            "version": 1
+          }
+        },
+        {
+          "id": "84e25a1d-5b03-462d-a679-7afd1e0c1be1",
+          "trialId": "228c1251-4227-4cab-bec2-e84507450de8",
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "5787f7ac-9df1-4441-b412-8e4dc48edb58",
+            "version": 1
+          }
+        },
+        {
+          "id": "c6622606-820e-4783-8016-6c2bc88fd0cc",
+          "trialId": "c16d5fac-ad2d-4cc3-8246-2e826a98653a",
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "5787f7ac-9df1-4441-b412-8e4dc48edb58",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 5,
+          "evidenceId": "2b965993-5ef1-45b6-8b67-060423fd5ba5",
+          "planningTrialId": "fe1f576b-edb8-4f67-ab66-65fbd667c2ba",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "5787f7ac-9df1-4441-b412-8e4dc48edb58",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "9025eb8082236fe6a55f51df7b578c84e933618edc8c1cb7338226e25b4b16c7",
+            "useful": true
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/5/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 6,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "runId": "d437bb02-016b-4e3a-af47-6a8f43fde4ed",
+      "trialIds": ["e25aa862-dd04-43e7-93a4-8d5851c3f88f"],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "EXECUTION ERROR",
+      "immediateCause": "F EXECUTION ERROR",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 1,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 3,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 1,
+        "EXPLORATION": 1,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 1
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 6,
+          "evidenceId": "c9221f59-d610-49d3-94a4-c81bd5eab490",
+          "planningTrialId": "606695d1-50d7-48e5-b2ce-7859d2fc69af",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["request", "request"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "b5e234ed-1891-4e72-a9d2-d5d3f6f7a790",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "5a0c98d17aeab4d973b7e7f633f82ec4fa74dd58c508b4f61810aeed3f1d976b",
+            "useful": true
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/6-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/6/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "runId": "85c8be53-cd54-4539-a5ec-29d89a9c1eb2",
+      "trialIds": ["edc1bfe6-fa31-4b3a-9b32-b634788da1c4"],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "C CONTRACT VALIDATION; EXACT RULE UNKNOWN",
+      "modelCalls": 2,
+      "http429Count": 0,
+      "contractFailureCount": 1,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 1,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 1,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 5,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 1,
+        "EXPLORATION": 3,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 1
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "b3af2b0d-dea6-4d3d-afc2-df066994d936",
+          "trialId": "edc1bfe6-fa31-4b3a-9b32-b634788da1c4",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "741ca382-1082-4721-bef8-12203087927b",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 7,
+          "evidenceId": "21720e4a-8f6d-433c-8c88-1a53ecdfce89",
+          "planningTrialId": "a39e93fa-3f92-4817-8c52-32934f476a0c",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["variable", "variable"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "741ca382-1082-4721-bef8-12203087927b",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "086bf60219ad8614b0dab74ccce2fed34c0afe91d663c2ac130db215c34fafdb",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 8,
+          "evidenceId": "c42fdbda-06c5-448c-837a-7fb6830c7f95",
+          "planningTrialId": "bc80e5aa-fe43-444d-9349-a324cb21c072",
+          "outcome": "MODEL PLAN ERROR",
+          "failureKind": "CONTRACT_VALIDATION",
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "CONTRACT_VALIDATION",
+          "exactRejectedRule": "UNKNOWN",
+          "seenNoveltyCount": 1,
+          "feedbackObservationCount": 3,
+          "mappingCount": 10,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/7-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/7/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 8,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "runId": "f6f8e491-cba4-402f-9321-32ab1b964422",
+      "trialIds": [
+        "5dcc864f-284c-4582-829f-69fc43d43ff1",
+        "913e35b9-0f5c-4e6c-907f-a6ac75a6577d"
+      ],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "STAGNATION",
+      "immediateCause": "D STAGNATION AFTER VALID PROPOSALS",
+      "modelCalls": 5,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 5,
+      "admittedExplorationJourneys": 2,
+      "completedExplorationJourneys": 2,
+      "stagnation": {
+        "stopped": true,
+        "consecutiveRounds": 3
+      },
+      "targetRequests": 10,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 2,
+        "EXPLORATION": 6,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 2
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "f505c258-48a0-4dc1-96aa-639556f98e32",
+          "trialId": "913e35b9-0f5c-4e6c-907f-a6ac75a6577d",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "81c8f84d-d427-4825-bbd4-c74d0eed9438",
+            "version": 1
+          }
+        },
+        {
+          "id": "f21c9e24-879a-4f31-a450-2a7aa5ec19ff",
+          "trialId": "5dcc864f-284c-4582-829f-69fc43d43ff1",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "81c8f84d-d427-4825-bbd4-c74d0eed9438",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 9,
+          "evidenceId": "7859065b-56fb-4ab1-897c-701f6273a0de",
+          "planningTrialId": "aeb0b3d1-04a0-474d-a793-f41462ea8cdd",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["variable", "variable"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "81c8f84d-d427-4825-bbd4-c74d0eed9438",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "40f121432c5c4aa951e2caa4bdbcc5397268c67feb0f6585ecaf59fd898e47f0",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 10,
+          "evidenceId": "1555d78a-a0b5-4226-8384-e60e7fe94d18",
+          "planningTrialId": "c0f48435-a591-4191-a95f-432c1f0a8a87",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 1,
+          "feedbackObservationCount": 3,
+          "mappingCount": 10,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "81c8f84d-d427-4825-bbd4-c74d0eed9438",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "bb68b4f384a568dc082758f4fbd7760c918a5afb15d6c7aa6c16c6a49659464f",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 11,
+          "evidenceId": "4715b1b7-1d4e-402b-97ce-a671ac2ab430",
+          "planningTrialId": "15219f03-d435-4179-bb90-54fdd2dc5c37",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 16,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "81c8f84d-d427-4825-bbd4-c74d0eed9438",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "bb68b4f384a568dc082758f4fbd7760c918a5afb15d6c7aa6c16c6a49659464f",
+            "useful": false
+          }
+        },
+        {
+          "globalCallOrdinal": 12,
+          "evidenceId": "0d1aa13a-18fe-432a-bef8-54d5a315308a",
+          "planningTrialId": "62a759e2-704c-4a2c-923e-ad3fb2c05cdc",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 16,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "81c8f84d-d427-4825-bbd4-c74d0eed9438",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "bb68b4f384a568dc082758f4fbd7760c918a5afb15d6c7aa6c16c6a49659464f",
+            "useful": false
+          }
+        },
+        {
+          "globalCallOrdinal": 13,
+          "evidenceId": "f356dfcd-fac1-4df7-bdde-875af60c8873",
+          "planningTrialId": "751b96e0-6f7d-4189-99a5-72e29b77fd37",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 16,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "81c8f84d-d427-4825-bbd4-c74d0eed9438",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "bb68b4f384a568dc082758f4fbd7760c918a5afb15d6c7aa6c16c6a49659464f",
+            "useful": false
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/8-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/8/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 9,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "runId": "4b4c6a92-77ff-4b76-ab41-ebb1eb9f2783",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "C CONTRACT VALIDATION; EXACT RULE UNKNOWN",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 1,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 14,
+          "evidenceId": "ef0b3a87-c840-46b9-8636-b558aa633bdc",
+          "planningTrialId": "028ddd09-5a47-4328-a44f-5745c5227215",
+          "outcome": "MODEL PLAN ERROR",
+          "failureKind": "CONTRACT_VALIDATION",
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "CONTRACT_VALIDATION",
+          "exactRejectedRule": "UNKNOWN",
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/9-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/9/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 10,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "runId": "9edb3e00-e31c-4886-9c4c-7e35d1a1a3be",
+      "trialIds": [
+        "3f8cb532-3410-427e-9d14-a712c0436abf",
+        "6594d88b-5801-4aba-b589-2120938d6309"
+      ],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 3,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 2,
+      "admittedExplorationJourneys": 2,
+      "completedExplorationJourneys": 2,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 10,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 2,
+        "EXPLORATION": 6,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 2
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "01aaedc1-57ce-48b0-a29f-f18a7f651f16",
+          "trialId": "6594d88b-5801-4aba-b589-2120938d6309",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "fafca66d-fd1f-4bf2-af4d-8d3d3aa762f6",
+            "version": 1
+          }
+        },
+        {
+          "id": "b37aa658-03fe-43fd-a870-d6c9c25ff023",
+          "trialId": "3f8cb532-3410-427e-9d14-a712c0436abf",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "fafca66d-fd1f-4bf2-af4d-8d3d3aa762f6",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 15,
+          "evidenceId": "5aa38f85-e881-46ab-9365-110269b4fcf8",
+          "planningTrialId": "640923da-ad1c-4118-892b-1df9801057a3",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["variable", "variable"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "fafca66d-fd1f-4bf2-af4d-8d3d3aa762f6",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "7f6f762ea983f5e2a7f43f29b70dfcbfee82729d004a978e646309b7d5b4afaa",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 16,
+          "evidenceId": "2ee57acd-c080-4d48-9076-29b1ddcb1744",
+          "planningTrialId": "275d0c93-d5af-4b57-816a-dde5ddd4e238",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 1,
+          "feedbackObservationCount": 3,
+          "mappingCount": 10,
+          "operations": [
+            "POST /api/orders",
+            "POST /api/orders/{orderId}/cancel",
+            "POST /api/orders/{orderId}/fulfill"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+            "id": "fafca66d-fd1f-4bf2-af4d-8d3d3aa762f6",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "cf5ba2178b6d8a0faa1cb3bfe93e1d1f04c9d91e8212a8fb92e861e4187ab5f8",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 17,
+          "evidenceId": "58d19215-455f-438e-8c4b-399816c47eaf",
+          "planningTrialId": "ee554f4a-eed4-4970-95a2-bd4a21c7b1ae",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 16,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/10-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/10/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 11,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "runId": "53d4fb83-ea0b-48a7-bdb5-d61e518cd23d",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 18,
+          "evidenceId": "935b690f-be1b-4f76-977d-6563a1a67bdf",
+          "planningTrialId": "a1ec7d52-396a-4b61-95eb-415c79a52d46",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/11-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/11/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 12,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "runId": "5ef420c0-047e-4827-8704-ea080daeb201",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 19,
+          "evidenceId": "3687e5c0-1352-4201-bfb7-d3f7844b06db",
+          "planningTrialId": "22fe22e5-19c9-47ea-b37f-0a299454b29e",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/12-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/12/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 13,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "runId": "430d4a04-341c-4d0b-bbd2-d1678c29b09b",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 20,
+          "evidenceId": "2ff448c8-7066-4d2e-9f0f-232b49d45d09",
+          "planningTrialId": "0160184c-33c4-4b69-ab56-50f95bd4d997",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/13-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/13/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 14,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "runId": "3dc7811a-d46d-4e97-8bdd-47875f59e316",
+      "trialIds": [
+        "587ef1ab-efba-468a-b39b-ef3e46dfbf2c",
+        "9ecee71a-20ee-4ce0-819e-f0920bb84740",
+        "b2433e4d-0ef9-4021-aa74-6ee6f7af91ac"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 1,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 1,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 15,
+      "phaseRequests": {
+        "ARTIFACT": 3,
+        "BASELINE": 3,
+        "EXPLORATION": 3,
+        "MINIMIZATION": 0,
+        "REPLAY": 3,
+        "RESET": 3
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "84156a40-5321-4c72-9115-f27949658417",
+          "trialId": "587ef1ab-efba-468a-b39b-ef3e46dfbf2c",
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "51def06d-510d-4b21-8011-d445e722be06",
+            "version": 1
+          }
+        },
+        {
+          "id": "69f35b7c-83bf-4790-a265-81fa90e64ec4",
+          "trialId": "b2433e4d-0ef9-4021-aa74-6ee6f7af91ac",
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "51def06d-510d-4b21-8011-d445e722be06",
+            "version": 1
+          }
+        },
+        {
+          "id": "d5046a6e-bdfe-44e0-a739-766884fa5b84",
+          "trialId": "9ecee71a-20ee-4ce0-819e-f0920bb84740",
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "51def06d-510d-4b21-8011-d445e722be06",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 21,
+          "evidenceId": "e5941ec4-25d4-4276-ae8a-421a4c64bbfd",
+          "planningTrialId": "ccc4e91f-f3a3-4dfb-b63c-7c997ac80e0f",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "51def06d-510d-4b21-8011-d445e722be06",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "0992f8feecdf4b1878fffc4ead02801d12c973baa3e9f0de21f443baa78f72aa",
+            "useful": true
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/14/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 15,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "runId": "1c97f81d-0515-43b4-8e0d-5595567dc86b",
+      "trialIds": [
+        "13791fc7-16fa-44fd-bd31-ab1bffb823eb",
+        "18a24bf3-29b2-4c73-a0f4-e765e057902e",
+        "c44212db-646c-473c-86ac-c32b7404291c"
+      ],
+      "discovery": "OBSERVED VIOLATION",
+      "confirmation": "CONFIRMED",
+      "terminalReason": "REPRODUCTION COMPLETE",
+      "immediateCause": "SUCCESS",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 1,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 1,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 15,
+      "phaseRequests": {
+        "ARTIFACT": 3,
+        "BASELINE": 3,
+        "EXPLORATION": 3,
+        "MINIMIZATION": 0,
+        "REPLAY": 3,
+        "RESET": 3
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "d63a5610-2e8f-41eb-a594-c36d358709bd",
+          "trialId": "c44212db-646c-473c-86ac-c32b7404291c",
+          "phase": "EXPLORATION",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "a84466b9-0303-479a-b3c0-2c45ddf1c63f",
+            "version": 1
+          }
+        },
+        {
+          "id": "c33f51e3-635b-43cf-bdfa-8753323dabf7",
+          "trialId": "18a24bf3-29b2-4c73-a0f4-e765e057902e",
+          "phase": "REPLAY",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "a84466b9-0303-479a-b3c0-2c45ddf1c63f",
+            "version": 1
+          }
+        },
+        {
+          "id": "5095ac83-f595-45fc-8abd-2f3e4c827d57",
+          "trialId": "13791fc7-16fa-44fd-bd31-ab1bffb823eb",
+          "phase": "ARTIFACT",
+          "outcome": "VIOLATED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "a84466b9-0303-479a-b3c0-2c45ddf1c63f",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 22,
+          "evidenceId": "723b1cf4-791c-4abb-bbb6-213a4cae3e9c",
+          "planningTrialId": "cabf472e-1544-447a-9419-5175138f2925",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "a84466b9-0303-479a-b3c0-2c45ddf1c63f",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "3ae1e651399c1fdb7835a3072580126ff2e2a7ce9a30a730283e24f071ad44b6",
+            "useful": true
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/15/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 16,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "runId": "a6ec227e-8460-43b6-a709-f2a9766472ba",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL PLAN ERROR",
+      "immediateCause": "C CONTRACT VALIDATION; EXACT RULE UNKNOWN",
+      "modelCalls": 1,
+      "http429Count": 0,
+      "contractFailureCount": 1,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 23,
+          "evidenceId": "fe6aa367-dac2-4b71-873d-a480d75b3809",
+          "planningTrialId": "2e123b37-746c-4811-b418-b947d13d067e",
+          "outcome": "MODEL PLAN ERROR",
+          "failureKind": "CONTRACT_VALIDATION",
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "CONTRACT_VALIDATION",
+          "exactRejectedRule": "UNKNOWN",
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/16-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/16/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 17,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "runId": "727d05ba-23b7-46d6-8c5a-55e4ab29aa5d",
+      "trialIds": ["c6689acc-fe12-4fa5-bb88-ac9c51a04932"],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "STAGNATION",
+      "immediateCause": "D STAGNATION AFTER VALID PROPOSALS",
+      "modelCalls": 4,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 4,
+      "admittedExplorationJourneys": 1,
+      "completedExplorationJourneys": 1,
+      "stagnation": {
+        "stopped": true,
+        "consecutiveRounds": 3
+      },
+      "targetRequests": 5,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 1,
+        "EXPLORATION": 3,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 1
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "3e9916e2-444f-4b2b-a5f5-2bfbe49c35b9",
+          "trialId": "c6689acc-fe12-4fa5-bb88-ac9c51a04932",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "f4e1099c-d512-4923-8a8b-b3027eacca62",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 24,
+          "evidenceId": "7ff9948d-da7c-41c7-bc6a-37cd97283ba0",
+          "planningTrialId": "49f39a48-32e1-4404-832c-8f72003d2d96",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "f4e1099c-d512-4923-8a8b-b3027eacca62",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "97bea478b5c4d6c3fd87acd384252fd620bbf30118159a58c30311fd4dcee852",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 25,
+          "evidenceId": "413d780b-4106-44f1-95fd-4fe2ef2a8544",
+          "planningTrialId": "4c8e6e6f-3df8-4c31-bf49-50419f5d2119",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 1,
+          "feedbackObservationCount": 3,
+          "mappingCount": 10,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "f4e1099c-d512-4923-8a8b-b3027eacca62",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "97bea478b5c4d6c3fd87acd384252fd620bbf30118159a58c30311fd4dcee852",
+            "useful": false
+          }
+        },
+        {
+          "globalCallOrdinal": 26,
+          "evidenceId": "9468fc23-5630-4e9f-8184-520c668893ac",
+          "planningTrialId": "f423ae63-91a5-4a2e-b2be-d583adbf7320",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 1,
+          "feedbackObservationCount": 3,
+          "mappingCount": 10,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "f4e1099c-d512-4923-8a8b-b3027eacca62",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "97bea478b5c4d6c3fd87acd384252fd620bbf30118159a58c30311fd4dcee852",
+            "useful": false
+          }
+        },
+        {
+          "globalCallOrdinal": 27,
+          "evidenceId": "793b8043-d08f-45b3-8a39-7c2371aaa47e",
+          "planningTrialId": "7c91c328-0b8f-44d6-abed-1ff1d321ffc6",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 1,
+          "feedbackObservationCount": 3,
+          "mappingCount": 10,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "f4e1099c-d512-4923-8a8b-b3027eacca62",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "97bea478b5c4d6c3fd87acd384252fd620bbf30118159a58c30311fd4dcee852",
+            "useful": false
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/17-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/17/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 18,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "runId": "b90479ca-c0bb-471f-b0c7-c134d31173fc",
+      "trialIds": [
+        "24d206fb-87f1-4dfa-a2d1-b405df04135a",
+        "9abee0eb-cc48-449b-8edc-a9eed077d79f"
+      ],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "STAGNATION",
+      "immediateCause": "D STAGNATION AFTER VALID PROPOSALS",
+      "modelCalls": 5,
+      "http429Count": 0,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 5,
+      "admittedExplorationJourneys": 2,
+      "completedExplorationJourneys": 2,
+      "stagnation": {
+        "stopped": true,
+        "consecutiveRounds": 3
+      },
+      "targetRequests": 10,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 2,
+        "EXPLORATION": 6,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 2
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "c59a1218-a59a-4cf2-849b-db2667f156c9",
+          "trialId": "24d206fb-87f1-4dfa-a2d1-b405df04135a",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7ff4affe-3d12-48d5-97a8-b76f4e8cfa86",
+            "version": 1
+          }
+        },
+        {
+          "id": "fd0ddf24-df16-461d-9e0b-a9322b895c4d",
+          "trialId": "9abee0eb-cc48-449b-8edc-a9eed077d79f",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7ff4affe-3d12-48d5-97a8-b76f4e8cfa86",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 28,
+          "evidenceId": "f512e16b-9ad1-4879-9120-2cf5ff6f1d18",
+          "planningTrialId": "a13cd7ed-9135-42d5-85ac-40fbb9bd6201",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["variable", "variable"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7ff4affe-3d12-48d5-97a8-b76f4e8cfa86",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "4ffbaa6de8fe471f40489eaf93d55e9c184ff89c8dd7b054a6c324df2270de6c",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 29,
+          "evidenceId": "d887c7b6-ca87-481e-8988-704c7eea3d45",
+          "planningTrialId": "ed2cdc97-731c-4df8-a887-3e5c8e9f8188",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 1,
+          "feedbackObservationCount": 3,
+          "mappingCount": 10,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7ff4affe-3d12-48d5-97a8-b76f4e8cfa86",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "efc402058ef233b844d218f04335bac1616f681764d88a806b5177e3338161db",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 30,
+          "evidenceId": "b93c6f89-7c3e-43e7-bd48-2df10bf7abe0",
+          "planningTrialId": "09aa0fc1-4804-4a7b-af7f-e58bc4fa94f2",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 17,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7ff4affe-3d12-48d5-97a8-b76f4e8cfa86",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "efc402058ef233b844d218f04335bac1616f681764d88a806b5177e3338161db",
+            "useful": false
+          }
+        },
+        {
+          "globalCallOrdinal": 31,
+          "evidenceId": "0807b5b2-cd77-4f67-972a-c1f3f8297bb0",
+          "planningTrialId": "9676ad4a-6082-4a18-9cb1-b01e3bf466ee",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 17,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7ff4affe-3d12-48d5-97a8-b76f4e8cfa86",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "efc402058ef233b844d218f04335bac1616f681764d88a806b5177e3338161db",
+            "useful": false
+          }
+        },
+        {
+          "globalCallOrdinal": 32,
+          "evidenceId": "9ca3566d-2234-4767-a34b-880e33d63cfe",
+          "planningTrialId": "75230df7-7cd7-4281-aaae-8cc54e1cde27",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 17,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7ff4affe-3d12-48d5-97a8-b76f4e8cfa86",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "efc402058ef233b844d218f04335bac1616f681764d88a806b5177e3338161db",
+            "useful": false
+          }
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/18-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/18/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 19,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "runId": "26532414-3e4f-460d-b9b9-f0c7e4d641b5",
+      "trialIds": [
+        "5595ce86-dcfc-4367-a0cf-2f99657e4767",
+        "d9561ccd-a565-4133-89bd-d8e1dccd4822"
+      ],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 5,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": true,
+      "proposalValidationPassed": true,
+      "validatedProposalCount": 4,
+      "admittedExplorationJourneys": 2,
+      "completedExplorationJourneys": 2,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 2
+      },
+      "targetRequests": 10,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 2,
+        "EXPLORATION": 6,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 2
+      },
+      "predicateEvaluationOccurred": true,
+      "predicateEvaluations": [
+        {
+          "id": "c6cfee86-c741-486d-9f20-81967bfd4420",
+          "trialId": "5595ce86-dcfc-4367-a0cf-2f99657e4767",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7951656f-656a-4bd3-ab7f-306fdeeeb3c6",
+            "version": 1
+          }
+        },
+        {
+          "id": "1534a02e-6830-40b1-8f97-055ddf8da04b",
+          "trialId": "d9561ccd-a565-4133-89bd-d8e1dccd4822",
+          "phase": "EXPLORATION",
+          "outcome": "SATISFIED",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7951656f-656a-4bd3-ab7f-306fdeeeb3c6",
+            "version": 1
+          }
+        }
+      ],
+      "rounds": [
+        {
+          "globalCallOrdinal": 33,
+          "evidenceId": "925ac902-846b-466c-af90-533db05e4963",
+          "planningTrialId": "8aa02418-9861-44b7-a2f9-e41d1d456c7d",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["variable", "variable"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7951656f-656a-4bd3-ab7f-306fdeeeb3c6",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "5c5851d79c8776db407ea80da70ee7e64753dcb0871c5d09b50fa8231cdf7d7d",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 34,
+          "evidenceId": "148d52ac-3c18-4a37-994b-bc59325f5cd2",
+          "planningTrialId": "a8468956-3644-4780-a035-d98308bcdc3d",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 1,
+          "feedbackObservationCount": 3,
+          "mappingCount": 10,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7951656f-656a-4bd3-ab7f-306fdeeeb3c6",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "526edd2cafbb83adbe5f85f8b1db92589fd78802328d30dbd340ea8e127fd177",
+            "useful": true
+          }
+        },
+        {
+          "globalCallOrdinal": 35,
+          "evidenceId": "2dd3f986-0f55-497e-9e5d-c5346804c08e",
+          "planningTrialId": "3cdbc92c-6e41-421c-88be-ade55ed7b618",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 16,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7951656f-656a-4bd3-ab7f-306fdeeeb3c6",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "526edd2cafbb83adbe5f85f8b1db92589fd78802328d30dbd340ea8e127fd177",
+            "useful": false
+          }
+        },
+        {
+          "globalCallOrdinal": 36,
+          "evidenceId": "65bd8648-1069-439c-82ba-493a6048f4be",
+          "planningTrialId": "53ebc0e9-94ed-482d-a497-6bfd384a20d0",
+          "outcome": "VALIDATED PROPOSAL",
+          "failureKind": null,
+          "diagnostic": null,
+          "structuredProposalReturned": true,
+          "proposalValidationPassed": true,
+          "retainedValidationCategory": null,
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 16,
+          "operations": [
+            "POST /api/items",
+            "POST /api/items/{itemId}/unavailable",
+            "POST /api/items/{itemId}/allocate"
+          ],
+          "journeyLength": 3,
+          "dependencyCount": 2,
+          "bindingKinds": ["json", "json"],
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "7951656f-656a-4bd3-ab7f-306fdeeeb3c6",
+            "version": 1
+          },
+          "normalizedNovelty": {
+            "hash": "526edd2cafbb83adbe5f85f8b1db92589fd78802328d30dbd340ea8e127fd177",
+            "useful": false
+          }
+        },
+        {
+          "globalCallOrdinal": 37,
+          "evidenceId": "26a5d7ff-047a-4eb0-b8fc-ba49c27b6725",
+          "planningTrialId": "66a15792-6713-446b-9375-714f312c510d",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 2,
+          "feedbackObservationCount": 6,
+          "mappingCount": 16,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/19-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/19/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 20,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "runId": "e00285b0-b7c8-4a82-a639-04414d0d571f",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 38,
+          "evidenceId": "f53fa318-a282-4c31-b0b1-483b8757dc46",
+          "planningTrialId": "3cc3bdce-f264-4b61-b3d9-c7ecc8786c38",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/20-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/20/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 21,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "runId": "a4c57887-ba66-47af-a849-283c10d0f20a",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 39,
+          "evidenceId": "9375cb04-7b86-4ae3-8c6a-58a482837093",
+          "planningTrialId": "d1816f01-2ee6-4532-8589-6617286fb3cd",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/21-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/21/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 22,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "runId": "dfaf97c5-f6d8-43a8-9540-2dcd96b4746b",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 40,
+          "evidenceId": "d48741f2-7f62-45cd-b734-877352e58887",
+          "planningTrialId": "33bd8a70-22a8-41a0-aa64-e9d73b5708da",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/22-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/22/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 23,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "runId": "6e17aa5d-c030-4ca2-a487-5733f380fe0d",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 41,
+          "evidenceId": "1cb2c01d-2b7c-4419-ae22-75233e4fa0d4",
+          "planningTrialId": "abc4b259-4f11-4221-9ebb-44063695d1d0",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/23-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/23/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 24,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "runId": "7d1fd475-8be5-4899-81ae-bed44edf3d56",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 42,
+          "evidenceId": "6984ee94-9c23-4ff4-9027-4e700e2c345d",
+          "planningTrialId": "e614cf9a-5b11-4006-b75a-a1379bc22fe5",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/24-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/24/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 25,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "runId": "51ab6e04-c7e6-4295-ab03-83e284defde1",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 43,
+          "evidenceId": "d1481ce7-9ae5-438e-a42b-5a1d01ae79a2",
+          "planningTrialId": "f25069b4-2ad4-4632-b1af-1c9d9973946b",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/25-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/25/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 26,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "runId": "29705553-c131-4a1b-8427-93ae4eaa37ec",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 44,
+          "evidenceId": "e7d9747b-d888-4300-a62f-4d752653d0cd",
+          "planningTrialId": "d76023b4-4dcd-4ffd-8c4e-4e760be76129",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/26-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/26/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 27,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "runId": "e3036c04-ef21-496c-bb0e-3e8495deb230",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 45,
+          "evidenceId": "bbfc71c6-8bab-4d4f-bfc3-c0a5dd1d15f9",
+          "planningTrialId": "8eb3adff-d3e7-4667-9270-58ba58b100f8",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/27-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/27/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 28,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "runId": "c2c43300-0ba7-405a-a174-dcaaaae13d33",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 46,
+          "evidenceId": "a2adf7c0-4daf-4857-b467-bc7dc059d68a",
+          "planningTrialId": "b1aab9b8-0e04-42e7-b977-c8d2dc0554a3",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/28-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/28/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 29,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "runId": "00ab4c86-3585-4a73-b651-692d6cbf0ea7",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 47,
+          "evidenceId": "bb35d936-ec8e-41a9-9677-acefbce0d0c6",
+          "planningTrialId": "5cdf4b8e-2826-4784-8404-ca22e2664e5f",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/29-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/29/evidence.json"
+      ]
+    },
+    {
+      "ordinal": 30,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "runId": "b6fbb623-1776-4a41-bfef-0aaf06dc9e41",
+      "trialIds": [],
+      "discovery": "NOT OBSERVED",
+      "confirmation": "NOT ATTEMPTED",
+      "terminalReason": "MODEL ERROR",
+      "immediateCause": "A PROVIDER 429",
+      "modelCalls": 1,
+      "http429Count": 1,
+      "contractFailureCount": 0,
+      "structuredProposalReturned": false,
+      "proposalValidationPassed": false,
+      "validatedProposalCount": 0,
+      "admittedExplorationJourneys": 0,
+      "completedExplorationJourneys": 0,
+      "stagnation": {
+        "stopped": false,
+        "consecutiveRounds": 0
+      },
+      "targetRequests": 0,
+      "phaseRequests": {
+        "ARTIFACT": 0,
+        "BASELINE": 0,
+        "EXPLORATION": 0,
+        "MINIMIZATION": 0,
+        "REPLAY": 0,
+        "RESET": 0
+      },
+      "predicateEvaluationOccurred": false,
+      "predicateEvaluations": [],
+      "rounds": [
+        {
+          "globalCallOrdinal": 48,
+          "evidenceId": "995ed34d-e824-4372-ac27-cd1c5cecf552",
+          "planningTrialId": "d01d3359-2d72-4404-940d-ce15f5178eed",
+          "outcome": "MODEL ERROR",
+          "failureKind": "PROVIDER_REQUEST",
+          "diagnostic": {
+            "apiStatus": "RESOURCE_EXHAUSTED",
+            "httpStatus": 429,
+            "model": "gemini-3.5-flash-lite",
+            "stage": "REQUEST"
+          },
+          "structuredProposalReturned": false,
+          "proposalValidationPassed": false,
+          "retainedValidationCategory": "PROVIDER_REQUEST",
+          "exactRejectedRule": null,
+          "seenNoveltyCount": 0,
+          "feedbackObservationCount": 0,
+          "mappingCount": 4,
+          "normalizedNovelty": null
+        }
+      ],
+      "evidenceReferences": [
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/30-result.json",
+        "tests/acceptance/gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50/30/evidence.json"
+      ]
+    }
+  ],
+  "series2Provider429Chronology": [
+    {
+      "ordinal": 10,
+      "fixture": "order-lifecycle",
+      "variant": "repaired",
+      "globalCallOrdinal": 17,
+      "planningTrialId": "ee554f4a-eed4-4970-95a2-bd4a21c7b1ae",
+      "evidenceId": "58d19215-455f-438e-8c4b-399816c47eaf"
+    },
+    {
+      "ordinal": 11,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "globalCallOrdinal": 18,
+      "planningTrialId": "a1ec7d52-396a-4b61-95eb-415c79a52d46",
+      "evidenceId": "935b690f-be1b-4f76-977d-6563a1a67bdf"
+    },
+    {
+      "ordinal": 12,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "globalCallOrdinal": 19,
+      "planningTrialId": "22fe22e5-19c9-47ea-b37f-0a299454b29e",
+      "evidenceId": "3687e5c0-1352-4201-bfb7-d3f7844b06db"
+    },
+    {
+      "ordinal": 13,
+      "fixture": "inventory",
+      "variant": "faulty",
+      "globalCallOrdinal": 20,
+      "planningTrialId": "0160184c-33c4-4b69-ab56-50f95bd4d997",
+      "evidenceId": "2ff448c8-7066-4d2e-9f0f-232b49d45d09"
+    },
+    {
+      "ordinal": 19,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "globalCallOrdinal": 37,
+      "planningTrialId": "66a15792-6713-446b-9375-714f312c510d",
+      "evidenceId": "26a5d7ff-047a-4eb0-b8fc-ba49c27b6725"
+    },
+    {
+      "ordinal": 20,
+      "fixture": "inventory",
+      "variant": "repaired",
+      "globalCallOrdinal": 38,
+      "planningTrialId": "3cc3bdce-f264-4b61-b3d9-c7ecc8786c38",
+      "evidenceId": "f53fa318-a282-4c31-b0b1-483b8757dc46"
+    },
+    {
+      "ordinal": 21,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "globalCallOrdinal": 39,
+      "planningTrialId": "d1816f01-2ee6-4532-8589-6617286fb3cd",
+      "evidenceId": "9375cb04-7b86-4ae3-8c6a-58a482837093"
+    },
+    {
+      "ordinal": 22,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "globalCallOrdinal": 40,
+      "planningTrialId": "33bd8a70-22a8-41a0-aa64-e9d73b5708da",
+      "evidenceId": "d48741f2-7f62-45cd-b734-877352e58887"
+    },
+    {
+      "ordinal": 23,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "globalCallOrdinal": 41,
+      "planningTrialId": "abc4b259-4f11-4221-9ebb-44063695d1d0",
+      "evidenceId": "1cb2c01d-2b7c-4419-ae22-75233e4fa0d4"
+    },
+    {
+      "ordinal": 24,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "globalCallOrdinal": 42,
+      "planningTrialId": "e614cf9a-5b11-4006-b75a-a1379bc22fe5",
+      "evidenceId": "6984ee94-9c23-4ff4-9027-4e700e2c345d"
+    },
+    {
+      "ordinal": 25,
+      "fixture": "workflow",
+      "variant": "faulty",
+      "globalCallOrdinal": 43,
+      "planningTrialId": "f25069b4-2ad4-4632-b1af-1c9d9973946b",
+      "evidenceId": "d1481ce7-9ae5-438e-a42b-5a1d01ae79a2"
+    },
+    {
+      "ordinal": 26,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "globalCallOrdinal": 44,
+      "planningTrialId": "d76023b4-4dcd-4ffd-8c4e-4e760be76129",
+      "evidenceId": "e7d9747b-d888-4300-a62f-4d752653d0cd"
+    },
+    {
+      "ordinal": 27,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "globalCallOrdinal": 45,
+      "planningTrialId": "8eb3adff-d3e7-4667-9270-58ba58b100f8",
+      "evidenceId": "bbfc71c6-8bab-4d4f-bfc3-c0a5dd1d15f9"
+    },
+    {
+      "ordinal": 28,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "globalCallOrdinal": 46,
+      "planningTrialId": "b1aab9b8-0e04-42e7-b977-c8d2dc0554a3",
+      "evidenceId": "a2adf7c0-4daf-4857-b467-bc7dc059d68a"
+    },
+    {
+      "ordinal": 29,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "globalCallOrdinal": 47,
+      "planningTrialId": "5cdf4b8e-2826-4784-8404-ca22e2664e5f",
+      "evidenceId": "bb35d936-ec8e-41a9-9677-acefbce0d0c6"
+    },
+    {
+      "ordinal": 30,
+      "fixture": "workflow",
+      "variant": "repaired",
+      "globalCallOrdinal": 48,
+      "planningTrialId": "d01d3359-2d72-4404-940d-ce15f5178eed",
+      "evidenceId": "995ed34d-e824-4372-ac27-cd1c5cecf552"
+    }
+  ],
+  "analysis": {
+    "workflow": "All five faulty and five repaired trials received HTTP 429 before any usable proposal, baseline or target dispatch. No evidence establishes a workflow planner/context/discoverability defect.",
+    "inventory": "Faulty ordinals 11\u201313 received 429 on their first calls. Ordinals 14\u201315 returned valid dependent three-step journeys and completed confirmation and artifact verification. Failed calls have no proposal shape or feedback to compare.",
+    "orderLifecycle": "Faulty ordinal 1: CONTRACT_VALIDATION; exact rejected rule not retained. Faulty ordinals 2\u20135 confirmed.",
+    "contractFailures": "Ordinals 1,7,9,16 retain CONTRACT_VALIDATION and provider usage but not a safe rejected-rule diagnostic. The exact rule and rejected output shape cannot be reconstructed. This is an observability defect, not proof validation was wrong.",
+    "stagnation": "Repaired ordinals 8,17,18. Offline production hypothesisHash reconstruction shows last three valid proposals repeat an already-seen normalized journey. SATISFIED fresh executions preceded stopping; no faulty trial stopped on stagnation. Public alternative operation availability does not override deterministic novelty stopping.",
+    "executionError": "Repaired ordinal 6 selected request /id operands for later steps despite the identifier being returned in the creation response. Reset, baseline and creation dispatched; the unavailable operand prevented subsequent dispatch. No predicate evaluation occurred. Fail-closed runtime behavior, not an established engine defect.",
+    "providerOrchestration": "Trials execute sequentially; SDK retry attempts:1. The first Series-2 429 is global call 17; subsequent successes exist before calls 37\u201348 fail. No retained quota limit or violated pacing constraint is established. No concurrency/pacing/retry change justified.",
+    "ap002": "FAIL follows per-fixture SC-002 thresholds: inventory 2/5 and workflow 0/5. Order 4/5 passes; repaired confirmations remain zero.",
+    "correction": "Diagnostics only: bounded allowlisted validationRule and safe Zod issue codes/paths; no raw rejected output, values, exception messages or evaluator metadata; strict validation unchanged.",
+    "newBuildRequired": true,
+    "series3Executed": false,
+    "series3Justified": "Not yet established: external provider capacity remains unresolved and rejected-rule causes require newly instrumented evidence. A future series needs a new frozen identity and explicit operator decision."
+  },
+  "validation": {
+    "providerPlannerFocused": {
+      "passed": 78,
+      "failed": 0
+    },
+    "newRegressionTests": 5,
+    "testFirst": {
+      "oldPassed": 5,
+      "newExpectedFailed": 5
+    },
+    "fullRegression": {
+      "passed": 871,
+      "failed": 0,
+      "skipped": 0
+    },
+    "typecheck": "PASS",
+    "changedFileLint": "PASS",
+    "format": "PASS",
+    "sanitization": "PASS: focused secret/redaction regressions and new-file configured protected-value scan",
+    "focused": {
+      "passed": 180,
+      "failed": 0,
+      "skipped": 0
+    },
+    "seriesArtifactConsistency": "PASS: 30 assignment/result records agree with summaries in both series",
+    "historicalIntegrity": "PASS: 245 SHA-256 matches"
+  },
+  "frozenSeriesIdentities": [
+    {
+      "seriesId": "gate5-0964afd0-7aa7-4a71-a063-ce7042585538",
+      "buildHash": "b9aecf93eff8d9d3ecc3abb1a1b91df1244bb5aaf692566ed166e49549c18d21",
+      "configurationHash": "1d4b7a1cdc5f10ba25e14e1335dc6a260e1f43f8b69826a36afab5b1a06e25f7",
+      "dependencyHash": "f77a13c73abbc0c67348574a8675c64961de8613ba6b1b2d21a1f78d676d20ff",
+      "engineHash": "2cbcfd05a09be0d296f3ca47b0b096212fea3b0212a297aaf9a9cdd55bb0ed21",
+      "fixtureHash": "ec5f5b9118c4647da82ce9e51c4fe3e09fa04a601fd1f0958ea46923eae102dc",
+      "modelHash": "5a838f92caeff18f264cd53b55047d80a356c59e9c31f66a99e89f515b24dca4",
+      "promptHash": "2811526c6f7e88de2fd604c5561e5e6c39de8248a64b3ba154f1ed2b7e5409d7"
+    },
+    {
+      "seriesId": "gate5-4ef4b360-4d4b-429e-8ecc-e6e75f722e50",
+      "buildHash": "b9aecf93eff8d9d3ecc3abb1a1b91df1244bb5aaf692566ed166e49549c18d21",
+      "configurationHash": "47e38b2a91a9b2f387f0c3f3c4fe96014d9491a0bd522bf57e9baea77639c440",
+      "dependencyHash": "f77a13c73abbc0c67348574a8675c64961de8613ba6b1b2d21a1f78d676d20ff",
+      "engineHash": "681152c18aa32cd2504661029a44fb6a0b31b74b00db7d8bcf05381467054857",
+      "fixtureHash": "ec5f5b9118c4647da82ce9e51c4fe3e09fa04a601fd1f0958ea46923eae102dc",
+      "modelHash": "5a838f92caeff18f264cd53b55047d80a356c59e9c31f66a99e89f515b24dca4",
+      "promptHash": "2811526c6f7e88de2fd604c5561e5e6c39de8248a64b3ba154f1ed2b7e5409d7"
+    }
+  ],
+  "diagnosticsSourceHashes": {
+    "src/engine/planning/provider.ts": "271b5031de3d12c45a829e4c7437a90d4eeaa844c3a249df1fef4efeaf9df062",
+    "tests/contract/provider-failure-diagnostics.test.ts": "78ce27ed4fff60564094fe2c02a400d638903479ea0640668f0ef15c13675235"
+  }
+}

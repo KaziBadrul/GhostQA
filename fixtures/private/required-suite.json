@@ -1,0 +1,338 @@
+{
+  "formatVersion": 1,
+  "fixtures": [
+    {
+      "id": "order-lifecycle",
+      "module": "fixtures/api/order-lifecycle.ts",
+      "startExport": "startOrderFixture",
+      "openapi": "fixtures/openapi/order-lifecycle.json",
+      "variants": {
+        "inconsistent": false,
+        "repaired": true
+      },
+      "baseline": {
+        "orders": 0
+      },
+      "operationPolicy": [
+        {
+          "operationId": "POST /api/control/reset",
+          "category": "RESET",
+          "phases": ["RESET"]
+        },
+        {
+          "operationId": "GET /api/control/baseline",
+          "category": "BASELINE",
+          "phases": ["BASELINE"]
+        },
+        {
+          "operationId": "POST /api/orders",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "GET /api/orders/{orderId}",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "POST /api/orders/{orderId}/cancel",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "POST /api/orders/{orderId}/fulfill",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        }
+      ],
+      "invariant": {
+        "sourceRef": "an order observed as CANCELLED must not later be observed as FULFILLED within the same fresh trial",
+        "applicability": [
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "CANCELLED"
+            }
+          },
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/id"
+            },
+            "right": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/id"
+            }
+          },
+          {
+            "op": "before",
+            "left": {
+              "kind": "step-index",
+              "stepId": "cancelled"
+            },
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "op": "not-equals",
+            "left": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "FULFILLED"
+            }
+          }
+        ]
+      },
+      "evaluator": {
+        "priorStep": "cancelled",
+        "laterStep": "later",
+        "actions": [
+          "POST /api/orders",
+          "POST /api/orders/{orderId}/cancel",
+          "POST /api/orders/{orderId}/fulfill"
+        ],
+        "inconsistentState": "FULFILLED",
+        "repairedState": "CANCELLED"
+      }
+    },
+    {
+      "id": "inventory",
+      "module": "fixtures/api/inventory.ts",
+      "startExport": "startInventoryFixture",
+      "openapi": "fixtures/openapi/inventory.json",
+      "variants": {
+        "inconsistent": false,
+        "repaired": true
+      },
+      "baseline": {
+        "items": 0
+      },
+      "operationPolicy": [
+        {
+          "operationId": "POST /api/control/reset",
+          "category": "RESET",
+          "phases": ["RESET"]
+        },
+        {
+          "operationId": "GET /api/control/baseline",
+          "category": "BASELINE",
+          "phases": ["BASELINE"]
+        },
+        {
+          "operationId": "POST /api/items",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "GET /api/items/{itemId}",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "POST /api/items/{itemId}/unavailable",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "POST /api/items/{itemId}/allocate",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        }
+      ],
+      "invariant": {
+        "sourceRef": "an item observed as UNAVAILABLE must not later be observed as ALLOCATED within the same fresh trial",
+        "applicability": [
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "unavailable",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "UNAVAILABLE"
+            }
+          },
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "unavailable",
+              "pointer": "/id"
+            },
+            "right": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/id"
+            }
+          },
+          {
+            "op": "before",
+            "left": {
+              "kind": "step-index",
+              "stepId": "unavailable"
+            },
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "op": "not-equals",
+            "left": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "ALLOCATED"
+            }
+          }
+        ]
+      },
+      "evaluator": {
+        "priorStep": "unavailable",
+        "laterStep": "later",
+        "actions": [
+          "POST /api/items",
+          "POST /api/items/{itemId}/unavailable",
+          "POST /api/items/{itemId}/allocate"
+        ],
+        "inconsistentState": "ALLOCATED",
+        "repairedState": "UNAVAILABLE"
+      }
+    },
+    {
+      "id": "workflow",
+      "module": "fixtures/api/workflow.ts",
+      "startExport": "startWorkflowFixture",
+      "openapi": "fixtures/openapi/workflow.json",
+      "variants": {
+        "inconsistent": false,
+        "repaired": true
+      },
+      "baseline": {
+        "documents": 0
+      },
+      "operationPolicy": [
+        {
+          "operationId": "POST /api/control/reset",
+          "category": "RESET",
+          "phases": ["RESET"]
+        },
+        {
+          "operationId": "GET /api/control/baseline",
+          "category": "BASELINE",
+          "phases": ["BASELINE"]
+        },
+        {
+          "operationId": "POST /api/documents",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "GET /api/documents/{documentId}",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "POST /api/documents/{documentId}/archive",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        },
+        {
+          "operationId": "POST /api/documents/{documentId}/publish",
+          "category": "EXPLORATION",
+          "phases": ["EXPLORATION", "REPLAY", "MINIMIZATION", "ARTIFACT"]
+        }
+      ],
+      "invariant": {
+        "sourceRef": "a document observed as ARCHIVED must not later be observed as PUBLISHED within the same fresh trial",
+        "applicability": [
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "archived",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "ARCHIVED"
+            }
+          },
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "archived",
+              "pointer": "/id"
+            },
+            "right": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/id"
+            }
+          },
+          {
+            "op": "before",
+            "left": {
+              "kind": "step-index",
+              "stepId": "archived"
+            },
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "op": "not-equals",
+            "left": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "PUBLISHED"
+            }
+          }
+        ]
+      },
+      "evaluator": {
+        "priorStep": "archived",
+        "laterStep": "later",
+        "actions": [
+          "POST /api/documents",
+          "POST /api/documents/{documentId}/archive",
+          "POST /api/documents/{documentId}/publish"
+        ],
+        "inconsistentState": "PUBLISHED",
+        "repairedState": "ARCHIVED"
+      }
+    }
+  ]
+}

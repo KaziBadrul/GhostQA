@@ -1,0 +1,156 @@
+{
+  "task": "T044",
+  "status": "COMPLETE; GATE 4 PROVEN",
+  "checked": true,
+  "newOrchestrationTests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "focusedCoverageInFinalFullRun": {
+    "passed": 365,
+    "failed": 0
+  },
+  "fullRegression": {
+    "passed": 798,
+    "failed": 0,
+    "skipped": 0
+  },
+  "baseline": {
+    "passed": 769,
+    "failed": 0,
+    "skipped": 0
+  },
+  "typecheck": "PASS",
+  "changedFileLint": "PASS",
+  "changedFileFormat": "PASS",
+  "sanitization": "PASS",
+  "historicalCheckpointsUnchanged": true,
+  "existingAuthorityTestsUnchanged": true,
+  "tasksUnchanged": false,
+  "liveAcceptance": {
+    "status": "PASS",
+    "executedByCodex": false,
+    "classification": "developer-executed live acceptance in Warp",
+    "command": "npm exec -- tsx scripts/t044-acceptance.ts",
+    "lastObservedOutput": {
+      "task": "T044",
+      "result": "PASS",
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+      "discoveryStatus": "OBSERVED VIOLATION",
+      "confirmationStatus": "CONFIRMED",
+      "predicateId": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+      "predicateVersion": 1,
+      "predicateHash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+      "originalJourneyLength": 3,
+      "bestVerifiedJourneyLength": 3,
+      "reportGenerated": true,
+      "manifestHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+      "supervisedVerificationStatus": "VIOLATED",
+      "artifactStatus": "VERIFIED",
+      "sharedBudgetVerified": true,
+      "packageHash": "2629117f0d5a63f1c7fc0e4568571bc3e12008a11b1cd91fc849e435c3f78bca",
+      "standaloneIsolationVerified": true,
+      "historicalEvidenceUnchanged": true,
+      "evidenceFile": "tests/acceptance/t044-order-601fa890-5598-47a0-beb8-50471fb4e72a.json",
+      "packageDirectory": "dist/gate4/601fa890-5598-47a0-beb8-50471fb4e72a"
+    },
+    "retainedEvidenceVerified": true
+  },
+  "knownUnrelatedIssues": {
+    "lintErrors": 2,
+    "formatFailures": 9
+  },
+  "T045Untouched": true,
+  "priorFullRegression": {
+    "passed": 775,
+    "failed": 0,
+    "skipped": 0
+  },
+  "diagnosticsRegressionTests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "focusedDiagnosticsValidation": {
+    "passed": 299,
+    "failed": 0,
+    "skipped": 0
+  },
+  "priorDiagnosticsFullRegression": {
+    "passed": 789,
+    "failed": 0,
+    "skipped": 0
+  },
+  "admissionFocusedValidation": {
+    "passed": 57,
+    "failed": 0,
+    "skipped": 0
+  },
+  "admissionRegressionTestsAdded": 2,
+  "productionAuthoritySemanticsChanged": false,
+  "priorAdmissionFullRegression": {
+    "passed": 791,
+    "failed": 0,
+    "skipped": 0
+  },
+  "proposalFocusedValidation": {
+    "passed": 104,
+    "failed": 0,
+    "skipped": 0
+  },
+  "proposalDiagnosticsTestsAdded": 7,
+  "generationDecisionsChanged": false,
+  "taskChecklistChange": "T044 checkbox only",
+  "priorLiveAcceptance": {
+    "status": "PENDING AFTER DEVELOPER-EXECUTED FAIL",
+    "executedByCodex": false,
+    "command": "npm exec -- tsx scripts/t044-acceptance.ts",
+    "lastObservedOutput": {
+      "task": "T044",
+      "result": "FAIL",
+      "failedStage": "GEMINI_PROPOSAL",
+      "reason": "DISCOVERY OR CONFIRMATION INCOMPLETE",
+      "lastCompletedStage": "RUN_ADMISSION",
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "runId": "343f257b-6364-42d2-a0a0-9cde6674ed59",
+      "stopReason": "MODEL ERROR",
+      "requestBudgetUsed": 0,
+      "requestBudgetLimit": 200,
+      "evidenceFile": "tests/acceptance/t044-failed-3c0f3bc1-3f20-4e6a-baf1-ec06b4ca34ce.json"
+    },
+    "classification": "developer-executed live acceptance",
+    "failedStage": "GEMINI_PROPOSAL",
+    "runtimeCause": "UNDETERMINED: attempted-call/timing information not retained",
+    "confirmedDefect": "ACCEPTANCE DIAGNOSTICS / FAILURE EVIDENCE RETENTION",
+    "failedAttemptRecord": "tests/acceptance/t044-failed-3c0f3bc1-3f20-4e6a-baf1-ec06b4ca34ce.json",
+    "failureDiagnosticsCorrected": true,
+    "lastCompletedStage": "RUN_ADMISSION",
+    "reason": "DISCOVERY OR CONFIRMATION INCOMPLETE",
+    "investigationRecord": "tests/acceptance/t044-proposal-investigation.json",
+    "stopReason": "MODEL ERROR"
+  },
+  "closureVerification": {
+    "manifestIntegrity": "PASS",
+    "byteIdenticalStaticBundleRebuild": "PASS",
+    "exactPredicateIdentity": "PASS",
+    "independentFreshTrials": 3,
+    "freshDiscoveryReplayValues": "PASS",
+    "sharedBudgetRequests": [0, 5, 10, 10, 15],
+    "requestLimit": 200,
+    "reportReferences": "PASS",
+    "generatedReportsRemain": "GENERATED / UNVERIFIED",
+    "supervisedArtifactStatus": "VERIFIED",
+    "bundleIsolation": "PASS",
+    "configuredSecretScan": "PASS",
+    "historicalAcceptanceFilesUnchanged": 36,
+    "authorityTests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "productionCodeChanged": false,
+    "authoritySemanticsChanged": false,
+    "liveOrStandaloneExecutionByCodex": false
+  }
+}

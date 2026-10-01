@@ -1,0 +1,626 @@
+{
+  "task": "T039",
+  "status": "PASS",
+  "filesChanged": [
+    "src/engine/minimization/greedy.ts",
+    "src/engine/minimization/deletion.ts",
+    "src/engine/contracts/minimization.ts",
+    "src/engine/contracts/index.ts",
+    "src/engine/fresh-state/manager.ts",
+    "src/server/repositories/minimization.ts",
+    "src/server/repositories/findings.ts",
+    "scripts/t039-acceptance.ts",
+    "tests/integration/minimization-authority.test.ts",
+    "tests/acceptance/t039.md",
+    "tests/acceptance/t039-results.json",
+    "tests/acceptance/t039-order-3866fbcf-62b5-4478-820d-a73dceedb3b2.json",
+    "specs/001-ghostqa-mvp/tasks.md"
+  ],
+  "initialT038": {
+    "passed": 8,
+    "expectedRed": 81,
+    "missingBoundary": "src/engine/minimization/greedy.ts"
+  },
+  "focused": {
+    "T038Passed": 89,
+    "T038Failed": 0,
+    "additionalAuthorityPassed": 4,
+    "combinedPassed": 93,
+    "failed": 0,
+    "suites": [
+      {
+        "file": "tests/unit/minimizer.test.ts",
+        "passed": 54,
+        "failed": 0,
+        "tests": [
+          {
+            "name": "setup: supplied six-step journey is validated, with two independent removable reads",
+            "status": "passed"
+          },
+          {
+            "name": "setup: input confirmation is independent, eligible and references exact original journey",
+            "status": "passed"
+          },
+          {
+            "name": "setup: all candidate verdict fixtures are evaluated by the existing deterministic evaluator",
+            "status": "passed"
+          },
+          {
+            "name": "ordered deletion index 0 protects producer/predicate or removes independent action",
+            "status": "passed"
+          },
+          {
+            "name": "ordered deletion index 1 protects producer/predicate or removes independent action",
+            "status": "passed"
+          },
+          {
+            "name": "ordered deletion index 2 protects producer/predicate or removes independent action",
+            "status": "passed"
+          },
+          {
+            "name": "ordered deletion index 3 protects producer/predicate or removes independent action",
+            "status": "passed"
+          },
+          {
+            "name": "ordered deletion index 4 protects producer/predicate or removes independent action",
+            "status": "passed"
+          },
+          {
+            "name": "ordered deletion index 5 protects producer/predicate or removes independent action",
+            "status": "passed"
+          },
+          {
+            "name": "predicate-referenced json operand protects the step in either comparison side",
+            "status": "passed"
+          },
+          {
+            "name": "predicate-referenced header operand protects the step in either comparison side",
+            "status": "passed"
+          },
+          {
+            "name": "predicate-referenced status operand protects the step in either comparison side",
+            "status": "passed"
+          },
+          {
+            "name": "predicate-referenced step-index operand protects the step in either comparison side",
+            "status": "passed"
+          },
+          {
+            "name": "predicate-referenced variable operand protects the step in either comparison side",
+            "status": "passed"
+          },
+          {
+            "name": "deletion rejects removal of a response producer used by another retained step",
+            "status": "passed"
+          },
+          {
+            "name": "invalid deletion index -1 does not invent a candidate",
+            "status": "passed"
+          },
+          {
+            "name": "invalid deletion index 6 does not invent a candidate",
+            "status": "passed"
+          },
+          {
+            "name": "invalid deletion index 1.5 does not invent a candidate",
+            "status": "passed"
+          },
+          {
+            "name": "only exact eligible fresh VIOLATED determines reduction preservation",
+            "status": "passed"
+          },
+          {
+            "name": "only exact eligible fresh SATISFIED determines reduction preservation",
+            "status": "passed"
+          },
+          {
+            "name": "only exact eligible fresh NOT APPLICABLE determines reduction preservation",
+            "status": "passed"
+          },
+          {
+            "name": "only exact eligible fresh UNEVALUABLE determines reduction preservation",
+            "status": "passed"
+          },
+          {
+            "name": "wrong predicate ID: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "wrong version: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "wrong canonical hash: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "edited approved predicate/new version: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "candidate different predicate: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "hypothesis-only predicate: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "observed candidate instead of confirmation: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "inconsistent confirmation: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "missing replay confirmation evidence: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "stale baseline trial: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "reused confirmation baseline: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "reused prior minimization baseline: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "reused prior minimization trial: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "missing baseline: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "failed baseline: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "unevaluable baseline: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "unrelated baseline assertion: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "wrong baseline run: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "discovery evidence reused: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "confirmation evidence reused: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "missing observation: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "unknown observation reference: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "foreign-trial observation: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "truncated response: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "execution error is not predicate verdict: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "execution error observation: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "interrupted observation: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "different phase: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "missing verdict: cannot accept a reduction",
+            "status": "passed"
+          },
+          {
+            "name": "setup: negative fixtures construct independently of missing minimizer",
+            "status": "passed"
+          },
+          {
+            "name": "a forged VIOLATED label/model explanation cannot override SATISFIED observations",
+            "status": "passed"
+          },
+          {
+            "name": "a candidate changing retained operations or action order is not single-step deletion",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "file": "tests/integration/minimization-authority.test.ts",
+        "passed": 4,
+        "failed": 0,
+        "tests": [
+          {
+            "name": "later invocation retains durable minimized best, even after supervisor cancellation",
+            "status": "passed"
+          },
+          {
+            "name": "repository rejects stale larger best and repeated accepted decision without changing durable history",
+            "status": "passed"
+          },
+          {
+            "name": "failed reset before dispatch retains the actually admitted trial identity, without a predicate verdict",
+            "status": "passed"
+          },
+          {
+            "name": "active supervisor run must match the source confirmation before reset admission",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "file": "tests/integration/minimization.test.ts",
+        "passed": 35,
+        "failed": 0,
+        "tests": [
+          {
+            "name": "setup: existing supervisor independently confirms supplied order journey minimal=false",
+            "status": "passed"
+          },
+          {
+            "name": "setup: existing supervisor independently confirms supplied order journey minimal=true",
+            "status": "passed"
+          },
+          {
+            "name": "setup: valid five-step MINIMIZATION trial already uses independent baseline and sole dispatcher",
+            "status": "passed"
+          },
+          {
+            "name": "ordered deletion reduces supplied six steps to exact same eligible three-step violation with durable fresh evidence",
+            "status": "passed"
+          },
+          {
+            "name": "already minimal confirmed journey reaches only local criterion without a target trial",
+            "status": "passed"
+          },
+          {
+            "name": "repaired variant rejects SATISFIED removals, visits candidates once and retains previously verified original",
+            "status": "passed"
+          },
+          {
+            "name": "stable removal order and finite restart scans are independent of generated runtime UUIDs",
+            "status": "passed"
+          },
+          {
+            "name": "all-phase budget 22 admits whole candidate or preserves verified best before reset",
+            "status": "passed"
+          },
+          {
+            "name": "all-phase budget 23 admits whole candidate or preserves verified best before reset",
+            "status": "passed"
+          },
+          {
+            "name": "all-phase budget 28 admits whole candidate or preserves verified best before reset",
+            "status": "passed"
+          },
+          {
+            "name": "reset failure stops minimization honestly without accepting a reduction or changing confirmation",
+            "status": "passed"
+          },
+          {
+            "name": "baseline failure stops minimization honestly without accepting a reduction or changing confirmation",
+            "status": "passed"
+          },
+          {
+            "name": "execution failure stops minimization honestly without accepting a reduction or changing confirmation",
+            "status": "passed"
+          },
+          {
+            "name": "cancel failure stops minimization honestly without accepting a reduction or changing confirmation",
+            "status": "passed"
+          },
+          {
+            "name": "time failure stops minimization honestly without accepting a reduction or changing confirmation",
+            "status": "passed"
+          },
+          {
+            "name": "ownership failure stops minimization honestly without accepting a reduction or changing confirmation",
+            "status": "passed"
+          },
+          {
+            "name": "cancellation between attempts retains first independently verified reduction and schedules no further reset",
+            "status": "passed"
+          },
+          {
+            "name": "preflight predicate ID cannot reuse confirmed evidence or consume budget",
+            "status": "passed"
+          },
+          {
+            "name": "preflight predicate version cannot reuse confirmed evidence or consume budget",
+            "status": "passed"
+          },
+          {
+            "name": "preflight predicate hash cannot reuse confirmed evidence or consume budget",
+            "status": "passed"
+          },
+          {
+            "name": "preflight journey edit cannot reuse confirmed evidence or consume budget",
+            "status": "passed"
+          },
+          {
+            "name": "preflight not confirmed cannot reuse confirmed evidence or consume budget",
+            "status": "passed"
+          },
+          {
+            "name": "preflight inconsistent cannot reuse confirmed evidence or consume budget",
+            "status": "passed"
+          },
+          {
+            "name": "preflight scope edit cannot reuse confirmed evidence or consume budget",
+            "status": "passed"
+          },
+          {
+            "name": "closed supervisor gate after confirmation prevents any alternate transport",
+            "status": "passed"
+          },
+          {
+            "name": "setup: expected final three-step candidate reproduces exact violation after fresh minimization reset",
+            "status": "passed"
+          },
+          {
+            "name": "reset failure after one accepted reduction retains its exact evidence and best journey",
+            "status": "passed"
+          },
+          {
+            "name": "execution failure after one accepted reduction retains its exact evidence and best journey",
+            "status": "passed"
+          },
+          {
+            "name": "cancellation during durable intent blocks dispatch, conservatively charges existing budget and retains best",
+            "status": "passed"
+          },
+          {
+            "name": "durable intent storage failure cannot authorize target dispatch or accept a deletion",
+            "status": "passed"
+          },
+          {
+            "name": "invalid stale baseline cannot authorize a candidate journey or a preserving verdict",
+            "status": "passed"
+          },
+          {
+            "name": "invalid reused baseline cannot authorize a candidate journey or a preserving verdict",
+            "status": "passed"
+          },
+          {
+            "name": "invalid missing baseline cannot authorize a candidate journey or a preserving verdict",
+            "status": "passed"
+          },
+          {
+            "name": "invalid failed baseline cannot authorize a candidate journey or a preserving verdict",
+            "status": "passed"
+          },
+          {
+            "name": "invalid unevaluable baseline cannot authorize a candidate journey or a preserving verdict",
+            "status": "passed"
+          }
+        ]
+      }
+    ]
+  },
+  "fullRegression": {
+    "passed": 612,
+    "failed": 0,
+    "skipped": 0,
+    "files": 49,
+    "previousBaseline": 519
+  },
+  "typecheck": "PASS",
+  "changedFileLint": "PASS; no warnings",
+  "changedFileFormat": "PASS",
+  "knownRepositoryLint": {
+    "errors": 2,
+    "file": "src/engine/mapping/state.ts",
+    "lines": [49, 52]
+  },
+  "knownRepositoryFormat": {
+    "failures": 9,
+    "files": [
+      "src/engine/contracts/common.ts",
+      "src/engine/contracts/predicate.ts",
+      "src/engine/detection/predicate.ts",
+      "src/engine/execution/journey.ts",
+      "src/engine/execution/variables.ts",
+      "src/engine/mapping/state.ts",
+      "src/server/config.ts",
+      "tests/helpers/setup.ts",
+      "tests/unit/config.test.ts"
+    ]
+  },
+  "localAcceptance": {
+    "task": "T039",
+    "result": "PASS",
+    "kind": "SUPPLIED MINIMIZATION CASE; NOT DISCOVERY",
+    "runId": "3866fbcf-62b5-4478-820d-a73dceedb3b2",
+    "findingId": "8452b386-239a-4e6a-a436-c8ec10c19ac3",
+    "originalJourneyId": "b2a4d368-1bf6-4138-b128-77c33d77362b",
+    "minimizedJourneyId": "be58f1ab-3444-4037-a8ef-a521a823228e",
+    "originalLength": 6,
+    "minimizedLength": 3,
+    "predicateRef": {
+      "id": "28a27eea-87aa-4ac4-9536-c9f41322a53e",
+      "version": 1,
+      "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+    },
+    "initialEvidenceId": "184b1f3d-01ac-449d-9d97-d8138bfa22db",
+    "confirmationEvidenceId": "f9d88611-844d-442e-9a40-118d18a5a4f9",
+    "initialTrialId": "4cda0ec2-6bbc-4f2b-8c56-f10a110a9927",
+    "confirmationTrialId": "0ac2642c-473a-4b88-a052-e3e07c87c271",
+    "initialBaselineId": "6bd375d1-5c43-46a9-868b-3f09120190e6",
+    "confirmationBaselineId": "d0898b16-64b7-4857-a4aa-cc45dc59f823",
+    "reductions": [
+      {
+        "removedStepId": "readBefore",
+        "journeyId": "04a8fd8b-6a65-4d1d-aa9a-82df8eba4ce8",
+        "trialId": "bb37bf5e-41ef-434d-a070-dea9e1ce7b0c",
+        "baselineId": "f96d8228-98a9-4eb9-b761-ff3778f22bbb",
+        "evidenceId": "b5967cd5-bc8c-4b0d-82b1-b617b6b9eb5f",
+        "predicateRef": {
+          "id": "28a27eea-87aa-4ac4-9536-c9f41322a53e",
+          "version": 1,
+          "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+        }
+      },
+      {
+        "removedStepId": "readAfter",
+        "journeyId": "2d0d99b1-c4c2-4678-92b3-1a390a4a3c48",
+        "trialId": "f441a9b7-cc8a-4917-8f1c-63e8f3ee58e3",
+        "baselineId": "045f9451-5210-4937-904f-b7b11d9618d0",
+        "evidenceId": "05b9ea86-75f4-4063-b016-e9e72049cb59",
+        "predicateRef": {
+          "id": "28a27eea-87aa-4ac4-9536-c9f41322a53e",
+          "version": 1,
+          "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+        }
+      },
+      {
+        "removedStepId": "extraOrder",
+        "journeyId": "be58f1ab-3444-4037-a8ef-a521a823228e",
+        "trialId": "f7089384-ea01-45f7-8aa6-0f3de6a72e4e",
+        "baselineId": "51714ec2-181c-4f72-974c-0c61501418d3",
+        "evidenceId": "c27956b6-8989-4a0f-8e7c-f92f165e0eb4",
+        "predicateRef": {
+          "id": "28a27eea-87aa-4ac4-9536-c9f41322a53e",
+          "version": 1,
+          "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+        }
+      }
+    ],
+    "stopReason": "LOCAL MINIMUM",
+    "locallyIrreducible": true,
+    "budget": {
+      "limits": {
+        "requests": 200,
+        "milliseconds": 600000,
+        "journeys": 1,
+        "steps": 10,
+        "requestTimeoutMs": 10000,
+        "modelTimeoutMs": 30000
+      },
+      "usedRequests": 34,
+      "requestsByPhase": {
+        "RESET": 5,
+        "BASELINE": 5,
+        "EXPLORATION": 6,
+        "REPLAY": 6,
+        "MINIMIZATION": 12,
+        "ARTIFACT": 0
+      },
+      "usedExplorationJourneys": 1,
+      "modelCalls": 0,
+      "stagnantRounds": 0,
+      "acceptedAt": "2026-10-01T13:41:19.963Z",
+      "deadlineAt": "2026-10-01T13:51:19.963Z"
+    }
+  },
+  "evidenceFile": "tests/acceptance/t039-order-3866fbcf-62b5-4478-820d-a73dceedb3b2.json",
+  "historicalTestsAndEvidenceSHA256": {
+    "tests/unit/foundation.test.ts": "909514d9113b73b692d60c99dc12573efbed34cf1218d782292eb69cc1b71201",
+    "tests/unit/scope.test.ts": "9262171c42b4774af425725013ce8bb5cc95f2105dacccadd83fafd97c0baa5d",
+    "tests/unit/budget.test.ts": "35ad87ea70205af658a51ae160ad851f383c13671fd8a45926a5ccb739a9bb8b",
+    "tests/unit/openapi-worker.test.ts": "a665240c6fd3569570f8afd1ae6c2ea7ae4cffbd654347aba56fcb8abb2efdb2",
+    "tests/unit/headers.test.ts": "b21f6d346074558241c269f6db5c555fc05b66b6d3a7111980d6419594b26070",
+    "tests/unit/api-model.test.ts": "df156123db714363e8bf40ee10c47f59966f8f415bff6d01ccb54811264e5fa6",
+    "tests/unit/observations.test.ts": "c8dea9e663f97b599c48ab02094218214de398ba5c9a0ea580caa984e33f14be",
+    "tests/unit/single-dispatch.test.ts": "c8b8ad7235e9f60261590253762175e99ae70ba095af94d54c16ed93d06f8b1b",
+    "tests/unit/openapi-sanitization.test.ts": "d5eefe0cd5f511737f6c99f7e4ff4d59d40958a3536337777877f3126a42e11c",
+    "tests/unit/planner.test.ts": "20b8b160011c4e18925aca1b383fe5a84f291111b63472f7f118a67474979788",
+    "tests/unit/planning-boundary.test.ts": "fff6592da91957c9999a8865fc80dddbeaec7681a5a5cf6c7344f67b713a9ad9",
+    "tests/unit/finding-transitions.test.ts": "d192251e448f5dad7ec791baf69aa2c835baa520a90f2651f723c987bbce7b42",
+    "tests/unit/account-invariants.test.ts": "acaa16cbc504bc60973e5b1c04464483a1d67dda08415ba2ee09bab200421d03",
+    "tests/unit/agent-loop.test.ts": "efb9c9fb97c3bbf90160438104c0ee4340ba379055c86e658c12724e27533090",
+    "tests/unit/secrets.test.ts": "ab59375b7e61d107c3979655cb18ba0b757b35946c789c47c0fa48d5906ebd5f",
+    "tests/unit/transport.test.ts": "89b3b833288e2da8305cb61eaac38ca26a85ff6cccca1843a24e9addd7dffee9",
+    "tests/unit/predicates.test.ts": "64678e72276859aab0ab2707db5230cd95922a85e535df4709419cc34ce52c6e",
+    "tests/unit/variables.test.ts": "0392c78e53b073ab6a6b160d783ed1600eae272976fc04381d7274ba75d7e6fe",
+    "tests/unit/scope-preview.test.ts": "a07ae8ab4d8df955e7bc777fe8a711c227ffa45a97805b29992c2dbf1e3dbb44",
+    "tests/unit/config.test.ts": "edd4120d5e3b2363c349fd4cdde62f34cfc920ddcc1af83e53a605248593eb8e",
+    "tests/unit/minimizer.test.ts": "b260121700531fff6e8f15832c8552d5196f261dd05152cb4143b2ab0b9f4710",
+    "tests/contract/provider.test.ts": "44648900caabebb7b7e6d6bbf24afbc6ae56952b48fc8cac89c2b409b8d8170d",
+    "tests/contract/core.test.ts": "aec44c207dad0c6b080cd59b13797ba2e2fd16b448e7ff17294ca1d1a26f37d4",
+    "tests/contract/openapi-reference-siblings.test.ts": "2482c52e3559c195b45214623f87fdb8148977e2462e57212352735e76c29bfc",
+    "tests/contract/openapi.test.ts": "6a5a9d8aac26322528aad484cac422143787a9eb67936dc1364ac8861a20b9ef",
+    "tests/contract/predicate-provenance.test.ts": "dccf3548f346615093b739b60a66306bf2250b035fced7e275e84e1bf35d5ae6",
+    "tests/contract/openapi-profile-matrix.test.ts": "c319a3c617c2019412ef657acc793ecd3fdabaa439a10b9d5102e307da293e0b",
+    "tests/contract/gemini.test.ts": "47b99898b30fd900ff9f59755728ec984ea79803d2243a3fcd33d123a6431c96",
+    "tests/contract/openapi-schema-semantics.test.ts": "8e14d06f78e6e6027475d3a327e58cd61f72f1b9573ecaf55ff39f228cfe6510",
+    "tests/integration/fresh-state.test.ts": "af2974e12375e662c29963a69864fe1e1ba4dfa15edd881b9a0d0bf6b44e4744",
+    "tests/integration/dispatch.test.ts": "fb8c1498c7dfda0e021cb6cdd7c5aa2e075398f05eb60a0f0d24990a4f37349a",
+    "tests/integration/order-lifecycle.test.ts": "19fb381b8d87c2af7a62bffecd7562d9a3a6b59d4ce6085c6d7a285e49dd4ce3",
+    "tests/integration/verification.test.ts": "df74b4e08b4fcb7085f2efc201958636b56b6800028f7ab115af61e234c522cc",
+    "tests/integration/vertical-slice-local.test.ts": "8867cd8aeab9107a1c16fce12494326ca0ccdca12a50ef27b8c423ee4abbd6ed",
+    "tests/integration/controlled-fixture-execution.test.ts": "6610d5ff1618475e16b4a8505b2ce929499c182501791710a0cbb3b14e46b14a",
+    "tests/integration/account-fixture.test.ts": "b09bce93fbae88540e8cbb6f7ba20a1e0499dfde9290146fc875bcd9768bf2cc",
+    "tests/integration/predicate-persistence.test.ts": "8cf3096cbbde1df1584533002cd616c3c8c5c3c033811c9118669a31596bf605",
+    "tests/integration/suspicious.test.ts": "b544664cf8cc1f71d5cbf9f860e827c0aaa7f9cc1e2de0ab6dd090666f2bef50",
+    "tests/integration/openapi-persistence.test.ts": "293891616e7c19c6b5c3f9d3f4b759818b82097eacbe13744edebf9e262c060f",
+    "tests/integration/candidate-loop-local.test.ts": "b17e5f5b0e3fc8c4ef646e7e80adc9a01fb6962b648aa63ff2e47f556f199d27",
+    "tests/integration/database.test.ts": "91c6cca16d256b49954b4a243ea6ddd846f31133f654210e986bd986cd1d25ac",
+    "tests/integration/minimization.test.ts": "b08922ae3e8038f8112a02be276170154957f9f77ab09e5457082e562c7e8568",
+    "tests/integration/journey-execution.test.ts": "d5339f171c976d9eea5c02d4f0be13668ca7dba528d90c822e0abec91a99464e",
+    "tests/integration/migrations.test.ts": "467fc8bd8bed6188959db24341b88e0aecfa90bc6249a6d6da1c789e46bcc698",
+    "tests/integration/evidence-store.test.ts": "506614c9f504baa2bde7b0b01ef3ebbe430b8928d330fac9f80db7d860ad70f3",
+    "tests/integration/credentials.test.ts": "0b03a88fad4c9b3dfc2a7b76810bc0a6360f2cf00141ceb541a728ce967369ab",
+    "tests/integration/verification-authority.test.ts": "69698b450dafdca28f814436f58aa70baaf5021a6d33dacfbfeec9b5208153e2",
+    "tests/integration/supervisor.test.ts": "581536f2277305baf2fabc70c18a35fad89ab6274c301b5c1946dcc105ce9d86",
+    "tests/helpers/minimization.ts": "676b7d49635f8d2554879e00c4b16fc37090086d6ddeacffe347fc28e534d022",
+    "tests/helpers/target-server.ts": "698f49f17828287fd68d9ac914637a91f54a0f1e42115456679b3a513f902614",
+    "tests/helpers/planning.ts": "83c65e9574798206ae887d5bb997b0d0e00fbcd9eb244223c98fa3247238145c",
+    "tests/helpers/journey.ts": "401c015a626469e2a80f79c90a4148c5351c3a51d5e3412f9cf563006eca1eb3",
+    "tests/helpers/setup.ts": "d637893b13379a01751848b15976a2a89bcfb523837dc691b7a71b2e0336e253",
+    "tests/helpers/database.ts": "ecff8c2b6c4fc9151864368cbfae99afef48eb645ea0fdf5c29978d6a3104a0e",
+    "tests/helpers/fresh.ts": "8dbc9dc5bfc414b3563d9c53679aa51824d3d39432b813b7836f18a8f09ed960",
+    "tests/helpers/verification.ts": "6dc81d61651592bba7ec41f06b80a03e16756b6352602761b36b7013c47fb841",
+    "tests/helpers/run.ts": "bb324d5be34c34e4ddc29a69c93419be30e8080a7cf975c9f02e4fd42a01ad0c",
+    "tests/acceptance/vertical-slice-order-passed.json": "401b9340e370e4baccad0a8ffa79ee374e8433e512a244474ccfd9e63d5faf87",
+    "tests/acceptance/t038-results.json": "18ee0de9d9521258d154decf7abbe8229c90acad7d91b57fe70bb298fdba2ec3",
+    "tests/acceptance/t037-order-attempt2.json": "37dd6ef64db8df0d15532146d89c4a30a6d1527f0179fa44897a56dd3564aa48",
+    "tests/acceptance/vertical-slice-failed.json": "1bd485aaa089d364fd8ecbc06c99f0d3dd78ead39c1e9374297b05555499d4c9",
+    "tests/acceptance/t037-order-attempt3.json": "2bed12bf014c441e1e6554cebaece5e1f07c879d98fe5743b0aabcd193b3bcef",
+    "tests/acceptance/t037-order-passed.json": "6576c0e9abb4d47d9792c0e9eeeb221e29003773c6e272db7e407bb48956ac6b",
+    "tests/acceptance/t031.md": "0e356628c10dbef2cdcb4235dfc3c2ded8030bf6cee2b218095a19ac76c2545d",
+    "tests/acceptance/t034.md": "d3e8452967cc6ac3b0a84fe1e9f1cbc0e41cb7a13aef569fd916d9a58e7141ea",
+    "tests/acceptance/vertical-slice.md": "78d89f8e440d8a9552cbc855190072d48a247b54437e3cc1e4eaf0b34f852849",
+    "tests/acceptance/gate1.md": "3efa1eba9fd18ee51667463d65c86312eed2fd0a4cbe6a4c4c32b3e8b9cf4a8d",
+    "tests/acceptance/vertical-slice-order-attempt1.json": "f41ff22ad30b627972e0b998beaa428c861503bdbc7ff6705c13e1f72ccf7b87",
+    "tests/acceptance/t037.md": "85a922016bb92882cd34bfbf8f212607e5a50de41e2e887d7408825b12a5cca7",
+    "tests/acceptance/vertical-slice-order-attempt2.json": "d8acccafe254aaa16eb5d92bbdb416eb071452c20d4f7de56dc241363663d240",
+    "tests/acceptance/t037-results.json": "cadce463b266b4021742fc8975816e75651f128b16b8d41c0b2de161e8d5c931",
+    "tests/acceptance/t033.md": "d9b3453394b4294e2aad07f38df12bf9480e5f96c8a9b03c047ba0f7237f665d",
+    "tests/acceptance/gemini-request-schema-rejected.json": "3f008085f3a455a635ca62ec8aabad2e2a78d14bc1bbf89e92acd5f6ba815e3f",
+    "tests/acceptance/t032.md": "07f526cc279ad9da27b3f174b89fc9376e04be41bcc3fa68bbc6f94beb01b08c",
+    "tests/acceptance/vertical-slice-account-failure.md": "d9818bb315cafebf6937147167a8a24e3a2f6511c2ea6c77388f17e0bee26ed1",
+    "tests/acceptance/t036.md": "88ebfb2ca0502cacda0c7f9a017c74a1d58abd821032a980be5232c7228029b8",
+    "tests/acceptance/t036-results.json": "141ff12b7e7f00a4af2a69c8c11e813a7be96704abb32fd59c416f7b1cc59c08",
+    "tests/acceptance/gate1-parser-blocker.md": "210e4f58001651bf83589fd13fbe723893aded1ed50cf14153e3925176fc61fc",
+    "tests/acceptance/t037-order-attempt1.json": "943d244c5de978d70038f5324e9b2493c4139cc4fbc246d2af8d711d211dce50",
+    "tests/acceptance/t038.md": "4acd135a243c7ff42bb50bb2f3fe2432a8f0901f5109bd56254cc6b65b62f5d5"
+  },
+  "T038TestsModified": false,
+  "T040": "UNTOUCHED; unchecked"
+}

@@ -1,0 +1,50 @@
+{
+  "task": "T044",
+  "classification": "developer-executed failure; source/evidence investigation only",
+  "failedSnapshot": "tests/acceptance/t044-failed-3c0f3bc1-3f20-4e6a-baf1-ec06b4ca34ce.json",
+  "failedSnapshotSha256": "9fec9f9af6ada7c74e277ea5c759e3f9cbf949f6697b1c05e83cbd89fed14868",
+  "observedOutput": {
+    "task": "T044",
+    "result": "FAIL",
+    "failedStage": "GEMINI_PROPOSAL",
+    "reason": "DISCOVERY OR CONFIRMATION INCOMPLETE",
+    "lastCompletedStage": "RUN_ADMISSION",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "runId": "343f257b-6364-42d2-a0a0-9cde6674ed59",
+    "stopReason": "MODEL ERROR",
+    "requestBudgetUsed": 0,
+    "requestBudgetLimit": 200,
+    "evidenceFile": "tests/acceptance/t044-failed-3c0f3bc1-3f20-4e6a-baf1-ec06b4ca34ce.json"
+  },
+  "providerCause": "UNDETERMINED FROM RETAINED EVIDENCE",
+  "providerActuallyCalled": "UNKNOWN; attempted-call flag was removed by old acceptance projection",
+  "remoteAPIStatus": "UNAVAILABLE; no provider diagnostic retained",
+  "confirmedFailure": "Planning stopped MODEL ERROR before trial admission/target dispatch",
+  "confirmedDiagnosticDefects": [
+    "Acceptance projection discarded attempted-call flag and model-call counters",
+    "Planning deadline emitted MODEL ERROR without a source/timing classification"
+  ],
+  "targetRequestAccounting": "CORRECT: target budget consumed before sole executor call; model calls accounted separately",
+  "modelConfigurationPath": "GEMINI_MODEL -> readConfig -> orderConfiguration and createGeminiProvider with the same configured model; no substitution",
+  "generationDecisionsChanged": false,
+  "supervisorOwnershipChanged": false,
+  "timeoutsRetriesBudgetsValidationUnchanged": true,
+  "focusedTests": {
+    "passed": 104,
+    "failed": 0,
+    "skipped": 0
+  },
+  "fullRegression": {
+    "passed": 798,
+    "failed": 0,
+    "skipped": 0
+  },
+  "typecheck": "PASS",
+  "changedLint": "PASS",
+  "changedFormat": "PASS",
+  "sanitization": "PASS",
+  "liveAcceptanceExecutedByCodex": false,
+  "T044Checked": false,
+  "T045Untouched": true
+}

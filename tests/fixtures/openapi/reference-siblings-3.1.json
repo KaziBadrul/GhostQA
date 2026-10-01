@@ -1,0 +1,32 @@
+{
+  "openapi": "3.1.0",
+  "info": { "title": "Reference compatibility", "version": "1.0" },
+  "components": {
+    "schemas": { "Name": { "type": "string", "maxLength": 8 } }
+  },
+  "paths": {
+    "/api/items": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "$ref": "#/components/schemas/Name",
+                    "maxLength": 20
+                  }
+                },
+                "required": ["name"],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Result" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "classification": "developer-executed live acceptance",
+  "summary": {
+    "task": "T044",
+    "result": "FAIL",
+    "failedStage": "GEMINI_PROPOSAL",
+    "reason": "DISCOVERY OR CONFIRMATION INCOMPLETE",
+    "lastCompletedStage": "RUN_ADMISSION",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "runId": "343f257b-6364-42d2-a0a0-9cde6674ed59",
+    "stopReason": "MODEL ERROR",
+    "requestBudgetUsed": 0,
+    "requestBudgetLimit": 200
+  },
+  "durable": {
+    "findings": [],
+    "journeys": [],
+    "runId": "343f257b-6364-42d2-a0a0-9cde6674ed59",
+    "stopReason": "MODEL ERROR",
+    "requestBudgetUsed": 0,
+    "requestBudgetLimit": 200,
+    "planning": [
+      {
+        "id": "c5eb0ef1-f29b-4f54-9e80-5364a6b9e97b",
+        "outcome": "MODEL ERROR"
+      }
+    ],
+    "evidence": [],
+    "steps": []
+  }
+}

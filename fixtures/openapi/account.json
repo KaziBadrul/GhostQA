@@ -1,0 +1,269 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Accounts API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/control/reset": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "reset": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": ["reset"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/control/baseline": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "accounts": {
+                      "type": "integer"
+                    },
+                    "tokens": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": ["accounts", "tokens"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/accounts": {
+      "post": {
+        "responses": {
+          "201": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "maxLength": 256,
+                      "format": "uuid"
+                    }
+                  },
+                  "required": ["id"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "maxLength": 256,
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string",
+                    "maxLength": 256,
+                    "x-sensitive": true
+                  }
+                },
+                "required": ["email", "password"],
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/accounts/{accountId}/password-reset": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string",
+                      "maxLength": 256,
+                      "format": "uuid",
+                      "x-sensitive": true
+                    }
+                  },
+                  "required": ["token"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 256,
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/api/accounts/{accountId}/email": {
+      "patch": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "maxLength": 256
+                    },
+                    "email": {
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  },
+                  "required": ["id", "email"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "maxLength": 256,
+                    "format": "email"
+                  }
+                },
+                "required": ["email"],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 256,
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/api/password-reset": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updated": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": ["updated"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  },
+                  "required": ["error"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string",
+                    "maxLength": 256,
+                    "x-sensitive": true
+                  },
+                  "password": {
+                    "type": "string",
+                    "maxLength": 256,
+                    "x-sensitive": true
+                  }
+                },
+                "required": ["token", "password"],
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

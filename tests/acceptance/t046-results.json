@@ -1,0 +1,54 @@
+{
+  "task": "T046",
+  "status": "COMPLETE",
+  "checked": true,
+  "harnessTests": {
+    "passed": 22,
+    "failed": 0
+  },
+  "focusedCoverageInFinalFullRun": {
+    "passed": 50,
+    "failed": 0
+  },
+  "fullRegression": {
+    "passed": 836,
+    "failed": 0,
+    "skipped": 0
+  },
+  "initialExpectedRed": {
+    "failed": 16,
+    "cause": "missing benchmark implementation"
+  },
+  "requiredFixtures": ["order-lifecycle", "inventory", "workflow"],
+  "trialsPerRequiredVariant": 5,
+  "assignedDiscoveryTrials": 30,
+  "liveGeminiBenchmarkExecuted": false,
+  "separateRedundancy": {
+    "mode": "SUPPLIED_REDUNDANCY",
+    "discoveryStatus": "NOT MEASURED",
+    "observedControlledReductions": {
+      "order-lifecycle": "4 -> 3",
+      "inventory": "4 -> 3",
+      "workflow": "4 -> 3"
+    }
+  },
+  "freezeArtifact": "tests/acceptance/t046-freeze.json",
+  "freezeClassification": "NON-EXECUTING CONFIGURATION SNAPSHOT",
+  "failedTrialsRemainInDenominator": true,
+  "interruptedLedgerInspectionDoesNotResume": true,
+  "providerTokensPreferred": true,
+  "unknownUsageExplicit": true,
+  "typecheck": "PASS",
+  "changedFileLint": "PASS",
+  "changedFileFormat": "PASS",
+  "sanitization": "PASS",
+  "historicalEvidenceUnchanged": true,
+  "productionAuthoritySemanticsChanged": false,
+  "T047Started": false,
+  "T048Executed": false,
+  "T058Untouched": true,
+  "knownUnrelatedIssues": {
+    "lintErrors": 2,
+    "formatFailures": 9
+  }
+}

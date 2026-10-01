@@ -1,0 +1,260 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Documents API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/control/reset": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "reset": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": ["reset"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/control/baseline": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "documents": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": ["documents"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents": {
+      "post": {
+        "responses": {
+          "201": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["DRAFT", "ARCHIVED", "PUBLISHED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/{documentId}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "maxLength": 256
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["DRAFT", "ARCHIVED", "PUBLISHED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/{documentId}/archive": {
+      "post": {
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "maxLength": 256
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["DRAFT", "ARCHIVED", "PUBLISHED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["DRAFT", "ARCHIVED", "PUBLISHED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/{documentId}/publish": {
+      "post": {
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "maxLength": 256
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["DRAFT", "ARCHIVED", "PUBLISHED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": ["DRAFT", "ARCHIVED", "PUBLISHED"],
+                      "maxLength": 32
+                    }
+                  },
+                  "required": ["id", "state"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

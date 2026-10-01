@@ -1,0 +1,479 @@
+{
+  "task": "T042",
+  "initial": {
+    "setupAndT041Passed": 50,
+    "T042ExpectedRed": 22
+  },
+  "T040": {
+    "passed": 72,
+    "failed": 0,
+    "T042Passed": 22
+  },
+  "addedAuthorityTests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "combinedFocused": {
+    "passed": 86,
+    "failed": 0
+  },
+  "full": {
+    "passed": 698,
+    "failed": 0,
+    "skipped": 0,
+    "previousPassed": 662
+  },
+  "typecheck": "PASS",
+  "changedLintFormat": "PASS",
+  "knownRepositoryLintErrors": 2,
+  "knownRepositoryFormatFailures": 9,
+  "checkpointSecretScan": "PASS",
+  "historicalEvidenceAndT040Tests": "SHA-256 unchanged",
+  "acceptance": [
+    {
+      "file": "tests/acceptance/t042-order-51e8de80-5c00-49d6-b3e7-f285fc3e6046.json",
+      "task": "T042",
+      "result": "PASS",
+      "scenario": "SUPPLIED ORDER-LIFECYCLE CASE; NOT DISCOVERY",
+      "variant": "repaired",
+      "runId": "51e8de80-5c00-49d6-b3e7-f285fc3e6046",
+      "findingId": "5199ed4d-d790-46bc-93d8-d4b17c922557",
+      "artifactId": "156e4f6b-c12f-45c2-afa8-e02f79d75b31",
+      "originalLength": 6,
+      "bestLength": 3,
+      "manifestHash": "73488ed13da7e0c06826a23cf690cdd8c6c8482c63fbedb1edfd35c5850da474",
+      "predicateRef": {
+        "id": "21599052-d27c-476f-9f72-0eaf1b88bbf3",
+        "version": 1,
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+      },
+      "verification": "UNVERIFIED",
+      "predicateOutcome": "SATISFIED",
+      "baselineId": "27162946-b834-46b4-aacd-5710a4ee5864",
+      "trialId": "6a264eda-8d40-4a0a-ae0d-62a473141d89",
+      "evidenceId": "36fc0701-5f3d-4fbb-b40f-65227f16d5ab",
+      "budget": {
+        "limits": {
+          "requests": 39,
+          "milliseconds": 600000,
+          "journeys": 1,
+          "steps": 10,
+          "requestTimeoutMs": 10000,
+          "modelTimeoutMs": 30000
+        },
+        "usedRequests": 39,
+        "requestsByPhase": {
+          "RESET": 6,
+          "BASELINE": 6,
+          "EXPLORATION": 6,
+          "REPLAY": 6,
+          "MINIMIZATION": 12,
+          "ARTIFACT": 3
+        },
+        "usedExplorationJourneys": 1,
+        "modelCalls": 0,
+        "stagnantRounds": 0,
+        "acceptedAt": "2026-10-01T15:29:54.712Z",
+        "deadlineAt": "2026-10-01T15:39:54.712Z"
+      },
+      "initialEvidenceId": "5970e34b-c4fc-4581-bb1a-48c17998a269",
+      "replayEvidenceId": "6362b454-bc04-4322-9746-fb57ca61ec73"
+    },
+    {
+      "file": "tests/acceptance/t042-order-82fdb889-5b6c-49bf-852f-f1b092cb394a.json",
+      "task": "T042",
+      "result": "PASS",
+      "scenario": "SUPPLIED ORDER-LIFECYCLE CASE; NOT DISCOVERY",
+      "variant": "faulty",
+      "runId": "82fdb889-5b6c-49bf-852f-f1b092cb394a",
+      "findingId": "cd16d420-9cea-42bc-8678-aa6575458fd5",
+      "artifactId": "6a01de38-ee69-4edb-9389-b55c2c361a4e",
+      "originalLength": 6,
+      "bestLength": 3,
+      "manifestHash": "3d946b047712002f302ffca6b3746c450cde1468d49e97564f5edc589ba2f416",
+      "predicateRef": {
+        "id": "a8042ca5-823b-4bb1-8218-37aaddc3dda9",
+        "version": 1,
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+      },
+      "verification": "VERIFIED",
+      "predicateOutcome": "VIOLATED",
+      "baselineId": "b1f27631-b505-483a-b6a0-4a10c50bcedd",
+      "trialId": "99cfa4c6-a6af-48fb-a0e9-42c599a5b9d9",
+      "evidenceId": "3cc1fe70-401a-4f49-a002-97404a406367",
+      "budget": {
+        "limits": {
+          "requests": 39,
+          "milliseconds": 600000,
+          "journeys": 1,
+          "steps": 10,
+          "requestTimeoutMs": 10000,
+          "modelTimeoutMs": 30000
+        },
+        "usedRequests": 39,
+        "requestsByPhase": {
+          "RESET": 6,
+          "BASELINE": 6,
+          "EXPLORATION": 6,
+          "REPLAY": 6,
+          "MINIMIZATION": 12,
+          "ARTIFACT": 3
+        },
+        "usedExplorationJourneys": 1,
+        "modelCalls": 0,
+        "stagnantRounds": 0,
+        "acceptedAt": "2026-10-01T15:28:18.236Z",
+        "deadlineAt": "2026-10-01T15:38:18.236Z"
+      },
+      "initialEvidenceId": "246404e2-7d52-4e2e-9aa6-97bd3a43fc56",
+      "replayEvidenceId": "4b2ca035-2210-4330-adcf-51215245513a"
+    }
+  ],
+  "cases": [
+    {
+      "name": "setup: export input is a confirmed six-to-three same-predicate order reproducer",
+      "status": "passed"
+    },
+    {
+      "name": "setup: existing artifact status contract rejects VERIFIED without evidence",
+      "status": "passed"
+    },
+    {
+      "name": "setup: each supplied reduction retains an independent baseline and exact violation",
+      "status": "passed"
+    },
+    {
+      "name": "T041: manifest preserves exact executable reset, predicate, assertions, journey and provenance",
+      "status": "passed"
+    },
+    {
+      "name": "T041: manifest exports scope expectations but no active destination/address approval",
+      "status": "passed"
+    },
+    {
+      "name": "T041: object insertion order cannot change canonical bytes or identity",
+      "status": "passed"
+    },
+    {
+      "name": "T041: metadata changes do not alter executable manifest identity",
+      "status": "passed"
+    },
+    {
+      "name": "T041: relevant reset mutation changes hash or is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "T041: relevant journey mutation changes hash or is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "T041: relevant predicate mutation changes hash or is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "T041: relevant assertions mutation changes hash or is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "T041: relevant runnerVersion mutation changes hash or is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "T041: relevant scope mutation changes hash or is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "T041: relevant credentialSlots mutation changes hash or is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "T041: relevant provenance mutation changes hash or is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "T041: predicate ID cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: predicate version cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: predicate hash cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: edited approved definition cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: unapproved hypothesis cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: unconfirmed finding cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: inconsistent confirmation cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: missing replay cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: reused discovery evidence cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: wrong original journey cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: unverified best cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: wrong reported length cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: unknown operation cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: missing producer cannot generate an executable artifact",
+      "status": "passed"
+    },
+    {
+      "name": "T041: symbolic credential bindings omit credential versions/values and remain stable",
+      "status": "passed"
+    },
+    {
+      "name": "T041: known secret in executable journey fails closed without copying or silently rewriting",
+      "status": "passed"
+    },
+    {
+      "name": "T041: known secret in executable reset fails closed without copying or silently rewriting",
+      "status": "passed"
+    },
+    {
+      "name": "T041: known secret in executable predicate fails closed without copying or silently rewriting",
+      "status": "passed"
+    },
+    {
+      "name": "T041: known secret in executable api fails closed without copying or silently rewriting",
+      "status": "passed"
+    },
+    {
+      "name": "T041: manifest hash rejects unknown fields and non-JSON values",
+      "status": "passed"
+    },
+    {
+      "name": "T041: read-only generation cannot mutate predicate/reset/journeys or historical evidence",
+      "status": "passed"
+    },
+    {
+      "name": "T041: deterministic Markdown/JSON report includes honest complete evidence chain",
+      "status": "passed"
+    },
+    {
+      "name": "T041: report retains best and honestly states BUDGET EXHAUSTED, truncation and rejected attempt",
+      "status": "passed"
+    },
+    {
+      "name": "T041: report retains best and honestly states CANCELLED, truncation and rejected attempt",
+      "status": "passed"
+    },
+    {
+      "name": "T041: report retains best and honestly states EXECUTION ERROR, truncation and rejected attempt",
+      "status": "passed"
+    },
+    {
+      "name": "T041: report redacts classified password and echoed/encoded values",
+      "status": "passed"
+    },
+    {
+      "name": "T041: report redacts classified authorization and echoed/encoded values",
+      "status": "passed"
+    },
+    {
+      "name": "T041: report redacts classified api_key and echoed/encoded values",
+      "status": "passed"
+    },
+    {
+      "name": "T041: report redacts classified cookie and echoed/encoded values",
+      "status": "passed"
+    },
+    {
+      "name": "T041: configured vault secret echoed in report prose is sanitized without changing identity",
+      "status": "passed"
+    },
+    {
+      "name": "artifact preservation requires exact intended assertion and VIOLATED",
+      "status": "passed"
+    },
+    {
+      "name": "artifact preservation requires exact intended assertion and SATISFIED",
+      "status": "passed"
+    },
+    {
+      "name": "artifact preservation requires exact intended assertion and NOT APPLICABLE",
+      "status": "passed"
+    },
+    {
+      "name": "artifact preservation requires exact intended assertion and UNEVALUABLE",
+      "status": "passed"
+    },
+    {
+      "name": "different assertion id cannot borrow a VIOLATED verdict",
+      "status": "passed"
+    },
+    {
+      "name": "different assertion version cannot borrow a VIOLATED verdict",
+      "status": "passed"
+    },
+    {
+      "name": "different assertion hash cannot borrow a VIOLATED verdict",
+      "status": "passed"
+    },
+    {
+      "name": "different assertion index cannot borrow a VIOLATED verdict",
+      "status": "passed"
+    },
+    {
+      "name": "a different failed assertion of the SAME predicate cannot verify the intended failure",
+      "status": "passed"
+    },
+    {
+      "name": "setup: existing originating supervisor preserves confirmation and independent minimization",
+      "status": "passed"
+    },
+    {
+      "name": "T041: real order evidence exports read-only with zero dispatch/model/admission and unchanged budget/history",
+      "status": "passed"
+    },
+    {
+      "name": "T041: generation remains possible after cancellation without manufacturing supervised verification",
+      "status": "passed"
+    },
+    {
+      "name": "T041: export modules have no target transport, supervisor instantiation, model or independent worker",
+      "status": "passed"
+    },
+    {
+      "name": "setup: future export boundary is declarative and fixtures never require model classification",
+      "status": "passed"
+    },
+    {
+      "name": "T042: exact manifest fresh replay alone grants VERIFIED through existing authority and shared budget",
+      "status": "passed"
+    },
+    {
+      "name": "T042: budget cannot manufacture VERIFIED or replace confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "T042: cancel cannot manufacture VERIFIED or replace confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "T042: ownership cannot manufacture VERIFIED or replace confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "T042: reset cannot manufacture VERIFIED or replace confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "T042: baseline cannot manufacture VERIFIED or replace confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "T042: execution cannot manufacture VERIFIED or replace confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "T042: storage cannot manufacture VERIFIED or replace confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "T042: cancel during persisted intent closes sole dispatcher without refund or VERIFIED",
+      "status": "passed"
+    },
+    {
+      "name": "T042: ownership during persisted intent closes sole dispatcher without refund or VERIFIED",
+      "status": "passed"
+    },
+    {
+      "name": "T042: stale baseline cannot authorize artifact actions or VERIFIED",
+      "status": "passed"
+    },
+    {
+      "name": "T042: reused baseline cannot authorize artifact actions or VERIFIED",
+      "status": "passed"
+    },
+    {
+      "name": "T042: missing baseline cannot authorize artifact actions or VERIFIED",
+      "status": "passed"
+    },
+    {
+      "name": "T042: failed baseline cannot authorize artifact actions or VERIFIED",
+      "status": "passed"
+    },
+    {
+      "name": "T042: unevaluable baseline cannot authorize artifact actions or VERIFIED",
+      "status": "passed"
+    },
+    {
+      "name": "T042: repaired applicable SATISFIED does not verify failing artifact or erase CONFIRMED history",
+      "status": "passed"
+    },
+    {
+      "name": "T042: altered bytes cannot borrow exact-artifact supervised authority",
+      "status": "passed"
+    },
+    {
+      "name": "T042: altered predicate cannot borrow exact-artifact supervised authority",
+      "status": "passed"
+    },
+    {
+      "name": "T042: altered scope cannot borrow exact-artifact supervised authority",
+      "status": "passed"
+    },
+    {
+      "name": "T042: altered external verification cannot borrow exact-artifact supervised authority",
+      "status": "passed"
+    },
+    {
+      "name": "T042: separate invocation result carries no originating database/verification authority",
+      "status": "passed"
+    },
+    {
+      "name": "T042: verification module delegates to fresh-state and journey infrastructure without a second worker/transport",
+      "status": "passed"
+    },
+    {
+      "name": "CANCELLED during artifact status write rolls back VERIFIED at commit gate",
+      "status": "passed"
+    },
+    {
+      "name": "OWNERSHIP LOST during artifact status write rolls back VERIFIED at commit gate",
+      "status": "passed"
+    },
+    {
+      "name": "actual advisory lock during artifact status write rolls back VERIFIED at commit gate",
+      "status": "passed"
+    },
+    {
+      "name": "persisted exact artifact content and verification audit history cannot be changed or deleted",
+      "status": "passed"
+    },
+    {
+      "name": "reset failure before the first intent retains the actual admitted trial identity",
+      "status": "passed"
+    }
+  ],
+  "T043T044": "UNTOUCHED"
+}

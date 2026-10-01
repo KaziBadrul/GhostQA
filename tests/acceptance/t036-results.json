@@ -1,0 +1,256 @@
+{
+  "task": "T036",
+  "date": "2026-10-01",
+  "newTests": {
+    "total": 64,
+    "passed": 6,
+    "expectedRed": 58,
+    "skipped": 0,
+    "failures": [
+      {
+        "test": "independent supervised order replay repaired=false",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "independent supervised order replay repaired=true",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "budget failure preserves honest stop outcome, no manufactured finding",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "reset failure preserves honest stop outcome, no manufactured finding",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "baseline failure preserves honest stop outcome, no manufactured finding",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "cancel failure preserves honest stop outcome, no manufactured finding",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "execution failure preserves honest stop outcome, no manufactured finding",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "caller cannot replay an edited journey or predicate under original finding identity",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "repository exact durable evidence references: none",
+        "reason": "Error: T037 missing boundary: ../../src/server/repositories/findings.ts"
+      },
+      {
+        "test": "repository exact durable evidence references: discovery evidence",
+        "reason": "Error: T037 missing boundary: ../../src/server/repositories/findings.ts"
+      },
+      {
+        "test": "repository exact durable evidence references: foreign baseline",
+        "reason": "Error: T037 missing boundary: ../../src/server/repositories/findings.ts"
+      },
+      {
+        "test": "repository exact durable evidence references: unknown observation",
+        "reason": "Error: T037 missing boundary: ../../src/server/repositories/findings.ts"
+      },
+      {
+        "test": "repository appends later inconsistent replay and preserves prior confirmation evidence",
+        "reason": "Error: T037 missing boundary: ../../src/server/repositories/findings.ts"
+      },
+      {
+        "test": "unrelated execution failure after confirmation preserves historical confirmed finding",
+        "reason": "Error: T037 missing boundary: ../../src/engine/verification/replay.ts"
+      },
+      {
+        "test": "fresh eligible replay VIOLATED => CONFIRMED",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "fresh eligible replay SATISFIED => NON-REPRODUCED",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "fresh eligible replay NOT APPLICABLE => INCONCLUSIVE",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "fresh eligible replay UNEVALUABLE => INCONCLUSIVE",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "wrong predicate ID: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "wrong version: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "wrong canonical hash: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "edited predicate/new version cannot verify old candidate: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "reused baseline: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "stale baseline trial: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "missing baseline: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "violated baseline: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "unevaluable baseline: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "empty baseline assertion references: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "unrelated baseline assertion: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "baseline from another run: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "discovery trial reused: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "original discovery evidence cannot confirm itself: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "replay incorrectly classified as exploration: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "unknown observation reference: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "duplicate observation reference: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "observation from original trial: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "missing observation: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "execution error is not predicate verdict: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "execution error observation cannot confirm: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "interrupted observation cannot confirm: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "truncated observation cannot confirm: reject or INCONCLUSIVE, never a finding verdict from execution error",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "hypothesis only cannot manufacture confirmation from two violations",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "late approval cannot manufacture confirmation from two violations",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "approval withdrawn cannot manufacture confirmation from two violations",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "ungrounded specification assertion cannot manufacture confirmation from two violations",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "approved hypothesis needs new bounded run and newly observed initial candidate",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "new predicate version needs a new candidate, initial evidence and independent replay",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "later disagreement after VIOLATED appends evidence and marks inconsistent",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "later disagreement after SATISFIED appends evidence and marks inconsistent",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "Gemini prose has no finding authority",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "initial SATISFIED cannot support confirmation",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "initial NOT APPLICABLE cannot support confirmation",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "initial UNEVALUABLE cannot support confirmation",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "later agreeing VIOLATED keeps append-only consistent history",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "later agreeing SATISFIED keeps append-only consistent history",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "grounded specification provenance with exact trusted hash is eligible",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "missing replay verdict yields INCONCLUSIVE rather than an invented verdict",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      },
+      {
+        "test": "forged model classification cannot replace the deterministic SATISFIED verdict",
+        "reason": "Error: T037 missing boundary: ../../src/engine/detection/findings.ts"
+      }
+    ]
+  },
+  "existingRegression": {
+    "total": 449,
+    "passed": 449,
+    "failed": 0,
+    "skipped": 0,
+    "files": 43
+  },
+  "typecheck": "PASS",
+  "focusedLint": "PASS",
+  "repositoryLint": "2 pre-existing no-explicit-any errors in src/engine/mapping/state.ts",
+  "repositoryFormat": "10 pre-existing unrelated files",
+  "T037Implemented": false
+}

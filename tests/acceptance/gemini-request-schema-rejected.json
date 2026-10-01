@@ -1,0 +1,2560 @@
+{
+  "anyOf": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "operationId": {
+                "type": "string"
+              },
+              "parameters": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "location": {
+                      "type": "string",
+                      "enum": ["path", "query", "header"]
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["step-index"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["operation"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["request"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["literal"]
+                            },
+                            "value": {
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "type": "string"
+                                },
+                                "password": {
+                                  "type": "string"
+                                },
+                                "token": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "str": {
+                                  "type": "string"
+                                },
+                                "num": {
+                                  "type": "number"
+                                },
+                                "bool": {
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          },
+                          "required": ["kind", "value"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["variable"]
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "name"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["status"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["json"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["header"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "name"],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": ["location", "name", "value"],
+                  "additionalProperties": false
+                }
+              },
+              "body": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "str": {
+                    "type": "string"
+                  },
+                  "num": {
+                    "type": "number"
+                  },
+                  "bool": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "bodyBindings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "pointer": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["step-index"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["operation"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["request"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["literal"]
+                            },
+                            "value": {
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "type": "string"
+                                },
+                                "password": {
+                                  "type": "string"
+                                },
+                                "token": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "str": {
+                                  "type": "string"
+                                },
+                                "num": {
+                                  "type": "number"
+                                },
+                                "bool": {
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          },
+                          "required": ["kind", "value"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["variable"]
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "name"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["status"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["json"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["header"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "name"],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": ["pointer", "value"],
+                  "additionalProperties": false
+                }
+              },
+              "extracts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "expectedType": {
+                      "type": "string",
+                      "enum": [
+                        "string",
+                        "integer",
+                        "number",
+                        "boolean",
+                        "object",
+                        "array",
+                        "null"
+                      ]
+                    },
+                    "source": {
+                      "anyOf": [
+                        {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["step-index"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["operation"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["request"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "pointer": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "pointer"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["literal"]
+                                },
+                                "value": {
+                                  "type": "object",
+                                  "properties": {
+                                    "email": {
+                                      "type": "string"
+                                    },
+                                    "password": {
+                                      "type": "string"
+                                    },
+                                    "token": {
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "str": {
+                                      "type": "string"
+                                    },
+                                    "num": {
+                                      "type": "number"
+                                    },
+                                    "bool": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              },
+                              "required": ["kind", "value"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["variable"]
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "name"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["status"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["json"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "pointer": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "pointer"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["header"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "name"],
+                              "additionalProperties": false
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["input"]
+                            },
+                            "key": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "key"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["generate"]
+                            },
+                            "generator": {
+                              "type": "string",
+                              "enum": ["email", "uuid", "bounded-literal"]
+                            },
+                            "constraints": {
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "type": "string"
+                                },
+                                "password": {
+                                  "type": "string"
+                                },
+                                "token": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "str": {
+                                  "type": "string"
+                                },
+                                "num": {
+                                  "type": "number"
+                                },
+                                "bool": {
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          },
+                          "required": ["kind", "generator", "constraints"],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "sensitive": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": ["name", "expectedType", "source", "sensitive"],
+                  "additionalProperties": false
+                }
+              },
+              "expectedStatuses": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 599
+                }
+              }
+            },
+            "required": [
+              "id",
+              "operationId",
+              "parameters",
+              "bodyBindings",
+              "extracts",
+              "expectedStatuses"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "expectedType": {
+                "type": "string",
+                "enum": [
+                  "string",
+                  "integer",
+                  "number",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ]
+              },
+              "source": {
+                "anyOf": [
+                  {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["step-index"]
+                          },
+                          "stepId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["kind", "stepId"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["operation"]
+                          },
+                          "stepId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["kind", "stepId"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["request"]
+                          },
+                          "stepId": {
+                            "type": "string"
+                          },
+                          "pointer": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["kind", "stepId", "pointer"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["literal"]
+                          },
+                          "value": {
+                            "type": "object",
+                            "properties": {
+                              "email": {
+                                "type": "string"
+                              },
+                              "password": {
+                                "type": "string"
+                              },
+                              "token": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "str": {
+                                "type": "string"
+                              },
+                              "num": {
+                                "type": "number"
+                              },
+                              "bool": {
+                                "type": "boolean"
+                              }
+                            }
+                          }
+                        },
+                        "required": ["kind", "value"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["variable"]
+                          },
+                          "name": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["kind", "name"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["status"]
+                          },
+                          "stepId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["kind", "stepId"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["json"]
+                          },
+                          "stepId": {
+                            "type": "string"
+                          },
+                          "pointer": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["kind", "stepId", "pointer"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["header"]
+                          },
+                          "stepId": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["kind", "stepId", "name"],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "enum": ["input"]
+                      },
+                      "key": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["kind", "key"],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "enum": ["generate"]
+                      },
+                      "generator": {
+                        "type": "string",
+                        "enum": ["email", "uuid", "bounded-literal"]
+                      },
+                      "constraints": {
+                        "type": "object",
+                        "properties": {
+                          "email": {
+                            "type": "string"
+                          },
+                          "password": {
+                            "type": "string"
+                          },
+                          "token": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "str": {
+                            "type": "string"
+                          },
+                          "num": {
+                            "type": "number"
+                          },
+                          "bool": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    },
+                    "required": ["kind", "generator", "constraints"],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "sensitive": {
+                "type": "boolean"
+              }
+            },
+            "required": ["name", "expectedType", "source", "sensitive"],
+            "additionalProperties": false
+          }
+        },
+        "predicateRef": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "version": {
+              "type": "integer",
+              "maximum": 9007199254740991
+            },
+            "hash": {
+              "type": "string"
+            }
+          },
+          "required": ["id", "version", "hash"],
+          "additionalProperties": false
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "producer": {
+                "type": "string"
+              },
+              "consumer": {
+                "type": "string"
+              },
+              "variable": {
+                "type": "string"
+              }
+            },
+            "required": ["producer", "consumer", "variable"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "steps",
+        "variables",
+        "predicateRef",
+        "rationale",
+        "dependencies"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "journey": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "steps": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "operationId": {
+                    "type": "string"
+                  },
+                  "parameters": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "location": {
+                          "type": "string",
+                          "enum": ["path", "query", "header"]
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["step-index"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["operation"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["request"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "pointer": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "pointer"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["literal"]
+                                },
+                                "value": {
+                                  "type": "object",
+                                  "properties": {
+                                    "email": {
+                                      "type": "string"
+                                    },
+                                    "password": {
+                                      "type": "string"
+                                    },
+                                    "token": {
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "str": {
+                                      "type": "string"
+                                    },
+                                    "num": {
+                                      "type": "number"
+                                    },
+                                    "bool": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              },
+                              "required": ["kind", "value"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["variable"]
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "name"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["status"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["json"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "pointer": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "pointer"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["header"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "name"],
+                              "additionalProperties": false
+                            }
+                          ]
+                        }
+                      },
+                      "required": ["location", "name", "value"],
+                      "additionalProperties": false
+                    }
+                  },
+                  "body": {
+                    "type": "object",
+                    "properties": {
+                      "email": {
+                        "type": "string"
+                      },
+                      "password": {
+                        "type": "string"
+                      },
+                      "token": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "str": {
+                        "type": "string"
+                      },
+                      "num": {
+                        "type": "number"
+                      },
+                      "bool": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "bodyBindings": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "pointer": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["step-index"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["operation"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["request"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "pointer": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "pointer"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["literal"]
+                                },
+                                "value": {
+                                  "type": "object",
+                                  "properties": {
+                                    "email": {
+                                      "type": "string"
+                                    },
+                                    "password": {
+                                      "type": "string"
+                                    },
+                                    "token": {
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "str": {
+                                      "type": "string"
+                                    },
+                                    "num": {
+                                      "type": "number"
+                                    },
+                                    "bool": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              },
+                              "required": ["kind", "value"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["variable"]
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "name"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["status"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["json"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "pointer": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "pointer"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["header"]
+                                },
+                                "stepId": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "stepId", "name"],
+                              "additionalProperties": false
+                            }
+                          ]
+                        }
+                      },
+                      "required": ["pointer", "value"],
+                      "additionalProperties": false
+                    }
+                  },
+                  "extracts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "expectedType": {
+                          "type": "string",
+                          "enum": [
+                            "string",
+                            "integer",
+                            "number",
+                            "boolean",
+                            "object",
+                            "array",
+                            "null"
+                          ]
+                        },
+                        "source": {
+                          "anyOf": [
+                            {
+                              "oneOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": ["step-index"]
+                                    },
+                                    "stepId": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": ["kind", "stepId"],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": ["operation"]
+                                    },
+                                    "stepId": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": ["kind", "stepId"],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": ["request"]
+                                    },
+                                    "stepId": {
+                                      "type": "string"
+                                    },
+                                    "pointer": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": ["kind", "stepId", "pointer"],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": ["literal"]
+                                    },
+                                    "value": {
+                                      "type": "object",
+                                      "properties": {
+                                        "email": {
+                                          "type": "string"
+                                        },
+                                        "password": {
+                                          "type": "string"
+                                        },
+                                        "token": {
+                                          "type": "string"
+                                        },
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "str": {
+                                          "type": "string"
+                                        },
+                                        "num": {
+                                          "type": "number"
+                                        },
+                                        "bool": {
+                                          "type": "boolean"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "required": ["kind", "value"],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": ["variable"]
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": ["kind", "name"],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": ["status"]
+                                    },
+                                    "stepId": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": ["kind", "stepId"],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": ["json"]
+                                    },
+                                    "stepId": {
+                                      "type": "string"
+                                    },
+                                    "pointer": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": ["kind", "stepId", "pointer"],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": ["header"]
+                                    },
+                                    "stepId": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": ["kind", "stepId", "name"],
+                                  "additionalProperties": false
+                                }
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["input"]
+                                },
+                                "key": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": ["kind", "key"],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "enum": ["generate"]
+                                },
+                                "generator": {
+                                  "type": "string",
+                                  "enum": ["email", "uuid", "bounded-literal"]
+                                },
+                                "constraints": {
+                                  "type": "object",
+                                  "properties": {
+                                    "email": {
+                                      "type": "string"
+                                    },
+                                    "password": {
+                                      "type": "string"
+                                    },
+                                    "token": {
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "str": {
+                                      "type": "string"
+                                    },
+                                    "num": {
+                                      "type": "number"
+                                    },
+                                    "bool": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              },
+                              "required": ["kind", "generator", "constraints"],
+                              "additionalProperties": false
+                            }
+                          ]
+                        },
+                        "sensitive": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "expectedType",
+                        "source",
+                        "sensitive"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "expectedStatuses": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "minimum": 100,
+                      "maximum": 599
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "operationId",
+                  "parameters",
+                  "bodyBindings",
+                  "extracts",
+                  "expectedStatuses"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "variables": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "expectedType": {
+                    "type": "string",
+                    "enum": [
+                      "string",
+                      "integer",
+                      "number",
+                      "boolean",
+                      "object",
+                      "array",
+                      "null"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": ["step-index"]
+                              },
+                              "stepId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": ["kind", "stepId"],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": ["operation"]
+                              },
+                              "stepId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": ["kind", "stepId"],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": ["request"]
+                              },
+                              "stepId": {
+                                "type": "string"
+                              },
+                              "pointer": {
+                                "type": "string"
+                              }
+                            },
+                            "required": ["kind", "stepId", "pointer"],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": ["literal"]
+                              },
+                              "value": {
+                                "type": "object",
+                                "properties": {
+                                  "email": {
+                                    "type": "string"
+                                  },
+                                  "password": {
+                                    "type": "string"
+                                  },
+                                  "token": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "str": {
+                                    "type": "string"
+                                  },
+                                  "num": {
+                                    "type": "number"
+                                  },
+                                  "bool": {
+                                    "type": "boolean"
+                                  }
+                                }
+                              }
+                            },
+                            "required": ["kind", "value"],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": ["variable"]
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            },
+                            "required": ["kind", "name"],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": ["status"]
+                              },
+                              "stepId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": ["kind", "stepId"],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": ["json"]
+                              },
+                              "stepId": {
+                                "type": "string"
+                              },
+                              "pointer": {
+                                "type": "string"
+                              }
+                            },
+                            "required": ["kind", "stepId", "pointer"],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": ["header"]
+                              },
+                              "stepId": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            },
+                            "required": ["kind", "stepId", "name"],
+                            "additionalProperties": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["input"]
+                          },
+                          "key": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["kind", "key"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "enum": ["generate"]
+                          },
+                          "generator": {
+                            "type": "string",
+                            "enum": ["email", "uuid", "bounded-literal"]
+                          },
+                          "constraints": {
+                            "type": "object",
+                            "properties": {
+                              "email": {
+                                "type": "string"
+                              },
+                              "password": {
+                                "type": "string"
+                              },
+                              "token": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "str": {
+                                "type": "string"
+                              },
+                              "num": {
+                                "type": "number"
+                              },
+                              "bool": {
+                                "type": "boolean"
+                              }
+                            }
+                          }
+                        },
+                        "required": ["kind", "generator", "constraints"],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "sensitive": {
+                    "type": "boolean"
+                  }
+                },
+                "required": ["name", "expectedType", "source", "sensitive"],
+                "additionalProperties": false
+              }
+            },
+            "predicateRef": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "version": {
+                  "type": "integer",
+                  "maximum": 9007199254740991
+                },
+                "hash": {
+                  "type": "string"
+                }
+              },
+              "required": ["id", "version", "hash"],
+              "additionalProperties": false
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "dependencies": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "producer": {
+                    "type": "string"
+                  },
+                  "consumer": {
+                    "type": "string"
+                  },
+                  "variable": {
+                    "type": "string"
+                  }
+                },
+                "required": ["producer", "consumer", "variable"],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "id",
+            "steps",
+            "variables",
+            "predicateRef",
+            "rationale",
+            "dependencies"
+          ],
+          "additionalProperties": false
+        },
+        "mappings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "DECLARED",
+                  "INFERRED_DEPENDENCY",
+                  "HYPOTHESIZED_STATE",
+                  "OBSERVED_TRANSITION"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "statement": {
+                "type": "string"
+              },
+              "operationIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "evidenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "required": [
+              "kind",
+              "id",
+              "statement",
+              "operationIds",
+              "evidenceIds"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "version": {
+                "type": "integer",
+                "maximum": 9007199254740991
+              },
+              "canonicalHash": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string",
+                "enum": ["SPEC_ASSERTION", "DEVELOPER", "AGENT_HYPOTHESIS"]
+              },
+              "sourceRef": {
+                "type": "string"
+              },
+              "approvalRef": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "applicability": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "enum": [
+                        "equals",
+                        "not-equals",
+                        "in",
+                        "exists",
+                        "absent",
+                        "before"
+                      ]
+                    },
+                    "left": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["step-index"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["operation"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["request"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["literal"]
+                            },
+                            "value": {
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "type": "string"
+                                },
+                                "password": {
+                                  "type": "string"
+                                },
+                                "token": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "str": {
+                                  "type": "string"
+                                },
+                                "num": {
+                                  "type": "number"
+                                },
+                                "bool": {
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          },
+                          "required": ["kind", "value"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["variable"]
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "name"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["status"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["json"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["header"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "name"],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "right": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["step-index"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["operation"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["request"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["literal"]
+                            },
+                            "value": {
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "type": "string"
+                                },
+                                "password": {
+                                  "type": "string"
+                                },
+                                "token": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "str": {
+                                  "type": "string"
+                                },
+                                "num": {
+                                  "type": "number"
+                                },
+                                "bool": {
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          },
+                          "required": ["kind", "value"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["variable"]
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "name"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["status"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["json"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["header"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "name"],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": ["op", "left"],
+                  "additionalProperties": false
+                }
+              },
+              "assertions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "enum": [
+                        "equals",
+                        "not-equals",
+                        "in",
+                        "exists",
+                        "absent",
+                        "before"
+                      ]
+                    },
+                    "left": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["step-index"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["operation"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["request"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["literal"]
+                            },
+                            "value": {
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "type": "string"
+                                },
+                                "password": {
+                                  "type": "string"
+                                },
+                                "token": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "str": {
+                                  "type": "string"
+                                },
+                                "num": {
+                                  "type": "number"
+                                },
+                                "bool": {
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          },
+                          "required": ["kind", "value"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["variable"]
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "name"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["status"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["json"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["header"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "name"],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "right": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["step-index"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["operation"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["request"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["literal"]
+                            },
+                            "value": {
+                              "type": "object",
+                              "properties": {
+                                "email": {
+                                  "type": "string"
+                                },
+                                "password": {
+                                  "type": "string"
+                                },
+                                "token": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "str": {
+                                  "type": "string"
+                                },
+                                "num": {
+                                  "type": "number"
+                                },
+                                "bool": {
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          },
+                          "required": ["kind", "value"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["variable"]
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "name"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["status"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["json"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "pointer": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "pointer"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "enum": ["header"]
+                            },
+                            "stepId": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["kind", "stepId", "name"],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": ["op", "left"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "version",
+              "canonicalHash",
+              "source",
+              "sourceRef",
+              "applicability",
+              "assertions"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["journey", "mappings", "hypotheses"],
+      "additionalProperties": false
+    }
+  ]
+}

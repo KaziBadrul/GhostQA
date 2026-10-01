@@ -1,0 +1,466 @@
+{
+  "task": "T041",
+  "T040Total": 72,
+  "setupPassed": 5,
+  "T041Passed": 45,
+  "T042ExpectedRed": 22,
+  "focused": {
+    "passed": 50,
+    "expectedRed": 22
+  },
+  "fullUnfiltered": {
+    "total": 684,
+    "passed": 662,
+    "expectedRedT042": 22,
+    "unexpectedFailures": 0
+  },
+  "finalRegressionExcludingOnlyT042Names": {
+    "total": 684,
+    "passed": 662,
+    "failed": 0,
+    "skippedT042": 22,
+    "previousPassed": 612
+  },
+  "typecheck": "PASS",
+  "changedLintFormat": "PASS",
+  "secretChecks": "PASS: known executable secrets fail closed; report classified/known/encoded echoes absent",
+  "knownRepositoryLintErrors": 2,
+  "knownRepositoryFormatFailures": 9,
+  "historicalEvidenceAndTests": "SHA-256 unchanged",
+  "T040TestsAndCheckpoint": "SHA-256 unchanged",
+  "T042T043T044": "NOT IMPLEMENTED",
+  "cases": [
+    {
+      "name": "setup: export input is a confirmed six-to-three same-predicate order reproducer",
+      "owner": "setup",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "setup: existing artifact status contract rejects VERIFIED without evidence",
+      "owner": "setup",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "setup: each supplied reduction retains an independent baseline and exact violation",
+      "owner": "setup",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: manifest preserves exact executable reset, predicate, assertions, journey and provenance",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: manifest exports scope expectations but no active destination/address approval",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: object insertion order cannot change canonical bytes or identity",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: metadata changes do not alter executable manifest identity",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: relevant reset mutation changes hash or is rejected",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: relevant journey mutation changes hash or is rejected",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: relevant predicate mutation changes hash or is rejected",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: relevant assertions mutation changes hash or is rejected",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: relevant runnerVersion mutation changes hash or is rejected",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: relevant scope mutation changes hash or is rejected",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: relevant credentialSlots mutation changes hash or is rejected",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: relevant provenance mutation changes hash or is rejected",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: predicate ID cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: predicate version cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: predicate hash cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: edited approved definition cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: unapproved hypothesis cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: unconfirmed finding cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: inconsistent confirmation cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: missing replay cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: reused discovery evidence cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: wrong original journey cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: unverified best cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: wrong reported length cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: unknown operation cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: missing producer cannot generate an executable artifact",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: symbolic credential bindings omit credential versions/values and remain stable",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: known secret in executable journey fails closed without copying or silently rewriting",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: known secret in executable reset fails closed without copying or silently rewriting",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: known secret in executable predicate fails closed without copying or silently rewriting",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: known secret in executable api fails closed without copying or silently rewriting",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: manifest hash rejects unknown fields and non-JSON values",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: read-only generation cannot mutate predicate/reset/journeys or historical evidence",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: deterministic Markdown/JSON report includes honest complete evidence chain",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: report retains best and honestly states BUDGET EXHAUSTED, truncation and rejected attempt",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: report retains best and honestly states CANCELLED, truncation and rejected attempt",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: report retains best and honestly states EXECUTION ERROR, truncation and rejected attempt",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: report redacts classified password and echoed/encoded values",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: report redacts classified authorization and echoed/encoded values",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: report redacts classified api_key and echoed/encoded values",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: report redacts classified cookie and echoed/encoded values",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: configured vault secret echoed in report prose is sanitized without changing identity",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "setup: existing originating supervisor preserves confirmation and independent minimization",
+      "owner": "setup",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: real order evidence exports read-only with zero dispatch/model/admission and unchanged budget/history",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: generation remains possible after cancellation without manufacturing supervised verification",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T041: export modules have no target transport, supervisor instantiation, model or independent worker",
+      "owner": "T041",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "setup: future export boundary is declarative and fixtures never require model classification",
+      "owner": "setup",
+      "status": "passed",
+      "reason": null
+    },
+    {
+      "name": "T042: exact manifest fresh replay alone grants VERIFIED through existing authority and shared budget",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: budget cannot manufacture VERIFIED or replace confirmation",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: cancel cannot manufacture VERIFIED or replace confirmation",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: ownership cannot manufacture VERIFIED or replace confirmation",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: reset cannot manufacture VERIFIED or replace confirmation",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: baseline cannot manufacture VERIFIED or replace confirmation",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: execution cannot manufacture VERIFIED or replace confirmation",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: storage cannot manufacture VERIFIED or replace confirmation",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: cancel during persisted intent closes sole dispatcher without refund or VERIFIED",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: ownership during persisted intent closes sole dispatcher without refund or VERIFIED",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: stale baseline cannot authorize artifact actions or VERIFIED",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: reused baseline cannot authorize artifact actions or VERIFIED",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: missing baseline cannot authorize artifact actions or VERIFIED",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: failed baseline cannot authorize artifact actions or VERIFIED",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: unevaluable baseline cannot authorize artifact actions or VERIFIED",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: repaired applicable SATISFIED does not verify failing artifact or erase CONFIRMED history",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: altered bytes cannot borrow exact-artifact supervised authority",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: altered predicate cannot borrow exact-artifact supervised authority",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: altered scope cannot borrow exact-artifact supervised authority",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: altered external verification cannot borrow exact-artifact supervised authority",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: separate invocation result carries no originating database/verification authority",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    },
+    {
+      "name": "T042: verification module delegates to fresh-state and journey infrastructure without a second worker/transport",
+      "owner": "T042",
+      "status": "skipped",
+      "reason": "T042 missing production boundary; demonstrated in focused/full unfiltered runs"
+    }
+  ]
+}

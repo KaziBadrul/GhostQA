@@ -1,0 +1,29 @@
+{
+  "classification": "developer-executed live acceptance",
+  "summary": {
+    "task": "T044",
+    "result": "FAIL",
+    "failedStage": "RUN_ADMISSION",
+    "reason": "SUPERVISOR BUSY",
+    "lastCompletedStage": "SCOPE_APPROVAL",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "runId": "6d5c7a2c-467f-46ae-9cc6-4704b73679c9",
+    "nextAction": "GRACEFULLY STOP THE OWNED SERVER OR OTHER SUPERVISOR; RERUN ONLY AFTER IT RELEASES OWNERSHIP",
+    "supervisorOwnership": {
+      "holders": [
+        {
+          "backendPid": 29221,
+          "state": "idle"
+        }
+      ]
+    }
+  },
+  "durable": {
+    "findings": [],
+    "journeys": [],
+    "planning": [],
+    "evidence": [],
+    "steps": []
+  }
+}

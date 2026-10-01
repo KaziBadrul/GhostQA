@@ -1,0 +1,3451 @@
+{
+  "summary": {
+    "task": "T044",
+    "result": "PASS",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+    "discoveryStatus": "OBSERVED VIOLATION",
+    "confirmationStatus": "CONFIRMED",
+    "predicateId": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+    "predicateVersion": 1,
+    "predicateHash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+    "originalJourneyLength": 3,
+    "bestVerifiedJourneyLength": 3,
+    "reportGenerated": true,
+    "manifestHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+    "supervisedVerificationStatus": "VIOLATED",
+    "artifactStatus": "VERIFIED",
+    "sharedBudgetVerified": true,
+    "packageHash": "2629117f0d5a63f1c7fc0e4568571bc3e12008a11b1cd91fc849e435c3f78bca",
+    "standaloneIsolationVerified": true,
+    "historicalEvidenceUnchanged": true
+  },
+  "initial": {
+    "evidence": {
+      "id": "96de4f3a-82d0-4e38-8bbe-231aa1652c33",
+      "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+      "trialId": "057a148e-26c2-43ae-b64b-64cc43ad0e93",
+      "phase": "EXPLORATION",
+      "predicateRef": {
+        "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+        "version": 1,
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+      },
+      "baselineEvidenceId": "2dafdd82-4099-463b-bf72-4a2632cefd54",
+      "observationIds": [
+        "b1271fb5-44eb-4243-b11d-1bec8df9f98b",
+        "2e4110c6-5392-4c73-a836-53f670bc6b7d",
+        "cfb1c489-2853-4e77-93f4-ccd541dede4e"
+      ],
+      "outcome": "VIOLATED",
+      "symbolicOperands": {
+        "assertions": [
+          {
+            "op": "not-equals",
+            "left": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "FULFILLED"
+            }
+          }
+        ],
+        "applicability": [
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "CANCELLED"
+            }
+          },
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/id"
+            },
+            "right": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/id"
+            }
+          },
+          {
+            "op": "before",
+            "left": {
+              "kind": "step-index",
+              "stepId": "cancelled"
+            },
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "executionOrder": [
+          {
+            "stepId": "create",
+            "ordinal": 0,
+            "operationId": "POST /api/orders"
+          },
+          {
+            "stepId": "cancelled",
+            "ordinal": 1,
+            "operationId": "POST /api/orders/{orderId}/cancel"
+          },
+          {
+            "stepId": "later",
+            "ordinal": 2,
+            "operationId": "POST /api/orders/{orderId}/fulfill"
+          }
+        ]
+      }
+    },
+    "baseline": {
+      "id": "2dafdd82-4099-463b-bf72-4a2632cefd54",
+      "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+      "trialId": "057a148e-26c2-43ae-b64b-64cc43ad0e93",
+      "resetStepIds": [
+        "reset"
+      ],
+      "checkStepIds": [
+        "baseline"
+      ],
+      "verdict": "SATISFIED",
+      "assertionIds": [
+        "fbc211cb-0534-44db-acae-bc1df808d275"
+      ]
+    },
+    "observations": [
+      {
+        "id": "2e4110c6-5392-4c73-a836-53f670bc6b7d",
+        "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+        "trialId": "057a148e-26c2-43ae-b64b-64cc43ad0e93",
+        "stepId": "create",
+        "result": {
+          "stepId": "create",
+          "status": 201,
+          "sanitizedRequest": {
+            "url": "http://127.0.0.1:62062/api/orders",
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/orders"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "20ed2ecf-2d2e-48e2-b7c5-95640ec6ace2",
+              "state": "CREATED"
+            },
+            "text": "{\"id\":\"20ed2ecf-2d2e-48e2-b7c5-95640ec6ace2\",\"state\":\"CREATED\"}",
+            "status": 201,
+            "headers": {
+              "date": "Thu, 01 Oct 2026 19:05:37 GMT",
+              "connection": "close",
+              "content-type": "application/json",
+              "transfer-encoding": "chunked"
+            },
+            "elapsedMs": 0.9810829999996713,
+            "truncated": false
+          },
+          "truncated": false,
+          "startedAt": "2026-10-01T19:05:37.884Z",
+          "elapsedMs": 0.9810829999996713,
+          "outcome": "RESPONSE"
+        },
+        "stateMappings": []
+      },
+      {
+        "id": "cfb1c489-2853-4e77-93f4-ccd541dede4e",
+        "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+        "trialId": "057a148e-26c2-43ae-b64b-64cc43ad0e93",
+        "stepId": "cancelled",
+        "result": {
+          "stepId": "cancelled",
+          "status": 200,
+          "sanitizedRequest": {
+            "url": "http://127.0.0.1:62062/api/orders/20ed2ecf-2d2e-48e2-b7c5-95640ec6ace2/cancel",
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/orders/{orderId}/cancel"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "20ed2ecf-2d2e-48e2-b7c5-95640ec6ace2",
+              "state": "CANCELLED"
+            },
+            "text": "{\"id\":\"20ed2ecf-2d2e-48e2-b7c5-95640ec6ace2\",\"state\":\"CANCELLED\"}",
+            "status": 200,
+            "headers": {
+              "date": "Thu, 01 Oct 2026 19:05:37 GMT",
+              "connection": "close",
+              "content-type": "application/json",
+              "transfer-encoding": "chunked"
+            },
+            "elapsedMs": 1.2431659999992917,
+            "truncated": false
+          },
+          "truncated": false,
+          "startedAt": "2026-10-01T19:05:37.901Z",
+          "elapsedMs": 1.2431659999992917,
+          "outcome": "RESPONSE"
+        },
+        "stateMappings": []
+      },
+      {
+        "id": "b1271fb5-44eb-4243-b11d-1bec8df9f98b",
+        "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+        "trialId": "057a148e-26c2-43ae-b64b-64cc43ad0e93",
+        "stepId": "later",
+        "result": {
+          "stepId": "later",
+          "status": 200,
+          "sanitizedRequest": {
+            "url": "http://127.0.0.1:62062/api/orders/20ed2ecf-2d2e-48e2-b7c5-95640ec6ace2/fulfill",
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/orders/{orderId}/fulfill"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "20ed2ecf-2d2e-48e2-b7c5-95640ec6ace2",
+              "state": "FULFILLED"
+            },
+            "text": "{\"id\":\"20ed2ecf-2d2e-48e2-b7c5-95640ec6ace2\",\"state\":\"FULFILLED\"}",
+            "status": 200,
+            "headers": {
+              "date": "Thu, 01 Oct 2026 19:05:37 GMT",
+              "connection": "close",
+              "content-type": "application/json",
+              "transfer-encoding": "chunked"
+            },
+            "elapsedMs": 0.8307909999994081,
+            "truncated": false
+          },
+          "truncated": false,
+          "startedAt": "2026-10-01T19:05:37.905Z",
+          "elapsedMs": 0.8307909999994081,
+          "outcome": "RESPONSE"
+        },
+        "stateMappings": []
+      }
+    ]
+  },
+  "replays": [
+    {
+      "evidence": {
+        "id": "f307002f-621c-41b2-90b0-e9344261c33e",
+        "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+        "trialId": "9073ea92-cc14-4dc4-9985-8239b1cffabb",
+        "phase": "REPLAY",
+        "predicateRef": {
+          "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+          "version": 1,
+          "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+        },
+        "baselineEvidenceId": "0afa73f8-6928-4853-859b-6714822e48da",
+        "observationIds": [
+          "22743d50-af0c-4149-b81c-03d9570f477f",
+          "3eb5b79a-2bdd-4f23-bd08-9d3670f53f05",
+          "74a8ad21-c978-4bae-b287-1bcfc40d8aba"
+        ],
+        "outcome": "VIOLATED",
+        "symbolicOperands": {
+          "assertions": [
+            {
+              "op": "not-equals",
+              "left": {
+                "kind": "json",
+                "stepId": "later",
+                "pointer": "/state"
+              },
+              "right": {
+                "kind": "literal",
+                "value": "FULFILLED"
+              }
+            }
+          ],
+          "applicability": [
+            {
+              "op": "equals",
+              "left": {
+                "kind": "json",
+                "stepId": "cancelled",
+                "pointer": "/state"
+              },
+              "right": {
+                "kind": "literal",
+                "value": "CANCELLED"
+              }
+            },
+            {
+              "op": "equals",
+              "left": {
+                "kind": "json",
+                "stepId": "cancelled",
+                "pointer": "/id"
+              },
+              "right": {
+                "kind": "json",
+                "stepId": "later",
+                "pointer": "/id"
+              }
+            },
+            {
+              "op": "before",
+              "left": {
+                "kind": "step-index",
+                "stepId": "cancelled"
+              },
+              "right": {
+                "kind": "step-index",
+                "stepId": "later"
+              }
+            }
+          ],
+          "executionOrder": [
+            {
+              "stepId": "create",
+              "ordinal": 0,
+              "operationId": "POST /api/orders"
+            },
+            {
+              "stepId": "cancelled",
+              "ordinal": 1,
+              "operationId": "POST /api/orders/{orderId}/cancel"
+            },
+            {
+              "stepId": "later",
+              "ordinal": 2,
+              "operationId": "POST /api/orders/{orderId}/fulfill"
+            }
+          ]
+        }
+      },
+      "baseline": {
+        "id": "0afa73f8-6928-4853-859b-6714822e48da",
+        "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+        "trialId": "9073ea92-cc14-4dc4-9985-8239b1cffabb",
+        "resetStepIds": [
+          "reset"
+        ],
+        "checkStepIds": [
+          "baseline"
+        ],
+        "verdict": "SATISFIED",
+        "assertionIds": [
+          "fbc211cb-0534-44db-acae-bc1df808d275"
+        ]
+      },
+      "observations": [
+        {
+          "id": "74a8ad21-c978-4bae-b287-1bcfc40d8aba",
+          "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+          "trialId": "9073ea92-cc14-4dc4-9985-8239b1cffabb",
+          "stepId": "create",
+          "result": {
+            "stepId": "create",
+            "status": 201,
+            "sanitizedRequest": {
+              "url": "http://127.0.0.1:62062/api/orders",
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/orders"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "94d7c643-f27e-4fb3-862a-83f7c978dab1",
+                "state": "CREATED"
+              },
+              "text": "{\"id\":\"94d7c643-f27e-4fb3-862a-83f7c978dab1\",\"state\":\"CREATED\"}",
+              "status": 201,
+              "headers": {
+                "date": "Thu, 01 Oct 2026 19:05:37 GMT",
+                "connection": "close",
+                "content-type": "application/json",
+                "transfer-encoding": "chunked"
+              },
+              "elapsedMs": 0.8963750000002619,
+              "truncated": false
+            },
+            "truncated": false,
+            "startedAt": "2026-10-01T19:05:37.932Z",
+            "elapsedMs": 0.8963750000002619,
+            "outcome": "RESPONSE"
+          },
+          "stateMappings": []
+        },
+        {
+          "id": "3eb5b79a-2bdd-4f23-bd08-9d3670f53f05",
+          "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+          "trialId": "9073ea92-cc14-4dc4-9985-8239b1cffabb",
+          "stepId": "cancelled",
+          "result": {
+            "stepId": "cancelled",
+            "status": 200,
+            "sanitizedRequest": {
+              "url": "http://127.0.0.1:62062/api/orders/94d7c643-f27e-4fb3-862a-83f7c978dab1/cancel",
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/orders/{orderId}/cancel"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "94d7c643-f27e-4fb3-862a-83f7c978dab1",
+                "state": "CANCELLED"
+              },
+              "text": "{\"id\":\"94d7c643-f27e-4fb3-862a-83f7c978dab1\",\"state\":\"CANCELLED\"}",
+              "status": 200,
+              "headers": {
+                "date": "Thu, 01 Oct 2026 19:05:37 GMT",
+                "connection": "close",
+                "content-type": "application/json",
+                "transfer-encoding": "chunked"
+              },
+              "elapsedMs": 0.843166999999994,
+              "truncated": false
+            },
+            "truncated": false,
+            "startedAt": "2026-10-01T19:05:37.935Z",
+            "elapsedMs": 0.843166999999994,
+            "outcome": "RESPONSE"
+          },
+          "stateMappings": []
+        },
+        {
+          "id": "22743d50-af0c-4149-b81c-03d9570f477f",
+          "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+          "trialId": "9073ea92-cc14-4dc4-9985-8239b1cffabb",
+          "stepId": "later",
+          "result": {
+            "stepId": "later",
+            "status": 200,
+            "sanitizedRequest": {
+              "url": "http://127.0.0.1:62062/api/orders/94d7c643-f27e-4fb3-862a-83f7c978dab1/fulfill",
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/orders/{orderId}/fulfill"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "94d7c643-f27e-4fb3-862a-83f7c978dab1",
+                "state": "FULFILLED"
+              },
+              "text": "{\"id\":\"94d7c643-f27e-4fb3-862a-83f7c978dab1\",\"state\":\"FULFILLED\"}",
+              "status": 200,
+              "headers": {
+                "date": "Thu, 01 Oct 2026 19:05:37 GMT",
+                "connection": "close",
+                "content-type": "application/json",
+                "transfer-encoding": "chunked"
+              },
+              "elapsedMs": 0.9941660000004049,
+              "truncated": false
+            },
+            "truncated": false,
+            "startedAt": "2026-10-01T19:05:37.938Z",
+            "elapsedMs": 0.9941660000004049,
+            "outcome": "RESPONSE"
+          },
+          "stateMappings": []
+        }
+      ]
+    }
+  ],
+  "minimization": {
+    "finding": {
+      "id": "2df40792-7713-447a-9fdf-76b3f1371a99",
+      "projectId": "650e3c6d-403e-45ad-a431-772c0e8b4380",
+      "initialEvidenceId": "96de4f3a-82d0-4e38-8bbe-231aa1652c33",
+      "replayEvidenceIds": [
+        "f307002f-621c-41b2-90b0-e9344261c33e"
+      ],
+      "predicateRef": {
+        "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+        "version": 1,
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+      },
+      "classification": "CONFIRMED",
+      "consistent": true,
+      "transitions": [
+        {
+          "next": "OBSERVED VIOLATION",
+          "prior": null,
+          "reason": "INITIAL PREDICATE VIOLATION",
+          "evidenceRefs": [
+            "96de4f3a-82d0-4e38-8bbe-231aa1652c33"
+          ]
+        },
+        {
+          "next": "CONFIRMED",
+          "prior": "OBSERVED VIOLATION",
+          "reason": "INDEPENDENT FRESH REPLAY VIOLATED",
+          "evidenceRefs": [
+            "96de4f3a-82d0-4e38-8bbe-231aa1652c33",
+            "f307002f-621c-41b2-90b0-e9344261c33e"
+          ]
+        }
+      ],
+      "originalJourneyId": "d63c7985-4b3f-4de8-b19f-b1c3b717f7fd",
+      "minimizedJourneyId": "d63c7985-4b3f-4de8-b19f-b1c3b717f7fd",
+      "minimizationStop": "LOCAL MINIMUM"
+    },
+    "best": {
+      "id": "d63c7985-4b3f-4de8-b19f-b1c3b717f7fd",
+      "steps": [
+        {
+          "id": "create",
+          "operationId": "POST /api/orders",
+          "parameters": [],
+          "bodyBindings": [],
+          "extracts": [
+            {
+              "name": "orderId",
+              "expectedType": "string",
+              "source": {
+                "kind": "json",
+                "stepId": "create",
+                "pointer": "/id"
+              },
+              "sensitive": false
+            }
+          ],
+          "expectedStatuses": [
+            201
+          ]
+        },
+        {
+          "id": "cancelled",
+          "operationId": "POST /api/orders/{orderId}/cancel",
+          "parameters": [
+            {
+              "location": "path",
+              "name": "orderId",
+              "value": {
+                "kind": "json",
+                "stepId": "create",
+                "pointer": "/id"
+              }
+            }
+          ],
+          "bodyBindings": [],
+          "extracts": [],
+          "expectedStatuses": [
+            200,
+            409
+          ]
+        },
+        {
+          "id": "later",
+          "operationId": "POST /api/orders/{orderId}/fulfill",
+          "parameters": [
+            {
+              "location": "path",
+              "name": "orderId",
+              "value": {
+                "kind": "json",
+                "stepId": "create",
+                "pointer": "/id"
+              }
+            }
+          ],
+          "bodyBindings": [],
+          "extracts": [],
+          "expectedStatuses": [
+            200,
+            409
+          ]
+        }
+      ],
+      "variables": [],
+      "predicateRef": {
+        "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+        "version": 1,
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+      },
+      "rationale": "Verify that an order observed as CANCELLED cannot subsequently be fulfilled.",
+      "dependencies": [
+        {
+          "producer": "create",
+          "consumer": "cancelled",
+          "variable": "orderId"
+        },
+        {
+          "producer": "create",
+          "consumer": "later",
+          "variable": "orderId"
+        }
+      ]
+    },
+    "originalLength": 3,
+    "bestLength": 3,
+    "attempts": [
+      {
+        "candidate": {
+          "id": "15bf61e1-6aee-4cdc-b39e-0b67baed542c",
+          "steps": [
+            {
+              "id": "cancelled",
+              "operationId": "POST /api/orders/{orderId}/cancel",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ],
+              "bodyBindings": [],
+              "extracts": [],
+              "expectedStatuses": [
+                200,
+                409
+              ]
+            },
+            {
+              "id": "later",
+              "operationId": "POST /api/orders/{orderId}/fulfill",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ],
+              "bodyBindings": [],
+              "extracts": [],
+              "expectedStatuses": [
+                200,
+                409
+              ]
+            }
+          ],
+          "variables": [],
+          "predicateRef": {
+            "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+            "version": 1,
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+          },
+          "rationale": "Verify that an order observed as CANCELLED cannot subsequently be fulfilled.",
+          "dependencies": []
+        },
+        "removedStepId": "create",
+        "accepted": false,
+        "reason": "PRODUCER REQUIRED",
+        "observations": []
+      },
+      {
+        "candidate": {
+          "id": "37401862-cdce-48df-8472-ce27b1f9ff91",
+          "steps": [
+            {
+              "id": "create",
+              "operationId": "POST /api/orders",
+              "parameters": [],
+              "bodyBindings": [],
+              "extracts": [
+                {
+                  "name": "orderId",
+                  "expectedType": "string",
+                  "source": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  },
+                  "sensitive": false
+                }
+              ],
+              "expectedStatuses": [
+                201
+              ]
+            },
+            {
+              "id": "later",
+              "operationId": "POST /api/orders/{orderId}/fulfill",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ],
+              "bodyBindings": [],
+              "extracts": [],
+              "expectedStatuses": [
+                200,
+                409
+              ]
+            }
+          ],
+          "variables": [],
+          "predicateRef": {
+            "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+            "version": 1,
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+          },
+          "rationale": "Verify that an order observed as CANCELLED cannot subsequently be fulfilled.",
+          "dependencies": [
+            {
+              "producer": "create",
+              "consumer": "later",
+              "variable": "orderId"
+            }
+          ]
+        },
+        "removedStepId": "cancelled",
+        "accepted": false,
+        "reason": "PREDICATE STEP REQUIRED",
+        "observations": []
+      },
+      {
+        "candidate": {
+          "id": "d55c10e6-c821-4fa0-a8a2-3c7cc3c5284e",
+          "steps": [
+            {
+              "id": "create",
+              "operationId": "POST /api/orders",
+              "parameters": [],
+              "bodyBindings": [],
+              "extracts": [
+                {
+                  "name": "orderId",
+                  "expectedType": "string",
+                  "source": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  },
+                  "sensitive": false
+                }
+              ],
+              "expectedStatuses": [
+                201
+              ]
+            },
+            {
+              "id": "cancelled",
+              "operationId": "POST /api/orders/{orderId}/cancel",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "orderId",
+                  "value": {
+                    "kind": "json",
+                    "stepId": "create",
+                    "pointer": "/id"
+                  }
+                }
+              ],
+              "bodyBindings": [],
+              "extracts": [],
+              "expectedStatuses": [
+                200,
+                409
+              ]
+            }
+          ],
+          "variables": [],
+          "predicateRef": {
+            "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+            "version": 1,
+            "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+          },
+          "rationale": "Verify that an order observed as CANCELLED cannot subsequently be fulfilled.",
+          "dependencies": [
+            {
+              "producer": "create",
+              "consumer": "cancelled",
+              "variable": "orderId"
+            }
+          ]
+        },
+        "removedStepId": "later",
+        "accepted": false,
+        "reason": "PREDICATE STEP REQUIRED",
+        "observations": []
+      }
+    ],
+    "stopReason": "LOCAL MINIMUM",
+    "locallyIrreducible": true
+  },
+  "generated": {
+    "artifact": {
+      "id": "2b448fd4-1b2f-462b-af8e-69c042733a26",
+      "findingId": "2df40792-7713-447a-9fdf-76b3f1371a99",
+      "formatVersion": 1,
+      "contentHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+      "journey": {
+        "id": "d63c7985-4b3f-4de8-b19f-b1c3b717f7fd",
+        "steps": [
+          {
+            "id": "create",
+            "operationId": "POST /api/orders",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [
+              {
+                "name": "orderId",
+                "expectedType": "string",
+                "source": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                },
+                "sensitive": false
+              }
+            ],
+            "expectedStatuses": [
+              201
+            ]
+          },
+          {
+            "id": "cancelled",
+            "operationId": "POST /api/orders/{orderId}/cancel",
+            "parameters": [
+              {
+                "location": "path",
+                "name": "orderId",
+                "value": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                }
+              }
+            ],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200,
+              409
+            ]
+          },
+          {
+            "id": "later",
+            "operationId": "POST /api/orders/{orderId}/fulfill",
+            "parameters": [
+              {
+                "location": "path",
+                "name": "orderId",
+                "value": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                }
+              }
+            ],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200,
+              409
+            ]
+          }
+        ],
+        "variables": [],
+        "predicateRef": {
+          "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+          "version": 1,
+          "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+        },
+        "rationale": "Verify that an order observed as CANCELLED cannot subsequently be fulfilled.",
+        "dependencies": [
+          {
+            "producer": "create",
+            "consumer": "cancelled",
+            "variable": "orderId"
+          },
+          {
+            "producer": "create",
+            "consumer": "later",
+            "variable": "orderId"
+          }
+        ]
+      },
+      "predicate": {
+        "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+        "version": 1,
+        "canonicalHash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+        "source": "DEVELOPER",
+        "sourceRef": "an order observed as CANCELLED must not later be observed as FULFILLED within the same fresh trial",
+        "applicability": [
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "CANCELLED"
+            }
+          },
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/id"
+            },
+            "right": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/id"
+            }
+          },
+          {
+            "op": "before",
+            "left": {
+              "kind": "step-index",
+              "stepId": "cancelled"
+            },
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "op": "not-equals",
+            "left": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "FULFILLED"
+            }
+          }
+        ]
+      },
+      "reset": {
+        "id": "572d8e78-ef1c-44b1-8d2a-1dcb0a69de5c",
+        "version": 1,
+        "resetSteps": [
+          {
+            "id": "reset",
+            "operationId": "POST /api/control/reset",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200
+            ]
+          }
+        ],
+        "resetAssertions": [
+          {
+            "id": "833ea855-4072-411e-a417-70cd6a53923a",
+            "predicate": {
+              "id": "70863412-ddd2-47ca-82ae-d72f1be51fe9",
+              "version": 1,
+              "canonicalHash": "e0b6f68e862a9dd1884aa593b0c4842d79656ac3574bf02afe95b49571d271ca",
+              "source": "DEVELOPER",
+              "sourceRef": "reset-acknowledgement",
+              "applicability": [],
+              "assertions": [
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "json",
+                    "stepId": "reset",
+                    "pointer": "/reset"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "checkSteps": [
+          {
+            "id": "baseline",
+            "operationId": "GET /api/control/baseline",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200
+            ]
+          }
+        ],
+        "baselineAssertions": [
+          {
+            "id": "fbc211cb-0534-44db-acae-bc1df808d275",
+            "predicate": {
+              "id": "92b42df4-c14b-4c30-b71d-e2eecff8c43e",
+              "version": 1,
+              "canonicalHash": "23d99ab499b14dde9f6bd02eea36b5d8a8a02587e01c7122bfa45febfe7b5e9d",
+              "source": "DEVELOPER",
+              "sourceRef": "empty-order-baseline",
+              "applicability": [],
+              "assertions": [
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "json",
+                    "stepId": "baseline",
+                    "pointer": "/orders"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "apiModel": {
+        "snapshotId": "f0cbff72-d4b9-4f1a-b44f-8fefb8af7104",
+        "contentHash": "a2f1fac3ba25d0acfdd5cd5c8c6d7d99fac161286e24a0cf27842bd87903144d",
+        "openapiVersion": "3.1.0",
+        "operations": [
+          {
+            "id": "POST /api/control/reset",
+            "method": "POST",
+            "pathTemplate": "/api/control/reset",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "reset": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "reset"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "GET /api/control/baseline",
+            "method": "GET",
+            "pathTemplate": "/api/control/baseline",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "orders": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          },
+                          "required": [
+                            "orders"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders",
+            "method": "POST",
+            "pathTemplate": "/api/orders",
+            "parameters": [],
+            "responses": {
+              "201": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "GET /api/orders/{orderId}",
+            "method": "GET",
+            "pathTemplate": "/api/orders/{orderId}",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders/{orderId}/cancel",
+            "method": "POST",
+            "pathTemplate": "/api/orders/{orderId}/cancel",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              },
+              "409": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders/{orderId}/fulfill",
+            "method": "POST",
+            "pathTemplate": "/api/orders/{orderId}/fulfill",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              },
+              "409": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          }
+        ],
+        "importDiagnostics": []
+      },
+      "scopeTemplate": {
+        "origin": "http://127.0.0.1:62062",
+        "hostname": "127.0.0.1",
+        "port": 62062,
+        "basePathSegments": [
+          "api"
+        ],
+        "operationIds": [
+          "POST /api/control/reset",
+          "GET /api/control/baseline",
+          "POST /api/orders",
+          "GET /api/orders/{orderId}",
+          "POST /api/orders/{orderId}/cancel",
+          "POST /api/orders/{orderId}/fulfill"
+        ],
+        "operationPolicy": [
+          {
+            "operationId": "POST /api/control/reset",
+            "category": "RESET",
+            "phases": [
+              "RESET"
+            ]
+          },
+          {
+            "operationId": "GET /api/control/baseline",
+            "category": "BASELINE",
+            "phases": [
+              "BASELINE"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "GET /api/orders/{orderId}",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders/{orderId}/cancel",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders/{orderId}/fulfill",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          }
+        ],
+        "mutationsAcknowledged": true
+      },
+      "credentialSlots": [],
+      "generatedAt": "2026-10-01T19:05:37.978Z",
+      "verification": "UNVERIFIED",
+      "verificationEvidenceIds": [],
+      "manifestHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+      "verificationAuthority": "SUPERVISED_RUN_PATH",
+      "generationState": "GENERATED",
+      "runnerVersion": "manifest-v1"
+    },
+    "manifest": {
+      "formatVersion": 1,
+      "runnerVersion": "manifest-v1",
+      "reset": {
+        "id": "572d8e78-ef1c-44b1-8d2a-1dcb0a69de5c",
+        "version": 1,
+        "resetSteps": [
+          {
+            "id": "reset",
+            "operationId": "POST /api/control/reset",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200
+            ]
+          }
+        ],
+        "resetAssertions": [
+          {
+            "id": "833ea855-4072-411e-a417-70cd6a53923a",
+            "predicate": {
+              "id": "70863412-ddd2-47ca-82ae-d72f1be51fe9",
+              "version": 1,
+              "canonicalHash": "e0b6f68e862a9dd1884aa593b0c4842d79656ac3574bf02afe95b49571d271ca",
+              "source": "DEVELOPER",
+              "sourceRef": "reset-acknowledgement",
+              "applicability": [],
+              "assertions": [
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "json",
+                    "stepId": "reset",
+                    "pointer": "/reset"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "checkSteps": [
+          {
+            "id": "baseline",
+            "operationId": "GET /api/control/baseline",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200
+            ]
+          }
+        ],
+        "baselineAssertions": [
+          {
+            "id": "fbc211cb-0534-44db-acae-bc1df808d275",
+            "predicate": {
+              "id": "92b42df4-c14b-4c30-b71d-e2eecff8c43e",
+              "version": 1,
+              "canonicalHash": "23d99ab499b14dde9f6bd02eea36b5d8a8a02587e01c7122bfa45febfe7b5e9d",
+              "source": "DEVELOPER",
+              "sourceRef": "empty-order-baseline",
+              "applicability": [],
+              "assertions": [
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "json",
+                    "stepId": "baseline",
+                    "pointer": "/orders"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "journey": {
+        "id": "d63c7985-4b3f-4de8-b19f-b1c3b717f7fd",
+        "steps": [
+          {
+            "id": "create",
+            "operationId": "POST /api/orders",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [
+              {
+                "name": "orderId",
+                "expectedType": "string",
+                "source": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                },
+                "sensitive": false
+              }
+            ],
+            "expectedStatuses": [
+              201
+            ]
+          },
+          {
+            "id": "cancelled",
+            "operationId": "POST /api/orders/{orderId}/cancel",
+            "parameters": [
+              {
+                "location": "path",
+                "name": "orderId",
+                "value": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                }
+              }
+            ],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200,
+              409
+            ]
+          },
+          {
+            "id": "later",
+            "operationId": "POST /api/orders/{orderId}/fulfill",
+            "parameters": [
+              {
+                "location": "path",
+                "name": "orderId",
+                "value": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                }
+              }
+            ],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200,
+              409
+            ]
+          }
+        ],
+        "variables": [],
+        "predicateRef": {
+          "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+          "version": 1,
+          "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+        },
+        "rationale": "Verify that an order observed as CANCELLED cannot subsequently be fulfilled.",
+        "dependencies": [
+          {
+            "producer": "create",
+            "consumer": "cancelled",
+            "variable": "orderId"
+          },
+          {
+            "producer": "create",
+            "consumer": "later",
+            "variable": "orderId"
+          }
+        ]
+      },
+      "predicate": {
+        "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+        "version": 1,
+        "canonicalHash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+        "source": "DEVELOPER",
+        "sourceRef": "an order observed as CANCELLED must not later be observed as FULFILLED within the same fresh trial",
+        "applicability": [
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "CANCELLED"
+            }
+          },
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/id"
+            },
+            "right": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/id"
+            }
+          },
+          {
+            "op": "before",
+            "left": {
+              "kind": "step-index",
+              "stepId": "cancelled"
+            },
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "op": "not-equals",
+            "left": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "FULFILLED"
+            }
+          }
+        ]
+      },
+      "predicateRef": {
+        "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+        "version": 1,
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+      },
+      "assertions": [
+        {
+          "op": "not-equals",
+          "left": {
+            "kind": "json",
+            "stepId": "later",
+            "pointer": "/state"
+          },
+          "right": {
+            "kind": "literal",
+            "value": "FULFILLED"
+          }
+        }
+      ],
+      "apiModel": {
+        "snapshotId": "f0cbff72-d4b9-4f1a-b44f-8fefb8af7104",
+        "contentHash": "a2f1fac3ba25d0acfdd5cd5c8c6d7d99fac161286e24a0cf27842bd87903144d",
+        "openapiVersion": "3.1.0",
+        "operations": [
+          {
+            "id": "POST /api/control/reset",
+            "method": "POST",
+            "pathTemplate": "/api/control/reset",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "reset": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "reset"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "GET /api/control/baseline",
+            "method": "GET",
+            "pathTemplate": "/api/control/baseline",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "orders": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          },
+                          "required": [
+                            "orders"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders",
+            "method": "POST",
+            "pathTemplate": "/api/orders",
+            "parameters": [],
+            "responses": {
+              "201": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "GET /api/orders/{orderId}",
+            "method": "GET",
+            "pathTemplate": "/api/orders/{orderId}",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders/{orderId}/cancel",
+            "method": "POST",
+            "pathTemplate": "/api/orders/{orderId}/cancel",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              },
+              "409": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders/{orderId}/fulfill",
+            "method": "POST",
+            "pathTemplate": "/api/orders/{orderId}/fulfill",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              },
+              "409": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          }
+        ],
+        "importDiagnostics": []
+      },
+      "scopeTemplate": {
+        "origin": "http://127.0.0.1:62062",
+        "hostname": "127.0.0.1",
+        "port": 62062,
+        "basePathSegments": [
+          "api"
+        ],
+        "operationIds": [
+          "POST /api/control/reset",
+          "GET /api/control/baseline",
+          "POST /api/orders",
+          "GET /api/orders/{orderId}",
+          "POST /api/orders/{orderId}/cancel",
+          "POST /api/orders/{orderId}/fulfill"
+        ],
+        "operationPolicy": [
+          {
+            "operationId": "POST /api/control/reset",
+            "category": "RESET",
+            "phases": [
+              "RESET"
+            ]
+          },
+          {
+            "operationId": "GET /api/control/baseline",
+            "category": "BASELINE",
+            "phases": [
+              "BASELINE"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "GET /api/orders/{orderId}",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders/{orderId}/cancel",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders/{orderId}/fulfill",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          }
+        ],
+        "mutationsAcknowledged": true
+      },
+      "credentialSlots": [],
+      "credentialBindings": [],
+      "provenance": {
+        "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+        "findingId": "2df40792-7713-447a-9fdf-76b3f1371a99",
+        "originalJourneyId": "d63c7985-4b3f-4de8-b19f-b1c3b717f7fd",
+        "bestJourneyId": "d63c7985-4b3f-4de8-b19f-b1c3b717f7fd",
+        "initialEvidenceId": "96de4f3a-82d0-4e38-8bbe-231aa1652c33",
+        "replayEvidenceIds": [
+          "f307002f-621c-41b2-90b0-e9344261c33e"
+        ],
+        "baselineEvidenceIds": [
+          "2dafdd82-4099-463b-bf72-4a2632cefd54",
+          "0afa73f8-6928-4853-859b-6714822e48da"
+        ],
+        "minimizationEvidenceIds": []
+      }
+    },
+    "bytes": "{\"apiModel\":{\"contentHash\":\"a2f1fac3ba25d0acfdd5cd5c8c6d7d99fac161286e24a0cf27842bd87903144d\",\"importDiagnostics\":[],\"openapiVersion\":\"3.1.0\",\"operations\":[{\"eligible\":true,\"exclusionReasons\":[],\"id\":\"POST /api/control/reset\",\"method\":\"POST\",\"parameters\":[],\"pathTemplate\":\"/api/control/reset\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"additionalProperties\":false,\"properties\":{\"reset\":{\"type\":\"boolean\"}},\"required\":[\"reset\"],\"type\":\"object\"}},\"$ref\":\"#/$defs/ghostqaSelected\"}}},\"description\":\"Result\"}}},{\"eligible\":true,\"exclusionReasons\":[],\"id\":\"GET /api/control/baseline\",\"method\":\"GET\",\"parameters\":[],\"pathTemplate\":\"/api/control/baseline\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"additionalProperties\":false,\"properties\":{\"orders\":{\"minimum\":0,\"type\":\"integer\"}},\"required\":[\"orders\"],\"type\":\"object\"}},\"$ref\":\"#/$defs/ghostqaSelected\"}}},\"description\":\"Result\"}}},{\"eligible\":true,\"exclusionReasons\":[],\"id\":\"POST /api/orders\",\"method\":\"POST\",\"parameters\":[],\"pathTemplate\":\"/api/orders\",\"responses\":{\"201\":{\"content\":{\"application/json\":{\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"additionalProperties\":false,\"properties\":{\"id\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"},\"state\":{\"enum\":[\"CREATED\",\"CANCELLED\",\"FULFILLED\"],\"maxLength\":32,\"type\":\"string\"}},\"required\":[\"id\",\"state\"],\"type\":\"object\"}},\"$ref\":\"#/$defs/ghostqaSelected\"}}},\"description\":\"Result\"}}},{\"eligible\":true,\"exclusionReasons\":[],\"id\":\"GET /api/orders/{orderId}\",\"method\":\"GET\",\"parameters\":[{\"explode\":false,\"in\":\"path\",\"name\":\"orderId\",\"required\":true,\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"}},\"$ref\":\"#/$defs/ghostqaSelected\"},\"sensitive\":false,\"style\":\"simple\"}],\"pathTemplate\":\"/api/orders/{orderId}\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"additionalProperties\":false,\"properties\":{\"id\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"},\"state\":{\"enum\":[\"CREATED\",\"CANCELLED\",\"FULFILLED\"],\"maxLength\":32,\"type\":\"string\"}},\"required\":[\"id\",\"state\"],\"type\":\"object\"}},\"$ref\":\"#/$defs/ghostqaSelected\"}}},\"description\":\"Result\"}}},{\"eligible\":true,\"exclusionReasons\":[],\"id\":\"POST /api/orders/{orderId}/cancel\",\"method\":\"POST\",\"parameters\":[{\"explode\":false,\"in\":\"path\",\"name\":\"orderId\",\"required\":true,\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"}},\"$ref\":\"#/$defs/ghostqaSelected\"},\"sensitive\":false,\"style\":\"simple\"}],\"pathTemplate\":\"/api/orders/{orderId}/cancel\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"additionalProperties\":false,\"properties\":{\"id\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"},\"state\":{\"enum\":[\"CREATED\",\"CANCELLED\",\"FULFILLED\"],\"maxLength\":32,\"type\":\"string\"}},\"required\":[\"id\",\"state\"],\"type\":\"object\"}},\"$ref\":\"#/$defs/ghostqaSelected\"}}},\"description\":\"Result\"},\"409\":{\"content\":{\"application/json\":{\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"additionalProperties\":false,\"properties\":{\"id\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"},\"state\":{\"enum\":[\"CREATED\",\"CANCELLED\",\"FULFILLED\"],\"maxLength\":32,\"type\":\"string\"}},\"required\":[\"id\",\"state\"],\"type\":\"object\"}},\"$ref\":\"#/$defs/ghostqaSelected\"}}},\"description\":\"Result\"}}},{\"eligible\":true,\"exclusionReasons\":[],\"id\":\"POST /api/orders/{orderId}/fulfill\",\"method\":\"POST\",\"parameters\":[{\"explode\":false,\"in\":\"path\",\"name\":\"orderId\",\"required\":true,\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"}},\"$ref\":\"#/$defs/ghostqaSelected\"},\"sensitive\":false,\"style\":\"simple\"}],\"pathTemplate\":\"/api/orders/{orderId}/fulfill\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"additionalProperties\":false,\"properties\":{\"id\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"},\"state\":{\"enum\":[\"CREATED\",\"CANCELLED\",\"FULFILLED\"],\"maxLength\":32,\"type\":\"string\"}},\"required\":[\"id\",\"state\"],\"type\":\"object\"}},\"$ref\":\"#/$defs/ghostqaSelected\"}}},\"description\":\"Result\"},\"409\":{\"content\":{\"application/json\":{\"schema\":{\"$defs\":{\"ghostqaSelected\":{\"additionalProperties\":false,\"properties\":{\"id\":{\"format\":\"uuid\",\"maxLength\":256,\"type\":\"string\"},\"state\":{\"enum\":[\"CREATED\",\"CANCELLED\",\"FULFILLED\"],\"maxLength\":32,\"type\":\"string\"}},\"required\":[\"id\",\"state\"],\"type\":\"object\"}},\"$ref\":\"#/$defs/ghostqaSelected\"}}},\"description\":\"Result\"}}}],\"snapshotId\":\"f0cbff72-d4b9-4f1a-b44f-8fefb8af7104\"},\"assertions\":[{\"left\":{\"kind\":\"json\",\"pointer\":\"/state\",\"stepId\":\"later\"},\"op\":\"not-equals\",\"right\":{\"kind\":\"literal\",\"value\":\"FULFILLED\"}}],\"credentialBindings\":[],\"credentialSlots\":[],\"formatVersion\":1,\"journey\":{\"dependencies\":[{\"consumer\":\"cancelled\",\"producer\":\"create\",\"variable\":\"orderId\"},{\"consumer\":\"later\",\"producer\":\"create\",\"variable\":\"orderId\"}],\"id\":\"d63c7985-4b3f-4de8-b19f-b1c3b717f7fd\",\"predicateRef\":{\"hash\":\"ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d\",\"id\":\"ec75b098-3679-46df-ba39-69f0d0b0883e\",\"version\":1},\"rationale\":\"Verify that an order observed as CANCELLED cannot subsequently be fulfilled.\",\"steps\":[{\"bodyBindings\":[],\"expectedStatuses\":[201],\"extracts\":[{\"expectedType\":\"string\",\"name\":\"orderId\",\"sensitive\":false,\"source\":{\"kind\":\"json\",\"pointer\":\"/id\",\"stepId\":\"create\"}}],\"id\":\"create\",\"operationId\":\"POST /api/orders\",\"parameters\":[]},{\"bodyBindings\":[],\"expectedStatuses\":[200,409],\"extracts\":[],\"id\":\"cancelled\",\"operationId\":\"POST /api/orders/{orderId}/cancel\",\"parameters\":[{\"location\":\"path\",\"name\":\"orderId\",\"value\":{\"kind\":\"json\",\"pointer\":\"/id\",\"stepId\":\"create\"}}]},{\"bodyBindings\":[],\"expectedStatuses\":[200,409],\"extracts\":[],\"id\":\"later\",\"operationId\":\"POST /api/orders/{orderId}/fulfill\",\"parameters\":[{\"location\":\"path\",\"name\":\"orderId\",\"value\":{\"kind\":\"json\",\"pointer\":\"/id\",\"stepId\":\"create\"}}]}],\"variables\":[]},\"predicate\":{\"applicability\":[{\"left\":{\"kind\":\"json\",\"pointer\":\"/state\",\"stepId\":\"cancelled\"},\"op\":\"equals\",\"right\":{\"kind\":\"literal\",\"value\":\"CANCELLED\"}},{\"left\":{\"kind\":\"json\",\"pointer\":\"/id\",\"stepId\":\"cancelled\"},\"op\":\"equals\",\"right\":{\"kind\":\"json\",\"pointer\":\"/id\",\"stepId\":\"later\"}},{\"left\":{\"kind\":\"step-index\",\"stepId\":\"cancelled\"},\"op\":\"before\",\"right\":{\"kind\":\"step-index\",\"stepId\":\"later\"}}],\"assertions\":[{\"left\":{\"kind\":\"json\",\"pointer\":\"/state\",\"stepId\":\"later\"},\"op\":\"not-equals\",\"right\":{\"kind\":\"literal\",\"value\":\"FULFILLED\"}}],\"canonicalHash\":\"ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d\",\"id\":\"ec75b098-3679-46df-ba39-69f0d0b0883e\",\"source\":\"DEVELOPER\",\"sourceRef\":\"an order observed as CANCELLED must not later be observed as FULFILLED within the same fresh trial\",\"version\":1},\"predicateRef\":{\"hash\":\"ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d\",\"id\":\"ec75b098-3679-46df-ba39-69f0d0b0883e\",\"version\":1},\"provenance\":{\"baselineEvidenceIds\":[\"2dafdd82-4099-463b-bf72-4a2632cefd54\",\"0afa73f8-6928-4853-859b-6714822e48da\"],\"bestJourneyId\":\"d63c7985-4b3f-4de8-b19f-b1c3b717f7fd\",\"findingId\":\"2df40792-7713-447a-9fdf-76b3f1371a99\",\"initialEvidenceId\":\"96de4f3a-82d0-4e38-8bbe-231aa1652c33\",\"minimizationEvidenceIds\":[],\"originalJourneyId\":\"d63c7985-4b3f-4de8-b19f-b1c3b717f7fd\",\"replayEvidenceIds\":[\"f307002f-621c-41b2-90b0-e9344261c33e\"],\"runId\":\"601fa890-5598-47a0-beb8-50471fb4e72a\"},\"reset\":{\"baselineAssertions\":[{\"id\":\"fbc211cb-0534-44db-acae-bc1df808d275\",\"predicate\":{\"applicability\":[],\"assertions\":[{\"left\":{\"kind\":\"json\",\"pointer\":\"/orders\",\"stepId\":\"baseline\"},\"op\":\"equals\",\"right\":{\"kind\":\"literal\",\"value\":0}}],\"canonicalHash\":\"23d99ab499b14dde9f6bd02eea36b5d8a8a02587e01c7122bfa45febfe7b5e9d\",\"id\":\"92b42df4-c14b-4c30-b71d-e2eecff8c43e\",\"source\":\"DEVELOPER\",\"sourceRef\":\"empty-order-baseline\",\"version\":1}}],\"checkSteps\":[{\"bodyBindings\":[],\"expectedStatuses\":[200],\"extracts\":[],\"id\":\"baseline\",\"operationId\":\"GET /api/control/baseline\",\"parameters\":[]}],\"id\":\"572d8e78-ef1c-44b1-8d2a-1dcb0a69de5c\",\"resetAssertions\":[{\"id\":\"833ea855-4072-411e-a417-70cd6a53923a\",\"predicate\":{\"applicability\":[],\"assertions\":[{\"left\":{\"kind\":\"json\",\"pointer\":\"/reset\",\"stepId\":\"reset\"},\"op\":\"equals\",\"right\":{\"kind\":\"literal\",\"value\":true}}],\"canonicalHash\":\"e0b6f68e862a9dd1884aa593b0c4842d79656ac3574bf02afe95b49571d271ca\",\"id\":\"70863412-ddd2-47ca-82ae-d72f1be51fe9\",\"source\":\"DEVELOPER\",\"sourceRef\":\"reset-acknowledgement\",\"version\":1}}],\"resetSteps\":[{\"bodyBindings\":[],\"expectedStatuses\":[200],\"extracts\":[],\"id\":\"reset\",\"operationId\":\"POST /api/control/reset\",\"parameters\":[]}],\"version\":1},\"runnerVersion\":\"manifest-v1\",\"scopeTemplate\":{\"basePathSegments\":[\"api\"],\"hostname\":\"127.0.0.1\",\"mutationsAcknowledged\":true,\"operationIds\":[\"POST /api/control/reset\",\"GET /api/control/baseline\",\"POST /api/orders\",\"GET /api/orders/{orderId}\",\"POST /api/orders/{orderId}/cancel\",\"POST /api/orders/{orderId}/fulfill\"],\"operationPolicy\":[{\"category\":\"RESET\",\"operationId\":\"POST /api/control/reset\",\"phases\":[\"RESET\"]},{\"category\":\"BASELINE\",\"operationId\":\"GET /api/control/baseline\",\"phases\":[\"BASELINE\"]},{\"category\":\"EXPLORATION\",\"operationId\":\"POST /api/orders\",\"phases\":[\"EXPLORATION\",\"REPLAY\",\"MINIMIZATION\",\"ARTIFACT\"]},{\"category\":\"EXPLORATION\",\"operationId\":\"GET /api/orders/{orderId}\",\"phases\":[\"EXPLORATION\",\"REPLAY\",\"MINIMIZATION\",\"ARTIFACT\"]},{\"category\":\"EXPLORATION\",\"operationId\":\"POST /api/orders/{orderId}/cancel\",\"phases\":[\"EXPLORATION\",\"REPLAY\",\"MINIMIZATION\",\"ARTIFACT\"]},{\"category\":\"EXPLORATION\",\"operationId\":\"POST /api/orders/{orderId}/fulfill\",\"phases\":[\"EXPLORATION\",\"REPLAY\",\"MINIMIZATION\",\"ARTIFACT\"]}],\"origin\":\"http://127.0.0.1:62062\",\"port\":62062}}"
+  },
+  "supervised": {
+    "artifact": {
+      "id": "2b448fd4-1b2f-462b-af8e-69c042733a26",
+      "findingId": "2df40792-7713-447a-9fdf-76b3f1371a99",
+      "formatVersion": 1,
+      "contentHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+      "journey": {
+        "id": "d63c7985-4b3f-4de8-b19f-b1c3b717f7fd",
+        "steps": [
+          {
+            "id": "create",
+            "operationId": "POST /api/orders",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [
+              {
+                "name": "orderId",
+                "expectedType": "string",
+                "source": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                },
+                "sensitive": false
+              }
+            ],
+            "expectedStatuses": [
+              201
+            ]
+          },
+          {
+            "id": "cancelled",
+            "operationId": "POST /api/orders/{orderId}/cancel",
+            "parameters": [
+              {
+                "location": "path",
+                "name": "orderId",
+                "value": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                }
+              }
+            ],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200,
+              409
+            ]
+          },
+          {
+            "id": "later",
+            "operationId": "POST /api/orders/{orderId}/fulfill",
+            "parameters": [
+              {
+                "location": "path",
+                "name": "orderId",
+                "value": {
+                  "kind": "json",
+                  "stepId": "create",
+                  "pointer": "/id"
+                }
+              }
+            ],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200,
+              409
+            ]
+          }
+        ],
+        "variables": [],
+        "predicateRef": {
+          "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+          "version": 1,
+          "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+        },
+        "rationale": "Verify that an order observed as CANCELLED cannot subsequently be fulfilled.",
+        "dependencies": [
+          {
+            "producer": "create",
+            "consumer": "cancelled",
+            "variable": "orderId"
+          },
+          {
+            "producer": "create",
+            "consumer": "later",
+            "variable": "orderId"
+          }
+        ]
+      },
+      "predicate": {
+        "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+        "version": 1,
+        "canonicalHash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d",
+        "source": "DEVELOPER",
+        "sourceRef": "an order observed as CANCELLED must not later be observed as FULFILLED within the same fresh trial",
+        "applicability": [
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "CANCELLED"
+            }
+          },
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/id"
+            },
+            "right": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/id"
+            }
+          },
+          {
+            "op": "before",
+            "left": {
+              "kind": "step-index",
+              "stepId": "cancelled"
+            },
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "op": "not-equals",
+            "left": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "FULFILLED"
+            }
+          }
+        ]
+      },
+      "reset": {
+        "id": "572d8e78-ef1c-44b1-8d2a-1dcb0a69de5c",
+        "version": 1,
+        "resetSteps": [
+          {
+            "id": "reset",
+            "operationId": "POST /api/control/reset",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200
+            ]
+          }
+        ],
+        "resetAssertions": [
+          {
+            "id": "833ea855-4072-411e-a417-70cd6a53923a",
+            "predicate": {
+              "id": "70863412-ddd2-47ca-82ae-d72f1be51fe9",
+              "version": 1,
+              "canonicalHash": "e0b6f68e862a9dd1884aa593b0c4842d79656ac3574bf02afe95b49571d271ca",
+              "source": "DEVELOPER",
+              "sourceRef": "reset-acknowledgement",
+              "applicability": [],
+              "assertions": [
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "json",
+                    "stepId": "reset",
+                    "pointer": "/reset"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "checkSteps": [
+          {
+            "id": "baseline",
+            "operationId": "GET /api/control/baseline",
+            "parameters": [],
+            "bodyBindings": [],
+            "extracts": [],
+            "expectedStatuses": [
+              200
+            ]
+          }
+        ],
+        "baselineAssertions": [
+          {
+            "id": "fbc211cb-0534-44db-acae-bc1df808d275",
+            "predicate": {
+              "id": "92b42df4-c14b-4c30-b71d-e2eecff8c43e",
+              "version": 1,
+              "canonicalHash": "23d99ab499b14dde9f6bd02eea36b5d8a8a02587e01c7122bfa45febfe7b5e9d",
+              "source": "DEVELOPER",
+              "sourceRef": "empty-order-baseline",
+              "applicability": [],
+              "assertions": [
+                {
+                  "op": "equals",
+                  "left": {
+                    "kind": "json",
+                    "stepId": "baseline",
+                    "pointer": "/orders"
+                  },
+                  "right": {
+                    "kind": "literal",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "apiModel": {
+        "snapshotId": "f0cbff72-d4b9-4f1a-b44f-8fefb8af7104",
+        "contentHash": "a2f1fac3ba25d0acfdd5cd5c8c6d7d99fac161286e24a0cf27842bd87903144d",
+        "openapiVersion": "3.1.0",
+        "operations": [
+          {
+            "id": "POST /api/control/reset",
+            "method": "POST",
+            "pathTemplate": "/api/control/reset",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "reset": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "reset"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "GET /api/control/baseline",
+            "method": "GET",
+            "pathTemplate": "/api/control/baseline",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "orders": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          },
+                          "required": [
+                            "orders"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders",
+            "method": "POST",
+            "pathTemplate": "/api/orders",
+            "parameters": [],
+            "responses": {
+              "201": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "GET /api/orders/{orderId}",
+            "method": "GET",
+            "pathTemplate": "/api/orders/{orderId}",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders/{orderId}/cancel",
+            "method": "POST",
+            "pathTemplate": "/api/orders/{orderId}/cancel",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              },
+              "409": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          },
+          {
+            "id": "POST /api/orders/{orderId}/fulfill",
+            "method": "POST",
+            "pathTemplate": "/api/orders/{orderId}/fulfill",
+            "parameters": [
+              {
+                "name": "orderId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                  "$defs": {
+                    "ghostqaSelected": {
+                      "type": "string",
+                      "format": "uuid",
+                      "maxLength": 256
+                    }
+                  },
+                  "$ref": "#/$defs/ghostqaSelected"
+                },
+                "style": "simple",
+                "explode": false,
+                "sensitive": false
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              },
+              "409": {
+                "description": "Result",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$defs": {
+                        "ghostqaSelected": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "maxLength": 256
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": [
+                                "CREATED",
+                                "CANCELLED",
+                                "FULFILLED"
+                              ],
+                              "maxLength": 32
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "state"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "$ref": "#/$defs/ghostqaSelected"
+                    }
+                  }
+                }
+              }
+            },
+            "eligible": true,
+            "exclusionReasons": []
+          }
+        ],
+        "importDiagnostics": []
+      },
+      "scopeTemplate": {
+        "origin": "http://127.0.0.1:62062",
+        "hostname": "127.0.0.1",
+        "port": 62062,
+        "basePathSegments": [
+          "api"
+        ],
+        "operationIds": [
+          "POST /api/control/reset",
+          "GET /api/control/baseline",
+          "POST /api/orders",
+          "GET /api/orders/{orderId}",
+          "POST /api/orders/{orderId}/cancel",
+          "POST /api/orders/{orderId}/fulfill"
+        ],
+        "operationPolicy": [
+          {
+            "operationId": "POST /api/control/reset",
+            "category": "RESET",
+            "phases": [
+              "RESET"
+            ]
+          },
+          {
+            "operationId": "GET /api/control/baseline",
+            "category": "BASELINE",
+            "phases": [
+              "BASELINE"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "GET /api/orders/{orderId}",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders/{orderId}/cancel",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          },
+          {
+            "operationId": "POST /api/orders/{orderId}/fulfill",
+            "category": "EXPLORATION",
+            "phases": [
+              "EXPLORATION",
+              "REPLAY",
+              "MINIMIZATION",
+              "ARTIFACT"
+            ]
+          }
+        ],
+        "mutationsAcknowledged": true
+      },
+      "credentialSlots": [],
+      "generatedAt": "2026-10-01T19:05:37.978Z",
+      "verification": "VERIFIED",
+      "verificationEvidenceIds": [
+        "ef058706-6d02-4a34-a348-bc4a841ef5f6"
+      ],
+      "manifestHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+      "verificationAuthority": "SUPERVISED_RUN_PATH",
+      "generationState": "GENERATED",
+      "runnerVersion": "manifest-v1"
+    },
+    "reason": "ARTIFACT VERIFIED",
+    "baseline": {
+      "id": "6ca2b6b6-f4e8-45ea-84e2-8dd6a1e41cf1",
+      "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+      "trialId": "d8d4ce61-a1ef-4de2-a57b-9e9510968285",
+      "resetStepIds": [
+        "reset"
+      ],
+      "checkStepIds": [
+        "baseline"
+      ],
+      "verdict": "SATISFIED",
+      "assertionIds": [
+        "fbc211cb-0534-44db-acae-bc1df808d275"
+      ]
+    },
+    "evidence": {
+      "id": "ef058706-6d02-4a34-a348-bc4a841ef5f6",
+      "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+      "trialId": "d8d4ce61-a1ef-4de2-a57b-9e9510968285",
+      "phase": "ARTIFACT",
+      "predicateRef": {
+        "id": "ec75b098-3679-46df-ba39-69f0d0b0883e",
+        "version": 1,
+        "hash": "ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d"
+      },
+      "baselineEvidenceId": "6ca2b6b6-f4e8-45ea-84e2-8dd6a1e41cf1",
+      "observationIds": [
+        "2ae00a09-ee1d-413d-b19a-920fa4edb5a7",
+        "b7570229-ccc0-4a75-af05-6829f257b77b",
+        "21f5edd8-585f-4d60-9cde-8ee77f698e5a"
+      ],
+      "outcome": "VIOLATED",
+      "symbolicOperands": {
+        "manifestHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+        "applicability": [
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "CANCELLED"
+            }
+          },
+          {
+            "op": "equals",
+            "left": {
+              "kind": "json",
+              "stepId": "cancelled",
+              "pointer": "/id"
+            },
+            "right": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/id"
+            }
+          },
+          {
+            "op": "before",
+            "left": {
+              "kind": "step-index",
+              "stepId": "cancelled"
+            },
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "op": "not-equals",
+            "left": {
+              "kind": "json",
+              "stepId": "later",
+              "pointer": "/state"
+            },
+            "right": {
+              "kind": "literal",
+              "value": "FULFILLED"
+            }
+          }
+        ],
+        "executionOrder": [
+          {
+            "stepId": "create",
+            "ordinal": 0,
+            "operationId": "POST /api/orders"
+          },
+          {
+            "stepId": "cancelled",
+            "ordinal": 1,
+            "operationId": "POST /api/orders/{orderId}/cancel"
+          },
+          {
+            "stepId": "later",
+            "ordinal": 2,
+            "operationId": "POST /api/orders/{orderId}/fulfill"
+          }
+        ]
+      }
+    },
+    "provenance": {
+      "runId": "601fa890-5598-47a0-beb8-50471fb4e72a",
+      "manifestHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+      "authority": "SUPERVISED_RUN_PATH",
+      "assertionIds": [
+        "ec75b098-3679-46df-ba39-69f0d0b0883e:1:ba3ac6018756c461928b686fc8bf70282f0026508c86a9b5818e61d9135b493d:assertion:0"
+      ]
+    },
+    "persistence": "RECORDED"
+  },
+  "budgetSnapshots": [
+    {
+      "stage": "ACCEPTED",
+      "budget": {
+        "limits": {
+          "requests": 200,
+          "milliseconds": 600000,
+          "journeys": 1,
+          "steps": 10,
+          "requestTimeoutMs": 10000,
+          "modelTimeoutMs": 30000
+        },
+        "usedRequests": 0,
+        "requestsByPhase": {
+          "RESET": 0,
+          "BASELINE": 0,
+          "EXPLORATION": 0,
+          "REPLAY": 0,
+          "MINIMIZATION": 0,
+          "ARTIFACT": 0
+        },
+        "usedExplorationJourneys": 0,
+        "modelCalls": 0,
+        "stagnantRounds": 0,
+        "acceptedAt": "2026-10-01T19:05:33.122Z",
+        "deadlineAt": "2026-10-01T19:15:33.122Z"
+      }
+    },
+    {
+      "stage": "DISCOVERY",
+      "budget": {
+        "limits": {
+          "requests": 200,
+          "milliseconds": 600000,
+          "journeys": 1,
+          "steps": 10,
+          "requestTimeoutMs": 10000,
+          "modelTimeoutMs": 30000
+        },
+        "usedRequests": 5,
+        "requestsByPhase": {
+          "RESET": 1,
+          "BASELINE": 1,
+          "EXPLORATION": 3,
+          "REPLAY": 0,
+          "MINIMIZATION": 0,
+          "ARTIFACT": 0
+        },
+        "usedExplorationJourneys": 1,
+        "modelCalls": 1,
+        "stagnantRounds": 0,
+        "acceptedAt": "2026-10-01T19:05:33.122Z",
+        "deadlineAt": "2026-10-01T19:15:33.122Z"
+      }
+    },
+    {
+      "stage": "CONFIRMED",
+      "budget": {
+        "limits": {
+          "requests": 200,
+          "milliseconds": 600000,
+          "journeys": 1,
+          "steps": 10,
+          "requestTimeoutMs": 10000,
+          "modelTimeoutMs": 30000
+        },
+        "usedRequests": 10,
+        "requestsByPhase": {
+          "RESET": 2,
+          "BASELINE": 2,
+          "EXPLORATION": 3,
+          "REPLAY": 3,
+          "MINIMIZATION": 0,
+          "ARTIFACT": 0
+        },
+        "usedExplorationJourneys": 1,
+        "modelCalls": 1,
+        "stagnantRounds": 0,
+        "acceptedAt": "2026-10-01T19:05:33.122Z",
+        "deadlineAt": "2026-10-01T19:15:33.122Z"
+      }
+    },
+    {
+      "stage": "MINIMIZED",
+      "budget": {
+        "limits": {
+          "requests": 200,
+          "milliseconds": 600000,
+          "journeys": 1,
+          "steps": 10,
+          "requestTimeoutMs": 10000,
+          "modelTimeoutMs": 30000
+        },
+        "usedRequests": 10,
+        "requestsByPhase": {
+          "RESET": 2,
+          "BASELINE": 2,
+          "EXPLORATION": 3,
+          "REPLAY": 3,
+          "MINIMIZATION": 0,
+          "ARTIFACT": 0
+        },
+        "usedExplorationJourneys": 1,
+        "modelCalls": 1,
+        "stagnantRounds": 0,
+        "acceptedAt": "2026-10-01T19:05:33.122Z",
+        "deadlineAt": "2026-10-01T19:15:33.122Z"
+      }
+    },
+    {
+      "stage": "ARTIFACT",
+      "budget": {
+        "limits": {
+          "requests": 200,
+          "milliseconds": 600000,
+          "journeys": 1,
+          "steps": 10,
+          "requestTimeoutMs": 10000,
+          "modelTimeoutMs": 30000
+        },
+        "usedRequests": 15,
+        "requestsByPhase": {
+          "RESET": 3,
+          "BASELINE": 3,
+          "EXPLORATION": 3,
+          "REPLAY": 3,
+          "MINIMIZATION": 0,
+          "ARTIFACT": 3
+        },
+        "usedExplorationJourneys": 1,
+        "modelCalls": 1,
+        "stagnantRounds": 0,
+        "acceptedAt": "2026-10-01T19:05:33.122Z",
+        "deadlineAt": "2026-10-01T19:15:33.122Z"
+      }
+    }
+  ],
+  "finalBudget": {
+    "limits": {
+      "requests": 200,
+      "milliseconds": 600000,
+      "journeys": 1,
+      "steps": 10,
+      "requestTimeoutMs": 10000,
+      "modelTimeoutMs": 30000
+    },
+    "usedRequests": 15,
+    "requestsByPhase": {
+      "RESET": 3,
+      "BASELINE": 3,
+      "EXPLORATION": 3,
+      "REPLAY": 3,
+      "MINIMIZATION": 0,
+      "ARTIFACT": 3
+    },
+    "usedExplorationJourneys": 1,
+    "modelCalls": 1,
+    "stagnantRounds": 0,
+    "acceptedAt": "2026-10-01T19:05:33.122Z",
+    "deadlineAt": "2026-10-01T19:15:33.122Z"
+  },
+  "bundle": {
+    "manifestHash": "7f84e67e59446eaa620a1cea2aa55a5d982e8f0c9307de66fd5d258bbe048ddc",
+    "packageHash": "2629117f0d5a63f1c7fc0e4568571bc3e12008a11b1cd91fc849e435c3f78bca",
+    "runnerHash": "437a964bbe4bd88ffaa53679bfe25cfb83f2b46f5db4495f29bddddf50f2d048",
+    "inputs": [
+      "node_modules/ajv-formats/dist/formats.js",
+      "node_modules/ajv-formats/dist/index.js",
+      "node_modules/ajv-formats/dist/limit.js",
+      "node_modules/ajv/dist/2020.js",
+      "node_modules/ajv/dist/ajv.js",
+      "node_modules/ajv/dist/compile/codegen/code.js",
+      "node_modules/ajv/dist/compile/codegen/index.js",
+      "node_modules/ajv/dist/compile/codegen/scope.js",
+      "node_modules/ajv/dist/compile/errors.js",
+      "node_modules/ajv/dist/compile/index.js",
+      "node_modules/ajv/dist/compile/names.js",
+      "node_modules/ajv/dist/compile/ref_error.js",
+      "node_modules/ajv/dist/compile/resolve.js",
+      "node_modules/ajv/dist/compile/rules.js",
+      "node_modules/ajv/dist/compile/util.js",
+      "node_modules/ajv/dist/compile/validate/applicability.js",
+      "node_modules/ajv/dist/compile/validate/boolSchema.js",
+      "node_modules/ajv/dist/compile/validate/dataType.js",
+      "node_modules/ajv/dist/compile/validate/defaults.js",
+      "node_modules/ajv/dist/compile/validate/index.js",
+      "node_modules/ajv/dist/compile/validate/keyword.js",
+      "node_modules/ajv/dist/compile/validate/subschema.js",
+      "node_modules/ajv/dist/core.js",
+      "node_modules/ajv/dist/refs/data.json",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/index.js",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/meta/applicator.json",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/meta/content.json",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/meta/core.json",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/meta/format-annotation.json",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/meta/meta-data.json",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/meta/unevaluated.json",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/meta/validation.json",
+      "node_modules/ajv/dist/refs/json-schema-2020-12/schema.json",
+      "node_modules/ajv/dist/refs/json-schema-draft-07.json",
+      "node_modules/ajv/dist/runtime/equal.js",
+      "node_modules/ajv/dist/runtime/ucs2length.js",
+      "node_modules/ajv/dist/runtime/uri.js",
+      "node_modules/ajv/dist/runtime/validation_error.js",
+      "node_modules/ajv/dist/vocabularies/applicator/additionalItems.js",
+      "node_modules/ajv/dist/vocabularies/applicator/additionalProperties.js",
+      "node_modules/ajv/dist/vocabularies/applicator/allOf.js",
+      "node_modules/ajv/dist/vocabularies/applicator/anyOf.js",
+      "node_modules/ajv/dist/vocabularies/applicator/contains.js",
+      "node_modules/ajv/dist/vocabularies/applicator/dependencies.js",
+      "node_modules/ajv/dist/vocabularies/applicator/dependentSchemas.js",
+      "node_modules/ajv/dist/vocabularies/applicator/if.js",
+      "node_modules/ajv/dist/vocabularies/applicator/index.js",
+      "node_modules/ajv/dist/vocabularies/applicator/items.js",
+      "node_modules/ajv/dist/vocabularies/applicator/items2020.js",
+      "node_modules/ajv/dist/vocabularies/applicator/not.js",
+      "node_modules/ajv/dist/vocabularies/applicator/oneOf.js",
+      "node_modules/ajv/dist/vocabularies/applicator/patternProperties.js",
+      "node_modules/ajv/dist/vocabularies/applicator/prefixItems.js",
+      "node_modules/ajv/dist/vocabularies/applicator/properties.js",
+      "node_modules/ajv/dist/vocabularies/applicator/propertyNames.js",
+      "node_modules/ajv/dist/vocabularies/applicator/thenElse.js",
+      "node_modules/ajv/dist/vocabularies/code.js",
+      "node_modules/ajv/dist/vocabularies/core/id.js",
+      "node_modules/ajv/dist/vocabularies/core/index.js",
+      "node_modules/ajv/dist/vocabularies/core/ref.js",
+      "node_modules/ajv/dist/vocabularies/discriminator/index.js",
+      "node_modules/ajv/dist/vocabularies/discriminator/types.js",
+      "node_modules/ajv/dist/vocabularies/draft2020.js",
+      "node_modules/ajv/dist/vocabularies/draft7.js",
+      "node_modules/ajv/dist/vocabularies/dynamic/dynamicAnchor.js",
+      "node_modules/ajv/dist/vocabularies/dynamic/dynamicRef.js",
+      "node_modules/ajv/dist/vocabularies/dynamic/index.js",
+      "node_modules/ajv/dist/vocabularies/dynamic/recursiveAnchor.js",
+      "node_modules/ajv/dist/vocabularies/dynamic/recursiveRef.js",
+      "node_modules/ajv/dist/vocabularies/format/format.js",
+      "node_modules/ajv/dist/vocabularies/format/index.js",
+      "node_modules/ajv/dist/vocabularies/metadata.js",
+      "node_modules/ajv/dist/vocabularies/next.js",
+      "node_modules/ajv/dist/vocabularies/unevaluated/index.js",
+      "node_modules/ajv/dist/vocabularies/unevaluated/unevaluatedItems.js",
+      "node_modules/ajv/dist/vocabularies/unevaluated/unevaluatedProperties.js",
+      "node_modules/ajv/dist/vocabularies/validation/const.js",
+      "node_modules/ajv/dist/vocabularies/validation/dependentRequired.js",
+      "node_modules/ajv/dist/vocabularies/validation/enum.js",
+      "node_modules/ajv/dist/vocabularies/validation/index.js",
+      "node_modules/ajv/dist/vocabularies/validation/limitContains.js",
+      "node_modules/ajv/dist/vocabularies/validation/limitItems.js",
+      "node_modules/ajv/dist/vocabularies/validation/limitLength.js",
+      "node_modules/ajv/dist/vocabularies/validation/limitNumber.js",
+      "node_modules/ajv/dist/vocabularies/validation/limitProperties.js",
+      "node_modules/ajv/dist/vocabularies/validation/multipleOf.js",
+      "node_modules/ajv/dist/vocabularies/validation/pattern.js",
+      "node_modules/ajv/dist/vocabularies/validation/required.js",
+      "node_modules/ajv/dist/vocabularies/validation/uniqueItems.js",
+      "node_modules/fast-deep-equal/index.js",
+      "node_modules/fast-uri/index.js",
+      "node_modules/fast-uri/lib/schemes.js",
+      "node_modules/fast-uri/lib/utils.js",
+      "node_modules/json-schema-traverse/index.js",
+      "node_modules/zod/index.js",
+      "node_modules/zod/v4/classic/checks.js",
+      "node_modules/zod/v4/classic/coerce.js",
+      "node_modules/zod/v4/classic/compat.js",
+      "node_modules/zod/v4/classic/deep-partial.js",
+      "node_modules/zod/v4/classic/errors.js",
+      "node_modules/zod/v4/classic/external.js",
+      "node_modules/zod/v4/classic/from-json-schema.js",
+      "node_modules/zod/v4/classic/in-out.js",
+      "node_modules/zod/v4/classic/iso.js",
+      "node_modules/zod/v4/classic/parse.js",
+      "node_modules/zod/v4/classic/schemas.js",
+      "node_modules/zod/v4/core/api.js",
+      "node_modules/zod/v4/core/checks.js",
+      "node_modules/zod/v4/core/compile.js",
+      "node_modules/zod/v4/core/core.js",
+      "node_modules/zod/v4/core/doc.js",
+      "node_modules/zod/v4/core/errors.js",
+      "node_modules/zod/v4/core/index.js",
+      "node_modules/zod/v4/core/json-schema-generator.js",
+      "node_modules/zod/v4/core/json-schema-processors.js",
+      "node_modules/zod/v4/core/json-schema.js",
+      "node_modules/zod/v4/core/memoizer.js",
+      "node_modules/zod/v4/core/parse.js",
+      "node_modules/zod/v4/core/regexes.js",
+      "node_modules/zod/v4/core/registries.js",
+      "node_modules/zod/v4/core/schemas.js",
+      "node_modules/zod/v4/core/to-json-schema.js",
+      "node_modules/zod/v4/core/util.js",
+      "node_modules/zod/v4/core/versions.js",
+      "node_modules/zod/v4/core/visit.js",
+      "node_modules/zod/v4/locales/ar.js",
+      "node_modules/zod/v4/locales/az.js",
+      "node_modules/zod/v4/locales/be.js",
+      "node_modules/zod/v4/locales/bg.js",
+      "node_modules/zod/v4/locales/bn.js",
+      "node_modules/zod/v4/locales/ca.js",
+      "node_modules/zod/v4/locales/ckb.js",
+      "node_modules/zod/v4/locales/cs.js",
+      "node_modules/zod/v4/locales/da.js",
+      "node_modules/zod/v4/locales/de.js",
+      "node_modules/zod/v4/locales/el.js",
+      "node_modules/zod/v4/locales/en.js",
+      "node_modules/zod/v4/locales/eo.js",
+      "node_modules/zod/v4/locales/es.js",
+      "node_modules/zod/v4/locales/fa.js",
+      "node_modules/zod/v4/locales/fi.js",
+      "node_modules/zod/v4/locales/fr-CA.js",
+      "node_modules/zod/v4/locales/fr.js",
+      "node_modules/zod/v4/locales/gu.js",
+      "node_modules/zod/v4/locales/he.js",
+      "node_modules/zod/v4/locales/hi.js",
+      "node_modules/zod/v4/locales/hr.js",
+      "node_modules/zod/v4/locales/hu.js",
+      "node_modules/zod/v4/locales/hy.js",
+      "node_modules/zod/v4/locales/id.js",
+      "node_modules/zod/v4/locales/index.js",
+      "node_modules/zod/v4/locales/is.js",
+      "node_modules/zod/v4/locales/it.js",
+      "node_modules/zod/v4/locales/ja.js",
+      "node_modules/zod/v4/locales/ka.js",
+      "node_modules/zod/v4/locales/kh.js",
+      "node_modules/zod/v4/locales/km.js",
+      "node_modules/zod/v4/locales/kn.js",
+      "node_modules/zod/v4/locales/ko.js",
+      "node_modules/zod/v4/locales/lt.js",
+      "node_modules/zod/v4/locales/mk.js",
+      "node_modules/zod/v4/locales/ms.js",
+      "node_modules/zod/v4/locales/ne.js",
+      "node_modules/zod/v4/locales/nl.js",
+      "node_modules/zod/v4/locales/nn.js",
+      "node_modules/zod/v4/locales/no.js",
+      "node_modules/zod/v4/locales/ota.js",
+      "node_modules/zod/v4/locales/pl.js",
+      "node_modules/zod/v4/locales/ps.js",
+      "node_modules/zod/v4/locales/pt-BR.js",
+      "node_modules/zod/v4/locales/pt.js",
+      "node_modules/zod/v4/locales/ro.js",
+      "node_modules/zod/v4/locales/ru.js",
+      "node_modules/zod/v4/locales/sk.js",
+      "node_modules/zod/v4/locales/sl.js",
+      "node_modules/zod/v4/locales/sv.js",
+      "node_modules/zod/v4/locales/ta.js",
+      "node_modules/zod/v4/locales/tg.js",
+      "node_modules/zod/v4/locales/th.js",
+      "node_modules/zod/v4/locales/tk.js",
+      "node_modules/zod/v4/locales/tr.js",
+      "node_modules/zod/v4/locales/ua.js",
+      "node_modules/zod/v4/locales/uk.js",
+      "node_modules/zod/v4/locales/ur.js",
+      "node_modules/zod/v4/locales/uz.js",
+      "node_modules/zod/v4/locales/vi.js",
+      "node_modules/zod/v4/locales/yo.js",
+      "node_modules/zod/v4/locales/zh-CN.js",
+      "node_modules/zod/v4/locales/zh-TW.js",
+      "regression-entry.ts",
+      "src/cli/regression.ts",
+      "src/engine/budget/manager.ts",
+      "src/engine/contracts/api.ts",
+      "src/engine/contracts/artifact.ts",
+      "src/engine/contracts/common.ts",
+      "src/engine/contracts/execution.ts",
+      "src/engine/contracts/index.ts",
+      "src/engine/contracts/journey.ts",
+      "src/engine/contracts/minimization.ts",
+      "src/engine/contracts/predicate.ts",
+      "src/engine/contracts/run.ts",
+      "src/engine/detection/findings.ts",
+      "src/engine/detection/predicate.ts",
+      "src/engine/execution/auth.ts",
+      "src/engine/execution/bindings.ts",
+      "src/engine/execution/generate.ts",
+      "src/engine/execution/prepare.ts",
+      "src/engine/execution/requests.ts",
+      "src/engine/execution/response-policy.ts",
+      "src/engine/execution/variables.ts",
+      "src/engine/exports/assertions.ts",
+      "src/engine/exports/contracts.ts",
+      "src/engine/exports/manifest-integrity.ts",
+      "src/engine/exports/runner.ts",
+      "src/engine/exports/secret-free.ts",
+      "src/engine/minimization/deletion.ts",
+      "src/engine/openapi/profile.ts",
+      "src/engine/openapi/references.ts",
+      "src/engine/openapi/schemas.ts",
+      "src/engine/policy/headers.ts",
+      "src/engine/policy/scope.ts",
+      "src/engine/secrets/classify.ts",
+      "src/engine/secrets/vault.ts",
+      "src/engine/validation/dependencies.ts",
+      "src/engine/validation/journey.ts",
+      "src/engine/validation/predicate.ts",
+      "src/transport/address.ts",
+      "src/transport/headers.ts",
+      "src/transport/http.ts"
+    ]
+  }
+}
