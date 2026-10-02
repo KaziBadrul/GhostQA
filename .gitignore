@@ -12,3 +12,6 @@ Thumbs.db
 *.tsbuildinfo
 .vscode/
 .idea/
+
+# Submission-track local run records and generated report copies.
+.demo/
