@@ -1,0 +1,1106 @@
+# GhostQA finding evidence
+
+Finding: `71ad0047-d819-482f-946f-fb3141eff1fe` — CONFIRMED
+Evidence chain: OBSERVED VIOLATION → CONFIRMED → best verified reproducer.
+Consistency: true. Artifact: GENERATED / UNVERIFIED.
+
+Predicate: `1053437d-d074-41e4-bb34-683961e37529`, version 1, canonical hash `04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9`.
+Approval provenance: DEVELOPER; source `an item observed as UNAVAILABLE must not later be observed as ALLOCATED within the same fresh trial`; eligible as of run acceptance: true.
+
+Original journey length: 3. Best verified journey length: 3.
+This is the shortest verified sequence found.
+It is locally irreducible under attempted deletion strategy.
+Local minimization stop reason: LOCAL MINIMUM.
+Truncated: no.
+
+## Expected invariant
+
+When the applicability conditions hold, every approved assertion must be satisfied:
+
+- `{"kind":"json","pointer":"/state","stepId":"later"}` not-equals `{"kind":"literal","value":"ALLOCATED"}`
+
+## Evidence references
+
+- EXPLORATION: evidence `6ccae019-c1e6-469d-afc2-6bed7b97c3c3`, trial `7ed1551c-f610-4756-b83b-653bcf747bdc`, baseline `789b7238-2014-4205-986d-4a04da13cf0a`, verdict VIOLATED.
+- REPLAY: evidence `5f4fd419-dd35-4c16-a5e5-ad2a98dd7eda`, trial `6eb102b7-6f3e-4a49-852d-4af790bea11c`, baseline `594f5c0e-46a6-4a9e-b671-76e32eb75dff`, verdict VIOLATED.
+
+## Minimized reproduction
+
+1. `create` — `POST /api/items`
+2. `unavailable` — `POST /api/items/{itemId}/unavailable`
+3. `later` — `POST /api/items/{itemId}/allocate`
+
+## Minimized attempt history
+
+- Remove `create`: rejected; PRODUCER REQUIRED; candidate `e73a2041-0662-4748-bbfb-f8e724ab8191`.
+- Remove `unavailable`: rejected; PREDICATE STEP REQUIRED; candidate `aaf9efa8-2e5e-4a43-8c93-8eb9a375a75f`.
+- Remove `later`: rejected; PREDICATE STEP REQUIRED; candidate `d0218e21-c0d3-44b9-a096-49da8af48768`.
+
+## Setup and verification
+
+Supply explicit target/address/operation approval, mutation acknowledgment, finite limits and credential slots separately. A standalone runner is not included in this manifest-only export.
+Generation does not establish supervised verification. This manifest has not been verified through the originating run.
+
+## Exact assertions and sanitized evidence
+
+```json
+{
+  "approval": {
+    "asOf": "2026-10-01T22:06:29.664Z",
+    "eligible": true,
+    "source": "DEVELOPER",
+    "sourceRef": "an item observed as UNAVAILABLE must not later be observed as ALLOCATED within the same fresh trial"
+  },
+  "bestJourney": {
+    "dependencies": [
+      {
+        "consumer": "unavailable",
+        "producer": "create",
+        "variable": "itemId"
+      },
+      {
+        "consumer": "later",
+        "producer": "create",
+        "variable": "itemId"
+      }
+    ],
+    "id": "d8ae49c5-44c3-4702-9342-8b208c1c6a43",
+    "predicateRef": {
+      "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+      "id": "1053437d-d074-41e4-bb34-683961e37529",
+      "version": 1
+    },
+    "rationale": "Journey covering item creation, setting to unavailable, and attempting allocation to validate predicate behavior.",
+    "steps": [
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          201
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "itemId",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ],
+        "id": "create",
+        "operationId": "POST /api/items",
+        "parameters": []
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [],
+        "id": "unavailable",
+        "operationId": "POST /api/items/{itemId}/unavailable",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "itemId",
+            "value": {
+              "kind": "variable",
+              "name": "itemId"
+            }
+          }
+        ]
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [],
+        "id": "later",
+        "operationId": "POST /api/items/{itemId}/allocate",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "itemId",
+            "value": {
+              "kind": "variable",
+              "name": "itemId"
+            }
+          }
+        ]
+      }
+    ],
+    "variables": []
+  },
+  "bestLength": 3,
+  "executionProvenance": {
+    "acceptedAt": "2026-10-01T22:06:29.664Z",
+    "deadlineAt": "2026-10-01T22:16:29.664Z",
+    "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+    "trialIds": [
+      "7ed1551c-f610-4756-b83b-653bcf747bdc",
+      "6eb102b7-6f3e-4a49-852d-4af790bea11c"
+    ]
+  },
+  "finding": {
+    "classification": "CONFIRMED",
+    "consistent": true,
+    "id": "71ad0047-d819-482f-946f-fb3141eff1fe",
+    "initialEvidenceId": "6ccae019-c1e6-469d-afc2-6bed7b97c3c3",
+    "minimizationStop": "LOCAL MINIMUM",
+    "minimizedJourneyId": "d8ae49c5-44c3-4702-9342-8b208c1c6a43",
+    "originalJourneyId": "d8ae49c5-44c3-4702-9342-8b208c1c6a43",
+    "predicateRef": {
+      "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+      "id": "1053437d-d074-41e4-bb34-683961e37529",
+      "version": 1
+    },
+    "projectId": "36b5d6d1-7b57-4a50-9022-dde025c6caa6",
+    "replayEvidenceIds": [
+      "5f4fd419-dd35-4c16-a5e5-ad2a98dd7eda"
+    ],
+    "transitions": [
+      {
+        "evidenceRefs": [
+          "6ccae019-c1e6-469d-afc2-6bed7b97c3c3"
+        ],
+        "next": "OBSERVED VIOLATION",
+        "prior": null,
+        "reason": "INITIAL PREDICATE VIOLATION"
+      },
+      {
+        "evidenceRefs": [
+          "6ccae019-c1e6-469d-afc2-6bed7b97c3c3",
+          "5f4fd419-dd35-4c16-a5e5-ad2a98dd7eda"
+        ],
+        "next": "CONFIRMED",
+        "prior": "OBSERVED VIOLATION",
+        "reason": "INDEPENDENT FRESH REPLAY VIOLATED"
+      }
+    ]
+  },
+  "formatVersion": 1,
+  "generationState": "GENERATED",
+  "initial": {
+    "baseline": {
+      "assertionIds": [
+        "69039a97-4832-40dc-ba97-82913bbbbb0e"
+      ],
+      "checkStepIds": [
+        "baseline"
+      ],
+      "id": "789b7238-2014-4205-986d-4a04da13cf0a",
+      "resetStepIds": [
+        "reset"
+      ],
+      "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+      "trialId": "7ed1551c-f610-4756-b83b-653bcf747bdc",
+      "verdict": "SATISFIED"
+    },
+    "evidence": {
+      "baselineEvidenceId": "789b7238-2014-4205-986d-4a04da13cf0a",
+      "id": "6ccae019-c1e6-469d-afc2-6bed7b97c3c3",
+      "observationIds": [
+        "c240962a-7956-49cd-bde2-25097ec2cf48",
+        "f82313ed-5de2-4cf1-85b6-3c7dedf96e5d",
+        "381b17ff-e4c8-4dca-baee-02b85bc43d20"
+      ],
+      "outcome": "VIOLATED",
+      "phase": "EXPLORATION",
+      "predicateRef": {
+        "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+        "id": "1053437d-d074-41e4-bb34-683961e37529",
+        "version": 1
+      },
+      "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+      "symbolicOperands": {
+        "applicability": [
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "unavailable"
+            },
+            "op": "equals",
+            "right": {
+              "kind": "literal",
+              "value": "UNAVAILABLE"
+            }
+          },
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "unavailable"
+            },
+            "op": "equals",
+            "right": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "later"
+            }
+          },
+          {
+            "left": {
+              "kind": "step-index",
+              "stepId": "unavailable"
+            },
+            "op": "before",
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "later"
+            },
+            "op": "not-equals",
+            "right": {
+              "kind": "literal",
+              "value": "ALLOCATED"
+            }
+          }
+        ],
+        "executionOrder": [
+          {
+            "operationId": "POST /api/items",
+            "ordinal": 0,
+            "stepId": "create"
+          },
+          {
+            "operationId": "POST /api/items/{itemId}/unavailable",
+            "ordinal": 1,
+            "stepId": "unavailable"
+          },
+          {
+            "operationId": "POST /api/items/{itemId}/allocate",
+            "ordinal": 2,
+            "stepId": "later"
+          }
+        ]
+      },
+      "trialId": "7ed1551c-f610-4756-b83b-653bcf747bdc"
+    },
+    "observations": [
+      {
+        "id": "c240962a-7956-49cd-bde2-25097ec2cf48",
+        "result": {
+          "elapsedMs": 2.576042000000598,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/items",
+            "url": "http://127.0.0.1:53025/api/items"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "aecd2d3c-7f03-4134-a1c5-daa4390148c6",
+              "state": "AVAILABLE"
+            },
+            "elapsedMs": 2.576042000000598,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 22:06:34 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 201,
+            "text": "{\"id\":\"aecd2d3c-7f03-4134-a1c5-daa4390148c6\",\"state\":\"AVAILABLE\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T22:06:34.181Z",
+          "status": 201,
+          "stepId": "create",
+          "truncated": false
+        },
+        "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+        "stateMappings": [],
+        "stepId": "create",
+        "trialId": "7ed1551c-f610-4756-b83b-653bcf747bdc"
+      },
+      {
+        "id": "381b17ff-e4c8-4dca-baee-02b85bc43d20",
+        "result": {
+          "elapsedMs": 2.188750000001164,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/items/{itemId}/unavailable",
+            "url": "http://127.0.0.1:53025/api/items/aecd2d3c-7f03-4134-a1c5-daa4390148c6/unavailable"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "aecd2d3c-7f03-4134-a1c5-daa4390148c6",
+              "state": "UNAVAILABLE"
+            },
+            "elapsedMs": 2.188750000001164,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 22:06:34 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 200,
+            "text": "{\"id\":\"aecd2d3c-7f03-4134-a1c5-daa4390148c6\",\"state\":\"UNAVAILABLE\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T22:06:34.189Z",
+          "status": 200,
+          "stepId": "unavailable",
+          "truncated": false
+        },
+        "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+        "stateMappings": [],
+        "stepId": "unavailable",
+        "trialId": "7ed1551c-f610-4756-b83b-653bcf747bdc"
+      },
+      {
+        "id": "f82313ed-5de2-4cf1-85b6-3c7dedf96e5d",
+        "result": {
+          "elapsedMs": 1.9257499999948777,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/items/{itemId}/allocate",
+            "url": "http://127.0.0.1:53025/api/items/aecd2d3c-7f03-4134-a1c5-daa4390148c6/allocate"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "aecd2d3c-7f03-4134-a1c5-daa4390148c6",
+              "state": "ALLOCATED"
+            },
+            "elapsedMs": 1.9257499999948777,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 22:06:34 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 200,
+            "text": "{\"id\":\"aecd2d3c-7f03-4134-a1c5-daa4390148c6\",\"state\":\"ALLOCATED\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T22:06:34.196Z",
+          "status": 200,
+          "stepId": "later",
+          "truncated": false
+        },
+        "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+        "stateMappings": [],
+        "stepId": "later",
+        "trialId": "7ed1551c-f610-4756-b83b-653bcf747bdc"
+      }
+    ]
+  },
+  "minimization": {
+    "attempts": [
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [],
+          "id": "e73a2041-0662-4748-bbfb-f8e724ab8191",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "1053437d-d074-41e4-bb34-683961e37529",
+            "version": 1
+          },
+          "rationale": "Journey covering item creation, setting to unavailable, and attempting allocation to validate predicate behavior.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [],
+              "id": "unavailable",
+              "operationId": "POST /api/items/{itemId}/unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [],
+              "id": "later",
+              "operationId": "POST /api/items/{itemId}/allocate",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PRODUCER REQUIRED",
+        "removedStepId": "create"
+      },
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [
+            {
+              "consumer": "later",
+              "producer": "create",
+              "variable": "itemId"
+            }
+          ],
+          "id": "aaf9efa8-2e5e-4a43-8c93-8eb9a375a75f",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "1053437d-d074-41e4-bb34-683961e37529",
+            "version": 1
+          },
+          "rationale": "Journey covering item creation, setting to unavailable, and attempting allocation to validate predicate behavior.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                201
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "itemId",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ],
+              "id": "create",
+              "operationId": "POST /api/items",
+              "parameters": []
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [],
+              "id": "later",
+              "operationId": "POST /api/items/{itemId}/allocate",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PREDICATE STEP REQUIRED",
+        "removedStepId": "unavailable"
+      },
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [
+            {
+              "consumer": "unavailable",
+              "producer": "create",
+              "variable": "itemId"
+            }
+          ],
+          "id": "d0218e21-c0d3-44b9-a096-49da8af48768",
+          "predicateRef": {
+            "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+            "id": "1053437d-d074-41e4-bb34-683961e37529",
+            "version": 1
+          },
+          "rationale": "Journey covering item creation, setting to unavailable, and attempting allocation to validate predicate behavior.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                201
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "itemId",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ],
+              "id": "create",
+              "operationId": "POST /api/items",
+              "parameters": []
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [],
+              "id": "unavailable",
+              "operationId": "POST /api/items/{itemId}/unavailable",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "itemId",
+                  "value": {
+                    "kind": "variable",
+                    "name": "itemId"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PREDICATE STEP REQUIRED",
+        "removedStepId": "later"
+      }
+    ],
+    "best": {
+      "dependencies": [
+        {
+          "consumer": "unavailable",
+          "producer": "create",
+          "variable": "itemId"
+        },
+        {
+          "consumer": "later",
+          "producer": "create",
+          "variable": "itemId"
+        }
+      ],
+      "id": "d8ae49c5-44c3-4702-9342-8b208c1c6a43",
+      "predicateRef": {
+        "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+        "id": "1053437d-d074-41e4-bb34-683961e37529",
+        "version": 1
+      },
+      "rationale": "Journey covering item creation, setting to unavailable, and attempting allocation to validate predicate behavior.",
+      "steps": [
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            201
+          ],
+          "extracts": [
+            {
+              "expectedType": "string",
+              "name": "itemId",
+              "sensitive": false,
+              "source": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "create"
+              }
+            }
+          ],
+          "id": "create",
+          "operationId": "POST /api/items",
+          "parameters": []
+        },
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            200,
+            409
+          ],
+          "extracts": [],
+          "id": "unavailable",
+          "operationId": "POST /api/items/{itemId}/unavailable",
+          "parameters": [
+            {
+              "location": "path",
+              "name": "itemId",
+              "value": {
+                "kind": "variable",
+                "name": "itemId"
+              }
+            }
+          ]
+        },
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            200,
+            409
+          ],
+          "extracts": [],
+          "id": "later",
+          "operationId": "POST /api/items/{itemId}/allocate",
+          "parameters": [
+            {
+              "location": "path",
+              "name": "itemId",
+              "value": {
+                "kind": "variable",
+                "name": "itemId"
+              }
+            }
+          ]
+        }
+      ],
+      "variables": []
+    },
+    "bestLength": 3,
+    "finding": {
+      "classification": "CONFIRMED",
+      "consistent": true,
+      "id": "71ad0047-d819-482f-946f-fb3141eff1fe",
+      "initialEvidenceId": "6ccae019-c1e6-469d-afc2-6bed7b97c3c3",
+      "minimizationStop": "LOCAL MINIMUM",
+      "minimizedJourneyId": "d8ae49c5-44c3-4702-9342-8b208c1c6a43",
+      "originalJourneyId": "d8ae49c5-44c3-4702-9342-8b208c1c6a43",
+      "predicateRef": {
+        "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+        "id": "1053437d-d074-41e4-bb34-683961e37529",
+        "version": 1
+      },
+      "projectId": "36b5d6d1-7b57-4a50-9022-dde025c6caa6",
+      "replayEvidenceIds": [
+        "5f4fd419-dd35-4c16-a5e5-ad2a98dd7eda"
+      ],
+      "transitions": [
+        {
+          "evidenceRefs": [
+            "6ccae019-c1e6-469d-afc2-6bed7b97c3c3"
+          ],
+          "next": "OBSERVED VIOLATION",
+          "prior": null,
+          "reason": "INITIAL PREDICATE VIOLATION"
+        },
+        {
+          "evidenceRefs": [
+            "6ccae019-c1e6-469d-afc2-6bed7b97c3c3",
+            "5f4fd419-dd35-4c16-a5e5-ad2a98dd7eda"
+          ],
+          "next": "CONFIRMED",
+          "prior": "OBSERVED VIOLATION",
+          "reason": "INDEPENDENT FRESH REPLAY VIOLATED"
+        }
+      ]
+    },
+    "locallyIrreducible": true,
+    "originalLength": 3,
+    "stopReason": "LOCAL MINIMUM"
+  },
+  "originalJourney": {
+    "dependencies": [
+      {
+        "consumer": "unavailable",
+        "producer": "create",
+        "variable": "itemId"
+      },
+      {
+        "consumer": "later",
+        "producer": "create",
+        "variable": "itemId"
+      }
+    ],
+    "id": "d8ae49c5-44c3-4702-9342-8b208c1c6a43",
+    "predicateRef": {
+      "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+      "id": "1053437d-d074-41e4-bb34-683961e37529",
+      "version": 1
+    },
+    "rationale": "Journey covering item creation, setting to unavailable, and attempting allocation to validate predicate behavior.",
+    "steps": [
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          201
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "itemId",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ],
+        "id": "create",
+        "operationId": "POST /api/items",
+        "parameters": []
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [],
+        "id": "unavailable",
+        "operationId": "POST /api/items/{itemId}/unavailable",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "itemId",
+            "value": {
+              "kind": "variable",
+              "name": "itemId"
+            }
+          }
+        ]
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [],
+        "id": "later",
+        "operationId": "POST /api/items/{itemId}/allocate",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "itemId",
+            "value": {
+              "kind": "variable",
+              "name": "itemId"
+            }
+          }
+        ]
+      }
+    ],
+    "variables": []
+  },
+  "originalLength": 3,
+  "predicate": {
+    "applicability": [
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/state",
+          "stepId": "unavailable"
+        },
+        "op": "equals",
+        "right": {
+          "kind": "literal",
+          "value": "UNAVAILABLE"
+        }
+      },
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/id",
+          "stepId": "unavailable"
+        },
+        "op": "equals",
+        "right": {
+          "kind": "json",
+          "pointer": "/id",
+          "stepId": "later"
+        }
+      },
+      {
+        "left": {
+          "kind": "step-index",
+          "stepId": "unavailable"
+        },
+        "op": "before",
+        "right": {
+          "kind": "step-index",
+          "stepId": "later"
+        }
+      }
+    ],
+    "assertions": [
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/state",
+          "stepId": "later"
+        },
+        "op": "not-equals",
+        "right": {
+          "kind": "literal",
+          "value": "ALLOCATED"
+        }
+      }
+    ],
+    "canonicalHash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+    "id": "1053437d-d074-41e4-bb34-683961e37529",
+    "source": "DEVELOPER",
+    "sourceRef": "an item observed as UNAVAILABLE must not later be observed as ALLOCATED within the same fresh trial",
+    "version": 1
+  },
+  "predicateRef": {
+    "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+    "id": "1053437d-d074-41e4-bb34-683961e37529",
+    "version": 1
+  },
+  "replays": [
+    {
+      "baseline": {
+        "assertionIds": [
+          "69039a97-4832-40dc-ba97-82913bbbbb0e"
+        ],
+        "checkStepIds": [
+          "baseline"
+        ],
+        "id": "594f5c0e-46a6-4a9e-b671-76e32eb75dff",
+        "resetStepIds": [
+          "reset"
+        ],
+        "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+        "trialId": "6eb102b7-6f3e-4a49-852d-4af790bea11c",
+        "verdict": "SATISFIED"
+      },
+      "evidence": {
+        "baselineEvidenceId": "594f5c0e-46a6-4a9e-b671-76e32eb75dff",
+        "id": "5f4fd419-dd35-4c16-a5e5-ad2a98dd7eda",
+        "observationIds": [
+          "6f09f5ae-9d28-4905-ac64-a5978ded4b00",
+          "ca96805c-2878-4dfe-a104-5d7e88e3a727",
+          "65e1ea1e-3355-42ae-8bcf-b04331e70171"
+        ],
+        "outcome": "VIOLATED",
+        "phase": "REPLAY",
+        "predicateRef": {
+          "hash": "04faaaafa43156f51b44a05d92aedfafdab4503a3d5327042b74b4574f761da9",
+          "id": "1053437d-d074-41e4-bb34-683961e37529",
+          "version": 1
+        },
+        "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+        "symbolicOperands": {
+          "applicability": [
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "unavailable"
+              },
+              "op": "equals",
+              "right": {
+                "kind": "literal",
+                "value": "UNAVAILABLE"
+              }
+            },
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "unavailable"
+              },
+              "op": "equals",
+              "right": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "later"
+              }
+            },
+            {
+              "left": {
+                "kind": "step-index",
+                "stepId": "unavailable"
+              },
+              "op": "before",
+              "right": {
+                "kind": "step-index",
+                "stepId": "later"
+              }
+            }
+          ],
+          "assertions": [
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "later"
+              },
+              "op": "not-equals",
+              "right": {
+                "kind": "literal",
+                "value": "ALLOCATED"
+              }
+            }
+          ],
+          "executionOrder": [
+            {
+              "operationId": "POST /api/items",
+              "ordinal": 0,
+              "stepId": "create"
+            },
+            {
+              "operationId": "POST /api/items/{itemId}/unavailable",
+              "ordinal": 1,
+              "stepId": "unavailable"
+            },
+            {
+              "operationId": "POST /api/items/{itemId}/allocate",
+              "ordinal": 2,
+              "stepId": "later"
+            }
+          ]
+        },
+        "trialId": "6eb102b7-6f3e-4a49-852d-4af790bea11c"
+      },
+      "observations": [
+        {
+          "id": "65e1ea1e-3355-42ae-8bcf-b04331e70171",
+          "result": {
+            "elapsedMs": 1.6478330000099959,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/items",
+              "url": "http://127.0.0.1:53025/api/items"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "0fa90b97-f658-4d36-b5dc-be16de728c8d",
+                "state": "AVAILABLE"
+              },
+              "elapsedMs": 1.6478330000099959,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 22:06:34 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 201,
+              "text": "{\"id\":\"0fa90b97-f658-4d36-b5dc-be16de728c8d\",\"state\":\"AVAILABLE\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T22:06:34.238Z",
+            "status": 201,
+            "stepId": "create",
+            "truncated": false
+          },
+          "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+          "stateMappings": [],
+          "stepId": "create",
+          "trialId": "6eb102b7-6f3e-4a49-852d-4af790bea11c"
+        },
+        {
+          "id": "6f09f5ae-9d28-4905-ac64-a5978ded4b00",
+          "result": {
+            "elapsedMs": 1.8723330000066198,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/items/{itemId}/unavailable",
+              "url": "http://127.0.0.1:53025/api/items/0fa90b97-f658-4d36-b5dc-be16de728c8d/unavailable"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "0fa90b97-f658-4d36-b5dc-be16de728c8d",
+                "state": "UNAVAILABLE"
+              },
+              "elapsedMs": 1.8723330000066198,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 22:06:34 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 200,
+              "text": "{\"id\":\"0fa90b97-f658-4d36-b5dc-be16de728c8d\",\"state\":\"UNAVAILABLE\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T22:06:34.243Z",
+            "status": 200,
+            "stepId": "unavailable",
+            "truncated": false
+          },
+          "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+          "stateMappings": [],
+          "stepId": "unavailable",
+          "trialId": "6eb102b7-6f3e-4a49-852d-4af790bea11c"
+        },
+        {
+          "id": "ca96805c-2878-4dfe-a104-5d7e88e3a727",
+          "result": {
+            "elapsedMs": 1.571458000005805,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/items/{itemId}/allocate",
+              "url": "http://127.0.0.1:53025/api/items/0fa90b97-f658-4d36-b5dc-be16de728c8d/allocate"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "0fa90b97-f658-4d36-b5dc-be16de728c8d",
+                "state": "ALLOCATED"
+              },
+              "elapsedMs": 1.571458000005805,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 22:06:34 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 200,
+              "text": "{\"id\":\"0fa90b97-f658-4d36-b5dc-be16de728c8d\",\"state\":\"ALLOCATED\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T22:06:34.249Z",
+            "status": 200,
+            "stepId": "later",
+            "truncated": false
+          },
+          "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+          "stateMappings": [],
+          "stepId": "later",
+          "trialId": "6eb102b7-6f3e-4a49-852d-4af790bea11c"
+        }
+      ]
+    }
+  ],
+  "reproductionClaim": "shortest verified sequence found",
+  "runId": "a33fe181-c7e8-4a7d-a495-a740aa7d5878",
+  "setup": "Supply explicit target/address/operation approval, mutation acknowledgment, finite limits and credential slots separately. A standalone runner is not included in this manifest-only export.",
+  "stopReason": "LOCAL MINIMUM",
+  "truncated": false,
+  "verification": "UNVERIFIED"
+}
+```

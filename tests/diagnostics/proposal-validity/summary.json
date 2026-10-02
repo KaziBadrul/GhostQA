@@ -1,0 +1,52 @@
+{
+  "evidenceClass": "DIAGNOSTIC",
+  "marker": "DIAGNOSTIC ONLY — NOT GATE 5 ACCEPTANCE EVIDENCE",
+  "gate5AcceptanceEvidence": false,
+  "targetHttpExecutions": 0,
+  "model": "gemini-3.5-flash-lite",
+  "configuredRPM": 12,
+  "samplesPerFixture": 10,
+  "fixtureIds": [
+    "order-lifecycle",
+    "inventory",
+    "workflow"
+  ],
+  "probeId": "394497bf-2b9a-46c9-bcf0-032286d33df6",
+  "overall": {
+    "requested": 30,
+    "persisted": 30,
+    "accepted": 30,
+    "rejected": 0,
+    "validityRate": 1,
+    "modelCalls": 30
+  },
+  "perFixture": {
+    "order-lifecycle": {
+      "requested": 10,
+      "persisted": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "validityRate": 1,
+      "modelCalls": 10
+    },
+    "inventory": {
+      "requested": 10,
+      "persisted": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "validityRate": 1,
+      "modelCalls": 10
+    },
+    "workflow": {
+      "requested": 10,
+      "persisted": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "validityRate": 1,
+      "modelCalls": 10
+    }
+  },
+  "rejectionsByValidationRule": {},
+  "rejectionsByContractIssueCode": {},
+  "rejectionsBySanitizedPath": {}
+}

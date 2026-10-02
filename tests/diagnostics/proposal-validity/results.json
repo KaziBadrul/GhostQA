@@ -1,0 +1,407 @@
+{
+  "evidenceClass": "DIAGNOSTIC",
+  "marker": "DIAGNOSTIC ONLY — NOT GATE 5 ACCEPTANCE EVIDENCE",
+  "gate5AcceptanceEvidence": false,
+  "targetHttpExecutions": 0,
+  "model": "gemini-3.5-flash-lite",
+  "configuredRPM": 12,
+  "samplesPerFixture": 10,
+  "fixtureIds": [
+    "order-lifecycle",
+    "inventory",
+    "workflow"
+  ],
+  "probeId": "394497bf-2b9a-46c9-bcf0-032286d33df6",
+  "results": [
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 1,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 3024
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 2,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4288
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 3,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4869
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 4,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5147
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 5,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4565
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 6,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5325
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 7,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5467
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 8,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4452
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 9,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5032
+    },
+    {
+      "fixtureId": "order-lifecycle",
+      "ordinal": 10,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4591
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 1,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5226
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 2,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4657
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 3,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5134
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 4,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5198
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 5,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5203
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 6,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4837
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 7,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5005
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 8,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4939
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 9,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5404
+    },
+    {
+      "fixtureId": "inventory",
+      "ordinal": 10,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4185
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 1,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 6263
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 2,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 3940
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 3,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5481
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 4,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4766
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 5,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4583
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 6,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5731
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 7,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4893
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 8,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5370
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 9,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 4046
+    },
+    {
+      "fixtureId": "workflow",
+      "ordinal": 10,
+      "accepted": true,
+      "planningOutcome": "PROPOSED",
+      "sanitizedContractIssues": {
+        "contractIssues": []
+      },
+      "providerModel": "gemini-3.5-flash-lite",
+      "configuredRPM": 12,
+      "modelCalls": 1,
+      "elapsedMs": 5301
+    }
+  ]
+}

@@ -1,0 +1,1226 @@
+# GhostQA finding evidence
+
+Finding: `f4d64dea-a325-4ace-b2b7-3c59524d2727` — CONFIRMED
+Evidence chain: OBSERVED VIOLATION → CONFIRMED → best verified reproducer.
+Consistency: true. Artifact: GENERATED / UNVERIFIED.
+
+Predicate: `0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f`, version 1, canonical hash `b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e`.
+Approval provenance: DEVELOPER; source `a document observed as ARCHIVED must not later be observed as PUBLISHED within the same fresh trial`; eligible as of run acceptance: true.
+
+Original journey length: 3. Best verified journey length: 3.
+This is the shortest verified sequence found.
+It is locally irreducible under attempted deletion strategy.
+Local minimization stop reason: LOCAL MINIMUM.
+Truncated: no.
+
+## Expected invariant
+
+When the applicability conditions hold, every approved assertion must be satisfied:
+
+- `{"kind":"json","pointer":"/state","stepId":"later"}` not-equals `{"kind":"literal","value":"PUBLISHED"}`
+
+## Evidence references
+
+- EXPLORATION: evidence `7bd62b7a-9fa3-497c-810a-f2c8739a5995`, trial `67e9b1df-5b11-4c7d-9ab2-d3b72fbcbe26`, baseline `dfabde44-e400-45bb-86ff-5511d45d5807`, verdict VIOLATED.
+- REPLAY: evidence `d5bbf1e5-7b8d-4af5-bac6-e264fab728e0`, trial `0a13e929-acb2-4db2-be8e-cf6732007c41`, baseline `ae0af4bb-5b96-4ae4-8d33-97416e89cd4e`, verdict VIOLATED.
+
+## Minimized reproduction
+
+1. `create` — `POST /api/documents`
+2. `archived` — `POST /api/documents/{documentId}/archive`
+3. `later` — `POST /api/documents/{documentId}/publish`
+
+## Minimized attempt history
+
+- Remove `create`: rejected; PRODUCER REQUIRED; candidate `c8b1ca32-b9bc-462e-802c-ca2d666e8e74`.
+- Remove `archived`: rejected; PREDICATE STEP REQUIRED; candidate `e5330417-63bf-4c15-94bf-3fb0f7ffe57a`.
+- Remove `later`: rejected; PREDICATE STEP REQUIRED; candidate `eee2b95d-5db7-4204-8617-b20af775b5d9`.
+
+## Setup and verification
+
+Supply explicit target/address/operation approval, mutation acknowledgment, finite limits and credential slots separately. A standalone runner is not included in this manifest-only export.
+Generation does not establish supervised verification. This manifest has not been verified through the originating run.
+
+## Exact assertions and sanitized evidence
+
+```json
+{
+  "approval": {
+    "asOf": "2026-10-01T22:22:12.455Z",
+    "eligible": true,
+    "source": "DEVELOPER",
+    "sourceRef": "a document observed as ARCHIVED must not later be observed as PUBLISHED within the same fresh trial"
+  },
+  "bestJourney": {
+    "dependencies": [
+      {
+        "consumer": "archived",
+        "producer": "create",
+        "variable": "docId"
+      },
+      {
+        "consumer": "later",
+        "producer": "create",
+        "variable": "docId"
+      }
+    ],
+    "id": "a655616a-4ae2-4a40-b9e8-e4af0f2c6161",
+    "predicateRef": {
+      "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+      "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+      "version": 1
+    },
+    "rationale": "Journey executing document creation, archiving, and subsequent publish attempt to satisfy the approved predicate asserting archived documents cannot be published.",
+    "steps": [
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          201
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "docId",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ],
+        "id": "create",
+        "operationId": "POST /api/documents",
+        "parameters": []
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "state",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "archived"
+            }
+          }
+        ],
+        "id": "archived",
+        "operationId": "POST /api/documents/{documentId}/archive",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "documentId",
+            "value": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ]
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "laterState",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "later"
+            }
+          }
+        ],
+        "id": "later",
+        "operationId": "POST /api/documents/{documentId}/publish",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "documentId",
+            "value": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ]
+      }
+    ],
+    "variables": []
+  },
+  "bestLength": 3,
+  "executionProvenance": {
+    "acceptedAt": "2026-10-01T22:22:12.455Z",
+    "deadlineAt": "2026-10-01T22:32:12.455Z",
+    "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+    "trialIds": [
+      "67e9b1df-5b11-4c7d-9ab2-d3b72fbcbe26",
+      "0a13e929-acb2-4db2-be8e-cf6732007c41"
+    ]
+  },
+  "finding": {
+    "classification": "CONFIRMED",
+    "consistent": true,
+    "id": "f4d64dea-a325-4ace-b2b7-3c59524d2727",
+    "initialEvidenceId": "7bd62b7a-9fa3-497c-810a-f2c8739a5995",
+    "minimizationStop": "LOCAL MINIMUM",
+    "minimizedJourneyId": "a655616a-4ae2-4a40-b9e8-e4af0f2c6161",
+    "originalJourneyId": "a655616a-4ae2-4a40-b9e8-e4af0f2c6161",
+    "predicateRef": {
+      "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+      "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+      "version": 1
+    },
+    "projectId": "30b7c3e6-4f0d-4149-83d7-b620ac95b19b",
+    "replayEvidenceIds": [
+      "d5bbf1e5-7b8d-4af5-bac6-e264fab728e0"
+    ],
+    "transitions": [
+      {
+        "evidenceRefs": [
+          "7bd62b7a-9fa3-497c-810a-f2c8739a5995"
+        ],
+        "next": "OBSERVED VIOLATION",
+        "prior": null,
+        "reason": "INITIAL PREDICATE VIOLATION"
+      },
+      {
+        "evidenceRefs": [
+          "7bd62b7a-9fa3-497c-810a-f2c8739a5995",
+          "d5bbf1e5-7b8d-4af5-bac6-e264fab728e0"
+        ],
+        "next": "CONFIRMED",
+        "prior": "OBSERVED VIOLATION",
+        "reason": "INDEPENDENT FRESH REPLAY VIOLATED"
+      }
+    ]
+  },
+  "formatVersion": 1,
+  "generationState": "GENERATED",
+  "initial": {
+    "baseline": {
+      "assertionIds": [
+        "a0a9a65f-2627-4ea7-b46a-afbd358ab2a6"
+      ],
+      "checkStepIds": [
+        "baseline"
+      ],
+      "id": "dfabde44-e400-45bb-86ff-5511d45d5807",
+      "resetStepIds": [
+        "reset"
+      ],
+      "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+      "trialId": "67e9b1df-5b11-4c7d-9ab2-d3b72fbcbe26",
+      "verdict": "SATISFIED"
+    },
+    "evidence": {
+      "baselineEvidenceId": "dfabde44-e400-45bb-86ff-5511d45d5807",
+      "id": "7bd62b7a-9fa3-497c-810a-f2c8739a5995",
+      "observationIds": [
+        "a467ab0b-2533-42d6-8bd1-1740081cfd27",
+        "7b4e493e-d167-467e-9280-72a3f8a22d36",
+        "32054d88-1110-432f-902c-e949d903cb76"
+      ],
+      "outcome": "VIOLATED",
+      "phase": "EXPLORATION",
+      "predicateRef": {
+        "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+        "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+        "version": 1
+      },
+      "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+      "symbolicOperands": {
+        "applicability": [
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "archived"
+            },
+            "op": "equals",
+            "right": {
+              "kind": "literal",
+              "value": "ARCHIVED"
+            }
+          },
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "archived"
+            },
+            "op": "equals",
+            "right": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "later"
+            }
+          },
+          {
+            "left": {
+              "kind": "step-index",
+              "stepId": "archived"
+            },
+            "op": "before",
+            "right": {
+              "kind": "step-index",
+              "stepId": "later"
+            }
+          }
+        ],
+        "assertions": [
+          {
+            "left": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "later"
+            },
+            "op": "not-equals",
+            "right": {
+              "kind": "literal",
+              "value": "PUBLISHED"
+            }
+          }
+        ],
+        "executionOrder": [
+          {
+            "operationId": "POST /api/documents",
+            "ordinal": 0,
+            "stepId": "create"
+          },
+          {
+            "operationId": "POST /api/documents/{documentId}/archive",
+            "ordinal": 1,
+            "stepId": "archived"
+          },
+          {
+            "operationId": "POST /api/documents/{documentId}/publish",
+            "ordinal": 2,
+            "stepId": "later"
+          }
+        ]
+      },
+      "trialId": "67e9b1df-5b11-4c7d-9ab2-d3b72fbcbe26"
+    },
+    "observations": [
+      {
+        "id": "a467ab0b-2533-42d6-8bd1-1740081cfd27",
+        "result": {
+          "elapsedMs": 2.126875000016298,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/documents",
+            "url": "http://127.0.0.1:54380/api/documents"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "2243c99b-d2df-43f1-ab74-fd620ce685fd",
+              "state": "DRAFT"
+            },
+            "elapsedMs": 2.126875000016298,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 22:22:16 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 201,
+            "text": "{\"id\":\"2243c99b-d2df-43f1-ab74-fd620ce685fd\",\"state\":\"DRAFT\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T22:22:16.872Z",
+          "status": 201,
+          "stepId": "create",
+          "truncated": false
+        },
+        "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+        "stateMappings": [],
+        "stepId": "create",
+        "trialId": "67e9b1df-5b11-4c7d-9ab2-d3b72fbcbe26"
+      },
+      {
+        "id": "32054d88-1110-432f-902c-e949d903cb76",
+        "result": {
+          "elapsedMs": 2.0682090000191238,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/documents/{documentId}/archive",
+            "url": "http://127.0.0.1:54380/api/documents/2243c99b-d2df-43f1-ab74-fd620ce685fd/archive"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "2243c99b-d2df-43f1-ab74-fd620ce685fd",
+              "state": "ARCHIVED"
+            },
+            "elapsedMs": 2.0682090000191238,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 22:22:16 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 200,
+            "text": "{\"id\":\"2243c99b-d2df-43f1-ab74-fd620ce685fd\",\"state\":\"ARCHIVED\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T22:22:16.878Z",
+          "status": 200,
+          "stepId": "archived",
+          "truncated": false
+        },
+        "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+        "stateMappings": [],
+        "stepId": "archived",
+        "trialId": "67e9b1df-5b11-4c7d-9ab2-d3b72fbcbe26"
+      },
+      {
+        "id": "7b4e493e-d167-467e-9280-72a3f8a22d36",
+        "result": {
+          "elapsedMs": 1.915166999999201,
+          "outcome": "RESPONSE",
+          "sanitizedRequest": {
+            "body": null,
+            "headers": {},
+            "operationId": "POST /api/documents/{documentId}/publish",
+            "url": "http://127.0.0.1:54380/api/documents/2243c99b-d2df-43f1-ab74-fd620ce685fd/publish"
+          },
+          "sanitizedResponse": {
+            "body": {
+              "id": "2243c99b-d2df-43f1-ab74-fd620ce685fd",
+              "state": "PUBLISHED"
+            },
+            "elapsedMs": 1.915166999999201,
+            "headers": {
+              "connection": "close",
+              "content-type": "application/json",
+              "date": "Thu, 01 Oct 2026 22:22:16 GMT",
+              "transfer-encoding": "chunked"
+            },
+            "status": 200,
+            "text": "{\"id\":\"2243c99b-d2df-43f1-ab74-fd620ce685fd\",\"state\":\"PUBLISHED\"}",
+            "truncated": false
+          },
+          "startedAt": "2026-10-01T22:22:16.886Z",
+          "status": 200,
+          "stepId": "later",
+          "truncated": false
+        },
+        "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+        "stateMappings": [],
+        "stepId": "later",
+        "trialId": "67e9b1df-5b11-4c7d-9ab2-d3b72fbcbe26"
+      }
+    ]
+  },
+  "minimization": {
+    "attempts": [
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [],
+          "id": "c8b1ca32-b9bc-462e-802c-ca2d666e8e74",
+          "predicateRef": {
+            "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+            "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+            "version": 1
+          },
+          "rationale": "Journey executing document creation, archiving, and subsequent publish attempt to satisfy the approved predicate asserting archived documents cannot be published.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "state",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/state",
+                    "stepId": "archived"
+                  }
+                }
+              ],
+              "id": "archived",
+              "operationId": "POST /api/documents/{documentId}/archive",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "documentId",
+                  "value": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ]
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "laterState",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/state",
+                    "stepId": "later"
+                  }
+                }
+              ],
+              "id": "later",
+              "operationId": "POST /api/documents/{documentId}/publish",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "documentId",
+                  "value": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PRODUCER REQUIRED",
+        "removedStepId": "create"
+      },
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [
+            {
+              "consumer": "later",
+              "producer": "create",
+              "variable": "docId"
+            }
+          ],
+          "id": "e5330417-63bf-4c15-94bf-3fb0f7ffe57a",
+          "predicateRef": {
+            "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+            "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+            "version": 1
+          },
+          "rationale": "Journey executing document creation, archiving, and subsequent publish attempt to satisfy the approved predicate asserting archived documents cannot be published.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                201
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "docId",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ],
+              "id": "create",
+              "operationId": "POST /api/documents",
+              "parameters": []
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "laterState",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/state",
+                    "stepId": "later"
+                  }
+                }
+              ],
+              "id": "later",
+              "operationId": "POST /api/documents/{documentId}/publish",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "documentId",
+                  "value": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PREDICATE STEP REQUIRED",
+        "removedStepId": "archived"
+      },
+      {
+        "accepted": false,
+        "candidate": {
+          "dependencies": [
+            {
+              "consumer": "archived",
+              "producer": "create",
+              "variable": "docId"
+            }
+          ],
+          "id": "eee2b95d-5db7-4204-8617-b20af775b5d9",
+          "predicateRef": {
+            "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+            "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+            "version": 1
+          },
+          "rationale": "Journey executing document creation, archiving, and subsequent publish attempt to satisfy the approved predicate asserting archived documents cannot be published.",
+          "steps": [
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                201
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "docId",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ],
+              "id": "create",
+              "operationId": "POST /api/documents",
+              "parameters": []
+            },
+            {
+              "bodyBindings": [],
+              "expectedStatuses": [
+                200,
+                409
+              ],
+              "extracts": [
+                {
+                  "expectedType": "string",
+                  "name": "state",
+                  "sensitive": false,
+                  "source": {
+                    "kind": "json",
+                    "pointer": "/state",
+                    "stepId": "archived"
+                  }
+                }
+              ],
+              "id": "archived",
+              "operationId": "POST /api/documents/{documentId}/archive",
+              "parameters": [
+                {
+                  "location": "path",
+                  "name": "documentId",
+                  "value": {
+                    "kind": "json",
+                    "pointer": "/id",
+                    "stepId": "create"
+                  }
+                }
+              ]
+            }
+          ],
+          "variables": []
+        },
+        "observations": [],
+        "reason": "PREDICATE STEP REQUIRED",
+        "removedStepId": "later"
+      }
+    ],
+    "best": {
+      "dependencies": [
+        {
+          "consumer": "archived",
+          "producer": "create",
+          "variable": "docId"
+        },
+        {
+          "consumer": "later",
+          "producer": "create",
+          "variable": "docId"
+        }
+      ],
+      "id": "a655616a-4ae2-4a40-b9e8-e4af0f2c6161",
+      "predicateRef": {
+        "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+        "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+        "version": 1
+      },
+      "rationale": "Journey executing document creation, archiving, and subsequent publish attempt to satisfy the approved predicate asserting archived documents cannot be published.",
+      "steps": [
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            201
+          ],
+          "extracts": [
+            {
+              "expectedType": "string",
+              "name": "docId",
+              "sensitive": false,
+              "source": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "create"
+              }
+            }
+          ],
+          "id": "create",
+          "operationId": "POST /api/documents",
+          "parameters": []
+        },
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            200,
+            409
+          ],
+          "extracts": [
+            {
+              "expectedType": "string",
+              "name": "state",
+              "sensitive": false,
+              "source": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "archived"
+              }
+            }
+          ],
+          "id": "archived",
+          "operationId": "POST /api/documents/{documentId}/archive",
+          "parameters": [
+            {
+              "location": "path",
+              "name": "documentId",
+              "value": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "create"
+              }
+            }
+          ]
+        },
+        {
+          "bodyBindings": [],
+          "expectedStatuses": [
+            200,
+            409
+          ],
+          "extracts": [
+            {
+              "expectedType": "string",
+              "name": "laterState",
+              "sensitive": false,
+              "source": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "later"
+              }
+            }
+          ],
+          "id": "later",
+          "operationId": "POST /api/documents/{documentId}/publish",
+          "parameters": [
+            {
+              "location": "path",
+              "name": "documentId",
+              "value": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "create"
+              }
+            }
+          ]
+        }
+      ],
+      "variables": []
+    },
+    "bestLength": 3,
+    "finding": {
+      "classification": "CONFIRMED",
+      "consistent": true,
+      "id": "f4d64dea-a325-4ace-b2b7-3c59524d2727",
+      "initialEvidenceId": "7bd62b7a-9fa3-497c-810a-f2c8739a5995",
+      "minimizationStop": "LOCAL MINIMUM",
+      "minimizedJourneyId": "a655616a-4ae2-4a40-b9e8-e4af0f2c6161",
+      "originalJourneyId": "a655616a-4ae2-4a40-b9e8-e4af0f2c6161",
+      "predicateRef": {
+        "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+        "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+        "version": 1
+      },
+      "projectId": "30b7c3e6-4f0d-4149-83d7-b620ac95b19b",
+      "replayEvidenceIds": [
+        "d5bbf1e5-7b8d-4af5-bac6-e264fab728e0"
+      ],
+      "transitions": [
+        {
+          "evidenceRefs": [
+            "7bd62b7a-9fa3-497c-810a-f2c8739a5995"
+          ],
+          "next": "OBSERVED VIOLATION",
+          "prior": null,
+          "reason": "INITIAL PREDICATE VIOLATION"
+        },
+        {
+          "evidenceRefs": [
+            "7bd62b7a-9fa3-497c-810a-f2c8739a5995",
+            "d5bbf1e5-7b8d-4af5-bac6-e264fab728e0"
+          ],
+          "next": "CONFIRMED",
+          "prior": "OBSERVED VIOLATION",
+          "reason": "INDEPENDENT FRESH REPLAY VIOLATED"
+        }
+      ]
+    },
+    "locallyIrreducible": true,
+    "originalLength": 3,
+    "stopReason": "LOCAL MINIMUM"
+  },
+  "originalJourney": {
+    "dependencies": [
+      {
+        "consumer": "archived",
+        "producer": "create",
+        "variable": "docId"
+      },
+      {
+        "consumer": "later",
+        "producer": "create",
+        "variable": "docId"
+      }
+    ],
+    "id": "a655616a-4ae2-4a40-b9e8-e4af0f2c6161",
+    "predicateRef": {
+      "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+      "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+      "version": 1
+    },
+    "rationale": "Journey executing document creation, archiving, and subsequent publish attempt to satisfy the approved predicate asserting archived documents cannot be published.",
+    "steps": [
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          201
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "docId",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ],
+        "id": "create",
+        "operationId": "POST /api/documents",
+        "parameters": []
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "state",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "archived"
+            }
+          }
+        ],
+        "id": "archived",
+        "operationId": "POST /api/documents/{documentId}/archive",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "documentId",
+            "value": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ]
+      },
+      {
+        "bodyBindings": [],
+        "expectedStatuses": [
+          200,
+          409
+        ],
+        "extracts": [
+          {
+            "expectedType": "string",
+            "name": "laterState",
+            "sensitive": false,
+            "source": {
+              "kind": "json",
+              "pointer": "/state",
+              "stepId": "later"
+            }
+          }
+        ],
+        "id": "later",
+        "operationId": "POST /api/documents/{documentId}/publish",
+        "parameters": [
+          {
+            "location": "path",
+            "name": "documentId",
+            "value": {
+              "kind": "json",
+              "pointer": "/id",
+              "stepId": "create"
+            }
+          }
+        ]
+      }
+    ],
+    "variables": []
+  },
+  "originalLength": 3,
+  "predicate": {
+    "applicability": [
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/state",
+          "stepId": "archived"
+        },
+        "op": "equals",
+        "right": {
+          "kind": "literal",
+          "value": "ARCHIVED"
+        }
+      },
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/id",
+          "stepId": "archived"
+        },
+        "op": "equals",
+        "right": {
+          "kind": "json",
+          "pointer": "/id",
+          "stepId": "later"
+        }
+      },
+      {
+        "left": {
+          "kind": "step-index",
+          "stepId": "archived"
+        },
+        "op": "before",
+        "right": {
+          "kind": "step-index",
+          "stepId": "later"
+        }
+      }
+    ],
+    "assertions": [
+      {
+        "left": {
+          "kind": "json",
+          "pointer": "/state",
+          "stepId": "later"
+        },
+        "op": "not-equals",
+        "right": {
+          "kind": "literal",
+          "value": "PUBLISHED"
+        }
+      }
+    ],
+    "canonicalHash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+    "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+    "source": "DEVELOPER",
+    "sourceRef": "a document observed as ARCHIVED must not later be observed as PUBLISHED within the same fresh trial",
+    "version": 1
+  },
+  "predicateRef": {
+    "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+    "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+    "version": 1
+  },
+  "replays": [
+    {
+      "baseline": {
+        "assertionIds": [
+          "a0a9a65f-2627-4ea7-b46a-afbd358ab2a6"
+        ],
+        "checkStepIds": [
+          "baseline"
+        ],
+        "id": "ae0af4bb-5b96-4ae4-8d33-97416e89cd4e",
+        "resetStepIds": [
+          "reset"
+        ],
+        "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+        "trialId": "0a13e929-acb2-4db2-be8e-cf6732007c41",
+        "verdict": "SATISFIED"
+      },
+      "evidence": {
+        "baselineEvidenceId": "ae0af4bb-5b96-4ae4-8d33-97416e89cd4e",
+        "id": "d5bbf1e5-7b8d-4af5-bac6-e264fab728e0",
+        "observationIds": [
+          "b7833979-038a-4ffc-98ce-b4445c3b41f6",
+          "ec3dac95-f45c-4214-a4ed-24225f415f8e",
+          "e08fd50c-7a65-4af0-ad3e-3f582bb0fecc"
+        ],
+        "outcome": "VIOLATED",
+        "phase": "REPLAY",
+        "predicateRef": {
+          "hash": "b5ac6e3fb532bdb7fc0a561914081018ce1d73f5adb864df9589005f39d5be7e",
+          "id": "0a8ccd71-ef33-4a18-9cdc-7c1462f54e6f",
+          "version": 1
+        },
+        "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+        "symbolicOperands": {
+          "applicability": [
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "archived"
+              },
+              "op": "equals",
+              "right": {
+                "kind": "literal",
+                "value": "ARCHIVED"
+              }
+            },
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "archived"
+              },
+              "op": "equals",
+              "right": {
+                "kind": "json",
+                "pointer": "/id",
+                "stepId": "later"
+              }
+            },
+            {
+              "left": {
+                "kind": "step-index",
+                "stepId": "archived"
+              },
+              "op": "before",
+              "right": {
+                "kind": "step-index",
+                "stepId": "later"
+              }
+            }
+          ],
+          "assertions": [
+            {
+              "left": {
+                "kind": "json",
+                "pointer": "/state",
+                "stepId": "later"
+              },
+              "op": "not-equals",
+              "right": {
+                "kind": "literal",
+                "value": "PUBLISHED"
+              }
+            }
+          ],
+          "executionOrder": [
+            {
+              "operationId": "POST /api/documents",
+              "ordinal": 0,
+              "stepId": "create"
+            },
+            {
+              "operationId": "POST /api/documents/{documentId}/archive",
+              "ordinal": 1,
+              "stepId": "archived"
+            },
+            {
+              "operationId": "POST /api/documents/{documentId}/publish",
+              "ordinal": 2,
+              "stepId": "later"
+            }
+          ]
+        },
+        "trialId": "0a13e929-acb2-4db2-be8e-cf6732007c41"
+      },
+      "observations": [
+        {
+          "id": "b7833979-038a-4ffc-98ce-b4445c3b41f6",
+          "result": {
+            "elapsedMs": 1.5638330000219867,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/documents",
+              "url": "http://127.0.0.1:54380/api/documents"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "97ae338f-9422-472f-8f0b-668d3727c826",
+                "state": "DRAFT"
+              },
+              "elapsedMs": 1.5638330000219867,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 22:22:16 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 201,
+              "text": "{\"id\":\"97ae338f-9422-472f-8f0b-668d3727c826\",\"state\":\"DRAFT\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T22:22:16.924Z",
+            "status": 201,
+            "stepId": "create",
+            "truncated": false
+          },
+          "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+          "stateMappings": [],
+          "stepId": "create",
+          "trialId": "0a13e929-acb2-4db2-be8e-cf6732007c41"
+        },
+        {
+          "id": "ec3dac95-f45c-4214-a4ed-24225f415f8e",
+          "result": {
+            "elapsedMs": 3.4462080000084825,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/documents/{documentId}/archive",
+              "url": "http://127.0.0.1:54380/api/documents/97ae338f-9422-472f-8f0b-668d3727c826/archive"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "97ae338f-9422-472f-8f0b-668d3727c826",
+                "state": "ARCHIVED"
+              },
+              "elapsedMs": 3.4462080000084825,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 22:22:16 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 200,
+              "text": "{\"id\":\"97ae338f-9422-472f-8f0b-668d3727c826\",\"state\":\"ARCHIVED\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T22:22:16.928Z",
+            "status": 200,
+            "stepId": "archived",
+            "truncated": false
+          },
+          "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+          "stateMappings": [],
+          "stepId": "archived",
+          "trialId": "0a13e929-acb2-4db2-be8e-cf6732007c41"
+        },
+        {
+          "id": "e08fd50c-7a65-4af0-ad3e-3f582bb0fecc",
+          "result": {
+            "elapsedMs": 1.5939999999827705,
+            "outcome": "RESPONSE",
+            "sanitizedRequest": {
+              "body": null,
+              "headers": {},
+              "operationId": "POST /api/documents/{documentId}/publish",
+              "url": "http://127.0.0.1:54380/api/documents/97ae338f-9422-472f-8f0b-668d3727c826/publish"
+            },
+            "sanitizedResponse": {
+              "body": {
+                "id": "97ae338f-9422-472f-8f0b-668d3727c826",
+                "state": "PUBLISHED"
+              },
+              "elapsedMs": 1.5939999999827705,
+              "headers": {
+                "connection": "close",
+                "content-type": "application/json",
+                "date": "Thu, 01 Oct 2026 22:22:16 GMT",
+                "transfer-encoding": "chunked"
+              },
+              "status": 200,
+              "text": "{\"id\":\"97ae338f-9422-472f-8f0b-668d3727c826\",\"state\":\"PUBLISHED\"}",
+              "truncated": false
+            },
+            "startedAt": "2026-10-01T22:22:16.936Z",
+            "status": 200,
+            "stepId": "later",
+            "truncated": false
+          },
+          "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+          "stateMappings": [],
+          "stepId": "later",
+          "trialId": "0a13e929-acb2-4db2-be8e-cf6732007c41"
+        }
+      ]
+    }
+  ],
+  "reproductionClaim": "shortest verified sequence found",
+  "runId": "5f24981d-46c4-4c15-8992-4bb988c07e8e",
+  "setup": "Supply explicit target/address/operation approval, mutation acknowledgment, finite limits and credential slots separately. A standalone runner is not included in this manifest-only export.",
+  "stopReason": "LOCAL MINIMUM",
+  "truncated": false,
+  "verification": "UNVERIFIED"
+}
+```
