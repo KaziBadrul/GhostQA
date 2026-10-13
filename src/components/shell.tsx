@@ -4,20 +4,60 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const LINKS = [
-  { href: '/', label: 'Dashboard' },
-  { href: '/runs/new', label: 'New test run' },
+  { href: '/', label: 'Overview' },
+  { href: '/mcp', label: 'Generate MCP server' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/projects/new', label: 'Import OpenAPI' },
+  { href: '/runs/new', label: 'Demo runs' },
   { href: '/recorded', label: 'Recorded runs' },
 ];
 
 function isActive(pathname: string, href: string) {
   if (href === '/') return pathname === '/';
+  if (href === '/projects')
+    return (
+      pathname === '/projects' ||
+      (pathname.startsWith('/projects/') && pathname !== '/projects/new')
+    );
   return pathname.startsWith(href);
 }
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() ?? '/';
+  if (pathname === '/') {
+    return (
+      <>
+        <header className="landing-nav">
+          <Link href="/" className="brand">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path
+                d="M6 26V14a10 10 0 0 1 20 0v12l-5-3-5 3-5-3-5 3Z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+              <path
+                d="M12 13v4m8-4v4"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+            GhostQA
+          </Link>
+          <nav aria-label="Main navigation">
+            <Link href="/#how-it-works">How it works</Link>
+            <Link href="/recorded">Recorded runs</Link>
+            <Link href="/mcp" className="nav-cta">
+              Generate MCP <span aria-hidden="true">↗</span>
+            </Link>
+          </nav>
+        </header>
+        {children}
+      </>
+    );
+  }
   return (
-    <div className="flex min-h-screen">
+    <div className="app-shell flex min-h-screen">
       <aside className="sticky top-0 flex h-screen w-56 shrink-0 flex-col border-r border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="border-b border-[var(--color-line)] px-4 py-3.5">
           <Link href="/" className="block">
@@ -25,11 +65,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
               GhostQA
             </span>
             <span className="mt-0.5 block text-[11px] leading-tight text-[var(--color-ink-faint)]">
-              Autonomous API regression testing
+              OpenAPI tools and workflow testing
             </span>
           </Link>
         </div>
-        <nav className="flex flex-1 flex-col gap-0.5 p-2">
+        <nav
+          aria-label="App navigation"
+          className="flex flex-1 flex-col gap-0.5 p-2"
+        >
           {LINKS.map((link) => {
             const active = isActive(pathname, link.href);
             return (

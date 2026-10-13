@@ -38,3 +38,9 @@ The Cancel acknowledgment requires the supervisor dispatch gate to be closed for
 Advisory-lock connection loss and supervisor shutdown close that same gate without waiting for a
 worker message. Start/phase messages cannot recreate it for a stopped run. Artifact verification
 is an ordinary supervised phase, with no independent runner invocation or second dispatch worker.
+
+## Setup error detail presentation
+
+Validation responses retain the same sanitized error envelope. `details` can contain up to eight `{field, message}` entries: field paths use allowlisted schema names and numeric indexes, and messages use fixed validation guidance. Rejected values, arbitrary extra-field names, raw Zod messages, provider exception text, and credentials are never returned. JSON syntax errors have `INVALID JSON`; phase conflicts, excluded control operations, and invalid check definitions have specific allowlisted `INVALID SETUP: ...` codes.
+
+Run presentation distinguishes `MODEL TIMEOUT`, `MODEL REQUEST REJECTED`, `MODEL INVALID OUTPUT`, `MODEL INVALID PLAN`, availability, and quota failures from sanitized planning telemetry. Existing `MODEL ERROR` records remain readable. These categories change presentation only; engine stop reasons, finding classifications, budgets, and dispatch authority are unchanged. The browser never automatically retries an ambiguous save/start request.

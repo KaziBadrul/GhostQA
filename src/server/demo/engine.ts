@@ -1,3 +1,5 @@
+import { modelFailureCode, runFailureCode } from '../run-errors';
+import { errorGuidance } from '../../lib/error-guidance';
 // Submission-track run orchestration. This module is a thin application
 // boundary: it prepares an explicitly allowlisted fixture and then calls the
 // existing authoritative path (`runVerticalSlice` -> RunSupervisor ->
@@ -6,6 +8,7 @@
 // and no finding logic of its own.
 import { z } from 'zod';
 import type { Pool, PoolClient } from 'pg';
+import type { RunSupervisor } from '../run-supervisor';
 import { readConfig } from '../config';
 import { createDatabase } from '../db';
 import { CredentialStore } from '../credential-store';
@@ -39,6 +42,7 @@ import {
   newDemoRunId,
   saveDemoRun,
   writeDemoReport,
+  writeDemoBundle,
 } from './store';
 
 // The demo budget is smaller than the engine default so a live presentation
@@ -54,77 +58,12 @@ async function evaluatorEntry(id: DemoFixtureId): Promise<RequiredFixture> {
   return entry;
 }
 
-const FAILURE_DETAIL: Record<DemoFailureCode, string> = {
-  'INVALID FIXTURE': 'That fixture is not available in this build.',
-  'ANOTHER RUN IN PROGRESS':
-    'GhostQA authorizes one supervised run at a time. Wait for the active run to finish.',
-  'TARGET UNAVAILABLE': 'The local fixture target could not be started.',
-  'MODEL UNAVAILABLE':
-    'The configured Gemini model or API key is not usable. Check GEMINI_API_KEY and GEMINI_MODEL.',
-  'MODEL QUOTA EXHAUSTED':
-    'The reasoning provider refused the request on a quota or rate limit. The run was not retried automatically.',
-  'MODEL ERROR': 'The reasoning model returned no usable proposal.',
-  STAGNATION: 'The model stopped proposing new distinct journeys.',
-  'BUDGET EXHAUSTED': 'The run reached its target request budget.',
-  'TIME EXHAUSTED': 'The run reached its wall-clock deadline.',
-  'BASELINE ERROR': 'The target did not return to a verified fresh state.',
-  'EXECUTION ERROR': 'A trial request failed to execute.',
-  'STORAGE ERROR': 'Evidence could not be persisted.',
-  CANCELLED: 'The run was cancelled.',
-  'ENGINE ERROR': 'The engine stopped for an unclassified reason.',
-};
-
-// Provider failures carry a structured diagnostic (an API status or a failure
-// kind), never raw provider text. Duck-typing keeps the engine's provider
-// classes out of this module's surface.
-function providerFailure(error: unknown): DemoFailureCode | undefined {
-  const record = error as {
-    diagnostic?: { apiStatus?: string; httpStatus?: number };
-    telemetry?: { failureKind?: string };
-  };
-  const status = record.diagnostic?.apiStatus;
-  const http = record.diagnostic?.httpStatus;
-  if (status === 'RESOURCE_EXHAUSTED' || http === 429)
-    return 'MODEL QUOTA EXHAUSTED';
-  if (
-    status === 'UNAUTHENTICATED' ||
-    status === 'PERMISSION_DENIED' ||
-    status === 'NOT_FOUND' ||
-    status === 'UNAVAILABLE' ||
-    status === 'INVALID_ARGUMENT' ||
-    http === 401 ||
-    http === 403 ||
-    http === 404
-  )
-    return 'MODEL UNAVAILABLE';
-  const kind = record.telemetry?.failureKind;
-  if (kind === 'MODEL_CONFIGURATION') return 'MODEL UNAVAILABLE';
-  if (kind === 'PROVIDER_REQUEST') return 'MODEL UNAVAILABLE';
-  if (kind === 'CANCELLED') return 'CANCELLED';
-  if (kind === 'PROVIDER_OUTPUT' || kind === 'CONTRACT_VALIDATION')
-    return 'MODEL ERROR';
-  return undefined;
-}
-
 function failureCode(error: unknown): DemoFailureCode {
+  const model = modelFailureCode(error);
+  if (model) return model;
   const message = error instanceof Error ? error.message : '';
-  const fromProvider = providerFailure(error);
-  if (fromProvider) return fromProvider;
-  if (message === 'SUPERVISOR BUSY') return 'ANOTHER RUN IN PROGRESS';
-  if (message === 'STORAGE ERROR' || message === 'PROJECT REQUIRED')
-    return 'STORAGE ERROR';
-  if (message === 'BASELINE ERROR') return 'BASELINE ERROR';
-  if (message === 'BUDGET EXHAUSTED') return 'BUDGET EXHAUSTED';
-  if (message === 'TIME EXHAUSTED') return 'TIME EXHAUSTED';
-  if (message === 'CANCELLED' || message === 'SHUTDOWN') return 'CANCELLED';
-  if (message === 'MODEL ERROR' || message === 'MODEL PLAN ERROR')
-    return 'MODEL ERROR';
-  if (message === 'STAGNATION') return 'STAGNATION';
-  if (message === 'EXECUTION ERROR' || message === 'WORKER ERROR')
-    return 'EXECUTION ERROR';
-  if (message === 'INVALID FIXTURE') return 'INVALID FIXTURE';
   if (message.startsWith('CONNECTION REFUSED')) return 'TARGET UNAVAILABLE';
-  return 'ENGINE ERROR';
+  return runFailureCode(message);
 }
 
 // ------------------------------------------------------------- live state ----
@@ -137,9 +76,12 @@ interface Live {
   client: PoolClient;
   target?: TargetHandle;
   writes: Promise<unknown>;
+  supervisor?: RunSupervisor;
+  done?: Promise<void>;
 }
 
 interface EngineState {
+  stopping?: boolean;
   live?: Live;
 }
 
@@ -205,11 +147,15 @@ function stageFrom(
   if (stage === 'REPORT_GENERATION' || stage === 'MANIFEST_GENERATION')
     return 'GENERATING REPORT';
   if (stage === 'SUPERVISED_VERIFICATION') return 'VERIFYING ARTIFACT';
-  if (stage === 'RUN_COMPLETION') return completed ? 'COMPLETE' : 'PACKAGING ARTIFACT';
+  if (stage === 'RUN_COMPLETION')
+    return completed ? 'COMPLETE' : 'PACKAGING ARTIFACT';
   return 'PACKAGING ARTIFACT';
 }
 
-function patch(record: DemoRunRecord, change: Partial<DemoRunRecord>): DemoRunRecord {
+function patch(
+  record: DemoRunRecord,
+  change: Partial<DemoRunRecord>,
+): DemoRunRecord {
   return DemoRunRecordSchema.parse({ ...record, ...change });
 }
 
@@ -237,7 +183,7 @@ const RawFinding = z
   .nullable();
 
 function outcomeOf(finding: DemoFinding | null): DemoRunRecord['outcome'] {
-  if (!finding) return 'NOT EVALUABLE';
+  if (!finding) return 'NO CONFIRMED VIOLATION';
   if (finding.classification === 'CONFIRMED' && finding.consistent)
     return 'VIOLATION CONFIRMED';
   if (
@@ -270,7 +216,10 @@ function toFinding(
 
 // --------------------------------------------------------------- starting ---
 
-export async function startDemoRun(fixtureId: DemoFixtureId): Promise<DemoRunRecord> {
+export async function startDemoRun(
+  fixtureId: DemoFixtureId,
+): Promise<DemoRunRecord> {
+  if (state.stopping) throw new Error('ENGINE ERROR');
   if (state.live) throw new Error('ANOTHER RUN IN PROGRESS');
   const config = readConfig(process.env);
   const record = DemoRunRecordSchema.parse({
@@ -294,7 +243,7 @@ export async function startDemoRun(fixtureId: DemoFixtureId): Promise<DemoRunRec
   state.live = live;
   await live.writes;
 
-  void execute(live, fixtureId, config);
+  live.done = execute(live, fixtureId, config);
 
   return live.record;
 }
@@ -319,18 +268,21 @@ async function teardown(live: Live) {
   }
 }
 
-async function fail(live: Live, error: unknown) {
+async function fail(live: Live, error: unknown, reason?: string) {
   // Opt-in operator diagnostic. Never enabled by default, never shown in the UI.
   if (process.env['GHOSTQA_DEMO_DEBUG'] === '1')
-    console.error('[ghostqa demo]', error);
-  const code = failureCode(error);
+    console.error('[ghostqa demo]', failureCode(error));
+  const code = reason ? runFailureCode(reason, error) : failureCode(error);
   publish(live, {
     state: 'FAILED',
     stage: 'FAILED',
     outcome: 'NOT EVALUABLE',
     finishedAt: new Date().toISOString(),
     counters: (await readCounters(live.record.id)) ?? live.record.counters,
-    failure: { code, detail: FAILURE_DETAIL[code] },
+    failure: {
+      code,
+      detail: `${errorGuidance(code).message} ${errorGuidance(code).action}`,
+    },
   });
   await teardown(live);
 }
@@ -370,7 +322,12 @@ async function execute(
     ]);
     await live.client.query(
       "INSERT INTO approvals(id,project_id,kind,subject_hash,details) VALUES($1,$2,'SCOPE',$3,$4)",
-      [run.scope.approvalId, run.projectId, run.apiSnapshot.contentHash, run.scope],
+      [
+        run.scope.approvalId,
+        run.projectId,
+        run.apiSnapshot.contentHash,
+        run.scope,
+      ],
     );
 
     const result = await runVerticalSlice(
@@ -386,11 +343,43 @@ async function execute(
       true,
       true,
       onProgress,
+      {
+        supervisor: (supervisor) => {
+          live.supervisor = supervisor;
+          if (state.stopping) supervisor.closeGate('SHUTDOWN');
+        },
+      },
     );
 
+    if (
+      [
+        'MODEL ERROR',
+        'MODEL PLAN ERROR',
+        'BASELINE ERROR',
+        'EXECUTION ERROR',
+        'STORAGE ERROR',
+        'OWNERSHIP LOST',
+        'WORKER ERROR',
+        'CANCELLED',
+        'SHUTDOWN',
+      ].includes(result.stopReason)
+    ) {
+      const diagnostic = await live.client.query<{
+        evaluation: { telemetry?: unknown };
+      }>(
+        "SELECT evaluation FROM evidence WHERE run_id=$1 AND kind='PLANNING RESULT' ORDER BY created_at DESC LIMIT 1",
+        [live.record.id],
+      );
+      const telemetry = diagnostic.rows[0]?.evaluation.telemetry;
+      publish(live, { stopReason: result.stopReason });
+      await fail(live, telemetry, result.stopReason);
+      return;
+    }
     const counters = await readCounters(live.record.id);
-    const reproduction = 'reproduction' in result ? result.reproduction : undefined;
-    const verification = 'verification' in result ? result.verification : undefined;
+    const reproduction =
+      'reproduction' in result ? result.reproduction : undefined;
+    const verification =
+      'verification' in result ? result.verification : undefined;
 
     let finding: DemoFinding | null;
     if (reproduction) {
@@ -403,6 +392,7 @@ async function execute(
         },
         reproduction.supervised.artifact.verification,
       );
+      await writeDemoBundle(live.record.id, reproduction.bundle);
       await writeDemoReport(
         live.record.id,
         reproduction.reports.markdown,
@@ -452,7 +442,25 @@ async function demoRunList() {
 
 // Installed by `server.ts`. Route handlers and server components import
 // `./runtime` instead, so this module never enters an application bundle.
+export async function cancelDemoRun(id: string) {
+  if (state.live?.record.id === id) {
+    state.live.supervisor?.cancel();
+    if (!state.live.supervisor) throw new Error('RUN ADMISSION IN PROGRESS');
+    return { state: 'STOPPING', dispatchDisabled: true };
+  }
+  if (!(await loadDemoRun(id))) throw new Error('NOT FOUND');
+  return { state: 'STOPPED', dispatchDisabled: true };
+}
+export async function shutdownDemo() {
+  state.stopping = true;
+  const live = state.live;
+  live?.supervisor?.closeGate('SHUTDOWN');
+  await live?.done;
+  await readPool?.end();
+}
 export const demoEngine: DemoEngine = {
+  cancelDemoRun,
+  shutdown: shutdownDemo,
   startDemoRun,
   demoRunDetail,
   demoRunList,

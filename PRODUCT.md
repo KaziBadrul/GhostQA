@@ -73,3 +73,11 @@ Use DESIGN.md as visual inspiration, adapting it to GhostQA rather than copying 
 - Make findings reproducible through minimized sequences and regression tests.
 - Prioritize clear results and execution traces so developers can understand and act on failures.
 - Distinguish observed violations from confirmed failures.
+
+## Current product direction (owner-approved 2026-10-03)
+
+The primary new flow is OpenAPI + notes → select tools → download a Node stdio MCP server →
+read documentation → connect an application's backend. See `specs/002-openapi-mcp/spec.md`.
+The implemented stack is Next.js, React, strict TypeScript and PostgreSQL. The earlier stack
+recommendation and statements that no application exists are historical. The fuzzing engine
+remains available; its reset/invariant setup is separate from MCP conversion.

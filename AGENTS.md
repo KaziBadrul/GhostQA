@@ -1019,3 +1019,22 @@ Import OpenAPI
 and do so repeatedly under the acceptance thresholds defined in the specification.
 
 That proof matters more than feature count.
+
+# Owner-approved OpenAPI → MCP pivot (2026-10-03)
+
+The primary new product flow is governed by `specs/002-openapi-mcp/spec.md` and its plan.
+The existing engine and its accepted requirements remain preserved. Conversion and exported
+standalone MCP servers do not constitute GhostQA fuzzing runs; reset, baseline, predicates,
+supervisor persistence and run budgets are not prerequisites for this flow. Notes are documentation
+only. Generated execution remains deterministic, schema validated, destination bounded and
+credential isolated. The previous MVP plugin exclusion does not prohibit generating MCP servers.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

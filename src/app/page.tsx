@@ -1,37 +1,27 @@
-export const runtime = 'nodejs';
-export const dynamic = 'force-dynamic';
+import { McpHero } from '@/components/mcp-hero';
+import Link from 'next/link';
 
-import { PageHeader } from '@/components/shell';
-import { Dashboard } from '@/components/dashboard';
-import { demoRunList } from '@/server/demo/runtime';
-import { demoFixtures } from '@/server/demo/catalog';
-import { recordedRuns } from '@/server/demo/recorded';
-import { DEMO_LIMITS } from '@/lib/demo-view';
-
-export default async function Home() {
-  const [list, fixtures, recorded] = await Promise.all([
-    demoRunList(),
-    demoFixtures(),
-    recordedRuns(),
-  ]);
+export default function Home() {
   return (
-    <>
-      <PageHeader
-        title="GhostQA"
-        description="Autonomous API regression testing. GhostQA proposes unusual but individually valid API workflows, executes them inside a frozen scope, observes approved invariants, independently reproduces any violation from a fresh state, and minimizes the sequence."
-      />
-      <Dashboard
-        runs={list.runs}
-        activeRunId={list.activeRunId}
-        fixtures={fixtures}
-        recordedCount={recorded.length}
-        recordedConfirmed={recorded.filter(
-          (summary) =>
-            summary.discoveryStatus === 'OBSERVED VIOLATION' &&
-            summary.confirmationStatus === 'CONFIRMED',
-        ).length}
-        limits={DEMO_LIMITS}
-      />
-    </>
+    <main className="landing">
+      <McpHero />
+      <section className="setup-page" id="how-it-works">
+        <h2>Built for your backend</h2>
+        <p>
+          The generated Node server exposes only the endpoints you select. Your
+          backend launches it through the official MCP SDK. The README covers
+          inputs, authentication, important notes and error recovery.
+        </p>
+        <p>
+          The workflow testing engine is also available.{' '}
+          <Link href="/runs/new">Run a fuzzing demo</Link> or{' '}
+          <Link href="/recorded">inspect recorded evidence</Link>.
+        </p>
+      </section>
+      <footer className="landing-footer">
+        <span>GhostQA</span>
+        <span>Your contract. Your tools.</span>
+      </footer>
+    </main>
   );
 }

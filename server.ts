@@ -28,6 +28,11 @@ client.release();
 const { demoEngine } = await import('./src/server/demo/engine');
 const { installDemoEngine } = await import('./src/server/demo/runtime');
 installDemoEngine(demoEngine);
+const { createApplication } = await import('./src/server/application-engine');
+const { installApplication } = await import('./src/server/application-runtime');
+const applicationEngine = createApplication();
+await applicationEngine.recover();
+installApplication(applicationEngine);
 
 const app = next({
   dev: process.env.NODE_ENV !== 'production',
@@ -48,7 +53,12 @@ let stopping = false;
 async function shutdown() {
   if (stopping) return;
   stopping = true;
+  const enginesStopped = Promise.all([
+    applicationEngine.shutdown(),
+    demoEngine.shutdown(),
+  ]);
   await new Promise<void>((done) => server.close(() => done()));
+  await enginesStopped;
   await app.close();
   await db.end();
 }

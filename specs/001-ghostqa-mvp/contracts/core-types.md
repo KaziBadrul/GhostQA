@@ -26,6 +26,7 @@ interface ApiParameter {
 interface ApiOperation {
   id: string; method: 'GET'|'POST'|'PUT'|'PATCH'|'DELETE'|'HEAD'|'OPTIONS';
   pathTemplate: string; parameters: ApiParameter[]; requestBody?: Json;
+  requestBodyRequired?: boolean; // retained for Feature 002; historical snapshots may omit
   responses: Json; eligible: boolean; exclusionReasons: string[];
   sanitizedDescription?: string;
 }

@@ -1,3 +1,9 @@
+import {
+  boundedText,
+  validSetupWrite,
+  localRequest,
+  setupError,
+} from '../../../server/setup-guards';
 import { NextResponse } from 'next/server';
 import { StartRunRequestSchema } from '@/server/demo/contracts';
 import { demoRunList, startDemoRun } from '@/server/demo/runtime';
@@ -5,14 +11,18 @@ import { demoRunList, startDemoRun } from '@/server/demo/runtime';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
+export async function GET(request: Request) {
+  if (!localRequest(request))
+    return setupError('FORBIDDEN', 'Use the local application.', 403);
   return NextResponse.json(await demoRunList());
 }
 
 export async function POST(request: Request) {
+  if (!validSetupWrite(request))
+    return setupError('FORBIDDEN', 'Refresh the page and try again.', 403);
   let body: unknown;
   try {
-    body = await request.json();
+    body = JSON.parse(await boundedText(request, 4096));
   } catch {
     return NextResponse.json({ error: 'INVALID REQUEST' }, { status: 400 });
   }
@@ -38,7 +48,10 @@ export async function POST(request: Request) {
     ];
     if (invalid.some((name) => message.includes(name)))
       return NextResponse.json(
-        { error: 'Invalid application configuration', missing: invalid.filter((name) => message.includes(name)) },
+        {
+          error: 'Invalid application configuration',
+          missing: invalid.filter((name) => message.includes(name)),
+        },
         { status: 503 },
       );
     return NextResponse.json({ error: 'ENGINE ERROR' }, { status: 500 });

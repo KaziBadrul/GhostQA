@@ -6,7 +6,8 @@ export async function parseOpenApi(text: string): Promise<ApiModel> {
     throw new Error('IMPORT TOO LARGE');
   return new Promise((resolveModel, reject) => {
     const worker = new Worker(resolve('dist/import-worker.mjs'), {
-      workerData: text,
+      // Next.js forwards worker globals by merging an object payload.
+      workerData: { text },
       resourceLimits: { maxOldGenerationSizeMb: 128 },
     });
     const timer = setTimeout(() => {

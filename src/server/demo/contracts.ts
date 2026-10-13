@@ -90,6 +90,10 @@ export const DemoFailureCodeSchema = z.enum([
   'MODEL UNAVAILABLE',
   'MODEL QUOTA EXHAUSTED',
   'MODEL ERROR',
+  'MODEL TIMEOUT',
+  'MODEL INVALID OUTPUT',
+  'MODEL INVALID PLAN',
+  'MODEL REQUEST REJECTED',
   'STAGNATION',
   'BUDGET EXHAUSTED',
   'TIME EXHAUSTED',
@@ -109,7 +113,9 @@ export type DemoFailure = z.infer<typeof DemoFailureSchema>;
 
 export const DemoRunRecordSchema = z.strictObject({
   id: z.string().min(1),
-  fixtureId: DemoFixtureIdSchema,
+  fixtureId: z.union([DemoFixtureIdSchema, z.literal('custom')]),
+  projectId: z.string().optional(),
+  projectName: z.string().optional(),
   mode: z.literal('LIVE'),
   state: DemoRunStateSchema,
   stage: DemoStageSchema,
@@ -146,7 +152,9 @@ export type DemoRunList = z.infer<typeof DemoRunListSchema>;
 
 export const RecordedRunIdSchema = z
   .string()
-  .regex(/^gate5-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\/[0-9]{1,3}$/);
+  .regex(
+    /^gate5-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\/[0-9]{1,3}$/,
+  );
 export type RecordedRunId = z.infer<typeof RecordedRunIdSchema>;
 
 export const RecordedRunSummarySchema = z.strictObject({

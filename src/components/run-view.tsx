@@ -1,18 +1,24 @@
 'use client';
+import { planningDiagnostics } from '@/lib/planning-diagnostics';
+import { ActionableError } from './actionable-error';
+import { errorGuidance } from '@/lib/error-guidance';
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import type {
-  DemoRunRecord,
-  DemoStage,
-} from '@/server/demo/contracts';
+import type { DemoRunRecord, DemoStage } from '@/server/demo/contracts';
 import {
   DEMO_LIMITS,
   DEMO_PIPELINE_STAGES,
   DEMO_STAGE_LABELS,
 } from '@/lib/demo-view';
+import { appRequest } from '@/lib/application-client';
 import { projectReport, type ReportView } from '@/lib/report-view';
-import { EvidencePanel, MetricGrid, ReportViewer, ResultHeadline } from './result';
+import {
+  EvidencePanel,
+  MetricGrid,
+  ReportViewer,
+  ResultHeadline,
+} from './result';
 import { Button, KeyValue, Panel, StatusBadge, type Tone } from './ui';
 
 const SKIPPED: DemoStage[] = ['QUEUED', 'FAILED'];
@@ -215,13 +221,12 @@ export function RunProgressPanel({ run }: { run: DemoRunRecord }) {
               },
               {
                 label: 'Requests by phase',
-                value:
-                  Object.keys(phase).length
-                    ? Object.entries(phase)
-                        .filter(([, count]) => count > 0)
-                        .map(([name, count]) => `${name.toLowerCase()} ${count}`)
-                        .join(' · ')
-                    : 'none yet',
+                value: Object.keys(phase).length
+                  ? Object.entries(phase)
+                      .filter(([, count]) => count > 0)
+                      .map(([name, count]) => `${name.toLowerCase()} ${count}`)
+                      .join(' · ')
+                  : 'none yet',
                 mono: false,
               },
             ]}
@@ -232,8 +237,16 @@ export function RunProgressPanel({ run }: { run: DemoRunRecord }) {
         <Panel title="Finding">
           <KeyValue
             items={[
-              { label: 'Classification', value: run.finding.classification, mono: false },
-              { label: 'Invariant', value: run.finding.predicateSourceRef, mono: false },
+              {
+                label: 'Classification',
+                value: run.finding.classification,
+                mono: false,
+              },
+              {
+                label: 'Invariant',
+                value: run.finding.predicateSourceRef,
+                mono: false,
+              },
               {
                 label: 'Sequence length',
                 value:
@@ -297,7 +310,10 @@ export function RunReportSection({
         const projected = projectReport(body.json);
         if (cancelled) return;
         if (projected)
-          setFetched({ report: projected, markdown: String(body.markdown ?? '') });
+          setFetched({
+            report: projected,
+            markdown: String(body.markdown ?? ''),
+          });
         else setAbsent(true);
       } catch {
         if (!cancelled) setAbsent(true);
@@ -338,6 +354,8 @@ export function RunView({
   report: InitialReport | null;
 }) {
   const [run, setRun] = useState(initial);
+  const [cancelError, setCancelError] = useState('');
+  const [cancelling, setCancelling] = useState(false);
   const active = run.state === 'QUEUED' || run.state === 'RUNNING';
 
   useEffect(() => {
@@ -356,7 +374,7 @@ export function RunView({
           /* A transient poll failure is not a run failure. */
         }
       })();
-    }, 1500);
+    }, 500);
     return () => {
       cancelled = true;
       clearInterval(timer);
@@ -369,20 +387,50 @@ export function RunView({
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="min-w-0">
           <h1 className="text-[19px] font-semibold tracking-tight text-[var(--color-ink)]">
-            {run.fixtureId}
+            {run.projectName ?? run.fixtureId}
           </h1>
           <p className="mono mt-0.5 text-[11px] text-[var(--color-ink-faint)]">
             run {run.id}
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <StatusBadge tone={toneForOutcome(run.outcome)}>{run.outcome}</StatusBadge>
-          <Link href="/">
-            <Button type="button">Back to dashboard</Button>
+          <StatusBadge tone={toneForOutcome(run.outcome)}>
+            {run.outcome}
+          </StatusBadge>
+          {active && (
+            <Button
+              disabled={cancelling}
+              onClick={() => {
+                setCancelling(true);
+                void appRequest(`/api/runs/${run.id}/cancel`, 'POST', {}).catch(
+                  (e) => {
+                    setCancelError(
+                      e instanceof Error
+                        ? e.message
+                        : 'Could not cancel this run.',
+                    );
+                    setCancelling(false);
+                  },
+                );
+              }}
+            >
+              {cancelling ? 'Stopping…' : 'Cancel run'}
+            </Button>
+          )}
+          <Link href="/projects">
+            <Button type="button">Projects</Button>
           </Link>
         </div>
       </div>
+      {cancelError && (
+        <p role="alert" className="setup-error">
+          {cancelError}
+        </p>
+      )}
       <RunProgressPanel run={run} />
+      <RunTrace id={run.id} active={active} />
+      {run.reportAvailable && <RunDownloads id={run.id} />}
+
       <RunReportSection
         id={run.id}
         initial={initialReport}
@@ -390,14 +438,170 @@ export function RunView({
       />
       {headline.tone === 'bad' && run.failure ? (
         <Panel title="Why the run stopped">
-          <p className="text-[12.5px] leading-relaxed text-[var(--color-ink-muted)]">
-            {run.failure.detail} Engine stop reason:{' '}
-            <span className="mono">{run.stopReason ?? run.failure.code}</span>. A
-            failed request is an execution outcome, never a product bug, so no
-            finding was recorded.
+          <ActionableError error={errorGuidance(run.failure.code)} />
+          <Link
+            className="text-action"
+            href={
+              run.projectId
+                ? `/projects/${run.projectId}${errorGuidance(run.failure.code).step !== undefined ? `?step=${errorGuidance(run.failure.code).step}` : ''}`
+                : '/runs/new'
+            }
+          >
+            {run.projectId ? 'Review project setup' : 'Return to demo setup'}
+          </Link>
+          <p className="mt-3 text-[12px] text-[var(--color-ink-muted)]">
+            Recorded stop reason:{' '}
+            <code>{run.stopReason ?? run.failure.code}</code>. Execution errors
+            alone do not confirm a product bug.
           </p>
         </Panel>
       ) : null}
+    </div>
+  );
+}
+function RunTrace({ id, active }: { id: string; active: boolean }) {
+  const [trace, setTrace] = useState<{
+    steps: {
+      id: string;
+      stepId: string;
+      phase: string;
+      outcome: string;
+      request: unknown;
+      response: unknown;
+    }[];
+    journeys: { rationale: string }[];
+    evidence?: unknown[];
+  }>();
+  useEffect(() => {
+    let disposed = false;
+    const load = () => {
+      void appRequest(`/api/runs/${id}/trace`)
+        .then((value) => {
+          if (!disposed) setTrace(value as typeof trace);
+        })
+        .catch(() => undefined);
+    };
+    load();
+    const timer = active ? setInterval(load, 1000) : undefined;
+    return () => {
+      disposed = true;
+      clearInterval(timer);
+    };
+  }, [id, active]);
+  return (
+    <details className="panel p-4">
+      <summary className="cursor-pointer text-[var(--color-accent)]">
+        Execution trace and planning rationale
+      </summary>
+      {!!planningDiagnostics(trace?.evidence ?? []).length && (
+        <div className="my-4">
+          <h3 className="text-sm font-medium">Planning diagnostics</h3>
+          {planningDiagnostics(trace?.evidence ?? []).map(
+            (diagnostic, index) => (
+              <div key={index} className="my-3 text-[13px]">
+                <p>
+                  <code>{diagnostic.failureKind}</code> ·{' '}
+                  {diagnostic.stage ?? 'validation'}
+                  {diagnostic.httpStatus
+                    ? ` · HTTP ${diagnostic.httpStatus}`
+                    : ''}
+                  {diagnostic.apiStatus ? ` · ${diagnostic.apiStatus}` : ''}
+                </p>
+                {diagnostic.validationRule && (
+                  <p>
+                    Rejected rule: <code>{diagnostic.validationRule}</code>
+                  </p>
+                )}
+                {diagnostic.contractIssues.map((issue, i) => (
+                  <p key={i}>
+                    Field <code>{issue.path}</code>: {issue.code}
+                  </p>
+                ))}
+              </div>
+            ),
+          )}
+        </div>
+      )}
+      {trace?.journeys.map((j, i) => (
+        <p className="my-3 text-[13px] text-[var(--color-ink-muted)]" key={i}>
+          {j.rationale}
+        </p>
+      ))}
+      {trace?.steps.map((step) => (
+        <details
+          key={step.id}
+          className="my-3 border-t border-[var(--color-line)] pt-3"
+        >
+          <summary className="mono cursor-pointer">
+            {step.phase} · {step.stepId} · {step.outcome}
+          </summary>
+          <pre className="prose-report overflow-auto p-3">
+            {JSON.stringify(
+              { request: step.request, response: step.response },
+              null,
+              2,
+            )}
+          </pre>
+        </details>
+      ))}
+      {!trace?.steps.length && (
+        <p className="my-3 text-[var(--color-ink-muted)]">
+          No dispatched requests recorded yet.
+        </p>
+      )}
+    </details>
+  );
+}
+function RunDownloads({ id }: { id: string }) {
+  const [error, setError] = useState('');
+  async function download(format: 'markdown' | 'json' | 'runner') {
+    try {
+      const value = (await appRequest(`/api/runs/${id}/exports`)) as {
+        markdown?: string;
+        json?: unknown;
+        bundle?: { code: string };
+      };
+      const content =
+        format === 'markdown'
+          ? value.markdown
+          : format === 'json'
+            ? JSON.stringify(value.json, null, 2)
+            : value.bundle?.code;
+      if (!content) throw Error('This export is not available.');
+      const url = URL.createObjectURL(
+        new Blob([content], { type: 'text/plain' }),
+      );
+      const link = document.createElement('a');
+      link.href = url;
+      link.download =
+        format === 'markdown'
+          ? 'report.md'
+          : format === 'json'
+            ? 'report.json'
+            : 'regression.mjs';
+      link.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Export failed.');
+    }
+  }
+  return (
+    <div className="panel p-4">
+      <p className="mb-3">Download reproduction artifacts</p>
+      <div className="flex flex-wrap gap-3">
+        <Button onClick={() => void download('markdown')}>
+          Markdown report
+        </Button>
+        <Button onClick={() => void download('json')}>JSON report</Button>
+        <Button onClick={() => void download('runner')}>
+          Regression runner
+        </Button>
+      </div>
+      {error && (
+        <p role="alert" className="mt-3 text-[var(--color-bad)]">
+          {error}
+        </p>
+      )}
     </div>
   );
 }

@@ -27,6 +27,7 @@ test('import deadline terminates bounded worker at ten seconds', async () => {
   const pending = parseOpenApi('{}');
   const rejection = expect(pending).rejects.toThrow('IMPORT TIMEOUT');
   expect(state.created.mock.calls[0]?.[1]).toMatchObject({
+    workerData: { text: '{}' },
     resourceLimits: { maxOldGenerationSizeMb: 128 },
   });
   await vi.advanceTimersByTimeAsync(10000);

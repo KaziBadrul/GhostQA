@@ -5,14 +5,8 @@ import {
   type Phase,
   type RunBudget,
 } from '../contracts';
-export const defaultLimits: Readonly<BudgetLimits> = Object.freeze({
-  requests: 200,
-  milliseconds: 600000,
-  journeys: 20,
-  steps: 10,
-  requestTimeoutMs: 10000,
-  modelTimeoutMs: 30000,
-});
+import { defaultLimits } from '../../lib/default-limits';
+export { defaultLimits } from '../../lib/default-limits';
 export class BudgetManager {
   readonly limits: Readonly<BudgetLimits>;
   readonly #clock: () => number;

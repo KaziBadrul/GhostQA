@@ -1,5 +1,8 @@
 # Implementation Plan: GhostQA MVP
 
+> This document governs the preserved fuzzing engine. The owner-approved new MCP conversion flow is governed by `../002-openapi-mcp/spec.md` and its plan.
+
+
 **Branch**: `001-ghostqa-mvp` | **Date**: 2026-09-30 | **Spec**: [spec.md](spec.md)
 
 **Input**: `specs/001-ghostqa-mvp/spec.md`, both clarification passes, constitution,

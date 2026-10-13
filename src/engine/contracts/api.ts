@@ -15,6 +15,7 @@ export const ApiOperationSchema = z.strictObject({
   pathTemplate: z.string().startsWith('/'),
   parameters: z.array(ApiParameterSchema),
   requestBody: JsonSchema.optional(),
+  requestBodyRequired: z.boolean().optional(),
   responses: JsonSchema,
   eligible: z.boolean(),
   exclusionReasons: z.array(z.string()),

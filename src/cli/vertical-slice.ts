@@ -46,6 +46,10 @@ export async function runVerticalSlice(
   verify = false,
   reproduce = false,
   onProgress?: ReproductionProgress,
+  lifecycle?: {
+    supervisor?: (value: RunSupervisor) => void;
+    accepted?: () => void;
+  },
 ) {
   const progress: ReproductionProgress = (stage, completed) => {
     if (reproduce) onProgress?.(stage, completed);
@@ -58,11 +62,13 @@ export async function runVerticalSlice(
   );
   if (approval.rowCount !== 1) throw new Error('SCOPE APPROVAL REQUIRED');
   const supervisor = await RunSupervisor.acquire(client, credentials);
+  lifecycle?.supervisor?.(supervisor);
   const cancel = () => supervisor.cancel();
   process.on('SIGINT', cancel);
   process.on('SIGTERM', cancel);
   try {
     await supervisor.accept(run);
+    lifecycle?.accepted?.();
     progress('RUN_ADMISSION', true);
     progress('DISCOVERY', false);
     const budgetSnapshots = reproduce

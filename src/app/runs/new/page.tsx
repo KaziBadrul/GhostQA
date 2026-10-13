@@ -10,8 +10,8 @@ export default async function NewRunPage() {
   return (
     <>
       <PageHeader
-        title="New test run"
-        description="Choose a local API fixture. GhostQA starts the fixture, freezes an approved scope, and lets the configured reasoning model propose workflows — nothing else is configurable from here, and nothing else is needed."
+        title="Try a demo API"
+        description="Choose a bundled API to see the complete testing pipeline. GhostQA starts the local target and explores workflows. To upload your own specification, use Import OpenAPI in the navigation."
       />
       <div className="px-6 py-5">
         <FixturePicker fixtures={fixtures} />

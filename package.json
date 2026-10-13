@@ -25,10 +25,13 @@
     "pretest:contract": "npm run build:engine",
     "pretest:integration": "npm run build:engine",
     "benchmark": "npm run build:engine && tsx src/cli/benchmark.ts",
-    "test:artifacts": "npm run build:engine && vitest run tests/integration/artifact-acceptance.test.ts"
+    "test:artifacts": "npm run build:engine && vitest run tests/integration/artifact-acceptance.test.ts",
+    "example": "tsx examples/server.ts",
+    "dev:mcp": "npm run build:engine && next dev --webpack --hostname 127.0.0.1"
   },
   "dependencies": {
     "@google/genai": "2.24.0",
+    "@modelcontextprotocol/sdk": "1.32.0",
     "@scalar/openapi-parser": "0.29.9",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",

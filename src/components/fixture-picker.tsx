@@ -2,16 +2,13 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { appRequest } from '@/lib/application-client';
 import { useState } from 'react';
 import type { DemoFixture, DemoFixtureId } from '@/server/demo/contracts';
 import { DEMO_LIMITS } from '@/lib/demo-view';
 import { Button, Panel, StatusBadge } from './ui';
 
-export function FixturePicker({
-  fixtures,
-}: {
-  fixtures: DemoFixture[];
-}) {
+export function FixturePicker({ fixtures }: { fixtures: DemoFixture[] }) {
   const router = useRouter();
   const [selected, setSelected] = useState<DemoFixtureId | null>(null);
   const [pending, setPending] = useState(false);
@@ -22,35 +19,16 @@ export function FixturePicker({
     setPending(true);
     setError(null);
     try {
-      const response = await fetch('/api/runs', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ fixture: selected }),
-      });
-      const body = (await response.json()) as {
-        run?: { id: string };
-        error?: string;
-        missing?: string[];
-      };
-      if (response.status === 409) {
-        setError(
-          'A supervised run is already active. GhostQA authorizes one at a time.',
-        );
-        setPending(false);
-        return;
-      }
-      if (!response.ok || !body.run) {
-        setError(
-          body.missing?.length
-            ? `Missing or invalid configuration: ${body.missing.join(', ')}.`
-            : 'The run could not be started.',
-        );
-        setPending(false);
-        return;
-      }
+      const body = (await appRequest('/api/runs', 'POST', {
+        fixture: selected,
+      })) as { run: { id: string } };
       router.push(`/runs/${body.run.id}`);
-    } catch {
-      setError('The run could not be started.');
+    } catch (error) {
+      setError(
+        error instanceof Error
+          ? error.message
+          : 'The run could not be started.',
+      );
       setPending(false);
     }
   };
@@ -115,7 +93,9 @@ export function FixturePicker({
       {error ? (
         <div className="rounded border border-[var(--color-bad)]/45 bg-[var(--color-raised)] px-3.5 py-2.5">
           <div className="flex items-start justify-between gap-3">
-            <p className="text-[12.5px] text-[var(--color-ink-muted)]">{error}</p>
+            <p className="text-[12.5px] text-[var(--color-ink-muted)]">
+              {error}
+            </p>
             <StatusBadge tone="bad">unavailable</StatusBadge>
           </div>
           <Link
@@ -148,9 +128,9 @@ function InvariantDetail({ fixture }: { fixture: DemoFixture }) {
         </ul>
       </div>
       <p className="text-[12px] leading-relaxed text-[var(--color-ink-faint)]">
-        Reset and baseline operations are held by the frozen policy and are never
-        exposed to the planner. The target is reset and its baseline verified
-        before every trial.
+        Reset and baseline operations are held by the frozen policy and are
+        never exposed to the planner. The target is reset and its baseline
+        verified before every trial.
       </p>
     </div>
   );

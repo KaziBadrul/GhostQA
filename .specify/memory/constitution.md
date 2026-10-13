@@ -101,7 +101,16 @@ approval before affected work proceeds. Open implementation choices MUST be reso
 specifications or plans without inventing product evidence. This initial constitution is adopted
 through the user's constitution command using the confirmed product brief.
 
-**Version**: 1.0.1 | **Ratified**: 2026-09-30 | **Last Amended**: 2026-10-01
+**Version**: 1.1.0 | **Ratified**: 2026-09-30 | **Last Amended**: 2026-10-03
 
 
 Amendment 1.0.1 (2026-10-01, approved by the project owner): the initial eligible predicate-violation classification is named OBSERVED VIOLATION. This is a vocabulary change; confirmation still requires independent fresh-state replay. Historical immutable evidence remains unchanged, with append-only migration history where derived current labels are renamed. The accepted feature specification also extends account reset-token invalidation to both email and password changes.
+
+Amendment 1.1.0 (2026-10-03, approved by the project owner's explicit pivot implementation
+request): add OpenAPI-to-MCP generation as the primary new product flow. Workflow fuzzing,
+evidence confirmation, fresh-state and run-supervisor obligations continue for fuzzing runs.
+They do not apply to deterministic package conversion or later standalone MCP developer calls.
+The generated package uses a fixed destination, schema validation, bounded requests, redirect
+rejection and environment credentials. Models may process documentation only and cannot modify
+execution authority. Existing engine and evidence remain preserved. Feature 002 records scope,
+acceptance and implementation. This scoped expansion supersedes the old MVP scope exclusion.

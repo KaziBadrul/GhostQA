@@ -145,6 +145,7 @@ export async function modelDocument(document: Json): Promise<ApiModel> {
         } else reasons.push('INVALID PARAMETER');
       }
       let requestBody: Json | undefined;
+      let requestBodyRequired: boolean | undefined;
       if (operation.requestBody !== undefined) {
         let body: Record<string, Json>;
         try {
@@ -153,6 +154,7 @@ export async function modelDocument(document: Json): Promise<ApiModel> {
           body = {};
           reasons.push('UNRESOLVED REQUEST BODY');
         }
+        requestBodyRequired = body.required === true;
         const content = record(body.content);
         if (Object.keys(content).length !== 1 || !content['application/json'])
           reasons.push('UNSUPPORTED MEDIA TYPE');
@@ -195,7 +197,9 @@ export async function modelDocument(document: Json): Promise<ApiModel> {
           : method.toUpperCase()) as ApiOperation['method'],
         pathTemplate: path,
         parameters,
-        ...(requestBody === undefined ? {} : { requestBody }),
+        ...(requestBody === undefined
+          ? {}
+          : { requestBody, requestBodyRequired }),
         responses,
         eligible: reasons.length === 0,
         exclusionReasons: [...new Set(reasons)],

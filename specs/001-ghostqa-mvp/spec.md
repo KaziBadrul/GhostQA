@@ -1,5 +1,8 @@
 # Feature Specification: GhostQA First MVP
 
+> This document governs the preserved fuzzing engine. The owner-approved new MCP conversion flow is governed by `../002-openapi-mcp/spec.md` and its plan.
+
+
 **Feature Branch**: Not created; no branch hook is configured.
 
 **Created**: 2026-09-30

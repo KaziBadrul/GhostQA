@@ -1,6 +1,9 @@
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+import { application } from '@/server/application-runtime';
+import { DemoRunRecordSchema } from '@/server/demo/contracts';
+import { z } from 'zod';
 import { notFound } from 'next/navigation';
 import { PageHeader } from '@/components/shell';
 import { RunView } from '@/components/run-view';
@@ -14,11 +17,14 @@ export default async function RunPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const [run, report] = await Promise.all([
+  let [run, report] = await Promise.all([
     demoRunDetail(id),
     readDemoReport(id),
   ]);
-  if (!run) notFound();
+  if (!run) {
+    try { const result = z.object({run:DemoRunRecordSchema}).parse(await application().command('run',id));run=result.run; } catch { notFound(); }
+    try { report=z.object({markdown:z.string(),json:z.unknown()}).parse(await application().command('report',id)); } catch { /* A report is only present after confirmed reproduction. */ }
+  }
   const projected = projectReport(report?.json);
   return (
     <>
