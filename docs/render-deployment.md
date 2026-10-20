@@ -73,10 +73,20 @@ password had 31 characters and no forbidden control characters; its value was
 not printed, copied into code, or recorded. The operator was asked to add at
 least one character and save before another rollout attempt.
 
-At this verification point the service is **not yet live**. Once the password
-is saved with at least 32 characters, deploy the latest commit, verify
-`GET /healthz` returns 200 and unauthenticated `/` and `/api/projects` return
-401, then sign in as `ghostqa` using the private operator password.
+The operator saved the corrected password. Deployment
+`dep-dbbp8ioae00c73ac8i9g` of release `21123d2` succeeded and Render reported
+**Live** on 2026-10-20. Independent HTTPS requests verified:
+
+```text
+/healthz       200 {"status":"ok"}
+/              401 Basic realm="GhostQA", charset="UTF-8"
+/api/projects  401 Basic realm="GhostQA", charset="UTF-8"
+```
+
+The live URL is https://ghostqa-u1z0.onrender.com. Sign in as `ghostqa` with
+the private operator password saved in Render. Authenticated hosted behavior was
+verified in the local production smoke test above; the cloud authenticated UI
+has not been exercised with the operator's private password.
 
 ## Free-plan limits and recovery
 
