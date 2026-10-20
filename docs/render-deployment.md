@@ -49,8 +49,34 @@ Hosted smoke test: PASS
 ```
 
 The test password was temporary and was not copied into Render or committed.
-The full regression suite is recorded separately in the deployment verification
-results when it finishes. These local tests do not claim that Render is live.
+The full regression suite passed in a disposable local PostgreSQL database:
+
+```text
+Test Files  74 passed (74)
+Tests  998 passed (998)
+Duration  170.29s
+```
+
+Typecheck, ESLint, formatting of the hosting modules, and `git diff --check` also
+passed. These local tests do not claim that Render is live.
+
+## Render rollout status
+
+Application release `21123d2` was pushed to `main`. The obsolete initial
+deployment was canceled after its logs confirmed that it listened on localhost
+instead of Render's assigned interface. `/healthz` was saved as the health path.
+
+Render successfully built the release using Node 24.21.0. Startup failed closed
+at operator-password validation. A fresh deployment with the saved environment
+also rejected the value. A metadata-only inspection confirmed that the saved
+password had 31 characters and no forbidden control characters; its value was
+not printed, copied into code, or recorded. The operator was asked to add at
+least one character and save before another rollout attempt.
+
+At this verification point the service is **not yet live**. Once the password
+is saved with at least 32 characters, deploy the latest commit, verify
+`GET /healthz` returns 200 and unauthenticated `/` and `/api/projects` return
+401, then sign in as `ghostqa` using the private operator password.
 
 ## Free-plan limits and recovery
 
