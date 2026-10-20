@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: ghostqa
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 24.21.0
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_URL_UNPOOLED
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        sync: false
+      - key: GHOSTQA_CREDENTIAL_KEY
+        sync: false
+      - key: GHOSTQA_ADMIN_PASSWORD
+        sync: false

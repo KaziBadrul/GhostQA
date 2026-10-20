@@ -1,5 +1,10 @@
 # Local application interface contract
 
+Private hosting deployment extension: `specs/003-private-hosting/spec.md` adds an
+explicit HTTPS origin and single-owner authentication at `server.ts` ingress.
+Hosted setup calls retain CSRF and exact-Origin validation, with Secure cookies.
+The local default described below remains unchanged; no multi-user API is added.
+
 Node route handlers validate strict Zod input and project ownership, then invoke repositories or
 supervisor commands. Bind server to 127.0.0.1 by default; reject unexpected Host/Origin and cross-
 origin mutations; require same-origin anti-CSRF nonce on writes. No public multi-user API. Never

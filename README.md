@@ -42,6 +42,59 @@ npm run dev
 
 Open http://127.0.0.1:3000. Startup applies versioned database migrations. For production, use `npm run build` followed by `npm start`.
 
+### Neon PostgreSQL
+
+The repository includes a Postgres-only `neon.ts` policy. Link the intended project
+and branch with the Neon CLI, then run `neon config plan` and `neon deploy` to
+review the policy and pull connection variables into the ignored `.env.local`.
+Keep the existing Gemini configuration and credential encryption key private.
+
+GhostQA retains the `pg` driver. When `DATABASE_URL_UNPOOLED` is present, both the
+application and `npm run db:migrate` use it in preference to `DATABASE_URL`:
+supervisor advisory locks and migrations require a dedicated Postgres session,
+which transaction pooling cannot provide. Use `sslmode=verify-full` in the Neon
+connection strings to verify the server certificate and hostname. Neon CLI env
+pulls may restore their default TLS query settings; check them after pulling.
+
+On the verified local macOS network, Node's address-family auto-selection timed
+out. These commands succeeded without changing target-execution policy or TLS:
+
+```sh
+NODE_OPTIONS=--no-network-family-autoselection npm run db:migrate
+npm run build
+NODE_OPTIONS=--no-network-family-autoselection npm start
+```
+
+This connects the local application to Neon; `neon deploy` does not publish the
+Next.js website.
+
+### Render Free: private single-owner deployment
+
+Use the existing Node Web Service with build command `npm ci && npm run build`,
+start command `npm start`, and the **Free** instance. `render.yaml` records the
+same settings for a future Blueprint deployment; do not create a second service.
+Set `NODE_VERSION=24.21.0` and health-check path `/healthz`.
+
+Copy the Neon connection variables, Gemini configuration, and existing
+`GHOSTQA_CREDENTIAL_KEY` into Render's private Environment settings. Set
+`GHOSTQA_ADMIN_PASSWORD` to a unique 32–256-character password there. Do not commit
+these values. The browser login username is `ghostqa`. Render supplies
+`RENDER_EXTERNAL_URL`; for another host set `GHOSTQA_PUBLIC_ORIGIN` to its exact
+HTTPS origin. The server uses the assigned `PORT` and refuses to start in hosted
+mode without valid operator credentials. Always start via `npm start`, which
+installs the authentication gate before serving Next.js.
+
+Hosted pages, APIs, exports, and assets require authentication. The sole public
+health endpoint returns fixed process-readiness information. Origin/CSRF checks
+remain enabled. This is a private developer instance, not a multi-user service.
+Hosted fuzzing reaches targets from Render's network; `localhost` means that
+server, not your laptop.
+
+Render Free sleeps when idle and local files do not survive redeploys. Project
+configuration and engine evidence are stored in Neon; transient demo presentation
+files may disappear. Download demo artifacts you want to retain. No paid disk or
+additional service is required.
+
 ## First workflow
 
 Follow [the example walkthrough](examples/README.md). The downloadable [OpenAPI specification](examples/orders.openapi.json) is paired with a disposable local API started by `npm run example`.

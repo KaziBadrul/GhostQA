@@ -25,18 +25,29 @@ function normalizeProposal(raw: unknown): unknown {
       : value;
   if (journey && typeof journey === 'object') {
     if (!z.uuid().safeParse(journey.id).success) journey.id = randomUUID();
-    const steps = Array.isArray(journey.steps) ? (journey.steps as Array<Record<string, unknown>>) : [];
+    const steps = Array.isArray(journey.steps)
+      ? (journey.steps as Array<Record<string, unknown>>)
+      : [];
     for (const step of steps) {
       if (step && typeof step === 'object') {
-        const bindings = Array.isArray(step.bodyBindings) ? step.bodyBindings : [];
+        const bindings = Array.isArray(step.bodyBindings)
+          ? step.bodyBindings
+          : [];
         if (bindings.length > 0) {
           step.body =
-            step.body && typeof step.body === 'object' && !Array.isArray(step.body)
+            step.body &&
+            typeof step.body === 'object' &&
+            !Array.isArray(step.body)
               ? step.body
               : {};
           const bodyObj = step.body as Record<string, unknown>;
           for (const b of bindings) {
-            if (b && typeof b === 'object' && typeof b.pointer === 'string' && b.pointer.startsWith('/')) {
+            if (
+              b &&
+              typeof b === 'object' &&
+              typeof b.pointer === 'string' &&
+              b.pointer.startsWith('/')
+            ) {
               const key = b.pointer.slice(1).split('/')[0];
               if (key && !(key in bodyObj)) bodyObj[key] = null;
             }
@@ -46,10 +57,23 @@ function normalizeProposal(raw: unknown): unknown {
     }
     if (Array.isArray(journey.variables)) {
       const extractedNames = new Set(
-        steps.flatMap((s) => (Array.isArray(s.extracts) ? s.extracts.map((e: any) => e?.name) : []))
+        steps.flatMap((s) =>
+          Array.isArray(s?.extracts)
+            ? s.extracts.map((entry: unknown) =>
+                entry && typeof entry === 'object' && 'name' in entry
+                  ? entry.name
+                  : undefined,
+              )
+            : [],
+        ),
       );
-      journey.variables = (journey.variables as Array<Record<string, unknown>>).filter((v) => {
-        const kind = v?.source && typeof v.source === 'object' && 'kind' in v.source ? (v.source as any).kind : undefined;
+      journey.variables = (
+        journey.variables as Array<Record<string, unknown>>
+      ).filter((v) => {
+        const kind =
+          v?.source && typeof v.source === 'object' && 'kind' in v.source
+            ? v.source.kind
+            : undefined;
         if (kind === 'input' || kind === 'generate') return true;
         return typeof v?.name === 'string' && !extractedNames.has(v.name);
       });

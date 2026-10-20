@@ -408,13 +408,14 @@ for (const [name, mutate] of invalid)
     rejectedPreservation(api, c.input);
     expect(c.input).toEqual(before);
   });
-test('setup: negative fixtures construct independently of missing minimizer', async () => {
-  for (const [name, mutate] of invalid) {
+test.each(invalid)(
+  'setup: negative fixture %s constructs independently of missing minimizer',
+  async (name, mutate) => {
     const c = await minimizationCase();
     mutate(c);
     expect(c.input.original.steps, name).toHaveLength(6);
-  }
-});
+  },
+);
 test('a forged VIOLATED label/model explanation cannot override SATISFIED observations', async () => {
   const api = await minimizerBoundary();
   const c = await minimizationCase();

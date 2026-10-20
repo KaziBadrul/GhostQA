@@ -2,7 +2,6 @@ export function fadeInUp({
   delay = 0,
   duration = 0.8,
   className,
-  ...rest
 }: {
   delay?: number;
   duration?: number;

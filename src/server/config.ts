@@ -7,11 +7,25 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { z } from 'zod';
 
+const databaseUrl = z
+  .string()
+  .regex(/^postgres(?:ql)?:\/\//)
+  .pipe(z.url());
+
+// Neon pooling is transaction-based. The supervisor and migrations require
+// dedicated sessions for advisory locks and other connection-local state.
+export function databaseConnectionString(input: Record<string, unknown>) {
+  const parsed = databaseUrl.safeParse(
+    input.DATABASE_URL_UNPOOLED ?? input.DATABASE_URL,
+  );
+  if (!parsed.success)
+    throw new Error('Invalid database connection configuration');
+  return parsed.data;
+}
+
 const environment = z.object({
-  DATABASE_URL: z
-    .string()
-    .regex(/^postgres(?:ql)?:\/\//)
-    .pipe(z.url()),
+  DATABASE_URL: databaseUrl,
+  DATABASE_URL_UNPOOLED: databaseUrl.optional(),
   GHOSTQA_CREDENTIAL_KEY: z.string().regex(/^[a-fA-F0-9]{64}$/),
   GEMINI_MODEL: z.string().trim().min(1),
   GEMINI_API_KEY: z.string().min(1),
@@ -32,7 +46,7 @@ export function readConfig(input: Record<string, string | undefined>) {
           .join(', '),
     );
   return Object.freeze({
-    databaseUrl: result.data.DATABASE_URL,
+    databaseUrl: databaseConnectionString(result.data),
     credentialKey: Buffer.from(result.data.GHOSTQA_CREDENTIAL_KEY, 'hex'),
     geminiModel: result.data.GEMINI_MODEL,
     geminiRequestsPerMinute: result.data.GEMINI_REQUESTS_PER_MINUTE,

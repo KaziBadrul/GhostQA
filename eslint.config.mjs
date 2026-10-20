@@ -11,6 +11,7 @@ export default defineConfig([
     'dist/**',
     'build/**',
     'coverage/**',
+    'tests/acceptance/**/regression.mjs',
     '.agents/**',
     '.codex/**',
     '.specify/**',

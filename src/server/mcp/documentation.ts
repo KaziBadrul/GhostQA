@@ -11,6 +11,8 @@ export function documentationVault(
     'GEMINI_API_KEY',
     'GHOSTQA_CREDENTIAL_KEY',
     'DATABASE_URL',
+    'DATABASE_URL_UNPOOLED',
+    'GHOSTQA_ADMIN_PASSWORD',
     'API_BEARER_TOKEN',
     'API_KEY',
   ]) {

@@ -16,3 +16,4 @@ Thumbs.db
 
 # Submission-track local run records and generated report copies.
 .demo/
+.neon

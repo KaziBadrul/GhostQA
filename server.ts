@@ -7,9 +7,11 @@ import { resolve } from 'node:path';
 import { readConfig, loadLocalEnvironment } from './src/server/config';
 import { createDatabase } from './src/server/db';
 import { migrate } from './src/server/migrate';
+import { authorizeIngress, readHostingConfig } from './src/server/hosting';
 
 loadLocalEnvironment();
 const config = readConfig(process.env);
+const hosting = readHostingConfig(process.env);
 const db = createDatabase(config.databaseUrl);
 const client = await db.connect();
 try {
@@ -39,15 +41,16 @@ const app = next({
   // Webpack in dev as well as build: `npm run build` already uses
   // `next build --webpack`, and this keeps dev and production on one bundler.
   webpack: true,
-  hostname: config.hostname,
-  port: 3000,
+  hostname: hosting.hostname,
+  port: hosting.port,
 });
 await app.prepare();
 const handler = app.getRequestHandler();
 const server = createServer((request, response) => {
+  if (!authorizeIngress(request, response, hosting)) return;
   void handler(request, response);
 });
-server.listen(3000, config.hostname);
+server.listen(hosting.port, hosting.hostname);
 
 let stopping = false;
 async function shutdown() {

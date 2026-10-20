@@ -1,5 +1,6 @@
 import { randomBytes, randomUUID, timingSafeEqual } from 'node:crypto';
 import { NextResponse } from 'next/server';
+import { hostedRequestAllowed, readHostingConfig } from './hosting';
 
 export function setupError(
   code: string,
@@ -13,6 +14,8 @@ export function setupError(
   );
 }
 export function localRequest(request: Request) {
+  const hosting = readHostingConfig(process.env);
+  if (hosting.publicOrigin) return hostedRequestAllowed(request, hosting);
   const url = new URL(request.url);
   const host = request.headers.get('host');
   return (
@@ -23,10 +26,12 @@ export function localRequest(request: Request) {
   );
 }
 export function validSetupWrite(request: Request) {
+  const expectedOrigin =
+    readHostingConfig(process.env).publicOrigin ??
+    `${new URL(request.url).protocol}//${request.headers.get('host')}`;
   if (
     !localRequest(request) ||
-    request.headers.get('origin') !==
-      `${new URL(request.url).protocol}//${request.headers.get('host')}`
+    request.headers.get('origin') !== expectedOrigin
   )
     return false;
   const token = request.headers.get('x-ghostqa-csrf') ?? '';
@@ -47,7 +52,7 @@ export function setupNonce(request: Request) {
   if (!localRequest(request))
     return setupError(
       'FORBIDDEN',
-      'Open GhostQA on localhost to import an API.',
+      'Open GhostQA at its configured address and sign in to import an API.',
       403,
     );
   const token = randomBytes(32).toString('hex');
@@ -60,7 +65,9 @@ export function setupNonce(request: Request) {
     sameSite: 'strict',
     path: '/',
     maxAge: 3600,
-    secure: new URL(request.url).protocol === 'https:',
+    secure:
+      Boolean(readHostingConfig(process.env).publicOrigin) ||
+      new URL(request.url).protocol === 'https:',
   });
   return response;
 }

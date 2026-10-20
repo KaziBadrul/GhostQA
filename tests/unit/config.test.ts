@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { readConfig } from '../../src/server/config';
+import { databaseConnectionString, readConfig } from '../../src/server/config';
 
 const valid = {
   DATABASE_URL: 'postgresql://localhost/ghostqa',
@@ -9,6 +9,22 @@ const valid = {
 };
 test('validates explicit model and separate credential key', () => {
   expect(readConfig(valid).geminiModel).toBe('configured-model');
+});
+test('uses the direct Neon connection for supervisor sessions and migrations', () => {
+  const direct = 'postgresql://direct.example/ghostqa?sslmode=verify-full';
+  const input = { ...valid, DATABASE_URL_UNPOOLED: direct };
+  expect(readConfig(input).databaseUrl).toBe(direct);
+  expect(databaseConnectionString(input)).toBe(direct);
+  expect(databaseConnectionString(valid)).toBe(valid.DATABASE_URL);
+});
+test('invalid direct connections fail closed without leaking values or falling back', () => {
+  const input = { ...valid, DATABASE_URL_UNPOOLED: 'private-secret' };
+  expect(() => readConfig(input)).toThrow(
+    /^Invalid application configuration: DATABASE_URL_UNPOOLED$/,
+  );
+  expect(() => databaseConnectionString(input)).toThrow(
+    /^Invalid database connection configuration$/,
+  );
 });
 test.each([
   'DATABASE_URL',
@@ -35,8 +51,13 @@ test('errors do not disclose environment values', () => {
 });
 
 test('configuration reports only invalid variable names, never their values', () => {
-  try { readConfig({ ...valid, DATABASE_URL: 'private-secret', GEMINI_API_KEY: '' }); }
-  catch (error) {
+  try {
+    readConfig({
+      ...valid,
+      DATABASE_URL: 'private-secret',
+      GEMINI_API_KEY: '',
+    });
+  } catch (error) {
     expect((error as Error).message).toContain('DATABASE_URL');
     expect((error as Error).message).toContain('GEMINI_API_KEY');
     expect((error as Error).message).not.toContain('private-secret');

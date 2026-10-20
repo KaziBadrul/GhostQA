@@ -4,7 +4,7 @@ import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { PoolClient } from 'pg';
 import { createDatabase } from './db';
-import { loadLocalEnvironment } from './config';
+import { databaseConnectionString, loadLocalEnvironment } from './config';
 
 export async function migrate(client: PoolClient, folder: string) {
   await client.query(
@@ -46,8 +46,7 @@ if (
   resolve(process.argv[1]) === fileURLToPath(import.meta.url)
 ) {
   loadLocalEnvironment();
-  if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL required');
-  const db = createDatabase(process.env.DATABASE_URL);
+  const db = createDatabase(databaseConnectionString(process.env));
   const client = await db.connect();
   try {
     await migrate(client, resolve('migrations'));

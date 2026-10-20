@@ -10,6 +10,29 @@ import {
 import { SecretVault } from '../../src/engine/secrets/vault';
 import { planningFixture, reply } from '../helpers/planning';
 
+test.each([{}, null])(
+  'a proposed undeclared request body %j remains rejected',
+  async (body) => {
+    const f = planningFixture();
+    f.journey.steps[0]!.body = body;
+    await expect(
+      requestProposal({
+        provider: { propose: async () => reply(f.journey) },
+        context: boundedContext(f.context),
+        api: f.run.apiSnapshot,
+        scope: f.run.scope,
+        model: 'configured-model',
+        signal: new AbortController().signal,
+        timeoutMs: 30000,
+        remainingMilliseconds: 600000,
+      }),
+    ).rejects.toMatchObject({
+      message: 'MODEL PLAN ERROR',
+      telemetry: { diagnostic: { validationRule: 'UNDECLARED BODY' } },
+    });
+  },
+);
+
 test('schema example secret is also removed from unexpected observation echoes', () => {
   const f = planningFixture();
   f.run.apiSnapshot.operations[2]!.requestBody = {
